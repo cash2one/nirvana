@@ -1,0 +1,15 @@
+/*
+ * Loading元素的样式 
+ */
+.ui-loading{
+    position: absolute !important;
+    /*top: 40%;
+    left: 45%;*/
+    text-align: center;
+    /*background: #fff !important;*/
+    line-height: 16px !important;
+}
+.ui-loading-exception {
+    top: 0;
+    position: absolute;
+}

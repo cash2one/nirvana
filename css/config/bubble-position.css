@@ -1,0 +1,18 @@
+#BubbleNewAccountTip {
+    position: absolute;
+    left: 50px;
+    top: -8px;
+}
+#BubbleNewAccountTip.IE7 {
+    top: 3px;
+}
+
+
+#BubbleNewAddWordTip {
+    position: absolute;
+    top: 95px;
+}
+#BubbleNewAddWordTip.IE7 {
+    top: 100px;
+}
+

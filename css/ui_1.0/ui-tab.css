@@ -1,0 +1,77 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui_tab.css
+ * desc:    标签结构样式
+ * author:  wanghuijun
+ * date:    2010/12/14
+ */
+
+/**Tab控件**/
+.ui_tab ul {
+	height:22px;
+	padding:3px 4px 0;
+}
+.ui_tab li {
+	background:#5076DD;
+	-webkit-border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+	color:#FFF;
+	display:inline;
+	float:left;
+	height:22px;
+	line-height:22px;
+	margin:0 0 0 4px;
+	padding:0 10px;
+	text-align:center;
+	position:relative;
+	/*behavior:url("./asset/js/pie.htc");*/
+}
+.ui_tab li h6 {
+	cursor:pointer;
+}
+.ui_tab li h6:hover {
+	text-decoration:underline;
+}
+.ui_tab li.active {
+	background:#FFF;
+	border:1px solid #CDCDCD;
+	border-bottom-color:#FFF;
+	color:#000;
+	height:24px;
+	line-height:24px;
+	padding:0 15px;
+	top:-3px;
+}
+.ui_tab li.active h6:hover {
+    cursor: default;
+}
+.ui_tab li.active h6 {
+	font-weight:bold;
+}
+.ui_tab li.active h6:hover {
+	text-decoration:none;
+}
+.ui_tab li.add {
+	cursor:pointer;
+	padding:0 7px;
+}
+.ui_tab li.close {
+	padding-right:24px;
+}
+.ui_tab li.close span {
+	background:url("../../asset/img/bg_icon.png") no-repeat -120px -85px;
+	height:8px;
+	overflow:hidden;
+	text-indent:-9999px;
+	width:8px;
+	position:absolute;
+	top:7px;
+	right:7px;
+}
+.ui_tab li.close span:hover {
+	background-position:-120px -65px;
+	cursor:pointer;
+}

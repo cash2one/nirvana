@@ -1,0 +1,283 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui_table.css
+ * desc:    标签结构样式
+ * author:  wanghuijun
+ * date:    2010/12/16
+ */
+
+/**Table控件**/
+.ui_table {
+	border:solid #C9C9C9;
+	border-width:0 1px;
+	overflow:hidden;
+	position:relative;
+	width:100%;
+}
+.ui_table table {
+	table-layout:fixed;
+	overflow:hidden;
+	white-space:nowrap;	/* 不换行 */
+	width:100%;
+}
+.ui_table .ui_table_head {
+	position:relative;
+	overflow:hidden;
+}
+.ui_table_body {
+	border:solid #C9C9C9;
+	border-width:0 0 1px 0;
+}
+.ui_table .ui_table_head_row {
+	background:#ECECEC;
+	/*border-bottom:1px solid #DFDFDF;*/
+	white-space:nowrap;
+}
+.ui_table .ui_table_thcell {
+	color:#666;
+	font-weight:bold;
+	height:30px;
+	line-height:30px;
+	padding:0 5px;
+	border-bottom:1px solid #C9C9C9;
+	overflow:hidden;
+}
+.ui_table .ui_table_thsel, .ui_table .ui_table_tdsel {
+	text-align:center;
+}
+.ui_table .ui_table_thsel {
+	left:1px;
+}
+.ui_table .ui_table_thsel input {
+	margin:4px 0 0;
+}
+.ui_table .ui_table_thfilterCol{
+	background:#FFF6BD;
+}
+.ui_table .ui_table_thsort {
+	background:url("../../asset/img/bg_icon_right.png") no-repeat right 10px;
+	cursor:pointer;
+	float:left;
+	padding:0 10px 0 0;
+}
+.ui_table .ui_table_thtext{
+	float:left;
+}
+
+.ui_table .table_align_right .ui_table_thtext{
+	float: right;
+}
+
+.ui_table .table_align_right .ui_table_thsort{
+	float:right;
+}
+.ui_table .ui_table_thfilter {
+	background:url("../../asset/img/bg_icon.png") no-repeat -480px -90px;
+	cursor:pointer;
+	float:left;
+	width:12px;
+	height:30px;
+	margin-left:3px;
+}
+.ui_table .ui_table_thcntr_hover .ui_table_thfilter {
+	background-position:-468px -90px;
+}
+.ui_table .ui_table_thfilter_active{
+	background-position:-433px -90px;
+}
+.ui_table a.ui_table_thfilter:hover{
+	text-decoration:none;
+}
+.ui_table .table_align_right .ui_table_thfilter{
+	float:right;
+}
+.ui_table .ui_table_thcell .ui_bubble{
+	cursor:pointer;
+	/*position:relative;*/
+	float:left;
+	*top:-3px;
+	_top:8px;
+}
+.ui_table .table_align_right .ui_bubble{
+	float:right;
+}
+.ui_table td,.ui_table th {
+	white-space:nowrap;	/* 不换行 */  
+	overflow:hidden;	/* 内容超出宽度时隐藏超出部分的内容 */  
+}
+.ui_table .ui_table_foot {
+	background:#FAFAFA;
+	color:#555;
+	border-bottom:1px solid #CCC;
+	font-weight:bold;
+}
+.ui_table .ui_table_tdcell {
+	line-height:25px;
+}
+.ui_table .heightHide {
+	height:0!important;
+	padding:0!important;
+}
+/***** 横向滚动 *****/
+.ui_table_scroll_x_handle{
+	height:20px;
+	position:relative;
+	background:#ECECEC;
+	overflow-x:scroll;
+	overflow-y:hidden;
+	width:100%;
+}
+/***** 降序 *****/
+.ui_table .ui_table_thdesc .ui_table_thsort {
+	background-position:right -50px;
+}
+/***** 升序 *****/
+.ui_table .ui_table_thasc .ui_table_thsort {
+	background-position:right -20px;
+}
+.ui_table .ui_table_row, .ui_table .ui_table_foot_row {
+	border-bottom:1px solid #EEE;
+}
+.ui_table .ui_table_row_over {
+	background:#F0F7FE;
+}
+
+.ui_table .ui_table_row td {
+	/*border:solid #EEE;
+	border-width:0 0 0 1px;*/
+	background:url("../../asset/img/bg_icon_right.png") no-repeat right -190px;
+	vertical-align:top;
+}
+
+.ui_table .ui_table_tdcell {
+	line-height:18px;
+	padding:5px;
+	overflow:hidden;
+	white-space:nowrap;  
+	overflow:hidden;	
+}
+.ui_table .ui_table_tdbreak {
+	line-height:18px;
+	margin:5px;
+	white-space:normal;
+	word-wrap:break-word;
+}
+.table_align_center {
+	text-align:center;
+}
+.table_align_center .ui_table_thtext {
+	display:inline-block;
+	*display:inline;
+	float:none;
+}
+.table_align_center .ui_table_thsort {
+	*background-position: right 1px;
+}
+.ui_table .ui_table_thdesc.table_align_center .ui_table_thsort {
+	*background-position:right -59px;
+}
+.ui_table .ui_table_thasc.table_align_center .ui_table_thsort {
+	*background-position:right -29px;
+}
+
+.ui_table .table_align_center .ui_bubble{
+	float:none;
+}
+.table_align_right {
+	text-align:right;
+}
+.ui_table_row-selected {
+	background:#FFF9D7;
+}
+.td_sort {
+	background-color:#FFF9D7!important;
+}
+
+/* 定义拖拽鼠标指针 */
+.ui_table .ui_table_startdrag,
+.ui_table .ui_table_startdrag .ui_table_thcntr {
+    cursor:col-resize;
+}
+
+/* 拖拽显示的竖线 */
+.ui_table_mark {
+    height:400px;
+    width:1px;
+    overflow:hidden;
+    background:#000;
+    position:absolute;
+	z-index:100;
+}
+.ui_table_domShadow{
+	position:fixed;
+	background:#333;
+    opacity: .2;
+    filter:alpha(opacity=20);
+	height:6px;
+}
+
+/*点击展开按钮*/
+.ui_table_subentry{
+	width:20px;
+	height:16px;
+	margin-top:7px;
+	margin-left:11px;
+	background:url("../../asset/img/bg_icon.png") no-repeat -208px -973px;
+	float:left;
+	cursor:pointer;
+}
+.ui_table .ui_table_subentry_opened{
+	background-position: -253px -973px;
+}
+
+/*匹配分析*/
+.ui_table .ui_table_row_unfolded_matchRow,.ui_table .ui_table_row_unfolded_matchsubRow{
+	background-color:#F1F4FC;
+}
+.ui_table_matchSubrow{
+	margin-left:29px;
+	background:#E4EAF9;
+}
+.ui_table_matchSubrow_loading{
+	background-color: #E4EAF9;
+	padding:10px 0px 10px 40px;
+	border-left:#eee solid 1px;
+}
+.ui_table_matchSubrow_loading img{
+	vertical-align:middle;
+}
+.ui_table .ui_table_body .ui_table_row-selected  .ui_table_matchSubrow ,.ui_table .ui_table_body .ui_table_row-selected {
+	background:#FFF9D7;
+}
+.ui_table .ui_table_body .ui_table_row-selected .ui_table_matchSubrow_loading{
+	background-color: #FFF9D7;
+}
+.ui_table_matchSubrow .ui_table_head_row{
+	background:transparent;
+	border:1px solid #DDE0E7;
+	border-top:none;
+}
+.ui_table_matchSubrow  .ui_table .ui_table_thcell {
+	border-bottom:none;
+}
+.ui_table_matchSubrow .ui_table .ui_table_head_row th {
+	border-right:1px solid #DDE0E7;
+}
+.ui_table_matchSubrow .ui_table .ui_table_row td{
+	background:transparent;
+	border:1px solid #DDE0E7;
+	border-top:0px;
+	border-bottom:0px;
+}
+.ui_table_matchSubrow .ui_table .ui_table_row,.ui_table_matchSubrow .ui_table .ui_table_foot_row {
+    border-bottom: 1px solid #DDE0E7;
+}
+.ui_table_matchSubrow .ui_table_body{
+	border-width:0 0 0 0;
+}
+.ui_table .table_align_center .ui_table_thfilter{
+    float:none;
+    display:inline-block;
+}

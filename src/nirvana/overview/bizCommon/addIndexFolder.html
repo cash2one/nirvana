@@ -1,0 +1,32 @@
+<!-- target:addIndexFolder -->
+<div class="manage_dialog">
+	<p><span class="bold">
+		1 <input type="radio" value="0" name="addtype" checked="checked" title="添加已有监控文件夹" ui="id:addIndexFolder;type:Radio" />
+		<input type="radio" value="1" name="addtype" title="新建监控文件夹" ui="id:addNewFolder;type:Radio" />
+		</span>
+	</p>
+	<p><span class="bold">2 请选择要显示的文件夹</span></p>
+	<div class="monitor_control_area">
+		<h4>
+			已选择的监控文件夹：（<span class="red" id="indexFolderCount"></span>）
+			<span class="red" id="error_area"></span>
+		</h4>
+		<div ui="id:wordList;"></div>
+		<div class="word_to_left"></div>
+		<div class="material_select">
+			<h4>请从账户<strong id="userName"></strong>中选择监控文件夹</h4>
+			<div ui="id:wordSelect;"></div>
+        </div>
+	</div>
+	<div class="ui_dialog_foot">
+		<div ui="id:setDialogOk;type:Button;">确定</div>
+		<div ui="id:setDialogCancel;type:Button;">取消</div>
+	</div>
+</div>
+<div style="display:none">
+	<label ui="id:currentCount;type:Label;datasource:*currentCount"></label>
+	<label ui="id:maxCount;type:Label;datasource:*maxCount"></label>
+</div>
+
+
+		

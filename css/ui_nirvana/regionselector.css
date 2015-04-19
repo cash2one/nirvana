@@ -1,0 +1,12 @@
+.fc-ui-regionselector .regionselector-value {
+	margin-left: 5px;
+    margin-right: 22px;
+}
+.fc-ui-regionselector .regionselector-button {
+	position: absolute;
+    right: 0;
+	top: -3px;
+}
+.fc-ui-regionselector .fc-ui-layer {
+	top: 18px;
+}

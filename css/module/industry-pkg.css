@@ -1,0 +1,283 @@
+/*
+ *  行业领先包的样式定义 
+ */
+#IndustryAoPkgOverviewHeader {
+    position: relative;
+    z-index: 2;
+}
+#IndustryAoPkgOverviewHeader .fc-ui-bubble {
+     padding-left: 3px;
+     height: 16px;
+}
+#IndustryAoPkgManagerMain h3 {
+    padding-bottom: 15px;
+}
+#IndustryAoPkgDataAreaContainer {
+    padding-bottom: 1px;
+    margin: 0 119px;
+    width: 741px;
+    min-height: 215px;
+    z-index: 1;
+}
+#IndustryAoPkgDataAreaContainer .aopkg_dataarea_loading {
+    left: 314px;
+    *left: 0;/*FIX IE7:对于绝对定位元素未设定宽度会根据父元素自动计算宽度的问题*/
+}
+/*#pkgChartContainer {
+   margin: 0 119px;
+   width: 741px;
+}*/
+#IndustryAoPkgDataAreaContainer .aopkg_dataarea_desc {
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 0;
+}
+#IndustryAoPkgDataAreaDesc .title {
+    font-weight: bold;
+    
+}
+#IndustryAoPkgDataAreaDesc .click_up,#IndustryAoPkgDataAreaDesc .click_down {
+    font-weight: bold;
+    padding: 0 3px;
+}
+#IndustryAoPkgDataAreaDesc .click_up {
+    color: #FC1506;
+}
+#IndustryAoPkgDataAreaDesc .click_down {
+    color: #3EAD00;
+}
+#IndustryAoPkgDataAreaDesc .up, #IndustryAoPkgDataAreaDesc .down {
+    background: url("../../asset/img/bg_icon_left.png") no-repeat;
+    padding-right: 20px;
+}
+#IndustryAoPkgDataAreaDesc .up {
+    background-position: 28px -1050px;
+}
+#IndustryAoPkgDataAreaDesc .down {
+    background-position: 28px -1068px;
+}
+/*
+ * 图表的样式 
+ */
+#IndustryAoPkgDataAreaMain {
+    padding: 0;
+}
+#IndustryAoPkgDataAreaMain .click_chart {
+    width: 730px;
+    height: 133px;
+    background: url('../../asset/img/industrypkg.png') 0 0 no-repeat;
+}
+/*
+ * 可以高亮的head样式 
+ */
+.pkg_light_head {
+    background-color: #FFFFFF;
+    position: absolute;
+}
+.pkg_light_head span {
+    background: url('../../asset/img/industrypkg.png') 0 0 no-repeat;
+    float: left;
+}
+.pkg_light_head.bad span {
+    background-position: -214px -179px;
+    width: 18px;
+    height: 22px;
+}
+.pkg_light_head.good span {
+    background-position: -161px -167px;
+    width: 39px;
+    height: 46px;
+}
+.pkg_light_head.excellent span { 
+    background-position: -91px -153px;
+    width: 50px;
+    height: 60px;
+}
+.pkg_light_head.light1 {
+    top: 67px;
+    left: 31px;
+}
+.pkg_light_head.light2 {
+    top: 75px;
+    left: 70px;
+}
+.pkg_light_head.light3 {
+   top: 62px;
+   left: 103px;
+}
+.pkg_light_head.light4 {
+   top: 76px;
+   left: 136px;
+}
+.pkg_light_head.light5 {
+   top: 69px;
+   left: 173px;
+}
+.pkg_light_head.light6 {
+    top: 58px;
+    left: 265px;
+}
+.pkg_light_head.light7 {
+    top: 78px;
+    left: 350px;
+}
+.pkg_light_head.light8 {
+   top: 58px;
+   left: 436px;
+}
+.pkg_light_head.light9 {
+    top: 53px;
+    left: 540px;
+}
+.pkg_light_head.light10 {
+    top: 53px;
+    left: 648px;
+}
+/*
+ * 点击Tip样式 
+ */
+.pkg_click_tip {
+    position: absolute;
+    background: url('../../asset/img/industrypkg.png') 0 -136px no-repeat;
+    width: 78px;
+    height: 78px;
+    text-align: center;
+    padding-top: 15px;
+}
+.pkg_click_tip .label {
+    
+}
+.pkg_click_tip .num {
+    font-size: 31px;
+}
+/*
+ * 条状的bar的样式 
+ */
+#IndustryAoPkgDataAreaMain .click_interval {
+    margin-top: 25px;
+}
+#IndustryAoPkgDataAreaMain .click_interval LI {
+    float: left;
+    width: 247px;
+    height: 27px;
+    line-height: 27px;
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+}
+/*#IndustryAoPkgDataAreaMain .click_interval .label {
+    text-shadow: 1px 1px 1px #ADB7C9;
+}*/
+#IndustryAoPkgDataAreaMain .click_interval .bad,.bar_intro .bad .color {
+    background-color: #E7F0FF;
+    color: #A1B0C1;
+}
+#IndustryAoPkgDataAreaMain .click_interval .good,.bar_intro .good .color  {
+    background-color: #B9D2FE;
+    color: #597AA1;
+}
+#IndustryAoPkgDataAreaMain .click_interval .excellent,.bar_intro .excellent .color  {
+    background-color: #94BAFE;
+}
+#IndustryAoPkgDataAreaMain .click_interval .graduation {
+    position: absolute;
+    color: #C2C2C2;
+    top: -30px;
+    left: -25px;
+}
+/*
+ * 优化建议区域标题的bar颜色含义的样式 
+ */
+.bar_intro {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+.bar_intro LI {
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+    margin-right: 25px;
+}
+.bar_intro .color {
+    width: 27px;
+    height: 9px; 
+    margin-right: 8px;
+    margin-top: 5px;
+    float: left;
+}
+.bar_intro .meaning {
+    font-weight: normal;
+    font-size: 12px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+/*
+ * 优化建议区域样式
+ */
+#IndustryAoPkgManagerMain .aopkg_listgroup {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+#IndustryAoPkgManagerMain li:hover p{
+    background-color: transparent;
+}
+#IndustryAoPkgManagerMain .aopkg_opt_group li:hover p {
+    background-color:#f0f7fe;
+}
+.aopkg_group_container {
+    border-bottom: 1px solid #EAF0F5;
+    margin-bottom: 10px;
+}
+.aopkg_manager_main .nomargin{
+    margin-bottom: 0;
+    padding-bottom: 12px;
+}
+.aopkg_group_container .aopkg_opt_group {
+    float: left;
+    /*display: inline-block;
+    *display: inline;*/
+    width: 570px;/*588px;*/
+   *width: 573px;
+    position: relative;
+    min-height: 1px;/*一开始内容为空，占位用*/
+}
+.aopkg_group_container .aopkg_industry_info {
+    /*display: inline-block;
+    *display: inline;*/
+    float: left;
+    overflow: visible;
+    width: 368px;
+    position: relative;
+    vertical-align: top;
+    height: 100px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+.aopkg_group_container .aopkg_data_bar {
+    margin-top: 30px;
+}
+.aopkg_group_container .bar-title {
+    width: 52px;
+    overflow: visible;
+    text-align: center;
+}
+.aopkg_group_container .bar-title .fc-ui-bubble {
+    position: absolute;
+    right: -15px;
+    top: 9px;
+}
+.aopkg_group_container .bar-view {
+    margin-left: 28px;
+}
+.aopkg_group_container .no_group_opt {
+    padding-left: 39px;
+    padding-top: 25px;
+}
+/*.load_peerdata_error {
+    text-align: center;
+    width: 100%;
+}*/

@@ -1,0 +1,36 @@
+.fc-ui-suggestion input {
+    color: #333333;
+    float: left;
+}
+.fc-ui-suggestion .fc-ui-list {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    box-shadow: 2px 2px 1px #DEDEDE;
+}
+.fc-ui-suggestion .fc-ui-list .ui-wrapper {
+    border-top: none;
+}
+.fc-ui-suggestion .suggestion-opened .fc-ui-list {
+    display: block;
+}
+.fc-ui-suggestion .list-content li {
+    font-weight: bold;
+    padding: 3px 6px;
+    overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.fc-ui-suggestion .list-content li em {
+    font-weight: normal;
+}
+.fc-ui-suggestion .fc-ui-list .list-content li:hover {
+    background-color: transparent;
+}
+.fc-ui-suggestion .list-item-selected {
+    background-color: #DBEBFB !important;
+}

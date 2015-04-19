@@ -1,0 +1,190 @@
+/**
+ * 一条创意的样式
+ */
+.ideaItem {
+    font-size: 16px;
+    line-height: 17px;
+    padding: 10px;
+}
+.ideaItem.shadow {
+    background: #FFDFD5;
+}
+.ideaItem .title {
+    color: #261CDC;
+    font-size: 1em;
+    text-decoration: underline;    
+    white-space: normal;
+}
+.ideaItem .desc {
+    font-size: 0.8em;
+    margin: 3px 0 2px;
+    white-space: normal;
+}
+.ideaItem .url {
+    color: green;
+    font-size: 0.8em;
+}
+.ideaItem u {
+    background: yellow;
+}
+
+/**
+ * 创意在一个单元格中的样式
+ */
+.ideaCell {
+    border: 1px solid transparent;
+    position: relative;
+    padding-right: 20px;
+}
+.ideaCell .editBtn {
+    border: none;
+    background: url('../../asset/img/bg_icon.png') 0 -650px;
+    cursor: pointer;
+
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: 1px;
+    right: 1px;
+
+    display: none;
+}
+.ideaCell:hover {
+    border: 1px solid #FFCC33;
+}
+.ideaCell:hover .editBtn {
+    display: block;
+}
+
+.ideaCell .shadowLink {
+    text-align: right;
+}
+.ideaCell .shadowLink a[act="switchShadow"] {
+    cursor: pointer;
+}
+
+/**
+ * 创意状态
+ */
+.ideaState {
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+}
+/**
+ * 为了icon绝对定位
+ */
+.ideaState > span {
+    position: relative;
+}
+.ideaState span,
+.ideaState label {
+    cursor: pointer;
+}
+.ideaState label {
+    padding: 3px;
+}
+.ideaState button {
+    border: none;
+    background: url("../../asset/img/bg_icon.png") no-repeat;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    
+    position: absolute;
+    right: 0px;
+    top: 2px;
+}
+.ideaState button[act="enableIdea"] {
+    background-position: -210px -70px;
+}
+.ideaState button[act="pauseIdea"] {
+    background-position: -240px -70px;
+}
+.ideaState button[act="pauseIdea-disabled"] {
+    background-position: -500px -1519px;
+}
+/**
+ * 有效
+ */
+.state_0 label {
+    color: #090;
+}
+/**
+ * 暂停推广
+ */
+.state_1 label {
+    color: #E19106;
+}
+/**
+ * 不宜推广
+ */
+.ideaState2Icon {
+    background: url("../../asset/img/bg_icon.png") no-repeat -433px -70px;
+    width: 15px;
+    height: 15px;
+    display: block;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.ideaState2Icon + label {
+    color: #DB1616;
+    margin-left: 15px;
+}
+/**
+ * 待激活
+ */
+.state_4 label {
+    color: #DB1616;
+}
+/**
+ * 审核中
+ */
+.state_5 label {
+    background: #FFDFD5;
+    color: #E19106;
+}
+
+
+.idea-brige-icon{
+   width: 119px;
+   height: 28px;
+   float: left;
+   background: url('../../asset/img/bg_icon.png') no-repeat -263px  -1469px;
+}
+.idea-brige-icon-only{
+   width: 225px;
+   height: 28px;
+   display: inline-block;
+   background: url('../../asset/img/bg_icon.png') no-repeat -2px  -1542px;
+
+}
+
+.ideaPhoneToggle{
+    cursor: pointer;
+	
+    padding-bottom: 1px;
+}
+#ideaPhoneToggleIcon{
+	
+}
+#ideaPhoneUrlWrap .tips{
+    color: #261CDC;
+	
+}
+.ideaPhoneUrlWrap{
+    background: #f9f9fb;
+	
+    border: 1px solid #e3e4f8;
+    padding: 5px;
+}
+#ideaPhoneUrlTips{
+	color: #aaacab;
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 3px;
+	margin-left: 16px;
+}

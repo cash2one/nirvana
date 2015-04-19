@@ -1,0 +1,30 @@
+.nirvana-ui-valueeditor {
+    width: auto;
+}
+.nirvana-ui-valueeditor > .ui-wrapper {
+    background-color: #FFF6BD;
+    border: 1px solid #A8ADB6;
+    padding: 5px 94px 5px 5px;
+    box-shadow: none;
+}
+.nirvana-ui-valueeditor input[type="text"] {
+    background: white;
+    border: 1px solid #A8ADB6;
+    padding: 3px 2px;
+    width: 120px;
+    height: 14px;
+    vertical-align: bottom;
+}
+.nirvana-ui-valueeditor .layer-content {
+    margin-right: 5px;
+}
+.nirvana-ui-valueeditor .layer-footer {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+.nirvana-ui-valueeditor .layer-footer .fc-ui-button {
+    margin-right: 5px;
+}

@@ -1,0 +1,380 @@
+@charset "utf-8";
+
+.mc-active, .mc-ml-groups>ul>li{
+    color: #30E;
+    cursor: pointer;
+}
+
+.mc-actived {
+	color: #fff !important;
+}
+
+.mc-disable, .mc-readonly {
+    color: #999;
+}
+
+/* 大容器的样式 */
+#ctrldialogmsgcenterbody {
+    margin: 10px 0;
+}
+
+.mc-message-container {
+    margin: 5px 25px;
+}
+
+/* tab的样式 */
+.mc-message-tabs {
+    margin-bottom: 8px;
+}
+.mc-message-tabs>ul {
+    border-bottom: 1px solid #d5d7d9;
+}
+
+
+/* 消息列表的样式 */
+.mc-ml-sidebar {
+	width: 136px;
+	float: left;
+}
+
+.mc-ml-content {
+	width: 790px;
+	float: right;
+	height: 482px;
+}
+
+#McMessageList {
+	height: 466px;
+	overflow-y: auto;
+}
+
+.no-message-words {
+	margin-top: 86px;
+	font-size: 1.8em;
+	color: #666;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.mc-ml-content>.ui_page>ul {
+	margin-top: 1em;
+	float: right;
+}
+
+
+.mc-ml-sidebar>.ui_checkbox {
+	float: none;
+	margin-bottom: 10px;
+	margin-left: 6px;
+	*margin-bottom: 0px;
+}
+
+.mc-ml-sidebar>.ui_checkbox_label {
+	*line-height: 30px;
+}
+
+.mc-ml-sidebar>.ui_button {
+	float: none;
+	margin-bottom: 5px;
+	*max-width: 92px;
+}
+
+.mc-ml-sidebar>ul {
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.mc-ml-sidebar>ul>li {
+	color: #30e;
+	text-indent:1.7em;
+	line-height: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.mc-ml-sidebar>ul>li.mc-li-header {
+	text-indent: 0;
+}
+.mc-ml-sidebar>ul>li.mc-current {
+	font-weight: 600;
+	font-size: 1.08em;
+	color: #383838;
+	cursor: default;
+}
+
+
+.mc-message-group>.mc-message-checkbox {
+	margin-bottom: 8px;
+	float: none;
+}
+
+.mc-message-checkbox>.ui_checkbox {
+	*position: static;
+}
+
+.mc-message-ul {
+	background: #F9FBFD;
+	padding: 10px;
+	margin-bottom: 8px;
+	border: 1px solid #F2F2F2;
+}
+.mc-message-ul>li {
+	line-height: 24px;
+	/*height: 24px;*/
+}
+
+.mc-message-ul>li>.ui_checkbox {
+	*position: static;
+}
+
+.mc-message-unread {
+	font-weight: 600;
+}
+
+.msg-text {
+	display: inline-block;
+}
+
+.msg-text, .msg-text>a {
+	margin-left:1.2em;
+}
+
+.msg-text>a {
+	cursor: pointer;
+}
+
+/* 单一行的描述性语言 */
+.mc-label {
+    margin-bottom: 8px;
+}
+
+/* 表格样式相关 */
+
+
+.mc-table {
+    width: 100%;
+    margin-bottom: 10px;
+    max-width: 100%;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.mc-table-bordered {
+    border: 1px solid #ddd;
+    border-collapse: separate;
+    border-left: 0;
+}
+
+.mc-table-bordered td {
+    border-left: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.mc-table td {
+    padding: 6px;
+    line-height: 38px;
+    *line-height: 28px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+    font-size: 1.1em;
+    padding-left: 16px;
+}
+
+.mc-table>tbody>tr>td {
+	min-width: 82px;
+	max-width: 470px;
+	word-wrap: break-word;
+}
+
+.mc-table>tbody>tr>.td-checkbox {
+	min-width: 181px;
+}
+
+
+
+
+td>.ui_button, td>.ui_button>.ui_button_label,td>.ui_checkbox {
+	*position: static;
+}
+
+td>.ui_checkbox_label {
+	margin-right: 10px;
+}
+
+.td-checkbox>.text_gray {
+	color: #000 !important;
+}
+
+td>.warn {
+	margin-left: 6px;
+}
+
+.mc-table-bordered tbody:first-child tr:first-child td,
+.mc-table-bordered thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+.mc-table-bordered>thead>tr>td {
+	background: #5076DD;
+	color: #fff;
+	font-weight: 600;
+	line-height: 18px;
+	height: 18px;
+}
+
+#McMessageSetsTable {
+    max-height: 442px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+/* 确定取消按钮及附近的错误信息样式 */
+.mc-buttons>.ui_button {
+    margin-right: 10px;
+}
+
+.mc-buttons>.warn {
+	line-height: 24px;
+}
+
+
+
+/* 添加消息接收人区域的样式 */
+.mc-addreceiver-area {
+    background: #F9FBFD;
+    padding: 10px;
+    border: 1px solid #F2F2F2;
+}
+.mc-receiver-inputs>input {
+    margin-right: 10px;
+}
+
+.mc-receiver-table tr>td {
+	line-height: 20px;
+}
+
+
+/* 添加重点计划弹窗中的计划列表相关的css */
+.mc-mp-ul {
+    height: 298px;
+    overflow-y: auto;
+    border: 1px solid #d5d7d9;
+    margin: 10px 0;
+}
+
+.mc-mp-ul>li {
+    line-height: 24px;
+    height: 24px; 
+    padding: 0 8px;
+    border-bottom: 1px solid #d5d7d9;
+}
+
+.mc-mp-ul>.mc-mp-added {
+    background: #f1f2f3;
+}
+
+.mc-hover, .mc-mp-ul>.mc-hover {
+    background: #ff9;
+}
+
+
+
+/*********以下是概要层和重要消息弹出层 zhouyu01@baidu.com**********/
+#NavSubMsg{
+	position:relative;
+}
+#NavMsgCnt{
+	position:relative;
+	left:0;
+	margin-right:5px;
+	display:inline-block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	padding:0 3px;
+}
+#NavMsgCnt.hasmsg{
+	background: #F32719;
+}
+#NavMsgCnt.nomsg{
+	background:#E1E2E6;
+	color:#000;
+}
+#NavMsgSummary{
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	width:344px;
+	padding:5px;
+	background:#4E596C;
+	position:absolute;
+	top:14px;
+	right:-120px;
+}
+#NavMsgSummary .no_unread_msg{
+	text-align:center;
+	line-height:50px;
+	height:50px;
+	font-weight:bold;
+}
+#NavMsgSummary .link{
+	color:blue;
+	cursor:pointer;
+}
+#NavMsgSummary .msg_summary_foot .link{
+	color:#FFF;
+}
+.nav_msg_unread{
+	cursor:pointer;
+}
+.nav_msg_item{
+	background:#F7F8FF;
+	margin-bottom:5px;
+	padding:0 5px 10px;
+	color:#000;
+	position:relative;
+}
+.nav_msg_item h2{
+	font-weight:bold;
+	height:35px;
+	line-height:35px;
+}
+.msg_check_all{
+	position:absolute;
+	top:10px;
+	right:5px;
+}
+.msg_summary_foot{
+	width:344px;
+	height:37px;
+	line-height:37px;
+	position:relative;
+	background:url(../../asset/img/bg_right.jpg) -130px -8px;
+	color:#FFF;
+}
+.msg_summary_foot .msg_set{
+	position:absolute;
+	right:10px;
+	top:0;
+	line-height:37px;
+}
+.nav_sub .nav_msg_item ul {
+	display:block;
+}
+.nav_sub .nav_msg_item li {
+	padding:0;
+	line-height:18px;
+	color:#000;
+}
+.ui_msgpopup_content li{
+	line-height:24px;
+}
+.ui_msgpopup_content li.msginfo {
+    display: inline;
+}
+.ui_msgpopup_content li a{
+	display:inline-block;
+	margin-left:5px;
+}

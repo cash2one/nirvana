@@ -1,0 +1,157 @@
+/*
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-mask.css
+ * desc:    遮罩层样式
+ * author:  linzhifeng
+ * date:    2010/12/14
+ */
+
+.ui_bubble_icon_info {
+	height:15px;
+    padding-right:13px;
+	margin-left:3px;
+	background:transparent url('../../asset/img/bg_icon.png') -456px -71px ;
+	cursor:pointer;
+}
+.ui_bubble_icon_help {    
+	height:15px;
+	padding-right:13px;
+	margin-left:3px;
+	background:transparent url('../../asset/img/bg_icon.png') -412px -71px ;
+	cursor:pointer;
+}
+.ui_bubble_icon_light {
+	height:15px;
+    padding-right:15px;
+	margin-left:3px;
+	zoom:1;
+	background:transparent url('../../asset/img/bg_icon.png') -434px -71px ;
+}
+.ui_bubble_icon_blue {
+	height:15px;
+    padding-right:15px;
+	margin-left:3px;
+	zoom:1;
+	background:transparent url('../../asset/img/bg_icon.png') -478px -71px ;
+	cursor:pointer;
+}
+.ui_bubble_icon_link {/*外链icon*/
+	background:url('../../asset/img/bg_icon.png') -434px -71px;
+	height:11px;
+    padding-right:11px;
+	position:absolute;
+	top:0;
+	right:0;
+	zoom:1;
+}
+.ui_bubble_icon_none{
+	display:none;
+}
+.ui_bubble_wrap{
+	border:1px solid #D5CA81;
+	width:280px;
+	background-color:#FFF6BD;
+	position:absolute;
+	display:none;
+	z-index:2000;
+}
+.lxb_bubble_wrap{
+	border:1px solid #D5CA81;
+	background-color:#FFF6BD;
+	position:absolute;
+	display:none;
+	z-index:2000;
+}
+.ui_bubble_container{
+	position:relative;
+	margin:5px 20px 5px 5px;
+}
+.ui_bubble_title{
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.ui_bubble_close{
+	background:transparent url('../../asset/img/bg_icon.png') -150px -65px ;
+	cursor:pointer;
+    height:12px;
+    width:12px;
+    overflow:hidden;
+	position:absolute;
+	top:0;
+	right:-15px;
+}
+.ui_bubble_close_hover {
+    background-position: -150px -85px;
+}
+.ui_bubble_tail_tr,.ui_bubble_tail_rt,.ui_bubble_tail_rb,.ui_bubble_tail_br,.ui_bubble_tail_bl,.ui_bubble_tail_lb,.ui_bubble_tail_lt,.ui_bubble_tail_tl{
+    background:transparent url('../../asset/img/bg_icon.png') right -678px no-repeat;
+	width:13px;
+	height:13px;
+	position:absolute;	
+}
+.ui_bubble_tail_tr{	
+	bottom:-13px;
+	left:10px;	
+	background-position: right -678px;
+}
+.ui_bubble_tail_rt{	
+	top:10px;
+	left:-13px;
+	background-position: right -692px;
+}
+.ui_bubble_tail_rb{	
+	bottom:10px;
+	left:-13px;
+	background-position: right -705px;
+}
+.ui_bubble_tail_br{	
+	top:-13px;
+	left:10px;
+	background-position: right -718px;
+}
+.ui_bubble_tail_bl{	
+	top:-13px;
+	right:10px;
+	background-position: right -732px;
+}
+.ui_bubble_tail_lb{	
+	bottom:10px;
+	right:-13px;
+	background-position: right -746px;
+}
+.ui_bubble_tail_lt{	
+	top:10px;
+	right:-13px;
+	background-position: right -759px;
+}
+.ui_bubble_tail_tl{	
+	bottom:-13px;
+	right:10px;
+	background-position: right -772px;
+}
+.ui_bubble_tail_none{
+	display:none;
+}
+
+.ui_bubble_middle .ui_bubble_icon_help{
+	height: 14px;
+    position: absolute;
+	*position:relative;
+    top: 3px;
+	*top:5px;
+}
+.ui_bubble_add .ui_bubble_icon_help{
+	margin-left:5px;
+	background-position:-412px -65px;	
+}
+.ui_bubble_left .ui_bubble_icon_help{
+	margin-left:0px;
+}
+
+.ui_bubble_container em {
+	font-weight: 700;
+}
+.ui_bubble_container #BubbleContent {
+	line-height: 1.2em;
+}

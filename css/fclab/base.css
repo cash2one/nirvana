@@ -1,0 +1,384 @@
+/**
+ * @凤巢实验室基础样式
+ * @auther zhouyu
+ */
+.fclab_container{
+	width:100%;
+	margin:0;
+	overflow: hidden;
+	display:inline-block;
+	background:url(../../asset/img/fclab/container_repeat_y.png) #FAFAFA right repeat-y;
+}
+.fclab_side{
+	width:290px;
+	float:right;
+	font-size:14px;
+}
+.fclab_section{
+	margin-right:300px;
+	/* 设置最小宽度 */
+	min-height: 655px;
+}
+.fclab_section h1{
+	font-weight:bold;
+	font-size:14px;
+}
+.ellipsis{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/**********************实验室导航*********************/
+#LabNav ul{
+	width:100%;
+	position:relative;
+	height:117px;
+	background:url(../../asset/img/fclab/nav_bottom.png) #FFF bottom repeat-x;
+}
+#LabNav li{
+	float:left;
+	height:117px;
+}
+
+/***icon与文字***/
+.fclab_nav_icon{
+	width:48px;
+	height:48px;
+	margin:10px auto;
+	cursor:pointer;
+	background:url(../../asset/img/fclab/nav_icon.png);
+}
+.fclab_nav_intro{
+	height:30px;
+	line-height:30px;
+}
+#LabNav li .current{
+	background:url(../../asset/img/fclab/nav_arrow.png) #FFF bottom no-repeat;
+	color:#55627D;
+	height:117px;
+	overflow:hidden;
+}
+#FclabNavHome .fclab_nav_icon{
+	background-position: -62px 0;
+}
+#FclabNavHome.current .fclab_nav_icon{
+	background-position: 0 0;
+}
+#FclabNavAbtest .fclab_nav_icon{
+	background-position: -62px -58px;
+}
+#FclabNavAbtest.current .fclab_nav_icon{
+	background-position: 0 -58px;
+}
+
+/* cpa图标状态 */
+#FclabNavCpa .fclab_nav_icon{
+	background-position: -62px -117px;
+}
+#FclabNavCpa.current .fclab_nav_icon{
+	background-position: 0 -117px;
+}
+
+/***首页icon模块***/
+.fclab_tool_item{
+	width: 130px;
+	text-align: center;
+	color: #BABABA;
+	/* 每一个导航都是内联元素 */
+	display: inline-block;
+	height: 117px;
+}
+/***分界线***/
+.fclab_nav_boundary{
+	height:114px;
+	background:#EAEAEA;
+	width:1px;
+}
+/***工具icon模块***/
+#FclabToolList{
+	margin-right:30px;
+	height:117px;
+}
+/***前后箭头***/
+#ToPrevTool,
+#ToNextTool{
+	width:60px;
+}
+#ToNextTool{
+	position:absolute;
+	right:0;
+	top:0;
+}
+#ToPrevTool span,
+#ToNextTool span{
+	background:url(../../asset/img/fclab/lab_icon.png);
+	height:32px;
+	width:19px;
+	display:block;
+	margin:30px 20px;
+}
+#ToPrevTool span{
+	background-position: -40px 0;
+}
+#ToNextTool span{
+	background-position: 0 0;
+}
+
+/****反馈建议****/
+#LabFeedback{
+	text-indent:100px;
+	width:300px;
+	margin-left:-10px;
+	overflow:hidden;
+	position:relative;
+	height:117px;
+	cursor:pointer;
+	background:url(../../asset/img/fclab/lab_icon.png) -135px 0;
+}
+#LabFeedback .lab_feedback_icon{
+	position: absolute;
+	top:40px;
+	left:60px;
+	background:url(../../asset/img/fclab/lab_icon.png) -83px 0px;
+	width:32px;
+	height:32px;
+}
+#LabFeedback h1{
+	font-weight:bolder;
+	margin-top:40px;
+}
+#LabFeedback p{
+	color:#BABABA;
+	line-height:32px;
+}
+/****右侧模块***/
+.fclab_side_module{
+	height:300px;
+	margin-top:15px;
+}
+.fclab_module_title{
+	height:32px;
+	line-height:32px;
+	border-bottom:1px solid #A4ABBB;
+	width:100%;
+}
+.fclab_module_title h1{
+	border-bottom:1px solid #219AFE;
+	font-weight:bold;
+	display:inline-block;
+	overflow:hidden;
+	float:left;
+}
+#LabSupport a{
+	height:45px;
+	line-height:45px;
+	display:inline-block;
+	width:270px;
+	text-decoration:none;
+	border-bottom:1px dashed #CACED7;
+	color:#5A5A5A;
+}
+#LabSupport a:hover{
+	text-decoration:underline;
+}
+#LabSupport a.lab_support_more{
+	width:60px;
+	border:0;
+	float:right;
+}
+/****介绍模块****/
+#LabToolIntro{
+	border-bottom: 1px solid #A8B4B9;
+	padding: 20px;
+	line-height:24px;
+}
+#LabToolIntro p{
+	text-indent:24px;
+}
+.lab_tool_toggle{
+	position:relative;
+	height:20px;
+}
+.lab_tool_toggle .arrow_up,
+.lab_tool_toggle .arrow_down{
+	width:40px;
+	height:20px;
+	position:absolute;
+	right:20px;
+	top:0;
+	cursor:pointer;
+}
+.lab_tool_toggle .arrow_up{
+	background:url(../../asset/img/fclab/lab_icon.png) -63px -40px;
+}
+.lab_tool_toggle .arrow_down{
+	background:url(../../asset/img/fclab/lab_icon.png) 0 -40px;
+}
+.lab_tool_banner{
+	height:400px;
+	margin:0 20px 20px;
+}
+.lab_tool_banner img{
+	width:100%;
+	height:400px;
+}
+/***最新产品***/
+
+#LabNewTools{
+	margin:20px;	
+}
+
+/***反馈建议浮层***/
+#ctrldialogopenFeedbackFloatbody, #ctrldialogopenFeedbackFloatfoot{
+	margin:0;
+}
+.lab_feecback_container{
+	background:#F7F8F9;
+}
+.lab_feecback_content{
+	margin:0 10px;
+}
+.lab_feecback_container h3{
+	line-height:60px;
+	background:#FFF;
+	text-indent:10px;
+	border-bottom:1px solid #CBD1D8;
+}
+.lab_feecback_container .form_submit{
+	padding:20px 0;
+	line-height:24px;
+	color:red;
+	position:relative;
+}
+.lab_feecback_container .form_submit .feedback_words_cnt{
+	position:absolute;
+	top:0px;
+	right:0;
+	line-height:20px;
+	color:#97989A;
+}
+.lab_feedback_type{
+	line-height:50px;
+}
+.lab_feedback_type input{
+	margin-right:5px;
+}
+.lab_feedback_type label{
+	margin-right:15px;
+}
+.lab_feedback_area{
+	width:675px;
+	height:260px;
+	line-height:24px;
+}
+/****最新产品****/
+#labNewProduct ul li{
+	float:left;
+	height:100px;
+	width:290px;
+	margin:15px 15px 15px 0;
+	position:relative;
+	cursor:pointer;
+}
+.new_produc_boxouter{
+    display:table;
+    width:100px;
+	height:100px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#8B9CBE;
+	color:#FFF;
+	line-height:35px;
+}
+.new_produc_box{
+    display:table-cell;
+    vertical-align:middle;
+	text-align:center;
+    *position:absolute;
+    top:50%;
+    width:100%;
+}
+.new_produc_boxinner{
+    *position:relative;
+    width:100%;
+    top:-50%;
+}
+.new_produc_info{
+	width:175px;
+	height:100px;
+	line-height:24px;
+	overflow:hidden;
+	margin-left:105px;
+}
+.new_produc_info h2{
+	font-weight:bold;
+}
+.new_produc_info p{
+	color:#999999;
+}
+
+#LabToolInfo .ui_page{
+	margin-left:20px;
+}
+/*********选择控件**********/
+.fclab_chosen_bar{
+	overflow:hidden;
+}
+.fclab_chosen_bar li{
+	float:left;
+	margin-right:1px;
+	padding:5px 20px;
+	text-align:center;
+	line-height:25px;
+	color:#999999;
+	background:#E4E4E4;
+	cursor:pointer;
+}
+.fclab_chosen_bar li.current{
+	color:#FFF;
+	background:#0BB3F3;
+}
+/********滑动选择控件******************/
+.slidebar_outter {
+    width: 100%;
+    position: relative;
+    background: #E4E4E4;
+    height: 40px;
+    overflow: hidden;
+    cursor: text;
+}
+.slidebar_inner {
+    width: 100%;
+    position: relative;
+    background: #C8C8C8;
+    height: 100%;
+}
+.slidebar_slider {
+    width: 10px;
+    background: #0BB3F3;
+    height: 100%;
+    cursor: default;
+}
+/********bubble中的表格******************/
+.table_bubble tr{
+	line-height: 24px;
+}
+.table_bubble th{
+	vertical-align:top;
+	font-weight:bold;
+	white-space: nowrap;
+}
+
+
+.lab_nodata{
+	margin: 70px auto;
+	text-align: center;
+	width: 350px;
+	background: #FFC;
+	border: 1px solid #E4E4E4;
+	color: #000;
+	line-height: 14px;
+	padding: 6px;
+	overflow: hidden;
+}

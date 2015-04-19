@@ -1,0 +1,943 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    index.css
+ * desc:    基础框架结构样式
+ * author:  wanghuijun
+ * date:    2010/12/21
+ */
+.content {
+	padding:0 10px;
+    position: relative;
+    zoom: 1;
+}
+/**
+ * 新功能提示
+ */
+#new_fun_tip {
+    position: absolute;
+    top: -10px;
+    left: 485px;
+    z-index: 9999;
+}
+.side {
+	width: 390px;
+	float: left;
+}
+.section {
+    margin-left: 410px;
+}
+.side .box {
+    margin:0 0 10px;
+    width:388px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.side .box_title {
+    position: relative;
+    background:#FFF url("../../asset/img/bg_repeat_x.png") repeat-x;
+    height:36px;
+	line-height:36px;
+    padding: 0px 10px;
+    border: 1px solid #D1D1D1;
+    border-bottom: none;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+.side .box_icon {
+    background: url("../../asset/img/bg_icon.png") no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px; 
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.side .box_title h3 {
+    font-weight: bold;
+    font-size: 120%;
+    display: inline;
+    margin-left: 20px;
+}
+.side .box_content {
+    border: 1px solid #D1D1D1;
+    border-top: none;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+}
+.side .module .content_open > a {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.side .module {
+    border-top: 1px solid #D1D1D1;
+    padding: 8px 6px;
+}
+.side .module a {
+    cursor: pointer;
+}
+.side .module label {
+    color: #CCC;
+}
+.side .module_open label {
+    color: #949494;
+}
+.side .module_title {
+    padding-right: 18px;
+    position: relative;
+    z-index: 100;
+}
+.side .module_content {
+    line-height: 20px;
+    position: relative;
+}
+.side .content_close strong {
+    font-weight: bold;
+    font-size: 150%;
+}
+.side .content_open .value {
+    font-size: 110%;
+    font-weight: normal;
+}
+.side .module_title .btn {
+    background: url("../../asset/img/bg_icon_left.png") no-repeat -1px -1087px;
+    cursor: pointer;
+    width: 17px;
+    height: 18px;
+    line-height: 17px;
+    text-align: center;
+    color: #999;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+/**       收起的样式     **/
+.side .module_close .module_title {
+    float: right;
+    height: 17px;
+    line-height: 17px;
+}
+.side .module_close .module_title h4 {
+    color: #949494;
+    margin-right: 5px;
+}
+.side .module_close .btn_open {
+    display: inline;
+    bottom: 0px;
+}
+.side .module_close .content_close {
+    display: block;
+}
+.side .module_close .btn_close,
+.side .module_close .content_open {
+    display: none;
+}
+
+/**      展开的样式        **/
+.side .module_open .module_title {
+    float: none;
+    border-bottom: 1px dashed #F2F2F2;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    zoom: 1;
+}
+.side .module_open .module_title h4 {
+    color: #000;
+    display: block;
+    *height: 12px;
+    *line-height: 14px;
+}
+.side .module_open .btn_close {
+    display: inline;
+    bottom: 4px;
+    background-position: -1px -1086px;
+}
+.side .module_open .content_open {
+    display: block;
+}
+.side .module_open .btn_open,
+.side .module_open .content_close {
+    display: none;
+}
+/**      收起展开结束       **/
+
+#accountInfo .box_icon,
+#accountInfo .ok {
+    background-position: -270px -108px;
+}
+#accountInfo .error {
+    background-position: -302px -108px;
+}
+#accountInfo .other {
+    background-position: -286px -108px;
+}
+#addVIcon {
+    font-family: Arial Black;
+    font-size: 13px;
+    font-weight: bold;
+    color: #777;
+}
+#accountInfo .vip {
+    color: red;
+}
+
+#Reminder .box_icon {
+    background:url("../../asset/img/bg_icon_left.png") no-repeat 1px -269px;
+}
+
+#accountSetting .otherSetting {
+    display: none;
+}
+
+
+/**     财务信息        **/
+#financeInfo {
+    border: 1px solid #FFF;
+    background: #F2F2F2;
+    border-radius: 0 0 5px 5px;
+}
+#financeInfo label {
+    color: #999;
+    display: block;
+    margin-top: 5px;
+}
+#financeInfo .content_close > strong {
+    margin-left: 5px;
+}
+#financeInfo .ui_button {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+}
+/**       加V           **/
+.v_layer {
+    line-height: 18px;
+}
+.v_layer .v_item {
+    width: 260px;
+    zoom: 1;
+}
+.v_layer .v_title {
+    font-weight: bold;
+    float: left;
+}
+.v_layer .v_content {
+    display: block;
+    word-wrap: break-word;
+}
+.v_layer .v_detail {
+    text-align: right;
+}
+/**     账户质量评分    **/
+/*#accountScore .btn {
+    background-position: -1px -1110px;
+    width: 16px;
+    height: 16px;
+}*/
+/**     账户设置        **/
+
+/**     优惠券          **/
+
+/**  为了轮显，把label display: block **/
+#coupon .content_open > ul > li {
+    overflow: hidden;
+    height: 18px;
+    line-height: 18px;
+    position: relative;
+    zoom: 1;
+}
+#coupon .content_open label,
+#coupon .content_open .value {
+    display: block;
+    float: left;
+    height: 100%;
+}
+#coupon .content_open .value {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+}
+#coupon .value ul {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+/**     离线宝        **/
+#offline .icon {
+    margin-right: 5px;
+}
+/**     市场风向标      **/
+#OverviewWrap #marketTrend .content_open p {
+    padding-left: 5px;
+}
+#OverviewWrap #marketTrend .content_open p a {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#OverviewWrap #marketTrendPVCompare {
+    margin-left: 10px;
+}
+#OverviewWrap #marketTrend .business_hot_icon {
+    display: inline-block;
+    width: 17px;
+    height: 15px;
+    padding-top: 2px;
+    margin-right: 3px;
+    color: #ffffff;
+    background-color: #FD514F;
+    text-align: center;
+    line-height: 12px;
+    height: 13px\9;
+    padding-top: 3px\9;
+    width: 15px\9;
+    padding-left: 2px\9;
+}
+#OverviewWrap #marketTrend .content_open > label,
+#OverviewWrap #marketTrend .content_open ul {
+    display: table-cell;
+    padding: 0px 10px 0 5px;
+    *display: inline-block;
+    *float: left;
+}
+#OverviewWrap #marketTrend .content_open {
+    *overflow: hidden;
+}
+#OverviewWrap #marketTrend .content_open > label {
+    *height: 40px;
+    *line-height: 40px;
+}
+/*#OverviewWrap #marketTrend .content_open ul {
+    *width: 127px;
+}*/
+#OverviewWrap #marketTrend .content_open > label {
+    vertical-align: middle;
+}
+#OverviewWrap #marketTrend .content_open ul {
+    border-left: 1px solid #CCC;
+}
+#OverviewWrap #marketTrend .content_open > label + ul label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+#OverviewWrap #marketTrend .content_open > label + ul + ul span {
+    display: inline-block;
+    width: 70px;
+}
+#OverviewWrap #marketTrend .content_close .up,
+#OverviewWrap #marketTrend .content_close .down {
+    font-size: 150%;
+    font-weight: bold;
+}
+#OverviewWrap #marketTrend .content_close .up {
+    color: #CC0D39;
+}
+#OverviewWrap #marketTrend .content_close .down {
+    color: #0A690D;
+}
+#OverviewWrap #marketTrend .up,
+#OverviewWrap #marketTrend .down {
+    background: url("../../asset/img/bg_icon_left.png") no-repeat;
+}
+#OverviewWrap #marketTrend .up {
+    background-position: 55px -1047px;
+}
+#OverviewWrap #marketTrend .down {
+    background-position: 55px -1066px;
+}
+#marketTrendBusinessName {
+    text-align: center;
+}
+                              .side .col {
+                                    border:1px solid #D1D1D1;
+                                    
+                                    
+                                    
+                                    overflow:hidden;
+                                    position:relative;
+                                    
+                                }
+.section .col {
+	border:1px solid #D1D1D1;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 0 10px;
+}
+#OverviewArea {
+	padding:0 0 2px;
+}
+.title_area {
+	background:#FFF url("../../asset/img/bg_repeat_x.png") repeat-x;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	height:36px;
+	line-height:36px;
+}
+.side .col .cont_area {
+	position:relative;
+}
+.side .col h2 {
+    color:#333;
+    font-size:14px;
+    font-weight:bold;
+    padding:0 0 0 29px;
+}
+.section .col h2 {
+    color:#333;
+    font-size:14px;
+    font-weight:bold;
+    overflow:hidden;
+    padding:0 12px;
+	position:relative;
+}
+.section .col h2 .help {
+    font-size:12px;
+	font-weight:normal;
+	position:absolute;
+	top:0;
+	right:12px;
+}
+#AccountInfo h2 {
+	display:inline-block;
+	position:relative;
+}
+#AccountInfo h2 span {
+	background:url("../../asset/img/bg_icon.png") no-repeat -270px -108px;
+	height:15px;
+	width:16px;
+	position:absolute;
+	top:10px;
+	left:6px;
+}
+#AccountInfo h2.status_error span {
+	background-position:-302px -108px;
+}
+#AccountInfo h2.status_other span {
+	background-position:-286px -108px;
+}
+#AccountInfo .cont_area {
+	height:94px;
+}
+#AccountInfo ul {
+	padding:5px 15px;
+}
+#AccountInfo li {
+	height:28px;
+	line-height:28px;
+	overflow:hidden;
+}
+#AccountInfo li span {
+	font-size:20px;
+	font-weight:bold;
+	margin:0 5px;
+	vertical-align:middle;
+}
+#AccountInfo .ui_button {
+	position:absolute;
+	top:7px;
+	right:6px;
+}
+#Reminder h2 {
+	background:url("../../asset/img/bg_icon_left.png") no-repeat 8px -259px;
+}
+#Reminder .ui_button {
+	position:absolute;
+	top:7px;
+	right:6px;
+	display:none;
+}
+#Reminder p {
+	margin:50px 15px 0;
+	text-align:center;
+}
+#Reminder ul {
+	padding:5px 15px;
+}
+#Reminder li {
+	line-height:21px;
+	overflow:hidden;
+}
+#Reminder li a {
+	margin:0 0 0 10px;
+}
+#Reminder .remind_task {
+	background:#FFF9C8;
+	line-height:18px;
+	padding:5px 30px;
+	position:relative;
+}
+#Reminder .remind_task h3 a {
+    color:#F00;
+    text-decoration:underline;
+}
+#Reminder .remind_task p {
+    color:#333;
+    margin:0;
+    text-align:left;
+}
+#Reminder .remind_task h6 {
+    color:#C9C9C9;
+	position:absolute;
+	right:5px;
+	bottom:5px;
+}
+#Reminder #YingCaiPlan{
+	padding-left:20px;
+}
+#YCContent{
+	margin-right:30px;
+}
+#OverviewArea .title_area {
+	position:relative;
+	padding:0 0 0 30px;
+}
+#OverviewArea .title_area .icon {
+	background:url("../../asset/img/bg_icon.png") no-repeat -330px -108px;
+	height:14px;
+	width:14px;
+	position:absolute;
+	top:13px;
+	left:10px;
+}
+#OverviewArea .flash_area {
+	height:350px;
+}
+
+#OverviewArea .ui_mcal{
+	float:right;
+	margin:2px 8px 0 0;
+}
+#AoPackageArea {
+	position:relative;
+}
+#AoPackageArea .loading_query {
+	position:absolute;
+	right:15px;
+	bottom:15px;
+	z-index:0;
+}
+#AoPackageArea .cont_area {
+	_height:1%;
+	overflow:hidden;
+	padding:0 0 20px;
+}
+#AoPackageArea .cont_area ul{
+    position: relative;
+    width: 100%;
+}
+#AoPackageArea .cont_area li {
+    border:1px solid #FFF;
+	cursor:pointer;
+	float:left;
+	height:102px;
+	line-height:14px;
+	margin:10px 0 10px 1%;
+	overflow:hidden;
+    /*outline:1px solid #FFF;*/
+	/*width:30.8%;*/
+    width: 23.6%;
+    min-width: 181px;
+    position:relative;
+}
+#AoPackageArea .cont_area li.limit_time {
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #FAFAFA, #FFF, #FAFAFA);
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #FAFAFA, #FFF, #FAFAFA);
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #FAFAFA, #FFF, #FAFAFA);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #FAFAFA, #FFF, #FAFAFA);
+}
+#AoPackageArea .cont_area li:hover {
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #FAFAFA, #FFF, #FFF, #FAFAFA);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #FAFAFA, #FFF, #FFF, #FAFAFA);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #FAFAFA, #FFF, #FFF, #FAFAFA);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #FAFAFA, #FFF, #FFF, #FAFAFA);
+    border:1px solid #E3E3E3;
+    *border:1px solid #FFDA82;
+    outline:1px solid #FFDA82;
+}
+#AoPackageArea .cont_area li h3 {
+    background:url("../../asset/img/bg_icon_32.png") no-repeat 0 0;
+	height:49px;
+	width:49px;
+	position:absolute;
+	top:19px;
+	left:8px;
+}
+#AoPackageArea .cont_area li#PkgWiden h3 {
+    background-position:-49px 0;
+}
+#AoPackageArea .cont_area li#PkgBusiness h3 {
+    background-position:-98px 0;
+}
+#AoPackageArea .cont_area li#PkgQuality h3 {
+    background-position:-147px 0;
+}
+
+#AoPackageArea .cont_area li#PkgCoreWords h3 {
+    background-position:-196px 0;
+}
+#AoPackageArea .cont_area li#PkgRecmword h3 {
+    background-position:-245px 0;
+}
+#AoPackageArea .cont_area li#PkgIndustry h3 {
+    background-position:-294px 0;
+}
+#AoPackageArea .cont_area li#PkgMobile h3 {
+    background-position:-343px 0;
+}
+#AoPackageArea .cont_area li#PkgSeason h3 {
+    background-position:-49px 0;
+}
+#AoPackageArea .cont_area li h3 span {
+    background:url("../../asset/img/bg_icon.png") no-repeat -60px -1210px;
+    color:#FFF;
+    font-weight:bold;
+    height:19px;
+    line-height:19px;
+    text-align:center;
+    width:19px;
+    position:absolute;
+    top:-7px;
+    right:-9px;
+}
+#AoPackageArea .cont_area li h3 span.update2 {
+	background-position:-80px -1210px;
+    width:26px;
+    right:-12px;
+}
+#AoPackageArea .cont_area li h4 {
+    text-align:center;
+    width:64px;
+    position:absolute;
+    bottom:10px;
+    left:2px;
+}
+#AoPackageArea .cont_area li.limit_time h4 {
+    color:#F00;
+}
+#AoPackageArea .cont_area li h5 {
+    color:#00F;
+    text-decoration:underline;
+	white-space:nowrap;
+    position:absolute;
+    top:20px;
+    left:70px;
+}
+#AoPackageArea .cont_area li h5.view {
+	font-size:14px;
+	top:auto;
+	bottom:3px;
+	*line-height: 1.2;/*修复IE7下'查看'显示不全问题*/
+}
+#AoPackageArea .cont_area li p {
+	line-height:16px;
+	word-wrap:break-word;
+    word-break: break-all;
+    position:absolute;
+    top:37px;
+    left:70px;
+}
+#AoPackageArea .cont_area li p strong {
+	color:#00F;
+	font-weight:normal;
+	white-space: nowrap;
+}
+#AoPackageArea .cont_area li p .good {
+    background:url("../../asset/img/bg_icon.png") no-repeat -144px -879px;
+	padding:1px 0 0 15px;
+	position:relative;
+	top:-2px;
+	*zoom:1;
+}
+#AoPackageArea .cont_area li.limit_time h6 {
+    background:url("../../asset/img/bg_icon.png") no-repeat 0 -1210px;
+	height:17px;
+	width:47px;
+    position:absolute;
+	right:0;
+    bottom:0;
+}
+/* 由于有升级图标会把限时标识挡住，固将其移到右上角，后续下掉升级图标，这个样式可以删掉*/
+#PkgEmergency h6 {
+    top: 0;
+}
+#AoPackageArea .cont_area li h5.aopkg-holiday-recmwordicon{
+    background: url(../../asset/img/holiday.png) no-repeat;
+    width: 124px;
+    height: 35px;
+    display: block;
+    color: #f00;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 15px 0 0 5px;
+    bottom: -10px;
+}
+/* 包概况页区域省略的摘要信息样式定义 */
+#AoPackageArea .more_pkg_abs {
+    font-weight: bold;
+}
+
+
+#Rank {
+	border-bottom:0;
+}
+#materialArea .title_area {
+	background-position:0 3px;
+	border-bottom:1px solid #D1D1D1;
+	height:39px;
+	position:relative;
+}
+#materialArea .ui_tab {
+	position:absolute;
+	top:14px;
+	left:10px;
+}
+#materialArea .title_area .select_menu {
+	position:absolute;
+	top:9px;
+	right:10px;
+}
+#Rank .operate_area {
+	padding:4px 15px;
+	position:relative;
+}
+#Rank .operate_area h4 {
+	line-height:22px;
+	position:absolute;
+	top:3px;
+	left:260px;
+}
+#Rank .ui_table {
+	border:0;
+}
+#Rank .heightLimit {
+	height:290px;
+	position:relative;
+}
+.rank_bubble_content li {
+	height:18px;
+	line-height:18px;
+	margin:5px 0;
+	overflow:hidden;
+}
+.rank_bubble_content li span {
+	color:#5B5902;
+	font-weight:bold;
+}
+.skin_remindlist{
+	height:90px;
+	line-height:20px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	padding:8px 15px;
+	white-space:nowrap;
+}
+
+.skin_remindlist .noReminder{
+	color:blue;
+	cursor:pointer;
+	margin-top:28px;
+	text-align:center;
+}
+#Folders .operate_area{
+	position:relative;
+	height:30px;
+}
+#Folders .to_fold_list{
+	height:30px;
+	line-height:30px;
+	position:absolute;
+	top:0;
+	right:15px;
+	cursor:pointer;
+	color:blue;
+}
+.fold_scroll .ui_table{
+	height:290px;
+}
+.add_index_folder{
+	height:200px;
+	line-height:200px;
+	text-align:center;
+}
+.add_index_folder #addFolder{
+	color:blue;
+	cursor:pointer;
+}
+#materialArea .ui_table,#materialArea .ui_table_body{
+	border-width:0;
+}
+
+.fold_page .ui_page{
+	text-align:center;
+	padding:5px 0;
+	border-top:1px solid #CCCCCC;
+}
+
+.treeview_folder{
+	display:inline-block;
+	background:url("../../asset/img/bg_icon_left.png") no-repeat scroll 0 -615px transparent;
+	width:16px;
+    height:14px;
+    margin-right:2px;
+}
+
+.skin_folderTable_body{
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.fold_scroll .skin_folderTable_body{
+	width:100%;
+	height:260px;
+}
+
+.browser_tip, .flash_tip{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	font-size:13px;
+	background:#FFF url("../../asset/img/bg_repeat_x.png") repeat-x 0 -120px;
+	z-index:2000;
+	padding-left:5px;
+	white-space:nowrap;
+}
+
+.browser_icon{
+	display:inline-block;
+	padding-left:16px;
+}
+.browser_ie{
+	background:url("../../asset/img/bg_icon_left.png") no-repeat 0px -707px;
+}
+
+.browser_ff{
+	background:url("../../asset/img/bg_icon_left.png") no-repeat 0px -737px;
+}
+
+.browser_chrome{
+	background:url("../../asset/img/bg_icon_left.png") no-repeat 0px -767px;
+}
+
+.cont_use{
+	color:#0000FF;
+	cursor:pointer;
+	margin-top:30px;
+}
+#ctrldialogaddIndexFolderDialog{
+	height:563px;
+}
+
+/** 快速新建引导页面 **/
+.overview_guide_wrap {
+	/*background:-moz-linear-gradient(top,#EBEBEB,#FFF 10%);*/
+	font-family:"宋体";
+	height:400px;
+	margin:0 10px;
+	/*padding:0 0 0 33%;*/
+}
+.overview_guide {
+	margin:0 auto;
+    padding:10px 20px;
+	width:980px;
+    position:relative;
+}
+.overview_guide h2 {
+	font-size:14px;
+	font-weight:bold;
+	position:absolute;
+	top:20px;
+	left:178px;
+}
+.overview_guide ol {
+	width:330px;
+    position:absolute;
+    top:70px;
+    left:178px;
+}
+.overview_guide ol.ol2 {
+	left:576px;
+}
+.overview_guide li {
+	height:62px;
+    padding:0 0 40px 70px;
+	position:relative;
+}
+.overview_guide li span {
+    background:url("../../asset/img/bg_icon.png") no-repeat 0 -1410px;
+	height:62px;
+	width:62px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.overview_guide li.step2 span {
+    background-position:-62px -1410px;
+}
+.overview_guide li.step3 span {
+    background-position:-124px -1410px;
+}
+.overview_guide li.step4 span {
+    background-position:-186px -1410px;
+}
+.overview_guide li h3 {
+	font-weight:bold;
+    line-height:22px;
+}
+.overview_guide li p {
+	color:#666;
+    line-height:16px;
+}
+.overview_guide .btn_area {
+	line-height:22px;
+	margin:0 0 0 -150px;
+	width:300px;
+	position:absolute;
+	top:300px;
+	left:50%;
+}
+/* 查看数据与设置 */
+.look-data-settings-container {
+    zoom: 1;
+}
+
+.look-data-settings-container:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.look-data-settings {
+    display: inline-block;
+    float: right;
+}
+.overview-lxb-bubble:hover span{
+    /*color: #009900 !important;*/
+    text-decoration: underline;
+}
+/*加v惩罚，以后要删掉，by wsy*/
+.vpunish-importent{
+    background-color: #FD514F;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    padding: 2px 5px;
+}

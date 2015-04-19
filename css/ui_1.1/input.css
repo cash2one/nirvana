@@ -1,0 +1,11 @@
+.fc-ui-input {
+    border: 1px solid #A8ADB6;
+    padding: 4px;
+    line-height: 1 !important;
+}
+.fc-ui-input:hover {
+    border-color: #6E8AB8;
+}
+.input-placeholder {
+    color: #AAAAAA !important;
+}

@@ -1,0 +1,36 @@
+<!-- target:aoPkgDetailView -->
+<div class="aopkg_widget_cont {containerStyle}" id="WidgetCont">
+    <div class="aopkg_widget_title">
+        <h3>
+            <span class="return">{pkgName}</span>
+            <em>&gt;</em>
+            {title}
+        </h3>
+        <h4 class="return">返回上一级</h4>
+    </div>
+    <div class="aopkg_widget_tip {tipStyle}">{tip}</div>
+    <div class="aopkg-detail-content {contentStyle}">
+    </div>
+    <div class="aopkg_widget_btn">
+        <div ui="id:WidgetApply;type:Button;">{applyBtnLabel}</div>
+        <h4 class="return">返回上一级</h4>
+        <p class="warn-info inline_block"></p>
+    </div>
+</div>
+
+<!-- target:aoPkgDetailBatchApplyMsg -->
+您将对{num}个{name}进行修改，确定吗？
+
+<!-- target:aoPkgAddwordDetailToolbar -->
+<div class="aopkg-detail-toolbar">
+    <div ui="id:recmbidBatchMod;type:Button;">修改出价</div>
+    <div ui="id:recmwmatchBatchMod;type:Button;">修改匹配</div>
+    <div ui="id:recmplanunitBatchMod;type:Button;">修改目标计划和单元</div>
+</div>
+
+<!-- target:aoPkgDetailTab -->
+<div class="aopkg_widget_tab">
+    <div ui="id:WidgetTab;type:Tab;"></div>
+</div>
+
+

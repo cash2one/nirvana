@@ -1,0 +1,26 @@
+/*nirvana 表单相关样式*/
+
+.form_key{
+    line-height:18px;
+    margin:3px 0;
+}
+.form_value {
+    margin-bottom:10px;
+    line-height:22px;
+}
+
+.form_submit .ui_button{/*给表单提交的两个button添加间隔*/
+    margin-right:5px;
+}
+
+.form_text{
+    float:left;
+}
+/*表单浮出层*/
+.form_layer{
+    padding:8px; 
+    border:1px solid gray;
+    border-top:2px solid gray;
+    z-index:1;
+    background:#FFF;
+}

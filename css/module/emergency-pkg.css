@@ -1,0 +1,109 @@
+/**
+ * 突降急救包升级的样式定义
+ */
+/* flash图表区样式定义 */
+#EmergencyAoPkgDataAreaContainer {
+    border-bottom: none;
+    min-height: 215px;
+}
+#EmergencyAoPkgDataAreaDesc {
+    padding-bottom: 0;
+    position: relative;
+    z-index: 10;
+}
+#EmergencyAoPkgDataAreaMain {
+    z-index: 1;
+}
+.emergency_pkg_flash_descr {
+    height: 20px;
+    padding: 5px 0 0 45px;
+}
+.emergency_pkg_flash_descr .fc-ui-bubble {
+    padding-right: 5px;
+    margin-left: -5px;
+    *height: 18px;
+}
+.emerency_pkg_clk_down {
+    color: #FF0000;
+    font-weight: bold;
+}
+.emerency_pkg_change_arrow {
+    background: url(../../asset/img/bg_icon_left.png) 0 -1840px no-repeat;
+    width: 16px;
+    height: 12px;
+    *height: 15px;
+    margin: 0 3px;
+}
+.emerency_pkg_value_em {
+    color: #03C;
+}
+/* 优化建议区域样式定义 */
+#EmergencyAoPkgManagerContainer .aopkg_manager_bg{
+    background: none;
+}
+#EmergencyAoPkgManagerMain .aopkg_listgroup {
+    padding-left: 35px;
+    border-bottom: none;
+}
+/* 优化建议区Tab Head loading 样式*/
+.emergency_pkg_loading {
+    position: absolute;
+    right: 25px;
+    top: 8px;
+}
+.skin_emergency_pkg_tab {
+    border-bottom: 1px solid #CCCCCC;
+    padding-left: 35px;
+}
+.skin_emergency_pkg_tab ul {
+    height: 30px;
+}
+.skin_emergency_pkg_tab li {
+    height: 30px;
+    line-height: 30px;
+}
+.skin_emergency_pkg_tab li.active {
+    height: 32px;
+    line-height: 32px;
+}
+.emergency_pkg_group_title {
+    height: 24px;
+    line-height: 24px;
+    padding-left: 25px !important;
+    background: url(../../asset/img/bg_icon_left.png) 0 -1854px no-repeat;
+    margin: 10px 0 0 35px !important;
+}
+.emergency_pkg_history_group_title {
+    background-position: 0 -1874px;
+}
+.emergency_pkg_opgroup_title_descr {
+    color: #999999;
+    font-weight: normal;
+    position: absolute;
+    left: 200px;
+    *line-height: 13px;
+}
+.emergency_pkg_opgroup_title_descr .rank_down_descr {
+    padding-right: 30px;
+}
+.emergency_pkg_opgroup_title_descr .title_value {
+    color: #FF0000;
+}
+/* 设置对话框样式定义 */
+.emergency_pkg_set_descr {
+    margin-top: 20px;
+}
+.emergency_pkg_set_form {
+    margin: 5px 0 25px 0;
+}
+.emergency_pkg_set_clk {
+    position: relative;
+    top: 8px;
+}
+/*.emergency_pkg_set_tip {
+    margin-top: 4px;
+}*/
+/* 时段详细样式定义 */
+.decrease_pkg_schedule_tip {
+    height: 36px;
+}

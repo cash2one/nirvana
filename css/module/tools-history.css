@@ -1,0 +1,102 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    tools-history.css
+ * desc:    历史操作查询样式
+ * author:  linzhifeng
+ * date:    2011/01/25
+ */
+
+.history_div_option{
+	display:block;
+	background:#E1E7F8;
+	padding:10px 10px 30px;
+	position:relative;
+	z-index:1;
+}
+.history_selected{
+	position:relative;
+	width:270px;
+	background:#fff;
+}
+.history_optionmenu{
+	position:absolute;
+	left:320px;
+	top:0;
+}
+.history_material{
+	position:absolute;
+	left:280px;
+	top:0;
+	background:#fff;
+	z-index:1;
+}
+.history_div_option #ctrlselectedlistselectedList{
+	height:163px;
+}
+.history_div_option #ctrllistselectedList{
+	height:135px;
+}
+.history_div_table{
+	display:block;
+	clear:both;
+	margin:10px;
+	-moz-border-radius: 5px 5px 0 0;
+    border: 1px solid #D1D1D1;
+}
+
+.history_div_table .title_area{
+	background:#eee;
+	padding:0 10px;
+	border-bottom: 1px solid #D1D1D1;
+}
+.history_div_table .ui_table{
+	border:0 none;
+}
+.history_div_table .manage_page{
+	padding: 10px;
+}
+table.user_define_hslist td{
+	width: 113px;
+	padding: 5px 3px 10px;
+	vertical-align:top;
+}
+td.user_define_hstype{
+	padding: 5px 10px 10px 5px;
+	vertical-align:top;
+}
+.table_display_none{
+	position:absolute;
+	z-index:-1;
+}
+.history_download_p{
+	text-align:right;
+	padding:10px 15px 0 0;
+}
+.history_opticon_mod{
+	font-weight:bold;
+	color:#0080ff;
+}
+.history_opticon_add{
+	font-weight:bold;
+	color:green;
+}
+.history_opticon_del{
+	font-weight:bold;
+	color:#ff8080;
+}
+.history_level_icon{
+	background:url("../../asset/img/history_icon.jpg") no-repeat;
+	width:14px;
+	overflow:hidden;
+	text-indent:-9999px;
+	display:block;
+	margin:0 5px;
+	padding:0;
+}
+.history_level_icon.idea{background-position:-14px center;}
+.history_level_icon.unit{background-position:-28px center;}
+.history_level_icon.plan{background-position:-42px center;}
+.history_level_icon.keyword{background-position:-56px center;}
+.history_level_icon.creative{background-position:-70px center;}

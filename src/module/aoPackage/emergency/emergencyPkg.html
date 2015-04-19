@@ -1,0 +1,168 @@
+<!--target:emergencyPkgFlashDescr-->
+<div class="emergency_pkg_flash_descr">
+    {endDate}（{endWeek}）比{beginDate}（{beginWeek}）
+    <span _ui="id:emergencyPkgDescrBubble;type:Bubble;source:emergencyPkg;" title="突降比较日期"></span>
+    点击量突降
+    <span class="emerency_pkg_clk_down">{changeValue}%</span>（{beginValue}<span class="emerency_pkg_change_arrow inline_block"></span>{endValue}）
+    <span class="clickable emergency_pkg_setting">设置</span>
+</div>
+<div class="emergency_pkg_flash_descr">
+    其中，突降关键词数：<em class="emerency_pkg_value_em">{wordNum}</em>个；
+    突降单元数：<em class="emerency_pkg_value_em">{unitNum}</em>个；
+    突降计划数：<em class="emerency_pkg_value_em">{planNum}</em>个。
+</div>
+
+<!-- target:emergencyPkgSetting -->
+<p class="emergency_pkg_set_descr">当下述指标发生异动时，系统会认为推广效果发生了突降：</p>
+<div class="emergency_pkg_set_form">
+    <span>点击量下降超过</span>
+    <span class="emergency_pkg_set_clk inline_block">
+        <input type="text" ui="type:TextInput;id:decrClkInput;" />
+    </span>
+    <span>%时</span>
+</div>
+
+<!-- target: emergencyPkgOptGroupAbstract -->
+<h3 id="{groupTitleId}" class="emergency_pkg_group_title{titleClass} hide">
+    {groupName}
+    <p class="emergency_pkg_opgroup_title_descr inline_block hide"></p>
+</h3>
+<ul id="{optGroupId}" class="aopkg_listgroup{groupClass} hide"></ul>
+
+<!-- target:emergencyPkgRankGroupTitleDescr -->
+<span class="rank_down_descr{rankClass}">排名平均<span class="title_value">下降：{rankdown}名</span></span>
+<span class="left_down_descr{leftClass}">左侧展现概率平均<span class="title_value">下降：{leftrankdown}%</span></span>
+
+<!-- target:emergencyPkgPresentGroupTitleDescr -->
+<span class="title_value">{invalidwinfo}</span>个关键词突变为不生效状态
+
+<!-- target:emergencyPkgOnlineGroupTitleDescr -->
+在线时长<span class="title_value">下降：{timeoff}小时</span>
+
+<!-- target: aoPkgAbsItem701 -->
+账户<span class="aopkg_em">余额为0</span>，导致无法展现，请及时续费
+<a class="aopkg_link" href="{chargeLink}" target="_blank">立即续费</a>
+
+<!-- target: aoPkgAbsItem702 -->
+因您下调账户预算，账户于{offtime}下线导致展现机会减少，建议提高预算
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem703 -->
+账户因预算限制，于{offtime}下线导致展现机会减少，建议提高预算
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem704 -->
+<span class="aopkg_em">{count}</span>个计划被删除，导致计划下<span class="aopkg_em">{totalprocount}</span>个关键词被删除，建议新增优质关键词
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem705 -->
+<span class="aopkg_em">{count}</span>个计划被暂停，导致计划下<span class="aopkg_em">{totalprocount}</span>个关键词被暂停，建议启用
+<!-- import:aoPkgAbsItemEnableAllBtn -->
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem706 -->
+因您下调计划预算，计划{planinfo}于{offtime}下线导致展现机会减少，建议提高预算
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem707 -->
+计划{planinfo}因预算限制，于{offtime}下线导致展现机会减少，建议提高预算
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem708 -->
+计划{planinfo}的时段设置未覆盖网民的搜索高峰时段，建议启用优质时段
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem709 -->
+<span class="aopkg_em">{count}</span>个单元被删除，导致单元下<span class="aopkg_em">{totalprocount}</span>个关键词被删除，建议新增优质关键词
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem710 -->
+<span class="aopkg_em">{count}</span>个单元被暂停，导致单元下<span class="aopkg_em">{totalprocount}</span>个关键词被暂停，建议启用
+<!-- import:aoPkgAbsItemEnableAllBtn -->
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem711 -->
+<span class="aopkg_em">{count}</span>个关键词被删除，建议新增优质关键词
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem712 -->
+<span class="aopkg_em">{count}</span>个关键词被暂停，建议启用
+<!-- import:aoPkgAbsItemEnableAllBtn -->
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem713 -->
+<span class="aopkg_em">{count}</span>个关键词突变为搜索无效，丧失展现资格，建议优化出价
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem714 -->
+<span class="aopkg_em">{count}</span>个关键词突变为不宜推广，丧失展现资格，建议拓展优质关键词
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem715 -->
+<span class="aopkg_em">{count}</span>个关键词网民搜索意愿过低，导致展现不足，建议添加网民爱搜词
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem716 -->
+<span class="aopkg_em">{count}</span>个关键词{date}网民搜索量显著下降，导致展现不足，建议添加网民爱搜词
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem717 -->
+<span class="aopkg_em">{count}</span>个关键词匹配模式缩小，建议优化匹配
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem718 -->
+<span class="aopkg_em">{count}</span>个有左侧展现资格的关键词{date}排名显著下降，建议优化出价
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target:aoPkgDetailTip705 -->
+以下推广计划被暂停，导致点击量突降，建议您启用部分优质计划以提高点击
+
+<!-- target:aoPkgDetailTip710 -->
+以下推广单元被暂停，导致点击量突降，建议您启用部分优质单元以提高点击
+
+<!-- target:aoPkgDetailTip712 -->
+以下关键词被暂停，导致点击量突降，建议您启用部分优质关键词，提高点击
+
+<!-- target:aoPkgDetailTip704 -->
+因删除操作导致点击量突降，建议添加新的业务相关词以恢复点击
+
+<!-- target:aoPkgDetailTip709 -->
+<!-- import:aoPkgDetailTip704 -->
+
+<!-- target:aoPkgDetailTip711 -->
+<!-- import:aoPkgDetailTip704 -->
+
+<!-- target:aoPkgDetailTip714 -->
+以下关键词突变为不宜推广，丧失展现资格，建议您寻找更多类似的优质关键词，提升点击
+
+<!-- target:aoPkgDetailTip715 -->
+以下关键词网民搜索意愿过低，导致展现不足，建议您寻找更多类似的优质关键词，提升点击
+
+<!-- target:aoPkgDetailTip716 -->
+以下关键词网民搜索量显著下降，导致展现不足，建议您寻找更多类似的优质关键词，提升点击
+
+<!-- target:aoPkgDetailTip713 -->
+以下关键词由于出价过低突变为搜索无效，丧失展现资格，建议您优化出价，提升点击
+
+<!-- target:aoPkgDetailTip717 -->
+以下关键词修改匹配模式后导致点击量突降，建议你采用广泛匹配+否定关键词的黄金组合优化账户投放效果
+
+<!-- target:aoPkgDetailTip718 -->
+以下关键词平均排名或展现机会突降，导致点击量突降，建议您优化出价以保证关键词推左且恢复排名
+
+<!-- target: emergencyPkyPopup -->
+<div class="popup_blockinfo">
+    <ul>
+        <li>
+            帐户点击{endDate}比{beginDate}突降{decrValue}%
+            <br />
+            <span class="popup_detail">
+                <span class="bold">点击：{beginValue}
+                    <span class="specFamily">&#8594;</span>
+                    {endValue}
+                </span>
+            </span>
+            <a action_type="aopkg_decr" href="javascript:void(0);">立即查看</a>
+        </li>
+    </ul>
+</div>

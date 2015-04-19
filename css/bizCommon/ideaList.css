@@ -1,0 +1,35 @@
+/**
+ * 请注意，bizView的还没有转全使用，但是css先单列出来
+ */
+#bizview-idealist-container {
+    margin: 0;
+    padding: 0;
+    height: 464px;
+}
+
+.bizview-idealist-header {
+    background: #ECECEC;
+    border: 1px solid #C9C9C9;
+    height: 30px;
+    width: 964px;
+}
+	.bizview-idealist-header .ui_button {
+		margin-left: 8px;
+		top: 3px;
+	}
+
+.bizview-idealist-body {
+    height: 410px;
+}
+    .bizview-idealist-body .ui_table_tdcell{
+        position: relative;
+    }
+.bizview-idealist-pager {
+	text-align: right;
+}
+    .bizview-idealist-body .ui_page {
+        /*text-align: right;*/
+        margin-top: 8px;
+    }
+.bizview-idealist-footer {
+}

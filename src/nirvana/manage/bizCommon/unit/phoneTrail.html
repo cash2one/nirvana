@@ -1,0 +1,24 @@
+<!-- target:runPhoneTrail -->
+<div class="manage_dialog">
+	<p>您选择了以下<span class="red" id="unitNum"></span>个单元,其中<span class="red" id="phoneTrailedNum"></span>个已启用电话追踪</p>
+	<div ui="id:phoneTrailList;"></div>
+	<p>新选中的<span class="red" id="phoneTrailNum"></span>个单元将启用电话追踪</p>
+	<p><span class="pt_grey">启用跟踪前建议先安装代码，否则不能成功统计电话转化次数，代码安装可前往</span>
+		<span class="trans_trail_tool"><span class="trans_icon"></span>转化跟踪</span><span class="pt_grey">工具。</span></p>
+	<div class="ui_dialog_foot">
+		<div ui="id:setDialogOk;type:Button;">确定</div>
+		<div ui="id:setDialogCancel;type:Button;">取消</div>
+		<span class="error_area" id="error_area"></span>
+	</div>
+</div>
+
+<!-- target:cancelPhoneTrail -->
+<div class="manage_dialog">
+	<p>您确定要取消电话追踪该单元吗？</p>
+	<p>取消跟踪后原来绑定的400分机号将被分配到新的单元，但原来的电话转化次数仍然保留。</p>
+	<div class="ui_dialog_foot">
+		<div ui="id:setDialogOk;type:Button;">确定</div>
+		<div ui="id:setDialogCancel;type:Button;">取消</div>
+		<span class="error_area" id="error_area"></span>
+	</div>
+</div>

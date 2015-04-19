@@ -1,0 +1,335 @@
+
+/**
+ * 添加创意向导
+ * @author zhujialu
+ */
+#add-idea-guide {
+    background: url('../../asset/img/bg_add_idea.png') no-repeat;
+    height: 543px;
+}
+
+#add-idea-guide .search-input {
+    position: absolute;
+    top: 72px;
+    left: 30px;
+    font-size: 14px;
+}
+#add-idea-guide .fc-ui-bubble {
+    margin-left: 5px;
+}
+
+#QuickSetupMain,
+#add-new-idea,
+#idea-edit-simple {
+    position: relative;
+}
+
+#add-idea-guide em.word {
+    max-width: 109px;
+    line-height: 13px;
+    vertical-align: middle;
+    display: inline-block;
+    zoom: 1;
+}
+
+/**
+ * 限制字数
+ */
+#add-new-idea .short-string {
+    white-space :nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: breakall;
+}
+
+/**
+ * 添加新创意，精简版
+ */
+#add-new-idea {
+    width: 378px;
+    height: 401px;
+
+    position: absolute;
+    right: 14px;
+    top: 110px;
+
+    padding: 5px;
+    background-color: #FFF;
+}
+#add-new-idea .header {
+    padding: 10px 0;
+    color: #999;
+}
+#add-new-idea .selector {
+    margin: 10px 0 15px 0;
+}
+#add-new-idea .selector .legend {
+    float: right;
+    height: 22px;
+    line-height: 22px;
+}
+#add-new-idea .guide-word em {
+    color: #03C;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+#add-new-idea .guide-word .try-other {
+    float: right;
+    cursor: pointer;
+    height: 13px;
+    line-height: 13px;
+    *line-height: 14px;
+}
+#add-new-idea .guide-word .try-other.disable {
+    visibility: hidden;
+}
+
+.new-idea-undo,
+.new-idea-done {
+    background: url("../../asset/img/bg_icon_left.png") no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    vertical-align: -4px;
+    margin: 0 2px;
+    *vertical-align: 0;
+}
+.new-idea-undo {
+    background-position: 0 -1241px;
+}
+.new-idea-done {
+    background-position: 0 -1217px;
+}
+#add-new-idea .operate {
+    border: 1px solid transparent;
+    height: 22px;
+    margin-bottom: 60px;
+    zoom: 1;
+    *margin-bottom: 50px;
+}
+#add-new-idea .operate .error {
+    color: red;
+    width: 230px;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 5px;
+
+    float: left;
+}
+#add-new-idea .operate > a {
+    position: relative;
+    top: 0;
+    right: 12px;
+}
+#add-new-idea .operate > a[title="至少保存一条创意哦"] {
+    color: #999;
+    cursor: default;
+    text-decoration: none;  
+}
+#add-new-idea .footer {
+    color: #CCC;
+    padding: 10px 0;
+    line-height: 20px;
+    text-align: right;
+}
+#add-new-idea .footer a {
+    cursor: pointer;
+}
+#add-new-idea .footer label {
+    display: block;
+}
+
+/**
+ * 填写创意的输入框部分
+ */
+#idea-edit-simple {
+    background: #E4EAF9;
+    padding: 20px 15px 5px 5px;
+    position: relative;
+}
+#idea-edit-simple .tip {
+    color: #999;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+#idea-edit-simple li > label {
+    color: #666;
+}
+#idea-edit-simple input[type="text"] {
+    width: 334px;
+    margin: 2px 0;
+}
+#idea-edit-simple input[type="checkbox"] {
+    height: 13px;
+    float: left;
+    margin-right: 5px;
+}
+#idea-edit-simple .options {
+    color: #999;
+    margin: 10px 0 5px;
+}
+
+/**
+ * 创意预览部分
+ */
+.new-idea-preview {
+    background-color: #FFF;
+    width: 546px;
+    height: 78px;
+    padding: 10px;
+
+    position: absolute;
+    top: 110px;
+    left: 12px;
+}
+
+#add-idea-guide .idea {
+    height: 78px;
+    margin: 0;
+    padding: 0;
+}
+
+/** 纠正外部影响的样式 **/
+#add-idea-guide .idea p {
+    margin: 0;
+    padding: 0;
+}
+/**
+ * 关键词高亮
+ */
+#add-idea-guide .idea em {
+    color: red;
+    text-decoration: none;
+}
+
+/**
+ * 通配符
+ */
+#add-idea-guide .idea u {
+    background: #FFFF00;
+    text-decoration: none;
+}
+#add-idea-guide .idea .title {
+    color: blue;
+    font-size: 16px;
+    text-decoration: underline;
+    height: 19px;
+    line-height: 19px;
+    *line-height: 20px;
+}
+#add-idea-guide .idea .title em {
+    text-decoration: underline;
+}
+#add-idea-guide .idea .title + p {
+    margin: 5px 0 3px;
+    line-height: 18px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#add-idea-guide .idea .url {
+    color: #008000;
+    margin-right: 5px;
+}
+#add-idea-guide .idea .url + a {
+    color: #999;
+    text-decoration: underline;
+}
+
+/**
+ * 参考创意
+ */
+#recommend-idea {
+    border: 3px dashed #FFF;
+    background-color: #E6E6E6;
+    
+    position: absolute;
+    top: 215px;
+    left: 12px;
+
+    width: 544px;
+    height: 270px;
+    padding: 15px 5px;
+}
+#recommend-idea .idea {
+    margin-top: 20px;
+}
+#recommend-idea .idea:first-child {
+    margin-top: 0;
+}
+#recommend-idea > .title {
+    background-color: #CCC;
+    color: #FFF;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+
+    border-bottom-left-radius: 15px;
+}
+#recommend-idea > .title > h1 {
+    font-weight: bold;
+    display: inline;
+}
+/**
+ * 同类关键词
+ */
+#ctrldialogsimilarWords .ui_dialog_body {
+    max-height: 300px;
+    overflow: auto;
+}
+#similarWords > p {
+    color: #999;
+    margin-bottom: 8px;
+}
+#similarWords .col1,
+#similarWords .col2 {
+    width: 110px;
+}
+#similarWords .col3 {
+    width: 330px;
+    color: #666;
+}
+
+#similarWords th,
+#similarWords td {
+    border: 1px solid #999;
+    text-align: right;
+}
+#similarWords th {
+    color: #666;
+    background: #F2F2F2;
+    padding: 6px 8px;
+}
+#similarWords td {
+    padding: 8px;
+    line-height: 16px;
+}
+#similarWords .words {
+    color: #666;
+}
+#similarWords .plan,
+#similarWords .unit {
+    display: inline-block;
+    white-space :nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: breakall;
+}
+#similarWords .plan,
+#similarWords .unit {
+    width: 115px;
+}
+
+#similarWords .word {
+    cursor: pointer;
+    display: inline-block;
+    max-width: 115px;
+}
+

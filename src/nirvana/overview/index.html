@@ -1,0 +1,352 @@
+<!-- target:overviewIndex -->
+<div class="content" id="OverviewWrap">
+    <div id="new_fun_tip"></div>
+
+    <div class="side">
+        <div class="box" id="accountInfo">
+
+            <div class="box_title">
+                <span id="BreadNavigation">
+                    <span class="box_icon"></span>
+                    <h3></h3>
+                </span>
+                <span id="addVIcon" style="display:none;">V</span>
+            </div>
+
+            <div class="box_content">
+                <div class="module" id="financeInfo">
+                    <div class="module_content">
+                        <div class="content_close">
+                            推广余额：<strong class="value"></strong> 元
+                            <label>余额预计可消费：<strong class="value"></strong> 天</label>
+                            <div ui="id:payment;type:Button" act="payment">充值</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="module module_close" id="accountScore" style="display:none;"></div>
+                <div class="module module_close" id="accountSetting" style="display:none;">
+                    <div class="module_title">
+                        <h4>账户设置</h4>
+                        <span class="btn btn_open" act="open" data-log='{"target":"index_sidebar_hideopen","type":1, "action_type":1}'>▼</span>
+                        <span class="btn btn_close" act="close" data-log='{"target":"index_sidebar_hideopen","type":1, "action_type":0}'>▲</span>
+                    </div>
+                    <div class="module_content">
+                        <div class="content_close">
+                            今日已消费 <strong class="value"></strong> 元
+                        </div>
+                        <div class="content_open">
+                            <ul>
+                                <li>
+                                    <label>今日已消费：</label>
+                                    <span><strong class="value"></strong> <label>元</label></span>
+                                </li>
+                                <li>
+                                    <label></label>
+                                    <span>
+                                        <strong class="value"></strong> 
+                                        <label></label> 
+                                        <a act="modifyBudget" data-log='{"target":"index_accountSetting_modifyBudget"}'>修改</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <label>推广地域：</label>
+                                    <span>
+                                        <strong class="value"></strong> 
+                                        <a act="modifyArea" data-log='{"target":"index_accountSetting_modifyArea"}'>修改</a>
+                                    </span>
+                                </li>
+                            </ul>
+                            <a act="otherSetting" data-log='{"target":"index_accountSetting_otherSetting"}'>其他设置</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="module module_close" id="coupon" style="display:none;">
+                    <div class="module_title">
+                        <h4>优惠券</h4>
+                        <span class="btn btn_open" act="open" data-log='{"target":"index_sidebar_hideopen","type":2, "action_type":1}'>▼</span>
+                        <span class="btn btn_close" act="close" data-log='{"target":"index_sidebar_hideopen","type":2, "action_type":0}'>▲</span>
+                    </div>
+                    <div class="module_content">
+                        <div class="content_close">
+                            优惠信息 <strong class="value"></strong> 条
+                        </div>
+                        <div class="content_open">
+                            <ul>
+                                <li>
+                                    <label>优惠活动：</label>
+                                    <span class="value" data-log='{"target":"index_coupon_openlink","type":0}'><ul></ul></span>
+                                </li>
+                                <li>
+                                    <label>优惠券：</label>
+                                    <span class="value" data-log='{"target":"index_coupon_openlink","type":1}'><ul></ul></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module module_open" id="offline" style="display:none;">
+                    <div class="module_title">
+                        <h4>百度离线宝</h4>
+                        <!--
+                        <span class="btn btn_open" act="open" data-log='{"target":"index_sidebar_hideopen","type":4, "action_type":1}'>▼</span>
+                        <span class="btn btn_close" act="close" data-log='{"target":"index_sidebar_hideopen","type":4, "action_type":0}'>▲</span>
+                        -->
+                    </div>
+                    <div class="module_content">
+                        <!--
+                        <div class="content_close">
+                            漏接电话 <strong>6</strong> 个
+                        </div>
+                        -->
+                        <div class="content_open">
+                            <ul>
+                                <li>
+                                    <label>百度离线宝：</label>
+                                    <span><span class="icon" refer="overview-lxb"></span><strong class="value"></strong></span>
+                                </li>
+                                <li class="look-data-settings-container">
+                                    
+                                    <label style="display:none;">今日已消费：</label>
+                                    <span style="display:none;"><strong class="value"></strong> <label>元</label></span>
+                                    
+                                    <a id="look-data-settings" target="_blank" href="#" class="look-data-settings" data-log='{"target":"index_lxb_viewdata"}'>查看数据与设置</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--加v惩罚，以后要删掉，by wsy-->
+                <div class="module module_open" id="vpunish" style="display:none;">
+                    <div class="module_title">
+                        <h4>未加V成本提升
+                            <span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="未加V成本提升"></span>
+                            <span class="vpunish-importent">重要</span>
+                        </h4>
+                    </div>
+                    <div class="module_content">
+                        <div class="content_open">
+                            <ul>
+                                <li>
+                                    <label>当前成本提升比例：</label>
+                                    <span class="value"></span>
+                                </li>
+                                <li>
+                                    <label>今日成本提升金额：</label>
+                                    <span class="value"></span>
+                                </li>
+                                <li>
+                                    <label>累计成本提升金额：</label>
+                                    <span class="value"></span>
+                                </li>
+                                <li class="look-data-settings-container">
+                                    <a id="nov-push-link"  target="_blank"
+                                       href="http://defensor.baidu.com/vchk/vcenter/upgradecost"
+                                       class="look-data-settings" >成本提升详情</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module module_close" id="marketTrend" style="display:none;">
+                    <div class="module_title">
+                        <h4>我的市场风向标<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="我的市场风向标"></span></h4>
+                        <span class="btn btn_open" act="open" data-log='{"target":"index_sidebar_hideopen","type":3, "action_type":1}'>▼</span>
+                        <span class="btn btn_close" act="close" data-log='{"target":"index_sidebar_hideopen","type":3, "action_type":0}'>▲</span>
+                    </div>
+                    <div class="module_content">
+                        <div class="content_close">
+                            我的份额 
+                            <span class="up" style="display:none;">▲</span>
+                            <span class="down" style="display:none;">▼</span>
+                            <strong class="value"></strong>
+                        </div>
+                        <div class="content_open">
+                            <label>昨日左侧展现</label>
+                            <ul>
+                                <li>
+                                    <label>行业平均份额:</label>
+                                    <span class="value"></span>
+                                </li>
+                                <li>
+                                    <label>我的份额:</label>
+                                    <span class="value"></span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <label>上周</label>
+                                    <span class="value"></span>
+                                </li>
+                                <li>
+                                    <label>上周</label>
+                                    <span class="value"></span>
+                                </li>
+                            </ul>
+                            <a act="openMarketTrend" data-log='{"target":"index_sidebar_viewdetail", "type":2}'
+                                    log-switch="true">详情</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="box hide" id="Reminder">
+
+            <div class="box_title">
+                <span class="box_icon"></span>
+                <h3>消息中心</h3>
+                <div ui="id:manageReminder;type:Button">消息管理</div>
+            </div>
+
+            <div class="box_content">
+                <div id="RemindTask" class="hide">
+                    <h3><a href="#" id="RemindTaskName"></a></h3>
+                    <p id="RemindTaskDesc"></p>
+                    <h6>任务</h6>
+                </div>
+				<div id="YingCaiPlan" class="hide">
+					<div id="YCContent"></div>
+					<h6>英才计划</h6>
+				</div>
+                <div ui="type:List;id:remindList;skin:remindlist;content:*remindContent"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- import:section -->
+    
+    <div style="clear:both;"></div>
+</div>
+
+<div class="overview_guide_wrap hide" id="OverviewGuide">
+	<div class="overview_guide">
+    <h2>使用“快速新建账户”功能，仅四步就能定制好你的百度推广方案：</h2>
+    <ol class="ol1">
+        <li class="step1">
+            <h3>1）描述你的业务</h3>
+            <p>描述你的业务内容，如提供的产品和服务；确定你要进行推广的地区；规划在百度投放的规模</p>
+			<span></span>
+        </li>
+        <li class="step2">
+            <h3>2）挑选关键词</h3>
+            <p>根据你上一步提供的信息，系统自动生成关键词，由你来挑选</p>
+			<span></span>
+        </li>
+    </ol>
+    <ol class="ol2">
+        <li class="step3">
+            <h3>3）查看定制方案</h3>
+            <p>方案定制好了，你可以根据需要修改关键词出价、推广预算和时段等内容</p>
+			<span></span>
+        </li>
+        <li class="step4">
+            <h3>4）添加推广创意</h3>
+            <p>最后，你可以在这撰写你想让网民搜索时看到的推广信息</p>
+			<span></span>
+        </li>
+    </ol>
+    <div class="btn_area">
+        <div ui="id:GotoSlide;type:Button;"><strong>查看使用演示</strong></div>
+        <div ui="id:GotoEos;type:Button;"><strong>快速新建账户</strong></div>
+        <a id="GotoOverview" href="#" title="稍后再说">稍后再说</a>
+    </div>
+	</div>
+</div>
+
+
+<!-- target:section -->
+<div class="section">
+    <div class="col" id="AoPackageArea">
+        <div class="title_area">
+            <h2>智能优化<a class="help" href="http://edu.baidu.com/zhiyou.html" target="_blank" title="学习智能优化">学习智能优化</a></h2>
+        </div>
+        <div class="cont_area">
+            <ul id="AoPackageList">
+            	<li id="PkgBusiness"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col" id="OverviewArea">
+        <div class="title_area">
+            <span class="icon"></span>
+            <div ui="id:OverviewCalendar;type:MultiCalendar;" ></div>
+            <div ui="id:OverviewType;type:Select;" class="select_menu"></div>
+            走势&nbsp;&nbsp;
+            <input type="checkbox" value="0" title="显示平均值" ui="id:OverviewAverage;type:CheckBox;">				
+        </div>
+        <div class="flash_area" id = "FlashArea"></div>
+    </div>
+    <div class="col" id="materialArea">
+        <div class="title_area">
+            <div ui="id:rankTab;type:Tab;"></div>
+            <div class="select_menu" ui="id:rankTimeSelect;type:Select;"></div>
+        </div>
+        <div id="Rank">
+            <div class="operate_area">
+                <div class="select_menu" ui="id:rankSelect1;type:Select;"></div>
+                <div class="select_menu" ui="id:rankSelect2;type:Select;"></div>
+                <h4>排行榜</h4>
+            </div>
+            <div class="table_area">
+                <div ui="id:rankTable;type:Table;"></div>
+            </div>
+        </div>
+        <div id="Folders">
+            <div class="operate_area">
+                <div id="toFoldList" class="to_fold_list" data-log="{target:'toFoldList_btn'}">前往监控文件夹列表>></div>
+            </div>
+            <div class="table_area">
+                <div ui="id:foldTable;type:Table;"></div>
+            </div>
+            <div ui="id:pagination;type:Page;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- target:aoPackageItem -->
+<li class="{pkg_class}" id="Pkg{id}" pkgid="{pkgid}" title="{pkg_tip}">
+    <h3><span class="{optnum_class}">{pkg_newoptnum}</span></h3>
+    <h4>{pkg_name}</h4>
+    <h5>{pkg_desc}</h5>
+    <p>{pkg_text}</p>
+	<h5 class="view">查看&gt;&gt;</h5>
+    <h6></h6>
+    <div class="{highlight_class}"></div>
+    <span class="{decorated_class}"></span>
+</li>
+
+<!-- target: newMarketContent -->
+<p>
+    <label>行业流量</label><span id="marketTrendPVCompare"></span>
+    <a act="openMarketTrend" data-log='{"target":"index_sidebar_viewdetail", "type":2, "version":2}' log-switch="true">查看详情</a>
+</p>
+
+<label id="marketTrendBusinessName"></label>
+<ul>
+    <li>
+        <label>我的份额:</label>
+        <span class="value"></span>
+    </li>
+    <li>
+        <label>行业平均份额:</label>
+        <span class="value"></span>
+    </li>
+</ul>
+<ul>
+    <li>
+        <label>上周</label>
+        <span class="value"></span>
+    </li>
+    <li>
+        <label>上周</label>
+        <span class="value"></span>
+    </li>
+</ul>

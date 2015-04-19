@@ -1,0 +1,70 @@
+.ui_searchcombo{
+	clear:both;
+	padding:3px 0 10px;
+}
+
+.ui_searchcombo .ui_text,
+.ui_searchcombo .ui_button,
+.ui_searchcombo .ui_select,
+.ui_searchcombo .ui_checkbox,
+.ui_searchcombo .ui_checkbox_label,
+.ui_searchcombo .advance_filter_link{
+	/*float:left;*/
+	float:none;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	margin-right:10px;
+	vertical-align:middle;
+}
+.ui_searchcombo .advance_filter_link{
+	line-height:20px;
+}
+.ui_searchcombo .ui_checkbox{
+	/*height:23px;*/
+	margin:4px 4px 0 0;
+	*margin: 0 4px 0 0;
+	vertical-align:top;
+}
+
+.advance_filter_table{
+	margin-bottom:8px;
+}
+.advance_filter_title{
+	width:135px;
+	font-weight:bold;
+	padding:5px 0;
+	*line-height:22px;
+}
+.advance_filter_content {
+	padding:5px 0;
+	*line-height:22px;
+}
+.advance_filter_content input{
+	float:left;
+	cursor:pointer;
+}
+.advance_filter_content label{
+	float:left;
+	width:50px;
+	margin:0 10px 0 5px;
+	cursor:pointer;
+}
+.shortcut_system_wrap{
+	line-height:22px;
+	margin-left:10px;
+}
+.shortcut_custom_wrap{
+	line-height:22px;
+	padding-bottom:5px;
+	margin:-10px 10px 5px;
+	border-bottom:1px solid #CCC;
+}
+.shortcut_custom_wrap .shortcut_custom_link{display:block;margin-right:20px;}
+.shortcut_custom_wrap a:hover.shortcut_custom_link{background-color:#E4EAF9}
+.shortcut_custom_wrap .filterCancel{float:right; background: url("../../asset/img/bg_icon.png") no-repeat scroll -359px -941px #fff;padding: 0 15px 0 0;}
+.shortcut_custom_wrap a:hover.filterCancel{text-decoration:none;background:url('../../asset/img/bg_icon.png') -359px -911px no-repeat;}
+.custom_shortcut_name_wrap{float:left;margin:7px 10px 0 0;}
+.detail_singleFilter{border:1px solid #99CCFF;background-color:#fff;padding:3px;margin:3px 0;display:inline-block;*display:inline;zoom:1}
+#SCCustomContent {overflow:hidden;}
+#ctrldialogAddMyShortcutfoot {*padding-bottom:10px;}

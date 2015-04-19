@@ -1,0 +1,75 @@
+<!-- target:overviewReminder -->
+<div class="reminder">
+    <div ui="id:reminderRuleTab;type:Tab;className:tab_text;title:*reminderTabTitleList;container:*remindRuleTabConfig;tab:*reminderRuleTabIndex"></div>
+
+	<div id="reminderRuleList">
+		<div class="form_key">提醒规则列表：<span class="grey_txt">(<span id="reminderRuleNumber">${remindRuleNumber}</span>条)</span> <span id="ruleListErrorMsg" style="display:none;" class="error_msg">提醒规则已达上限50条</span></div>
+		<div class="form_value">
+		<div ui="id:ruleList;type:List;content:*ruleListDataHtml;skin:reminder;beforeDel:*beforeDeleteRule;ondelete:*ondeleteRule"></div>   
+		</div>
+    </div>
+    <div id="reminderRuleForm">
+    <div class="form_block">
+        <div class="form_key">选定层级：</div>
+        <div class="form_value reminder_type">
+            <input type="radio" value="2" name="targetType" title="推广账户" ui="type:Radio;group:targetType;id:remindTypeAccount;datasource:*targetType;" />
+            <input type="radio" value="3" name="targetType" title="推广计划" ui="type:Radio;group:targetType;id:remindTypePlan;datasource:*targetType;" />
+            <input type="radio" value="5" name="targetType"  title="推广单元" ui="type:Radio;group:targetType;id:remindTypeUnit;datasource:*targetType;" />       
+            <input type="radio" value="11" name="targetType" title="关键词"   ui="type:Radio;group:targetType;id:remindTypeKeyWord;datasource:*targetType;" />
+            <input type="radio" value="7" name="targetType" title="创意"    ui="type:Radio;group:targetType;id:remindTypeIdea;datasource:*targetType;" />    
+        </div>
+		<div class="form_key">选定的对象列表： <span id="selectedObjNumWrapper" class="grey_txt">(<span id="selectedObjNum">${selectedObjNum}</span>个)</span> <span id="targetValueErrorMsg" style="display:none;" class="error_msg"></span></div>
+        <div class="form_value" style="position:relative;">
+        <div style="width:272px;">
+            <div name="targetValue" ui="id:selectedList;type:SelectList;datasource:*selectedListData;skin:reminder;deleteHandler:*onSelectedDelete;width:249;"></div>
+        </div>
+        <div id="materialSelectWrapper">
+            <div ui="id:materialSelectList;type:MaterialSelect;level:*materialSelectType;form:material;width:310;height:275;onAddLeft:*addObjHandler;tableOption:*materialSelectTableOptions;ispageset:true;"></div>
+        </div>
+        </div>
+    </div>
+    <div id="reminderRuleTM" class="form_block">
+        <div class="form_key">提醒内容：</div>
+        <div class="form_value" >
+			<div id="remindTypeAccountC">
+				<input type="radio" value="0" name="remindContent" title="到达预算下线" ui="id:accountRuleContent0;group:remindContent;type:Radio;datasource:*remindContent;"><br />
+				<div id="paySum"><input  type="radio" value="1"  name="remindContent" title="当日消费到达" ui="id:accountRuleContent1;group:remindContent;type:Radio;datasource:*remindContent;"><input type="text" name="paysum" ui="id:paysumLimitation;type:TextInput;width:30;"><span>元</span></div>
+			    <div id="paysumErrorMsg" class="field_error" style="display:none;"></div>
+			</div>
+			<div id="remindTypePlanC">
+				<input type="radio" value="0" name="remindContent" title="到达预算下线" ui="id:planRuleContent0;group:remindContent;type:Radio;datasource:*remindContent;"><br />
+			</div>
+			<div id="remindTypeKeyWordC">
+				<input type="radio" value="3" name="remindContent" title="无展现资格 （因不宜推广）" ui="id:keyWordRuleContent3;group:remindContent;type:Radio;datasource:*remindContent;" ><br />
+				<input type="radio" value="2" name="remindContent" title="无展现资格 （因搜索量过低）" ui="id:keyWordRuleContent2;group:remindContent;type:Radio;datasource:*remindContent;">
+			</div>
+			<div id="remindTypeIdeaC">
+				<input type="radio" value="3" name="remindContent" title="无展现资格 （因不宜推广）" ui="id:IdeaRuleContent3;group:remindContent;type:Radio;datasource:*remindContent;"><br />
+			</div>
+        </div>
+        <div class="form_key">提醒方式：</div>
+        <div class="form_value">
+            <input type="checkbox" value="1" name="remindWay" title="消息提醒" ui="id:remindWay1;group:remindWay;type:CheckBox;datasource:*remindWay;">
+            <input type="checkbox" value="2" name="remindWay" title="短信提醒" ui="id:remindWay2;group:remindWay;type:CheckBox;datasource:*remindWay;">
+            <input type="checkbox" value="4" name="remindWay" title="邮件提醒" ui="id:remindWay4;group:remindWay;type:CheckBox;datasource:*remindWay;">
+            <div id="remindWayErrorMsg" class="field_error" style="display:none;">请选择至少一种提醒方式。</div>
+        </div>
+    </div>
+    </div>
+    <div id="ruleMaxLimitationError" class="global_error" style="display:none;">
+                         提醒规则已达上限50条， 请删除部分<a id="goToRuleManagement" href="javascript:void(0)" onclick="return false;">提醒规则</a>。 
+    </div>
+</div>
+
+
+
+<!-- target:reminderFinished -->
+<div class="reminder">
+	<div class="successInfo">{0}</div>
+	<div class="ruleInfo">
+		<p>提醒方式：{1}</p>
+		<p>提醒对象：{2}</p>
+		<p>提醒条件：{3}</p>
+	</div>
+</div>
+

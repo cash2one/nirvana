@@ -1,0 +1,92 @@
+<!-- target:autounitGroup -->
+<div id="auGroup{i}"  class="autounit_group">
+	<!-- 非空组-->
+	<div id="notEmptyGroup{i}" class="notEmptyGroup" style="display:none;">
+		<table class="au_group_headline">
+			<tr style="height:100%;width:100%;">
+				<!--<td id="autounitGroupName{i}" class="au_group_index"><div class="au_group_index_div">{groupIndex}组</div></td>-->
+				<!--<td id="autounitGroupAdvice{i}" class="au_group_save_type">建议保存到已有单元</td>-->
+			</tr>
+		</table>
+		<div  id="listWrapper{i}" class="au_list_wrapper au_list_border_normal">
+			<div  id="wordList{i}"></div>
+		</div>
+		<div id="listBack{i}" class="au_list_back au_list_border_normal">
+		    <div class="au_word_delete">删除</div>
+		</div>
+		<div  id="groupError{i}" class="au_group_error">
+
+		</div>
+
+		<table class="au_group_button_line" title="修改" onclick="KR_AUTOUNIT.showPlanUnitPanel({i})">
+			<tr class="au_group_button_line_row">
+				<td class="au_group_mod_icon">
+					<div id="auModifyGroupTypeIcon{i}" class="au_modPlanUnit">&nbsp;</div>
+				</td>
+				<td class="au_group_plan_unit_name">
+					<div  id="planName{i}" class="au_group_plan_unit_name_span" ></div>
+					<div class="au_group_arrow">&nbsp;&gt;&nbsp;</div>
+					<div id="unitName{i}" class="au_group_plan_unit_name_span"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!-- 非空组结束-->
+	<!-- 计划和单元面板-->
+
+	<div id="planUnitPanel{i}" class="au_mod_plan_unit_panel" style="display:none;">
+		<div class="au_mod_plan_unit_radios_line">
+			<span>计划单元</span>
+			<span>
+				<input type="radio" id="addToExisitRadio{i}" name="unitType{i}" value="1" checked=true  onclick="KR_AUTOUNIT.onChangeUnitType({i},1)"/>
+			</span>
+			<span class="au_select_exsits_span">选择已有</span>
+			<span>
+				<input type="radio" id="addToNewRadio{i}"  name="unitType{i}"value="0" onclick="KR_AUTOUNIT.onChangeUnitType({i},0)" />
+				新建
+			</span>
+
+		</div>
+
+		<div class="au_panel_input_line">
+			<div id="auLevelPlanWrapper{i}" style="width:100%;display:none;"></div>
+			<div id="planNameInputWrapper{i}" style="width:100%;display:none; "></div>
+		</div>
+		<div id="planErr{i}" class="au_panel_input_error" style="display:none;"></div>
+
+		<div class="au_panel_input_line">
+			<div id="auLevelUnitWrapper{i}" style="width:100%"></div>
+			<div id="unitNameInputWrapper{i}" style="width:100%;display:none; "></div>
+		</div>
+
+		<div id="unitErr{i}" class="au_panel_input_error" style="display:none;"></div>
+		<div id="defaultPriceInfo{i}" class="au_panel_default_price" style="display:none;">
+			<span style="width:100%;">单元出价默认为<span class="au_law_tip">&nbsp;1.00&nbsp;</span>元</span>
+		</div>
+		<table class="au_panel_input_line">
+			<tr>
+				<td class="au_panel_cancel_btn_area">
+					<div id="panelOkBtn{i}" ></div>
+				</td>
+				<td class="au_panel_cancel_btn_area">
+					<div id="panelCancelBtn{i}" ></div>
+				</td>
+			</tr>
+		</table>
+		<div id="defaultIdeaInfo{i}" class="au_panel_default_idea" style="display: none">* 新建单元未添加创意无法展示。</div>
+	</div>
+
+	<div id="emptyGroup{i}" class="emptyGroup" >
+		<div class="au_cross_wraper">
+			<div class="au_cross_wraper2">
+				<div class="au_cross"></div>
+			</div>
+		</div>
+		<div class="au_cross_tip_wraper">
+			<div class="au_cross_tip_wraper2">
+				<div class="au_cross_tip">拖动词到此处可新建分组</div>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,121 @@
+.ui_avatarmaterial{
+	height:450px;
+	width:375px;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	border:1px solid #CCCCCC;
+}
+
+
+.ui_avatarmaterial .ui_page{
+	position:absolute;
+	bottom:0;
+	right:0;
+	background:#F0F0F0;
+	width:100%;
+	text-align:right;
+	border-top:1px solid #CCCCCC;
+	padding:5px 15px 4px;
+	height:30px;
+}
+
+.ui_avatarmaterial .ui_materiallevel{
+	padding-top:5px;
+	padding-left:5px;
+}
+
+.ui_avatarmaterial .ui_searchcombo{
+	position:relative;
+	top:0;
+	left:0;
+	background:#F0F0F0;
+	border-top:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	width:150%;
+	padding:5px 0 6px;
+}
+
+.ui_avatarmaterial .ui_searchcombo .ui_text{
+	margin-left:5px;
+}
+
+.ui_avatarmaterial .ui_table{
+	height:380px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	border-top:1px solid #C9C9C9;
+	border-bottom:1px solid #C9C9C9;
+	border-left:0 none;
+	border-right:0 none;
+}
+
+.ui_avatarmaterial .ui_table_body{
+	border:0 none;
+}
+
+.ui_avatarmaterial_noResult{
+	font-weight:bold;
+	font-size:14px;
+	text-align:center;
+	line-height:300px;
+	width:100%;
+	display:inline-block;
+}
+
+.ui_avatarmaterial .ui_table .ui_table_head_row{
+	background:none;
+}
+
+
+.ui_avatarmaterial .ui_table .ui_table_tdcell{
+	border-width:0;
+}
+
+.ui_avatarmaterial .ui_table_tdcell a{
+	cursor:pointer;
+}
+
+.ui_avatarmaterial .ui_table_tdcell .ui_selectcombo_disabled{
+	cursor:default;
+}
+
+.ui_avatarmaterial .ui_table .ui_table_row{
+	border:0 none;
+}
+
+.ui_avatarmaterial .ui_table .ui_table_row td{
+	background:none;
+}
+
+.ui_avatarmaterial .ui_table .ui_table_head{
+	position:relative;
+	top:0;
+	display:none;
+}
+
+.ui_avatarmaterial_lastlevel{
+	background:url('../../asset/img/bg_icon_left.png') 0 -327px no-repeat;
+	padding-left:15px;
+}
+
+.search_hide .ui_text,.search_hide .ui_button{
+	visibility:hidden;
+}
+.ui_avatarmaterial .up{
+	background:url('../../asset/img/bg_icon.png') -444px -130px no-repeat;
+	height:16px;
+	overflow:hidden;
+	position:absolute;
+	right:10px;
+	text-indent:-9999px;
+	top:7px;
+	width:14px;
+	display:none;
+	cursor:pointer;
+}
+.ui_avatarmaterial .noData{
+	text-align:center;
+	line-height:150px;
+}
+

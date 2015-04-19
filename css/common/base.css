@@ -1,0 +1,547 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    base.css
+ * desc:    基础框架结构样式
+ * author:  wanghuijun
+ * date:    2010/12/20
+ */
+.noborder {
+	border:0!important;
+}
+.hide {
+	display:none!important;
+}
+.display_none { display:none }
+.hidden{visibility:hidden;}
+.visible{visibility:visible;}
+.heightHide {
+	height:0!important;
+	overflow:hidden;
+}
+.inline_block {
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+.literal-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nofloat {
+	float : none;
+}
+
+.warn {
+	color:#F00!important;
+}
+.info {
+	color:#999;
+}
+.center{
+	margin:0 auto;
+	text-align:center;
+}
+.rightalign{
+	text-align:right;
+}
+.padding_left0 {
+	padding-left:0!important;
+}
+.padding_right0 {
+	padding-right:0!important;
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+/* Hides from IE-mac \*/
+.clearfix{display:block;*zoom:1;*clear:both}
+* /* End hide from IE-mac */
+
+.breadStatusTip {
+  background:#FFF url("../../asset/img/bg_repeat_x.png") repeat-x 0 -40px;
+  border: 1px solid #767676;
+  color: #000;
+  line-height: 16px;
+  padding: 2px 5px;
+  position: absolute;
+}
+.fleft{
+	float:left;
+}
+.fright{
+	float: right;
+}
+.vm{
+	vertical-align:middle;
+}
+/* 使用宋体字体 */
+.specFamily {
+	font-family: "宋体";
+}
+
+
+/***** 状态颜色值 *****/
+.stat_ok {
+	color:#090;
+}
+.stat_pause {
+	color:#E19106;
+}
+.stat_other {
+	color:#DB1616;
+}
+.text_red{
+	color:red;
+}
+.text_blue{
+	color:blue;
+}
+.text_gray{
+	color:gray
+}
+/***** 数据读取异常 *****/
+.exception {
+	background:#FFE0E0;
+	border:1px solid #E48A8A;
+	color:#C30;
+	line-height:14px;
+	padding:6px;
+	overflow:hidden;
+}
+/*.exception_vertical {
+	margin:-13px 0 0 -90px; /* 负margin top和left分别为高度和宽度的一半，需要包含padding */
+/*	position:absolute;
+	top:50%;
+	left:50%;
+}*/
+/***** 没有数据 *****/
+.nodata {
+	background:#FFC;
+	border:1px solid #E4E4E4;
+	color:#000;
+	line-height:14px;
+	padding:6px;
+	overflow:hidden;
+}
+.nodata_vertical {
+	margin:-13px 0 0 -90px; /* 负margin top和left分别为高度和宽度的一半，需要包含padding */
+	position:absolute;
+	top:50%;
+	left:50%; 
+}
+/***** 发送请求时loading *****/
+.loading_wrap {
+	height:400px;
+	position:relative;
+}
+.loading {
+	background:#FFF6BD;
+	border:1px solid #A8ADB6;
+	color:#666;
+	font-size:14px;
+	height:16px;
+	line-height:16px;
+	overflow:hidden;
+	padding:10px;
+	white-space:nowrap;
+}
+.loading_fix {
+	position:fixed;
+	_position:absolute;
+	z-index:2401;
+}
+.loading img {
+	margin:0 5px 0 0;
+	vertical-align:middle;
+}
+.loading_done {
+	background:#CBFFCB!important; /* IE下，需要增加important，否则无法覆盖上边属性，不知为何。。 */
+}
+.loading_vertical {
+	margin:-12px 0 0 -90px; /* 负margin top和left分别为高度和宽度的一半，需要包含padding */
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+.loading_inline {
+	background:url("../../asset/img/loading.gif") no-repeat 5px 3px;
+	display:block;
+	line-height:18px;
+	text-indent:30px;
+}
+
+.loading_query {
+	height:16px;
+	width:16px;
+	position:fixed;
+	right:40px;
+	bottom:40px;
+	z-index:1000;
+}
+
+.wrap {
+	min-width:1000px; /* 为了关键词列表，改成1000了，想用涅槃就用大显示器吧 */
+	*position:relative; /* 在IE下增加此属性，避免页面的抖动问题 */
+}
+.have_toolbar{
+	padding-bottom:34px;
+}
+.head {
+	background:#264597 url("../../asset/img/bg_right.jpg") no-repeat right 0;
+	height:50px;
+	margin:0 0 11px;
+	position:relative;
+	z-index:200; /* 突破工具箱的层级 100 */
+}
+.logo {
+	position:absolute;
+	top:11px;
+	left:14px;
+}
+.logo:focus {
+	outline:0;
+}
+.nav_main {
+	position:absolute;
+	top:23px;
+	left:138px;
+}
+/*.nav_main ul {
+	width:530px;
+}*/
+.nav_main li {
+	color:#FFF;
+	float:left;
+	font-size:14px;
+	height:27px;
+	line-height:27px;
+	margin:0 5px 0 0;
+	text-align:center;
+	text-indent:20px;
+}
+.nav_main li a {
+	background:url("../../asset/img/bg_icon.png") no-repeat;
+	color:#FFF;
+	display:block;
+}
+.nav_main li a:hover {
+	text-shadow:1px 1px #000;
+	text-decoration:none;
+}
+.nav_main li.homepage a {
+	background-position:0 -30px;
+	width:84px;
+}
+.nav_main li.account a {
+	background-position:-89px -30px;
+	width:114px;
+}
+.nav_main li.finance a {
+	background-position:-208px -30px;
+	width:82px;
+}
+.nav_main li.overview a {
+	background-position:-295px -30px;
+	width:112px;
+}
+.nav_main li.manage a {
+	background-position:-412px -30px;
+	width:112px;
+}
+.nav_main li.navlab a {
+	background-position:0 -1480px;
+	width:124px;
+}
+.nav_main li a.current {
+	color:#333;
+	font-weight:bold;
+}
+.nav_main li a.current:hover {
+	text-shadow:none;
+}
+.nav_main li.homepage a.current {
+	background-position:0 0;
+}
+.nav_main li.account a.current {
+	background-position:-89px 0;
+}
+.nav_main li.finance a.current {
+	background-position:-208px 0;
+}
+.nav_main li.overview a.current {
+	background-position:-295px 0;
+}
+.nav_main li.manage a.current {
+	background-position:-412px 0;
+}
+.nav_main li.navlab a.current {
+	background-position:0 -1510px;
+}
+.nav_main #MobileIntro, .nav_main ul{
+	display:inline;
+}
+.nav_main #MobileIntro{
+	display: inline-block;
+/****由于小人跳动需要高度，这里将高度加大，并整个dom往上调10px****/
+	height: 37px; 
+	line-height: 37px;  
+	position: relative; 
+	top: -10px; 
+	margin-left:5px;
+}
+.android_jumping{
+	background:url("../../asset/img/android_jumping.gif") 0 5px no-repeat;
+	width:20px;
+	display:inline-block;
+}
+.nav_main #MobileIntro a{
+	font-size:12px;
+	color:#FFF;
+	position:relative;
+	top:5px;
+	margin-right:8px;
+}
+.nav_sub {
+	position:absolute;
+	top:6px;
+	right:10px;
+}
+.nav_sub ul {
+}
+.nav_sub li {
+	border-left:1px solid #FFF;
+	color:#FFF;
+	float:left;
+	line-height:14px;
+	padding:0 10px;
+}
+.nav_sub li a {
+	color:#FFF;
+}
+.nav_sub li.username {
+	font-weight:bold;
+}
+/* deleted by Leo Wang in proj.7480
+.nav_sub li.help #NavSubHelp {
+    background:#526ED1 url("../../asset/img/bg_icon_right.png") no-repeat 90% -123px;
+    margin:-2px -3px;
+    padding:2px 20px 2px 5px;
+    white-space:nowrap;
+}
+.nav_sub li.contact #NavSubContact {
+    background:url("../../asset/img/bg_icon_right.png") no-repeat 90% -123px;
+    margin:-2px -3px;
+    padding:2px 20px 2px 5px;
+    white-space:nowrap;
+}
+*/
+.nav_sub li .number {
+	color:#FC0;
+}
+.nav_sub li.active {
+	position:relative;
+}
+/* deleted by Leo Wang in proj.7480
+.nav_sub li.active #NavSubHelp {
+    background-color:#FFF;
+    background-position:90% -153px;
+    _background-position:96% -153px;
+    border:1px solid #C0C0C0;
+    border-bottom-color:#FFF;
+    color:#333;
+    margin:-3px -4px;
+    outline:0;
+    position:relative;
+    z-index:1;
+}
+.nav_sub li.active #NavSubContact {
+    background-color:#FFF;
+    background-position:90% -153px;
+    _background-position:96% -153px;
+    border:1px solid #C0C0C0;
+    border-bottom-color:#FFF;
+    color:#333;
+    margin:-3px -4px;
+    outline:0;
+    position:relative;
+    z-index:1;
+}
+*/
+.nav_sub li ul {
+	display:none;
+}
+.nav_sub li.active ul {
+	background:#FFF;
+	border:1px solid #C0C0C0;
+	display:block;
+	padding:3px 0;
+	width:100px;
+	position:absolute;
+	top:17px;
+    left:6px;
+}
+.nav_sub li ul li {
+    border:0;
+    float:none;
+    padding:3px 10px;
+}
+.nav_sub li.help ul li {
+    border-bottom:1px solid #C0C0C0;
+}
+.nav_sub li ul li a {
+	color:#03C;
+}
+/****** 推广管理不显示新版引导 ******/
+.wrap_manage .nav_sub li.help {
+	display:none;
+}
+.foot {
+	border-top:1px solid #999;
+	margin:10px 10px 0;
+	padding:7px 0;
+}
+.foot p {
+	color:#999;
+	line-height:18px;
+}
+.foot p a {
+	color:#999;
+}
+.foot .promotion-policy-link {
+    color: #0033CC;
+}
+.download{
+	padding-left:20px;
+	background:url("../../asset/img/bg_icon.png") no-repeat -505px -848px;
+}
+.common_notice {
+    background: none repeat scroll 0 0 #FFF9C8;
+    border: 1px solid #EEE495;
+    color: #666666;
+    padding: 0 11px;
+}
+/* 请求数据异常显示的字体颜色 */
+.request_exception {
+    color: red !important;
+}
+/* 模拟超链接样式 */
+.clickable {
+    color: blue;
+}
+.clickable:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* 警告提示消息样式定义,用于按钮区域旁边的提示消息 */
+.warn-info {
+    color: red;
+    line-height: 22px;
+}
+/* 圆角样式定义 */
+.box-border-radius {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+/**无线提示浮层**/
+#MobileNotice{
+	z-index:20000;
+	background-color:#fff;
+    opacity: .95;
+    filter:alpha(opacity=95);
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	overflow:auto;
+	font-size:14px;
+}
+.mobile-notice{
+	margin: 70px auto 40px;
+	border:1px solid #A9B2C3;
+	padding:15px;
+	width:720px;
+	height:450px;
+	overflow-y: auto;
+    overflow-x: hidden;
+}
+.mobile-notice h1{
+	font-size:24px;
+}
+.mobile-notice h2{
+	font-size:18px;
+	margin-top:10px;
+}
+.mobile-notice h2 span{
+	font-size:40px;
+}
+.mobile-notice h3{
+	font-weight:bold;
+	margin-top:10px;
+}
+.mobile-notice p{
+	line-height:30px;
+}
+.mobile-notice .mobile-notice-step{
+	border:1px solid #D5D5D5;
+	padding:15px;
+	margin-top:5px;
+}
+.mobile-notice-step h4{
+	color:#497CD7;
+	line-height:30px;
+	font-weight:bold;
+}
+.mobile-notice-step ul{
+	list-style:disc;
+	margin-left:15px;
+}
+.mobile-notice-step li{
+	margin-left: -13px;
+	list-style-type:none;
+	line-height:30px;
+	color:#000;
+}
+.mobile-notice-step li span{
+	font-weight:bold;
+}
+.mobile-notice-img{
+	background:url(../../asset/img/priceFactor.jpg);
+	width:706px;
+	height:208px;
+	margin-top:6px;
+}
+.mobile-notice-link{
+	width:174px;
+	margin: 0 auto;
+	position:relative;
+}
+.mobile-notice-readbtn{
+	cursor:pointer;
+	background:url(../../asset/img/mobile.png) 0 -383px;
+	width:174px;
+	height:54px;
+}
+.mobile-notice-link .mobile-link{
+	display:inline-block;
+	position:absolute;
+	top:14px;
+	left:200px;
+	width:300px;
+	line-height:30px;
+}
+.pointer{
+ cursor:pointer;
+}
+
+.disabled-link{
+    cursor: default;
+    color: gray;
+}
+.disabled-link:hover, .disabled-link:active{
+    text-decoration: none;
+}

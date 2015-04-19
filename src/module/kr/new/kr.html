@@ -1,0 +1,125 @@
+<!-- target:kr -->
+<div class="kr_theme_default">
+    <div id="kr">
+        <!-- import:krAddWords -->
+        <!-- import:krRecommendWords -->
+        <!-- import:krAutoUnit -->
+    </div>
+</div>
+
+<!-- target:krAddWords -->
+<div class="addWords">
+    <h1>已选择关键词 （<span><em class="selected_num">0</em> / 100</span>）</h1>
+    <span class="bubble_match_pattern"></span>
+    <h2>每行一个关键词，每个最多20个汉字或40个英文。</h2>
+    <textarea class="word_box"></textarea>
+    <div class="error" style="display:none;"></div>
+    <h2>
+        百度无法保证这些关键词能够提升您的推广效果；请您认真复核所选择的关键词，并确保不违反任何生效的法律法规。
+    </h2>
+    <div class="auto_unit">
+        <div class="button">自动分组</div>
+        <div class="bubble"></div>
+    </div>
+    <div class="plan_unit_selector"></div>
+</div>
+
+<!-- target:krRecommendWords -->
+<div class="recommendWords">
+    <!-- import:krOptions -->
+    <div id="krMarquee">
+        <div id="krSeedMarquee"></div>
+        <div id="krMaterialMarquee"></div>
+    </div>
+    <!-- import:krTabs -->
+    <div id="krFilter"></div>
+    <!-- import:krToolbar -->
+    <div id="krRecommandResult"></div>
+</div>
+
+<!-- target:krOptions -->
+<div class="krOptions">
+    <div class="option recycle">
+        <span class="icon"></span>
+        <label class="title">回收站<em></em></label>
+    </div>
+
+    <div class="option region"> </div>
+
+    <div class="option device">
+        <label class="title">投放设备：</label>
+        <div id="selectDevice">
+            <input type="radio" name="kr_device_option" value="0" ui="id:krDeviceAll;type:Radio" />
+            <label for="ctrlradioboxkrDeviceAll">全部设备</label>
+            <input type="radio" name="kr_device_option" value="1" ui="id:krDeviceComputer;type:Radio" />
+            <label for="ctrlradioboxkrDeviceComputer">计算机</label>
+            <input type="radio" name="kr_device_option" value="2" ui="id:krDeviceMobile;type:Radio" />
+            <label for="ctrlradioboxkrDeviceMobile">移动设备</label>
+        </div>
+    </div>
+
+    <div class="option advance">
+        <label class="title">高级：</label>
+        <span class="text">还未设置</span>
+        <div id="krAdvanceLayer"></div>
+    </div>
+
+</div>
+
+<!-- target:krTabs -->
+<div id="krTabs">
+    <div id="krPasv" class="background_color_ease">
+        <label>搜索关键词</label>
+        <div id="krSearch">
+            <input id="krSearchInput" type="text"/>
+            <span id="krSearchBtn"></span>
+        </div>
+    </div>
+    <div id="krActv" class="background_color_ease">
+        <label>可能适合您的词</label>
+    </div>
+</div>
+
+<!-- target:krAdvanceLayer -->
+<div class="field">
+    <input id="showRegionWords" class="key" type="checkbox" />
+    <label class="value" for="showRegionWords">显示地域拓展词</label>
+</div>
+<span class="tip">带有拓展地域名称的关键词，如北京鲜花。</span>
+
+
+<!-- target:krToolbar -->
+<div id="krToolbar">
+    <div id="krCustomColumns"></div>
+    <div id="krAddWordsBtn"></div>
+    <div id="krDownloadWordsBtn"></div>
+</div>
+
+
+
+<!-- target:krAutoUnit -->
+<div id="kr_autounit" class="au_contaner" style="display:none;" >
+        <div class="kr_autounit_head clearfix">
+            <div class="kr_autounit_name">关键词分组</div>
+            <div class="kr_autounit_tip">
+                                                可通过<span class="au_law_tip">拖拽</span>关键词或<span class="au_law_tip">修改</span>保存单元调整分组结果；
+                                                系统为您新建的单元，默认出价为<span class="au_law_tip">1.00</span>，为了保证您的推广效果，请进入单元修改。
+            </div>
+        </div>
+        <div  id="groupContainer" class="au_groups_container" ></div>
+
+        <!-- 这边放保存和取消的按钮--> 
+        <div id="SaveButtonArea" class="savebutton_area floatLeft">
+            <div ui="id:saveKeyAutoUnit;type:Select;" class="select_button" title=""></div>
+        </div>
+
+        <div id="autoUnitCancelButton" class="floatLeft"></div>
+
+        <div class="floatRight au_bottom_tip" style="text-align:right;">
+            <span class="au_law_tip">使用自动分组，可能扩展您的账户单元、进而影响您的展现和消费。</span>
+        </div>
+</div>
+    
+<div id="draggingImg" class="dragingImg dragingImgBGMulti" onselectstart="return false">
+        
+</div>

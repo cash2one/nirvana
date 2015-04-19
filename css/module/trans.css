@@ -1,0 +1,843 @@
+/* trans common */
+.code-block {
+    width: 100%;
+    height: 82px;
+}
+
+.copy-ok-tip {
+    margin: 5px 0 0 0;
+}
+
+.text-grey {
+    color: #999
+}
+
+.trans-btn {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.trans-loading {
+    width: 320px;
+    height: 57;
+    line-height: 57px;
+    text-indent: 30px;
+    margin: 456px auto 40px;
+    background: url(../../asset/img/loading.gif) no-repeat left center;
+}
+
+.text {
+    margin: 20px 0;
+	line-height:18px;
+	width:524px;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+
+.dot-div {
+    margin: 8px 30px 20px;
+    border: 1px #999 dashed;
+    padding: 10px 20px;
+}
+
+.dot-div1 {
+    margin: 8px 0
+}
+
+/* trans */
+.trans-container {
+    margin: 20px 20px;
+    border: 1px solid #ccc;
+    background: url(../../asset/img/bg_trans.jpg) no-repeat center center;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+	overflow:hidden;
+	_height:100%;
+}
+
+.trans-hide {
+    display: none;
+}
+
+.trans-container .trans-step1 {
+    background: #fff
+}
+
+.trans-container .trans-step1-content {
+    margin: 20px 20px;
+    line-height: 22px;
+}
+
+.trans-container .trans-step1-content .title {
+    font-size: 14px;
+    margin: 10px 0
+}
+
+.scroll-body {
+    border: #abadb3 1px solid;
+	display:block;
+    height: 330px;
+	line-height:1.5;
+    margin: 10px auto;
+    padding: 2px;
+    overflow-y: scroll;
+    width: 99%;
+	resize: none;
+}
+
+.trans-container .accept-tips {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background: #f9fbfd;
+    padding: 10px;
+}
+
+.trans-container .trans-step1-content .ui_button {
+    font-size: 14px;
+    float: none;
+    font-weight: bold;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 104px;
+}
+
+.trans-tips {
+    width: 365px;
+    margin: 456px auto 40px;
+    line-height: 23px;
+}
+
+.trans-tips span {
+	color:#666;
+    display: block;
+    margin-top: 15px
+}
+.trans-tips span b {
+	color:#000;
+	margin:0 5px 0 0;
+}
+
+/* new trans */
+.newtrans {
+    background: #fff;
+    padding: 10px 20px;
+    line-height: 150%
+}
+
+.newtrans h3 {
+    margin: 15px 0;
+    font-size: 13px;
+    color: #000;
+    font-weight: bold
+}
+
+.newtrans .input_area {
+    background:#F9FBFD;
+    margin: 10px auto;
+	overflow:hidden;
+    padding: 6px 20px;
+}
+.input_area .warn {
+	clear:both;
+}
+.newtrans .trans-loading {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.newtrans .btn-bar {
+	height:22px;
+    margin: 30px 0;
+}
+#NewTransStep2B {
+	padding:0 40px;
+}
+.check-result {
+    background:#FFF8F8;
+    border: 1px solid #FFB0B0;
+    line-height: 22px;
+    margin: 10px auto;
+    overflow: hidden;
+    padding: 10px;
+}
+.check-result .text {
+	font-weight:bold;
+	margin:0;
+}
+.check-result #ResultInfo {
+    color: #666;
+    margin: 0;
+    padding: 15px;
+}
+
+.check-result p {
+    padding-bottom: 15px
+}
+
+.newtrans .btn-bar .ui_button {
+    margin-right: 10px;
+}
+
+.get-code-box td {
+    padding: 2px 5px;
+	vertical-align:top;
+}
+
+.download_code {
+	border:1px solid #CCC;
+	padding:2px;
+}
+.download_code .view {
+	border:1px solid #C50A0A;
+	color:#C50A0A;
+	padding:8px 5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.trans-container h1 {
+    font-size: 19px;
+    padding: 13px 0;
+    border-bottom: 1px solid #999;
+    font-weight: bold
+}
+
+input.trans-text {
+    width: 306px;
+    height: 20px;
+	line-height:20px;
+    text-align: left;
+    font-family: 'Arial';
+    font-size: 13px;
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none
+}
+
+/* trans list */
+.tanslist-container {
+    margin: 10px
+}
+
+.tanslist-container .tab-container {
+	height:30px;
+    padding: 0 10px;
+}
+
+.tanslist-container .tab-container a.corner {
+    -webkit-border-radius: 3px 3px 0px 0px;
+    -moz-border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.tanslist-container .tab-container a.tab {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #999;
+    text-align: center;
+    width: 100px;
+    height: 27px;
+    line-height: 27px;
+    background: #567be5;
+    color: #fff;
+}
+
+.tanslist-container .tab-container a.selected {
+    background: #fff;
+    color: #000;
+    width: 115px;
+    border-bottom: 1px solid #fff;
+    height: 28px;
+    line-height: 28px;
+    font-weight: bold;
+	position:relative;
+}
+.tanslist-container .tab-container a em {
+	color:#999;
+	font-size:11px;
+	margin:0 0 0 3px;
+}
+
+.tanslist-container .tab-container .newtrans-btn {
+    float: right
+}
+/**
+.tanslist-container .ui_table .ui_table_thcell .ui_table_thsort {
+	float:none;
+	display:inline-block;
+	*zoom:1;
+}
+**/
+.trans_set_all {
+    float: left;
+    margin: 6px 10px 0 0;
+    position: relative;
+	z-index:1;
+}
+a.set-trans {
+    float: left;
+	*line-height:15px;
+	margin:2px 0 0;
+}
+#TransAreaTip {
+	float:left;
+	*line-height:17px;
+}
+.check-toolbar input {
+    vertical-align: middle
+}
+
+.check-toolbar label {
+    padding: 0 10px 0 3px
+}
+
+.control-item {
+	border: 1px #ccc solid;
+    border-bottom: 0;
+    margin-top: -1px;
+    padding: 15px;
+	background:#E4EAF9;
+}
+
+.control-item td {
+    padding: 0 25px 8px 0
+}
+
+.control-item div.btn-toolbar {
+    margin: 12px 0
+}
+
+.control-item .btn-toolbar a {
+    padding-left: 15px;
+    line-height: 21px
+}
+
+.control-item .select-toolbar {
+    margin: 10px 0
+}
+.list-container {
+	border: 1px #CCC solid;
+    border-bottom: 0;
+}
+.list-container .ui_table {
+	border:0;
+}
+.trans-dialog {
+    position: absolute;
+    background: #FFFFFF;
+    padding: 5px 18px;
+    border-color: gray;
+    border-right: 1px solid gray;
+    border-style: solid;
+    border-width: 2px 1px 1px;
+    position: absolute;
+    top: 17px;
+	left:0;
+    z-index: 1;
+}
+#Tools_translist_body .ui_selectcombo_close:hover {
+	background-position:-150px -85px;
+}
+
+.trans-dialog h4 {
+    font-weight: bold;
+    margin: 7px 0
+}
+
+div.trans-dialog input {
+    vertical-align: middle
+}
+
+div.trans-dialog div.typeB {
+    margin: 15px 0;
+}
+
+div.trans-dialog div.set-title {
+    margin: 20px 0 30px 0
+}
+
+div.trans-dialog span.r {
+    display: block;
+    float: right
+}
+
+div.trans-dialog div.set-message {
+    background: #F8FBFD;
+    line-height: 170%;
+    display: none;
+    margin: 0 20px;
+    padding: 5px;
+    width: 500px;
+}
+
+#TransAreaContainer {
+    position: absolute;
+    margin-top: 25px;
+}
+
+#SetTransContainer {
+    width: 587px;
+}
+
+#ModifyTransContainer {
+    width: 665px;
+    top: 30px
+}
+
+div.trans-modify-box {
+    background: #f9fbfd;
+    margin: 12px 0;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+}
+.pager-container {
+	padding:10px;
+	text-align:center;
+}
+
+/*trans check*/
+.trans_check {
+	padding:0 20px;
+}
+div.trans-check {
+    background: #fff;
+    padding: 10px 20px 20px 20px;
+    line-height: 150%
+}
+
+div.trans-check p.tip {
+    color: #999999;
+    font-size: 13px;
+    padding-top: 2px;
+}
+
+div.trans-check ul#SelectUrlContainer span {
+    color: #999
+}
+
+.trans-check h4 {
+    margin: 25px 0 15px 0;
+}
+
+#TransURLScope {
+    display: none;
+    margin: 10px
+}
+
+ul#SelectUrlContainer li {
+    margin-bottom: 10px;
+}
+
+div.trans-check div.trans-btn {
+    margin-right: 15px
+}
+
+.result-container {
+    margin-top: 15px;
+    border-top: 3px double #ccc;
+}
+
+.result-container h2 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+.result-container h4 {
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+}
+
+.result-container {
+    line-height: 1.6;
+    padding: 1px;
+}
+
+.result-container li.even {
+    background: #f9fbfd;
+}
+
+.result-container li h5 {
+    font-size: 13px;
+    margin: 0;
+    padding: 15px 15px 10px;
+}
+
+.result-container li h5 span {
+    color: #f00;
+}
+
+.result-container li p {
+    margin: 0;
+    padding: 0 40px;
+}
+
+.result-container li ul {
+    padding: 15px 40px;
+}
+
+.result-container li h6 {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 40px 20px;
+}
+
+.result-container dl {
+    line-height: 22px;
+    margin: 0 10px 10px;
+    overflow: hidden;
+    padding: 0 10px 10px;
+    word-wrap: break-word;
+}
+
+.result-container dt {
+    font-weight: bold;
+    padding: 15px 0 5px;
+}
+
+.result-container dd {
+    background: #fff8f8;
+    border: 1px solid #ffb0b0;
+    color: #666;
+    margin: 0;
+    padding: 5px;
+}
+.transAllResult {
+	margin:20px -20px;
+}
+.transAllResult h3 {
+    border-top: 3px double #000;
+    font-size: 16px;
+	font-weight:bold;
+    margin: 0;
+    padding: 20px 20px 0;
+}
+
+.transAllResult h4 {
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+	padding:0 20px;
+    position: relative;
+}
+.transAllResult p {
+	padding:20px;
+}
+
+.transAllResult .cont {
+    line-height: 1.6;
+    padding: 1px;
+}
+.transAllResult .check_loading {
+	padding:20px;
+}
+.transAllResult .cont li.even {
+    background: #f9fbfd;
+}
+
+.transAllResult .cont li h5 {
+    font-size: 13px;
+	font-weight:bold;
+    margin: 0;
+    padding: 15px 15px 10px;
+}
+
+.transAllResult .cont li h5 span {
+    color: #f00;
+}
+
+.transAllResult .cont li p {
+	color:#666;
+    margin: 0;
+    padding: 0 40px;
+}
+
+.transAllResult .cont li ul {
+    padding: 15px 40px;
+}
+
+.transAllResult .cont li h6 {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 40px 20px;
+}
+
+.transAllResult .cont dl {
+    line-height: 22px;
+    margin: 0 10px 10px;
+    overflow: hidden;
+    padding: 0 10px 10px;
+    word-wrap: break-word;
+}
+
+.transAllResult .cont dt {
+    font-weight: bold;
+    padding: 15px 0 5px;
+}
+
+.transAllResult .cont dd {
+    background: #fff8f8;
+    border: 1px solid #ffb0b0;
+    color: #666;
+    margin: 0;
+    padding: 5px;
+}
+
+.inputArea p input {
+    border: 0;
+    cursor: default;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+span.awSelect {
+    margin: 0 10px 0 0;
+}
+
+.downloadResult {
+    background: url("../../asset/img/bg_icon_left.png") no-repeat 0 -1903px;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0 0 0 15px;
+}
+
+.transAllResult h4 .downloadResult {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+#TransURLScope em {
+    color: #999;
+    font-style: normal;
+}
+
+
+.keyword_transfer_content{
+	border-top:1px solid #CCCCCC;
+	padding: 15px 13px 0 13px;
+	margin:0 -7px;
+	margin-top:10px;
+}
+.intro_unit_span{
+	color : #666666;
+}
+
+
+.tabledata-cnt{
+	background: none repeat scroll 0 0 #ECECEC;
+	height:30px;
+	line-height:30px;
+	border:1px solid #CCCCCC;
+	border-bottom:0;
+	font-weight:bold;
+	padding-left:5px;
+}
+.trans-notice{
+	background:#FFFFCC;
+	height:30px;
+	line-height:30px;
+}
+#ControlPhoneTransData li{
+	height:20px;
+	line-height:40px;
+	*line-height:20px;
+}
+#PhoneTrackAppFailArea{
+	border: 1px #ccc solid;
+    margin-top: -1px;
+    padding: 15px;
+	height:300px;
+	background:#E4EAF9;
+}
+#PhoneTrackAppFailStat{
+	text-align:right;
+	width:98%;
+}
+#PhoneTrackAppFailStat div, #PhoneTrackSucceedStat div{
+	position: relative;
+    top: 3px;
+}
+#PhoneTrackAppFailTip{
+	margin:50px auto 0;
+	height:140px;
+	width:620px;
+	padding:45px 0 0 80px;
+    border-radius: 5px;
+	background:#FFFFFF;
+}
+#PhoneTrackPauseTip{
+	border:1px solid #CCCCCC;
+	border-bottom:0;
+	padding:10px 0 15px 20px;
+	margin-top:-1px;
+	background:#FFF6BD;
+}
+/**小电话图�?**/
+.sphone-icon1000{
+	background:url("../../asset/img/bg_icon.png") no-repeat -352px -1111px;
+	width:15px;
+	height:14px;
+	display:inline-block;
+}
+.sphone-icon1{
+	background:url("../../asset/img/bg_icon.png") no-repeat -259px -1111px;
+	width:15px;
+	height:14px;
+	display:inline-block;
+}
+.sphone-icon6{
+	background:url("../../asset/img/bg_icon.png") no-repeat -307px -1111px;
+	width:15px;
+	height:14px;
+	display:inline-block;
+}
+.sphone-icon0, .sphone-icon4, .sphone-icon8, .sphone-icon9{
+	background:url("../../asset/img/bg_icon.png") no-repeat -212px -1111px;
+	width:15px;
+	height:14px;
+	display:inline-block;
+}
+/**大电话图�?**/
+.bphone-icon1000{
+	background:url("../../asset/img/bg_icon.png") no-repeat -330px -1162px;
+	margin-top:20px;
+	width:98px;
+	height:90px;
+}
+.bphone-icon6{
+	background:url("../../asset/img/bg_icon.png") no-repeat -479px -1148px;
+	padding-left:56px;
+}
+.bphone-icon0, .bphone-icon4, .bphone-icon8, .bphone-icon9{
+	background:url("../../asset/img/bg_icon.png") no-repeat -479px -1090px;
+	padding-left:56px;
+}
+/***小电话图�?**/
+.lsphone-icon-green{
+	background:url("../../asset/img/bg_icon.png") no-repeat -399px -1113px;
+	width:15px;
+	height:12px;
+	display:inline-block;
+}
+.lsphone-icon-red{
+	background:url("../../asset/img/bg_icon.png") no-repeat -437px -1113px;
+	width:15px;
+	height:12px;
+	display:inline-block;
+}
+/**文字  标题颜色**/
+.lxb-label-0, .lxb-label-4, .lxb-label-8, .lxb-label-9,
+.lxb-border-0 h2, .lxb-border-4 h2,
+.site-state-nocode{
+	color:#DB1616;
+}
+.lxb-label-1,
+.site-state-normal{
+	color:#009900;
+}
+.lxb-label-6, .lxb-border-6 h2,
+.site-state-checking{
+	color:#E19106;
+}
+.lxb-label-1000{
+	color:#8A8A8A;
+}
+.lxb-border-1000 .tip-container h2,.lxb-status-1000 h2{
+	color:#000000;
+	background: url("../../asset/img/bg_icon.png") no-repeat -503px -1235px;
+	padding-left:20px;
+	height:30px;
+	line-height:30px;
+	margin-bottom:10px;
+}
+/**
+ * 边框颜色
+ */
+.lxb-border-0, .lxb-border-4{
+	border:1px solid #DB1616;
+}
+.lxb-border-6{
+	border:1px solid #E19106;
+}
+.app-button-line{
+	color:gray;
+}
+.app-button-line .ui_button_label{
+	color:#000000;
+	font-weight:bold;
+}
+#PhoneTrackAppFailTip.lxb-border-1000{
+	background:none;
+}
+
+#PhoneTrackAppFailArea.applxbguide{
+	background:#FFFFCC;
+}
+.app-button-line{
+	line-height:48px;
+}
+.app-button-line .ui_button{
+	margin:12px 5px 0 0;
+}
+.tip-container{
+	height:70px;
+}
+.tip-container h2{
+    font-size: 14px;
+    font-weight: bold;
+	height:30px;
+	line-height:30px;
+}
+.tip-container ul .emp{
+	color:#F66F28;
+	font-weight:bold;
+}
+.tip-container li{
+	height:22px;
+	line-height:22px;
+}
+.inline-check-single{
+	background:url("../../asset/img/bg_icon.png") no-repeat -207px -1145px;
+	width: 25px;
+	height: 21px;
+	display:inline-block;
+}
+.inline-check-all{
+	background:url("../../asset/img/bg_icon.png") no-repeat -256px -1145px;
+	width: 23px;
+	height: 21px;
+	display:inline-block;
+}
+.trans-lxb-stat{
+	position:relative;
+	top:-3px;
+	*top:0;
+}
+.control-item-tr{
+	*line-height:25px;
+	*height:25px;
+}
+.new-trans-input input{
+	float:none;
+	width:160px;
+	height:22px;
+}
+
+#KeywordTransferInfo .save {
+    margin-left: 6px;
+    margin-right: 10px;
+}

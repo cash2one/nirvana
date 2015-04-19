@@ -1,0 +1,248 @@
+/**
+ * 行业旺季包样式定义
+ */
+.season-pkg-arrow-up,
+.season-pkg-arrow-down {
+    color: #3333CC;
+}
+/**
+ * 旺季包Tab样式定义
+ */
+.season-pkg-tab-wrapper {
+    padding: 15px 12px;
+    line-height: 30px;
+    height: 30px;
+    position: relative;
+}
+.season-pkg-tab-wrapper .title {
+    float: left;
+}
+.season-pkg-tab-wrapper .trade-tab-list {
+    position: relative;
+}
+.season-pkg-tab-wrapper .trade-tab {
+    float: left;
+    background: #F2F2F2;
+    margin-left: 8px;
+    width: 110px;
+    padding: 0 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.season-pkg-tab-wrapper .selected-tab {
+    cursor: default;
+    background: #F6ECC2;
+}
+.peak-season-icon {
+    width: 16px;
+    height: 15px;
+    background: url("../../asset/img/bg_icon_left.png") no-repeat;
+    vertical-align: middle;
+}
+.peak-season-ing .peak-season-icon {
+    background-position: -3px -2064px;
+    margin-right: 5px;
+}
+.peak-season-start .peak-season-icon {
+    background-position: -3px -2044px;
+}
+.peak-season-end .peak-season-icon {
+    background-position: -3px -2024px;
+}
+.peak-seaon-type-bubble {
+    padding: 5px;
+}
+.season-pkg-descr-loading img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.seasonpkg-tab-bubble {
+    width: 180px;
+}
+/**
+ * 旺季行业信息样式定义
+ */
+.season-pkg-descr-wrapper {
+    height: 45px;
+    line-height: 45px;
+    background: #F6ECC2;
+    position: relative;
+    padding-left: 12px;
+}
+.season-pkg-descr-loading {
+    position: absolute;
+    top: 0;
+}
+.season-pkg-descr-wrapper .arrow-up {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 13px solid #F6ECC2;
+    top: -12px;
+    left: 150px;
+}
+.season-pkg-descr-wrapper .exception {
+    background: none;
+    border: none;
+}
+.season-pkg-descr-wrapper em,
+.season-pkg-descr-wrapper .change-value {
+    color: #FF9900;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 3px;
+}
+.season-pkg-descr-wrapper .up,
+.season-pkg-descr-wrapper .down {
+    background: url("../../asset/img/bg_icon_left.png") no-repeat;
+    padding-left: 20px;
+}
+.season-pkg-descr-wrapper .up {
+    color: #CC0D39;
+    background-position: 2px -1049px;
+}
+.season-pkg-descr-wrapper .down {
+    color: #0A690D;
+    background-position: 2px -1067px;
+}
+/**
+ * flash图表区样式定义
+ */
+.season-pkg-flash-wrapper .flash-area {
+    padding: 10px 15px 0;
+    position: relative;
+    zoom: 1;
+}
+.season-pkg-flash-wrapper .season-flash-container {
+    padding-left: 8px;
+    height: 180px;
+}
+.season-pkg-flash-wrapper .display-type-switch {
+    padding: 5px 0 5px 653px;
+}
+.season-pkg-flash-wrapper .ui_radiobox {
+    vertical-align: middle;
+    margin: 0 5px 0 12px;
+}
+.season-pkg-flash-wrapper .flash-toggle-area {
+    position: relative;
+    text-align: right;
+    border-top: 1px solid #EBEBEB;
+}
+.season-pkg-flash-wrapper .toggle-btn {
+    background: #F6ECC2;
+    line-height: 25px;
+    width: 105px;
+    text-align: center;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    right: 15px;
+    top: -1px;
+}
+/**
+ * 优化建议区样式定义
+ */
+.season-pkg-optitem-wrapper {
+    padding: 0 12px;
+}
+.season-pkg-optitem-wrapper .title {
+    line-height: 30px;
+    padding: 10px 0;
+}
+.season-pkg-optitem-wrapper .specified-trade-name {
+    font-weight: bold;
+    padding: 0 3px;
+    font-size: 13px;
+}
+.season-pkg-opt-loading {
+    padding-left: 10px;
+}
+.season-pkg-opt-loading img {
+    vertical-align: middle;
+}
+.season-pkg-optitem-wrapper .diagnosis-result {
+    color: #CC0000;
+}
+.season-pkg-optitem-wrapper .group-wrapper {
+    margin-bottom: 10px;
+}
+.season-pkg-optitem-wrapper .group-title {
+    background: #E7EBEF url("../../asset/img/bg_icon_left.png") 0px -2081px no-repeat;
+    padding-left: 25px;
+    height: 35px;
+    line-height: 35px;
+}
+.season-pkg-optitem-wrapper .group-content {
+    background: #F8F8F9;
+    padding-top: 5px;
+}
+.season-pkg-optitem-wrapper .sub-group-content {
+    position: relative;
+    zoom: 1;
+}
+.season-pkg-optitem-wrapper .toggle-btn {
+    margin-left: 10px;
+}
+.season-pkg-optitem-wrapper .sub-group {
+    border-bottom: 1px dashed #E4E4E4;
+    margin-bottom: 8px;
+    zoom: 1;
+}
+.season-pkg-optitem-wrapper .sub-group-title {
+    line-height: 30px;
+    color: #999999;
+    padding-left: 24px;
+}
+.season-pkg-optitem-wrapper .view-all,
+.season-pkg-optitem-wrapper .preview-item {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 24px;
+}
+.season-pkg-optitem-wrapper .previewitem-loading {
+    color: #999999;
+}
+.season-pkg-optitem-wrapper .recmword-item {
+    background: #F8F4E9;
+    margin: 0 0 10px 24px;
+    line-height: 40px;
+    width: 272px;
+    padding: 0 0 0 8px;
+    position: relative;
+}
+.season-pkg-optitem-wrapper .recmword-add-btn {
+    position: absolute;
+    right: 8px;
+    top: 0;
+}
+.season-pkg-optitem-wrapper .recmword-title {
+    width: 90px;
+    vertical-align: middle;
+}
+.season-pkg-optitem-wrapper .recmword-pv-info {
+    padding: 0 8px;
+}
+.season-pkg-optitem-wrapper .info-item {
+    margin-right: 45px;
+    width: 130px;
+}
+.season-pkg-optitem-wrapper .wordinfo-item {
+    width: 250px;
+}
+.season-pkg-optitem-wrapper .preview-exception {
+    background: #FFE0E0;
+    color: #C30;
+}
+.season-pkg-optitem-noadvice {
+    color: #CCC;
+}
+.season-pkg-noadvice {
+    padding: 45px 0;
+    color: #CCC;
+    text-align: center;
+}

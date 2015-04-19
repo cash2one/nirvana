@@ -1,0 +1,59 @@
+<!-- target:appendIdeaList -->
+<div class="manage_cont">
+    <div class="manage_section">
+        <div id="manage-stat-container">
+            <!-- import:materialLevel -->
+            <!-- import:acctStat -->
+            <!-- import:planStat -->
+            <!-- import:unitStat -->
+        </div>
+        <!-- import:manageStatLoading -->
+		<div class="manage_tab clearfix">
+			<div ui="id:tab;type:Tab;title:*tab;tab:*tabindex"></div>
+			<div id="ExtraTab"></div>
+			<div class="xijing_clear"></div>
+		</div>
+        <div id="ideaSearchCombo">
+        <!-- import:searchComboTip -->
+        </div>
+         <!-- import: appendIdeaType -->
+         <!-- import:materialBulletin -->
+        <div class="manage_option clearfix scroll_y_top_fixed">
+            <div class="manage_addword">
+                
+                <div ui="id:addidea;type:Button;">新建蹊径子链</div>
+                <div ui="id:addAppSelect;type:Select;value:-9999;width:118;disabled:1;" class="select_button" style="display:none;"></div>
+            </div>
+            <div class="manage_option_left"><div ui="id:runPause;type:Select;datasource:*runPause;value:-9999;width:100;disabled:1;" class="select_menu"></div></div>
+            <div class="manage_option_left"><div ui="id:delAppendIdea;type:Button;">删除</div></div>
+            <div class="manage_option_right"><div ui="id:userDefine;type:Button;skin:select" class="manage_userdefine">自定义列</div></div>
+        </div>
+        <div class="manage_table">
+            <div ui="id:ideaTableList"></div>
+        </div>
+        
+        <!-- import:materialPage -->
+        <!-- import:unbindUserTip -->
+    </div>
+    
+</div>
+
+<!-- target:appendIdeaType -->
+<div id='appendIdeaType' class="scroll_y_top_fixed"><span>类型选择：</span><span class='typeItem current' rel='sublink'>蹊径子链</span><span>|</span><span class='typeItem' rel='app'>App推广</span></div>
+
+<!-- target:unbindUserTip -->
+<div id='unbindUserTip' class='hide'>
+    <div class='bigContainer'>
+    <div class='container'>
+        <p><span class='icon'></span>您还未进行绑定百度开发者中心账户，请先<a class='bindUser' target="_blank">绑定账户</a>。</p>
+        <p class='title'>什么是App推广? </p>
+        <p>在搜索页宝贵位置展示您的应用信息，提供直接面向用户的下载渠道。</p>
+        <p class="title">如何绑定账户?</p>
+        <p>App推广的应用相关信息均来自百度应用商店，我们将通过百度推广账户和百度开发者中心账户（即百度应用商店所使用的账户）的绑定关系来获取所需信息。</p>
+        <p class="title">如何注册账户?</p>
+        <p>若您还未注册百度开发者中心账户，我们将引导您完成账户注册及绑定流程。</p>
+        <p>现在，请点击“<a class='bindUser' target="_blank">绑定账户</a>”，开始您的App推广。</p>
+        <div ui='type:Button;id:bindUserBtn' class='bindUserBtn'>绑定账户 ></div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+/*
+ * cb-web
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:   .ui_mmcal.css
+ * desc:    迷你日期区间选择组件
+ * author:  zhaolei,erik
+ * date:    $Date: 2010/05/21 03:00:39 $
+ */
+
+.ui_mmcal {
+    display:inline-block;
+    height:20px;
+    line-height:20px;
+    zoom:1;
+    padding-bottom:3px;
+	width:100%;
+	text-align:left;
+}
+
+.ui_mmcal_option {
+    cursor:pointer;
+    color:#0033CC;
+}
+
+
+.ui_mmcal_option_selected {
+    color:#000;
+    cursor:default;
+    text-decoration:none;
+	font-weight: bold;
+}

@@ -1,0 +1,110 @@
+.fc-ui-marquee .ui-wrapper {
+    padding: 6px 8px;
+    height: 18px;
+}
+
+.fc-ui-marquee .marquee-label,
+.fc-ui-marquee .marquee-slider,
+.fc-ui-marquee .marquee-slider ul,
+.fc-ui-marquee .marquee-item,
+.fc-ui-marquee .marquee-page,
+.fc-ui-marquee .marquee-page * {
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    +display: inline;
+    +zoom: 1;
+}
+
+
+.fc-ui-marquee .marquee-slider li {
+    border-right: 1px solid #C9E2FB;
+    height: 12px;
+    margin-right: 8px;
+    padding-right: 8px;
+    vertical-align: top;
+    position: relative;
+    top: 3px;
+    
+    display: inline-block;
+    +display: inline;
+    +zoom: 1;
+}
+.fc-ui-marquee .marquee-item {
+    position: relative;
+    top: -3px;
+}
+
+.fc-ui-marquee .marquee-label {
+    float: left;
+    color: #808080;
+}
+
+.fc-ui-marquee .marquee-slider .marquee-item-last {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none !important;
+}
+.fc-ui-marquee .marquee-item {
+    cursor: pointer;
+    color: black;
+    padding: 0 4px;
+    border-radius: 4px;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+}
+.fc-ui-marquee .marquee-item:hover {
+    background-color: #DBEBFB;
+    box-shadow: 0 1px 1px #999999; 
+}
+
+.fc-ui-marquee .marquee-page {
+    float: right;
+}
+.fc-ui-marquee .marquee-page-text {
+    color: #CCCCCC;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.fc-ui-marquee .marquee-btn-prev,
+.fc-ui-marquee .marquee-btn-next,
+.fc-ui-marquee .marquee-btn-prev-disable,
+.fc-ui-marquee .marquee-btn-next-disable,
+.fc-ui-marquee .marquee-btn-first-enable,
+.fc-ui-marquee .marquee-btn-last-enable {
+    background: url('../../asset/img/ui-icon.png') no-repeat;
+    display: inline-block;
+    width: 5px;
+}
+.fc-ui-marquee .marquee-btn-prev,
+.fc-ui-marquee .marquee-btn-first-enable {
+    background-position: 0 -267px;
+}
+.fc-ui-marquee .marquee-btn-next,
+.fc-ui-marquee .marquee-btn-last-enable {
+    background-position: -7px -267px;
+}
+.fc-ui-marquee .marquee-btn-prev-disable {
+    background-position: 0 -247px;
+}
+.fc-ui-marquee .marquee-btn-next-disable {
+    background-position: -7px -247px;
+}
+.fc-ui-marquee .marquee-btn-prev,
+.fc-ui-marquee .marquee-btn-prev-disable,
+.fc-ui-marquee .marquee-btn-first-enable {
+    margin-right: 10px;
+}
+.fc-ui-marquee .marquee-btn-prev,
+.fc-ui-marquee .marquee-btn-next,
+.fc-ui-marquee .marquee-btn-first-enable, 
+.fc-ui-marquee .marquee-btn-last-enable {
+    cursor: pointer;
+}

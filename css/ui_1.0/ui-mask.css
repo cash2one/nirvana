@@ -1,0 +1,28 @@
+/*
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-mask.css
+ * desc:    遮罩层样式
+ * author:  linzhifeng
+ * date:    2010/12/14
+ */
+
+.ui_blackmask, .ui_whitemask {
+    position:fixed;/*原来为absoulte*/
+    top:0;
+    left:0;
+    bottom: 0;/*新增样式*/
+    right: 0;/*新增样式*/
+}
+
+.ui_blackmask {
+    background:#000;
+    opacity: .2;
+    filter:alpha(opacity=20);
+}
+
+.ui_whitemask {
+    background:#fff;
+    opacity: .0;
+    filter:alpha(opacity=0);
+}

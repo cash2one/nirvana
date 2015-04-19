@@ -1,0 +1,133 @@
+<!-- target:corwordRecmdBroadcast-->
+<div class="recmd_coreword_wrapper">
+    <div class="broadcast_container">
+        建议关注您账户中<span class="recmd_reason"></span>的关键词<span class="recmd_coreword"></span>
+    </div>
+    <div class="add_coreword_btn" ui="id:addCorewordBtn;type:Button;">立即关注</div>
+    <div class="more_recmd_cword clickable">更多</div>
+</div>
+
+<!-- target:corwordRecmdInfo-->
+<div class="recmd_coreword_wrapper">
+    <div class="broadcast_container">
+        <span class="recmcoreword-add-info">您账户中有<span class="recmcoreword-num"></span>个重点词建议添加关注</span>
+        <span class="recmcoreword-del-info">，<span class="recmcoreword-num"></span>个重点词建议取消关注</span>
+    </div>
+    <div class="view-recmcoreword-info clickable">查看</div>
+</div>
+
+<!-- target:CorewordsManage -->
+<div id="corewordPkgManageContainer">
+    <div class="coreword_toolbar clearfix">
+        <div class="coreword_filter">
+            <span class="coreword_filter_title">分析筛选：</span>
+            <span filtertype="1" class="clickable corword_filter_label coreword_filter_sel">
+                全部<span class="num"></span>
+            </span>
+            <span filtertype="2" class="clickable corword_filter_label">
+                预算不足<span class="num"></span>
+            </span>
+            <span filtertype="3" class="clickable corword_filter_label">
+                不在左侧<span class="num"></span>
+            </span>
+            <span filtertype="7" class="clickable corword_filter_label" style="display:none;">
+                排名下降<span class="num"></span>
+            </span>
+            <span filtertype="4" class="clickable corword_filter_label">
+                质量度过低<span class="num"></span>
+            </span>
+            <span filtertype="5" class="clickable corword_filter_label">
+                搜索无效<span class="num"></span>
+            </span>
+            <span filtertype="6" class="clickable corword_filter_label">
+                搜索量过低<span class="num"></span>
+            </span>
+        </div>
+    </div>
+    <div id="corewordTableContainer">
+        <div class="coreword_table"></div>
+    </div>
+</div>
+
+<!-- target:recmdCorewordDlg -->
+<div class="recmd_coreword_header aopkg_overview_header">
+    <h2 class="recmd_coreword_title">根据您账户内的关键词信息，推荐关注以下重点词</h2>
+</div>
+<div class="recmd_coreword_info">
+    <div class="recmd_coreword_table" ui="id:recmdAddCorewordTable;type:Table;"></div>
+</div>
+
+<!-- target:recmdCorewordDlg2 -->
+<div class="recmcoreword-detail-wrapper">
+    <!-- import:recmdCorewordDlg -->
+    <div class="recmd_coreword_header aopkg_overview_header">
+        <h2 class="recmd_coreword_title">根据您账户内的关键词信息，推荐取消关注以下重点词</h2>
+    </div>
+    <div class="recmd_coreword_info">
+        <div class="recmd_coreword_table" ui="id:recmdDelCorewordTable;type:Table;"></div>
+    </div>
+</div>
+
+<!-- target:recmdCorewordDlgSelAddTip -->
+添加关注<span class="num">{addNum}</span>个重点词
+<!-- target:recmdCorewordDlgSelDelTip -->
+，取消关注<span class="num">{delNum}</span>个重点词
+
+<!-- target:corewordPkgHeader -->
+<div class="coreword_op clearfix">
+    <div class="mod_cword_btn" ui="id:modCoreword;type:Button;skin:cword_btn">关注新重点词</div>
+    <div class="sel_region_btn" ui="id:selRegion;type:Button;skin:cword_sel_btn"></div>
+</div>
+
+<!-- target:corewordUpdateCounter -->
+<span class="diagnosis_counter {counterClass}">{comma}
+    <span class="counter_remain">{counter}</span>
+    <span class="counter_unit">分钟</span>后更新
+</span>
+<div class="box-border-radius coreword_update_btn {btnClass}">
+    点击更新
+</div>
+
+<!-- target:modifiedCorewordRankInfo -->
+<div class="coreword_modify_info invalid_cell_value">修改已生效</div>
+<!-- import:corewordUpdateCounter -->
+
+<!-- target:corewordDiagnosisInfo -->
+<span class="footer_diagnosis_time">{time}</span>完成诊断
+<!-- import:corewordUpdateCounter -->
+
+<!-- target:oldCorewordDiagnosisInfo -->
+<span class="footer_diagnosis_time">{time}</span>完成诊断，和当前信息可能有一定差异
+
+<!-- target:corewordPkgFooter -->
+<div class="diagnosis_info">
+</div>
+
+<!-- target:aoPkgModCoreword -->
+<div id="AoPkgModCWordContainer">
+    <div id="AoPkgModCWordMain" class="aopkg_modCWord_main">
+        <div class="aopkg_modCWord_left">
+            <h1>已选择的词：(<span id="AoPkgModCWordChosen" class="text_red"></span>)</h1>
+            <div id="AoPkgModCWordChosenList" class="aopkg_modCWord_chosenlist">
+            </div>
+        </div>
+        <div class="aopkg_modCWord_split"></div>
+        <div class="aopkg_modCWord_right">
+            <h1>请从账户<strong id="AoPkgModCWordUser">0</strong>中选择关键词</h1>
+            <div id="AoPkgModCWordSearch" class="aopkg_modCWord_searcharea">
+                <input type="text" _ui="id:AoPkgModCWordSearchTxt;type:Input"/>
+                <div ui="id:AoPkgModCWordSearchBtn;type:Button;">查询</div>
+            </div>
+            <div id="AoPkgModCWordInfoGuide" class="aopkg_modCWord_infoguide"></div>
+            <div id="AoPkgModCWordInfoList" class="aopkg_modCWord_infolist">
+            </div>
+        </div>
+    </div>
+    <div class="btn_area">
+        <div ui="id:AoPkgModCWordSaveBtn;type:Button;">确定</div>
+        <div ui="id:AoPkgModCWordCancelBtn;type:Button;">取消</div>
+        <div class="coreword-limit-tip hide">
+            根据您当前的消费情况，最多可设置<span class="num"></span>个重点词
+        </div>
+    </div>
+</div>

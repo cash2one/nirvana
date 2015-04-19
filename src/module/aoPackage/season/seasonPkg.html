@@ -1,0 +1,190 @@
+<!-- target:seasonPkgContent -->
+<div class="season-pkg-tab-wrapper">
+    <div class="title">您的旺季行业：</div>
+    <ul class="trade-tab-list inline_block">
+    </ul>
+</div>
+<div class="season-pkg-descr-wrapper">
+    <div class="arrow-up"></div>
+    <div class="descr-info">
+    </div>
+    <div class="season-pkg-descr-loading inline_block hide">
+        <img src="./asset/img/loading.gif" />
+        正在读取数据，请稍候...
+    </div>
+</div>
+<div class="season-pkg-flash-wrapper hide">
+</div>
+<div class="season-pkg-optitem-wrapper">
+    <div class="title">
+        <span class="trade-name"></span>行业的优化建议：
+        <span class="season-pkg-opt-loading">
+            <img src="./asset/img/loading.gif">
+        </span>
+    </div>
+    <div class="optitem-container">
+    </div>
+</div>
+
+<!-- target:seasonPkgTabItem -->
+<li class="trade-tab literal-overflow {tabClass}" tradeId="{tradeId}" tradeType="{tradeType}">
+    <div bubblesource="seasonPkg" iconType="{iconType}" class="ui_bubble inline_block peak-season-icon{iconClass}"></div>
+    <span title="{tradeTitle}">{tradeName}</span>
+</li>
+
+<!-- target:seasonPkgFlash-->
+<div class="flash-area">
+    <div class="display-type-switch" style="display:none;">
+        <input type="radio" checked="checked" value="show" ui="type:Radio;id:tradeShowType" name="displayType" title="我的旺季展现量" />
+        <input type="radio" value="click" ui="type:Radio;id:tradeClkType" name="displayType" title="我的旺季点击量" />
+    </div>
+    <div class="season-flash-container">
+    </div>
+</div>
+<div class="flash-toggle-area">
+    <div class="toggle-btn clickable inline_block" act="collapseView">
+        <span class="btn-txt">收起图表</span>
+        <span class="season-pkg-arrow-up">▲</span>
+        <span class="season-pkg-arrow-down hide">▼</span>
+    </div>
+</div>
+
+<!-- target:seasonPkgAllTradeDescrBefore -->
+账户中<em>{beforePeakNum}</em>个行业即将进入旺季。请关注优化建议，捕捉旺季商机。
+
+<!-- target:seasonPkgAllTradeDescrIn -->
+账户中<em>{inPeakNum}</em>个行业处于旺季中。请关注优化建议，捕捉旺季商机。
+
+<!-- target:seasonPkgAllTradeDescr -->
+账户中<em>{beforePeakNum}</em>个行业即将进入旺季，<em>{inPeakNum}</em>个行业处于旺季中。请关注优化建议，捕捉旺季商机。
+
+<!-- target:seasonPkgAllTradeAfterPeakDescr -->
+账户中<em>{num}</em>个行业处于旺季末期，可适当调整投放力度。
+
+<!-- target:seasonPkgTradePeakStartDescr -->
+该行业即将进入旺季，预计旺季期间，行业检索量
+<span class="up change-value">{tradePvChange}%</span>
+，请及时查看优化建议，捕捉旺季商机。
+
+<!-- target:seasonPkgTradeInPeakDescr -->
+该行业已经进入旺季，相比旺季前一周，行业检索量
+<span class="up change-value">{tradePvChange}%</span>
+<span style="display:none;">
+    ，我的近一周展现量
+    <span class="{showChangeClass} change-value">{showChange}{unit}</span>
+</span>
+<span style="display:none;">
+    ，我的近一周日均点击量
+    <span class="{clkChangeClass} change-value">{clkChange}{unit}</span>
+</span>
+。请关注优化建议，保持旺季市场份额。
+
+<!-- target:seasonPkgTradePeakEndDescr -->
+该行业处于旺季末期，本次旺季中，行业检索量
+<span class="up change-value">{tradePvChange}%</span>。
+
+<!-- target:seasonPkgOptItemGroup -->
+<div class="group-wrapper hide" groupId="{groupId}">
+    <div class="group-title">
+        诊断：<span class="diagnosis-result">{diagnosisResult}</span>
+    </div>
+    <div class="group-content">{groupContent}</div>
+</div>
+
+<!-- target:seasonPkgOptItem -->
+<div class="optitem preview-content-{opttypeId} hide" opttype="{opttypeId}"></div>
+
+<!-- target:seasonPkgOptItemSubGroup -->
+<div class="optitem sub-group hide" opttype="{opttypeId}">
+    <div class="sub-group-title">
+        {title}
+        <span class="toggle-btn clickable" act="collapseView" opttype="{opttypeId}">
+            <span class="btn-txt">收起</span>
+            <span class="season-pkg-arrow-up">▲</span>
+            <span class="season-pkg-arrow-down hide">▼</span>
+        </span>
+    </div>
+    <div class="sub-group-content preview-content-{opttypeId}"></div>
+</div>
+
+<!-- target:seasonPkgPreviewItem -->
+<div class="optitem-preview {previewClass}">{content}</div>
+
+<!-- target:seasonPkgViewAllOptItems -->
+<div class="view-all"><span class="clickable" opttype="{opttypeId}" act="viewAllOptItems">{viewAllTxt}&nbsp;&gt;&gt;</span></div>
+
+<!-- target: seasonPkgAbsItemBtn -->
+<a class="{btnClass}" href="javascript:void 0;" act="{action}" dataIdx="{dataIdx}" opttype="{opttypeId}">{btnTxt}</a>
+
+<!-- target: aoPkgAbsItem901Day -->
+建议账户预算<span class="aopkg_em">{suggestbudget}</span>元，以挽回<span class="ao_em">{saveclk}%</span>的损失点击
+<!-- import:seasonPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem901Week -->
+建议账户预算<span class="aopkg_em">{suggestbudget}</span>元，以保证账户正常投放
+<!-- import:seasonPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem902 -->
+计划{planname}建议预算<span class="aopkg_em">{suggestbudget}</span>元，以挽回<span class="ao_em">{saveclk}%</span>的损失点击
+<!-- import:seasonPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem902NoSaveClk -->
+计划{planname}建议预算<span class="aopkg_em">{suggestbudget}</span>元，以保证计划正常投放
+<!-- import:seasonPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem903 -->
+<div class="info-item wordinfo-item inline_block">关键词{showword}</div>
+<div class="info-item inline_block">质量度：{showqstar}</div>
+<div class="info-item inline_block">当前出价：{bid}元</div>
+<div class="info-item inline_block">建议出价：<span class="aopkg_em">{recmbid}</span>元</div>
+<!-- import:seasonPkgAbsItemBtn -->
+
+<!-- target:seasonPkgSubOptItemGroupTitle904 -->
+建议添加<span class="aopkg_em opt{opttypeId}-count"></span>个同业务客户关注并且搜索量上涨的旺季关键词，获得更多点击
+<!-- target:aoPkgAbsItem904 -->
+<div class="inline_block recmword-title literal-overflow" title="{showword}">{showword}</div><span class="recmword-pv-info">日均检索量：{dailypv}</span>
+<!-- import:seasonPkgAbsItemBtn -->
+
+<!-- target:seasonPkgSubOptItemGroupTitle906 -->
+建议拓展<span class="aopkg_em opt{opttypeId}-count"></span>个旺季词的匹配模式，增加优质流量
+<!-- target: aoPkgAbsItem906 -->
+<div class="info-item wordinfo-item inline_block">关键词{showword}</div>
+<div class="info-item inline_block">当前出价：{bid}元</div>
+<div class="info-item inline_block">当前匹配：{wmatch}</div>
+<div class="info-item inline_block">建议匹配：<span class="aopkg_em">{recmwmatch}</span></div>
+<!-- import:seasonPkgAbsItemBtn -->
+
+<!-- target: seasonPkgPreviewFail901 -->
+<div class="preview-item preview-exception">账户预算优化信息读取异常，请刷新后重试。</div>
+<!-- target: seasonPkgPreviewFail902 -->
+<div class="preview-item preview-exception">计划预算优化信息读取异常，请刷新后重试。</div>
+<!-- target: seasonPkgPreviewFail903 -->
+<div class="preview-item preview-exception">关键词出价优化信息读取异常，请刷新后重试。</div>
+<!-- target: seasonPkgPreviewFail904 -->
+<div class="preview-item preview-exception">推荐提词信息读取异常，请刷新后重试。</div>
+<!-- target: seasonPkgPreviewFail906 -->
+<div class="preview-item preview-exception">关键词匹配优化信息读取异常，请刷新后重试。</div>
+
+<!-- target: seasonPkgOptItemNoAdvice -->
+<div class="season-pkg-optitem-noadvice preview-item">当前无优化建议</div>
+
+<!-- target: seasonPkgNoAdvice -->
+<div class="season-pkg-noadvice">暂时没有合适的优化建议</div>
+
+<!-- target: seasonPkgPreviewRefresh -->
+<div class="preview-item">
+    <img src="./asset/img/loading_ao.gif" style="vertical-align: middle;" />
+    <span class="previewitem-loading">{refreshTxt}</span>
+</div>
+
+<!-- target:aoPkgDetailTip902 -->
+<span class="count">-</span>个计划建议调整预算，增加旺季投放时长
+
+<!-- target:aoPkgDetailTip903 -->
+<span class="count">-</span>个关键词建议调整出价，获得更多旺季点击
+
+<!-- target:aoPkgDetailTip904 -->
+建议添加以下旺季词，获得更多旺季点击
+
+<!-- target:aoPkgDetailTip906 -->
+<span class="count">-</span>个旺季词建议调整匹配，覆盖更多旺季流量

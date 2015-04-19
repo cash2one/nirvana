@@ -1,0 +1,46 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-textline.css
+ * desc:    带行号的文本输入框样式
+ * author:  zhouyu
+ * date:    2010/12/16
+ */
+
+.ui_textline{
+	position:relative;
+}
+.ui_textline_num{
+	background-color:#CACACA;
+	color:#FFFFFF;
+	font-weight:bold;
+	overflow-y:scroll;
+	text-align:center;
+	width:42px;
+	line-height:21px;
+	border:1px solid #A8ADB6;
+}
+.ui_textline textarea{
+	position:absolute;
+	left:24px;
+	top:0;
+	line-height:21px;
+	resize:none;
+}
+.ui_textline .ui_textline_num p {
+	line-height:21px;
+	padding:0;
+}
+.ghost_textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 21px;
+	visibility: hidden;
+	word-wrap:break-word;
+}
+
+.ghost_textarea p {
+    line-height: 21px;
+}

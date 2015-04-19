@@ -1,0 +1,190 @@
+<!-- target:queryReport -->
+<div class="tools_option_area" id="QueryReportOption">
+	<div class="form_value" id="SelectLevel">
+        <input type="radio" value="2"  name="selectedLevel" title="推广账户" ui="type:Radio;group:selectedLevel;id:SelectedAccount;datasource:*selectedLevel;" />
+        <input type="radio" value="3"  name="selectedLevel" title="推广计划" ui="type:Radio;group:selectedLevel;id:SelectedPlan;datasource:*selectedLevel;" />
+        <input type="radio" value="5"  name="selectedLevel" title="推广单元" ui="type:Radio;group:selectedLevel;id:SelectedUnit;datasource:*selectedLevel;" />       
+        <input type="radio" value="11" name="selectedLevel" title="关键词"   ui="type:Radio;group:selectedLevel;id:SelectedKeyword;datasource:*selectedLevel;" />
+        <input type="radio" value="7"  name="selectedLevel" title="创意"     ui="type:Radio;group:selectedLevel;id:SelectedIdea;datasource:*selectedLevel;" />    
+    </div>
+	<h3>
+		选定的对象列表： <span>(<span id="QuerySelectedObjNum"></span>个)</span> <span id="SelectedNumberWarn" class="warn hide"></span>
+	</h3>
+	<div class="material_select_area">
+		<div id="ToolMaterialSelectedWrap">
+			<div ui="id:ToolMaterialSelected;type:SelectList;"></div>
+		</div>
+		<div id="ToolMaterialListWrap">
+			<div ui="id:ToolMaterialList;type:MaterialSelect;"></div>
+		</div>
+	</div>
+	<div class="scope_select_area">
+		<h3>选择时间范围：</h3>
+		<div ui="id:QueryReportCalendar;type:MultiCalendar;"></div>
+		<div class="day_sensitive"><input type="checkbox" value="1" title="分日报告" ui="id:DaySensitive;type:CheckBox;"></div>
+		<h3>选择投放设备：</h3>
+		<!-- import:queryDevice -->
+		<h3>选择搜索引擎范围：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="选择搜索引擎范围">&nbsp;</span></h3>
+		
+		<!-- import:searchEngine -->
+		<h3>选择地域范围：</h3>
+		<div id="QueryReportRegion"></div>
+		<div class="query_region" id="QueryRegion" style="display:none;">
+			<!-- import:queryRegion -->
+		</div>
+	</div>
+	<div ui="id:BuildReport;type:Button;">生成报告</div>
+</div>
+<div class="tools_content_area hide" id="QueryReportContent">
+	<div class="tools_content_title">
+		<p> 报告为非实时数据，系统可能无法为您提供3小时内的点击消费数据和当日展现数据（昨日展现数据每日中午12时起提供）。</p>
+		<p>系统只能为您提供搜索推广方式下最近30天的搜索词分日报告数据。</p>
+		<p>搜索词报告中，“点击量”、“展现量”等总计数值并未包括非百度搜索推广的相关数据。</p>
+	</div>
+	<div class="download_area" id="DownQueryReport">
+		下载报告：
+		<a id='DownReportExcel' href="#" class="download" title="Excel文件">Excel文件</a>
+		<a id='DownReportText' href="#" class="download" title="文本文件">文本文件</a>
+	</div>
+    <div class="table_area">
+        <div class="option_area">
+            <div ui="id:AddWords;type:Button;">添加为关键词</div>
+			<a class="query_tokr" href="javascript:void(0)" id="QueryToKr">查看更多关键词&gt;&gt;</a>
+        </div>
+        <div ui="id:QueryTable;type:Table;"></div>
+        <div class="manage_page" id="QueryPageWrap">
+            <div class="scope">
+                <h4>每页显示</h4>
+                <div ui="id:QueryPageSize;"></div>
+            </div>
+            <div ui="id:QueryPage;"></div>
+        </div>
+    </div>
+</div>
+
+<form method="POST" id="QueryReportForm" name="queryReportForm">
+	<input type="hidden" id="Fuserid" name="userid">
+
+	<input type="hidden" id="FaccountRange" name="accountRange">
+	<input type="hidden" id="FstartDate" name="startDate">
+	<input type="hidden" id="FendDate" name="endDate">
+	<input type="hidden" id="FdaySensitive" name="daySensitive">
+	<input type="hidden" id="Faccountid" name="accountid">
+
+	<input type="hidden" id="Fmtldim" name="mtldim">
+	<input type="hidden" id="Fidset" name="idset">
+	<input type="hidden" id="Fdevice" name="device">
+	<input type="hidden" id="Fengineid" name="engineid">
+	<input type="hidden" id="Fprovid" name="provid">
+</form>
+
+<!-- target:queryDevice -->
+<div id='queryDevice'>
+	<span class="title" id="deviceTitle">全部设备</span>
+	<div ui="id:deviceBtn;type:Button;skin:shrink_16;"></div>
+	<div class='ui_dialog skin_modeless hide' id='queryDeviceDialog'>
+		<span class="ui_dialog_close" id='deviceCloseBtn'></span>
+		<p><input type="radio" name='queryDevice' value='0' checked="checked" title="全部设备" ui="id:queryDeviceAll;type:Radio"/></p>
+		<p><input type="radio" name='queryDevice' value='1' title="计算机" ui="id:queryDevicePC;type:Radio"/></p>
+		<p><input type="radio" name='queryDevice' value='2' title="移动设备" ui="id:queryDevicePhone;type:Radio"/></p>
+	</div>
+</div>
+
+<!-- target:searchEngine -->
+<div id="SearchEngine">
+	<span class="title" id="SETitle">全部</span>
+	<div ui="id:SEBtn;type:Button;skin:shrink_16;"></div>
+</div>
+
+<!-- target:queryRegion -->
+<div id="QueryRegionSet">
+	<div class="manage_region">
+		<input type="radio" value="0" name="region" checked="checked" title="全部地域" ui="id:QueryAllRegion;type:Radio" />
+		<input type="radio" value="1" name="region" title="部分地域" ui="id:QueryPartRegion;type:Radio" />
+	</div>
+	<div ui="id:QueryRegionBody;type:Region;mode:multi;checked:*checked;" style="display:none"></div>
+</div>
+<div class="ui_dialog_foot">
+	<div ui="id:QueryRegionOk;type:Button;">确定</div>
+	<div ui="id:QueryRegionCancel;type:Button;">取消</div>
+</div>
+
+<!-- target:addQueryWord -->
+<div class="add_query" id="AddQuery">
+	<h2>您要添加的关键词有<span class="query_number" id="AddQueryNumber">1</span>个：</h2>
+	<h3 id="AddQueryTip"></h3>
+	<ul class="query_list" id="AddQueryList"></ul>
+    <ul class="query_level" id="AddQueryLevel">
+        <li>
+            <h5>添加到推广计划：</h5>
+            <div ui="id:QueryLevelPlan;type:Select;"></div>
+        </li>
+        <li>
+            <h5>添加到推广单元：</h5>
+            <div ui="id:QueryLevelUnit;type:Select;"></div>
+        </li>
+    </ul>
+    <div class="query_match">
+    	<h5>匹配模式：</h5>
+        <div ui="id:QueryMatchType;type:Select;"></div>
+    </div>
+	<div class="btn_area">
+		<div ui="id:AddQuerySubmit;type:Button;">确定</div>
+		<div ui="id:AddQueryCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+
+<!-- target:addQueryNeg -->
+<div class="add_query" id="AddQueryNeg">
+	<h2>您要添加为否定关键词的有<span class="query_number" id="AddQueryNegNumber">1</span>个：</h2>
+	<h3>以下词被搜索到后将不触发您的推广结果。</h3>
+	<ul class="query_list" id="AddQueryNegList"></ul>
+    <div id="QuerySelectNeg">
+        <h4>添加到：</h4>
+        <p id="QuerySelectPlan">
+			<input type="radio" value="plan" name="querySelectRadio" title="推广计划层级" ui="type:Radio;id:QuerySelectRadioPlan;">
+        </p>
+        <ul class="query_level">
+            <li>
+                <h5>推广计划：</h5>
+                <div ui="id:QueryLevelPlan;type:Select;"></div>
+            </li>
+            <li>
+                <h5>推广单元：</h5>
+                <div ui="id:QueryLevelUnit;type:Select;"></div>
+            </li>
+        </ul>
+        <p id="QuerySelectUnit">
+            <input type="radio" value="unit" name="querySelectRadio" title="推广单元层级" ui="type:Radio;id:QuerySelectRadioUnit;">
+        </p>
+    </div>
+    <div class="query_match">
+    	<h5>匹配模式：</h5>
+        <div ui="id:QueryNegMatchType;type:Select;"></div>
+		<span id="QueryNegMatchTypeTip"></span>
+    </div>
+	<div class="btn_area">
+		<div ui="id:AddQuerySubmit;type:Button;">确定</div>
+		<div ui="id:AddQueryCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+
+<!-- target:addQueryCallback -->
+<div class="add_query" id="AddQueryCallback">
+	<div id="AddSuccessWrap">
+		<h2>以下<span class="query_number" id="AddSuccessNumber"></span>个关键词<span id="AddSuccessExtraTip"></span><span class="query_mode" id="AddSuccessMode"></span></h2>
+		<ul class="query_list query_list_short" id="AddSuccessList"></ul>
+	</div>
+	<div id="AddFailWrap">
+		<h2>以下<span class="query_number" id="AddFailNumber"></span>个关键词<span id="AddFailExtraTip"></span></h2>
+		<ul class="query_list" id="AddFailList"></ul>
+	</div>
+	<div id="AddSuggestWordsWrap" class="add_end_suggest"></div>
+	<div id="AddQueryBtnArea" class="btn_area">
+		<div id="SaveSuggestWordsContainer" class="fleft"></div>
+		<div ui="id:AddCallbackClose;type:Button;">关闭</div>
+		<div id="SaveErrorExpe2" class="save_error_expe"></div>
+	</div>
+</div>

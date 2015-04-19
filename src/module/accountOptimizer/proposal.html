@@ -1,0 +1,207 @@
+<!-- target:accountOptimizer -->
+<div class="ao_cont">
+	<h2>
+		<span>优化建议</span>
+		<span>账户分析</span>
+	</h2>
+</div>
+
+<!-- target:proposal -->
+<div class="proposal_cont">
+	<!-- import:proposalSide -->
+	<!-- import:proposalSection -->
+</div>
+
+<!-- target:decrease -->
+<div class="proposal_cont">
+	<!-- import:decreaseSide -->
+	<!-- import:decreaseSection -->
+</div>
+
+<!-- target:proposalSide -->
+<div class="proposal_side" id="PropAside">
+	<ul class="proposal_side_ul">
+		<li><a href="#" id="AoAll" title="优化建议为您账户在计算机端的推广进行全面分析和诊断">全部优化建议</a></li>
+		<li><a href="#" id="AoDecrease">效果突降分析</a></li>
+	</ul>
+	<!-- import:proposalObject -->
+	<h6><a href="javascript:void(0)" id="PropSet">设置</a></h6>
+</div>
+
+<!-- target:decreaseSide -->
+<div class="proposal_side" id="PropAside">
+	<ul class="proposal_side_ul">
+		<li><a href="#" id="AoAll" title="优化建议为您账户在计算机端的推广进行全面分析和诊断">全部优化建议</a></li>
+		<li><a href="#" id="AoDecrease">效果突降分析</a></li>
+	</ul>
+</div>
+
+<!-- target:proposalSection -->
+<div class="proposal_section_wrap">
+    <div class="proposal_section">
+    	<!-- import:proposalStage -->
+		<div class="proposal_data" id="ProposalData">
+			<div class="title">
+				<h3><span id="AoDataDate"></span>账户表现数据：</h3>
+			</div>
+			<div id="AoDataTableLoading"></div>
+			<div ui="id:AoDataTable;type:Table;"></div>
+	   </div>
+	   <div class="ao_result" id="AoResult"></div>
+	   <div class="proposal_widget" id="ProposalWidget"></div>
+    </div>
+</div>
+
+<!-- target:decreaseSection -->
+<div class="proposal_section_wrap">
+    <div class="proposal_section">
+	   <div class="decrease_result" id="DecreaseResult"></div>
+    </div>
+</div>
+
+<!-- target:proposalObject -->
+<div class="proposal_object" id="ProposalObject">
+	<h3>分析对象：</h3>
+	<ul>
+		<li level="useracct"><a href="javascript:void(0)" id="AoAccount">全账户</a></li>
+		<li level="toppaysumwords">
+			<a href="javascript:void(0)" id="TopPaysum">高消费词</a>
+			<div ui="id:TopPaysumSet;type:Button;skin:common_16;"></div>
+		</li>
+		<li level="topclkswords">
+			<a href="javascript:void(0)" id="TopClks">高点击词</a>
+			<div ui="id:TopClksSet;type:Button;skin:common_16;"></div>
+		</li>
+		<li level="topshowswords">
+			<a href="javascript:void(0)" id="TopShows">高展现词</a>
+			<div ui="id:TopShowsSet;type:Button;skin:common_16;"></div>
+		</li>
+		<li level="selectedfolder">
+			<a href="javascript:void(0)" id="PropFolders">监控的关键词</a>
+			<div ui="id:FolderSet;type:Button;skin:common_16;"></div>
+		</li>
+		<li id="mySelectedMaterial" class="ao_myselected">
+			<a href="javascript:void(0)" id="propMySelected"></a>
+			<div ui="id:MySelectedList;type:Button;skin:common_16;"></div>
+		</li>
+	</ul>
+</div>
+
+<!-- target:proposalStage -->
+<div class="proposal_stage">
+	<ul id="ProposalStageList">
+		<li class="all">
+			<h4><a href="#" id="AoStageAll">全部建议</a><span id="AoStageAllNum">(15)</span></h4>
+		</li>
+		<li>
+			<h3>展现<span id="AoStageShowsNum">(5)</span></h3>
+			<h5>
+				<span><a href="#" id="AoStageTime">优化在线时间</a></span>
+				<a href="#" id="AoStageKeyword">优化关键词</a>
+			</h5>
+		</li>
+		<li class="arrow"></li>
+		<li>
+			<h3>点击<span id="AoStageClksNum">(5)</span></h3>
+			<h5>
+				<span><a href="#" id="AoStageBid">优化出价</a></span>
+				<a href="#" id="AoStageQuality">优化质量</a>
+			</h5>
+		</li>
+		<li class="arrow pv"></li>
+		<li class="pv">
+			<h3>浏览<span id="AoStagePvNum">(5)</span></h3>
+			<h5>
+				<span><a href="#" id="AoStageSpeed">优化连通速度</a></span>
+				<a href="#" id="AoStagePage">优化网页质量</a>
+			</h5>
+		</li>
+		<li class="arrow trans"></li>
+		<li class="trans">
+			<h3>转化<span id="AoStageTransNum">(5)</span></h3>
+			<h5>
+				<a href="#" id="AoStageTrans">优化转化率</a>
+			</h5>
+		</li>
+	</ul>
+</div>
+
+<!-- target:groupContainer -->
+<div id="%id" style="display:none;">
+	<h2>
+		%title
+		<span></span>
+	</h2>
+	<ul>%items</ul>
+</div>
+
+<!-- target:itemContainer -->
+<li id="%prefix%item_id"></li>
+
+<!-- target:manageAoContainer -->
+<ul id="%id">
+	%items
+</ul>
+
+<!-- target:propMaterialList -->
+<div class="ao_table_list">
+	<div ui="type:Label;id:aoMlLabel"></div>
+	<div ui="type:Table;id:aoMlTable;"></div>
+	<div ui="type:Page;id:aoMlPage;"></div>
+</div>
+
+<!-- target:propFolderList -->
+<div class="ao_table_list" id="AoFolderList">
+	<div class="prop_create_folder" id="aoCreateFolder">新建监控文件夹</div>
+	<div ui="type:Table;id:aoFlTable;"></div>
+	<div class="hide warn" id="AoFolderWarn"></div>
+	<div ui="type:Button;id:aoFlButton;">确定</div>
+</div>
+
+<!-- target:propSelectedList -->
+<div class="ao_table_list">
+	<div ui="type:Label;id:aoSlLabel"></div>
+	<div ui="type:Table;id:aoSlTable;"></div>
+	<div ui="type:Page;id:aoSlPage;"></div>
+</div>
+
+
+<!-- target:setPropThreshold -->
+<div class="manage_dialog prop_set_threshold">
+	请选择设置类型:
+	    <div class="ao_set_type">
+            <input type="radio" value="toppaysumwords" name="setType" title="定义高消费" ui="type:Radio;group:setType;id:setTypePaysum;" />
+            <input type="radio" value="topclkswords" name="setType" title="定义高点击" ui="type:Radio;group:setType;id:setTypeClks;" />
+            <input type="radio" value="topshowswords" name="setType"  title="定义高展现" ui="type:Radio;group:setType;id:setTypeShow;" /> 
+        </div>
+		<br />
+		您的关键词符合下述条件时，系统认为它是高<label ui="type:Label;id:aoSetLabel1;datasource:*topWordsLabel;"></label>词：<br/>
+		该关键词的<label ui="type:Label;id:aoSetLabel2;datasource:*topFieldLabel;"></label>在账户有<label ui="type:Label;id:aoSetLabel3;datasource:*topWordsLabel;"></label>关键词数的前<span class="ao_threshold_text"><input type="text" ui="type:TextInput;id:aoThreshold;" /></span>%以上
+		<div id="TipArea" class="text_red"></div>
+		<div class="ui_dialog_foot">
+			<div ui="type:Button;id:aoThresholdOK;">保存</div>
+			<div ui="type:Button;id:aoThresholdClose;">关闭</div>
+		</div>
+</div>
+
+<!-- target:setPropForAoDecr -->
+<div class="manage_dialog prop_set_threshold">
+	当下述指标发生异动时，系统会认为推广效果发生了突降：
+	    <div class="ao_set_type">
+            <input type="radio" value="decrshows" name="setDecrType" title="展现量下降超过" ui="type:Radio;group:setDecrType;id:setDecrTypeShows;" />
+            <span class="decr_threshold_text"><input type="text" ui="type:TextInput;id:decrshowsValue;" /></span>%时
+            <br />
+            <input type="radio" value="decrclks" name="setDecrType" title="点击量下降超过" ui="type:Radio;group:setDecrType;id:setDecrTypeClks;" />
+            <span class="decr_threshold_text"><input type="text" ui="type:TextInput;id:decrclksValue;" /></span>%时
+            <br />
+            <!--
+            <input type="radio" value="decrpv" name="setDecrType"  title="浏览量下降超过" ui="type:Radio;group:setDecrType;id:setDecrTypePv;" /> 
+            <span class="decr_threshold_text"><input type="text" ui="type:TextInput;id:decrpvValue;" /></span>%时
+           	-->
+        </div>
+		<div class="ui_dialog_foot">
+			<div ui="type:Button;id:decrThresholdOK;">保存</div>
+			<div ui="type:Button;id:decrThresholdClose;">关闭</div>
+			<span id="TipArea" class="text_red"></span>
+		</div>
+</div>

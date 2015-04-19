@@ -1,0 +1,51 @@
+<!-- target:quickSetupStep3 -->
+<div id="QuickSetupBody">
+	<div class="quicksetup_step_content">
+		<div id="QuickSetupInfoTree" class="quicksetup_infotree_container"></div>
+		<div class="quicksetup_checkscheme_container">
+			<div>你可<a id="QuickSetupCheckSchemeDetail" href="#">点击这里</a>查看和修改推广预算和时段等内容，或者等之后再修改</div>
+			<div class="quicksetup_checkscheme_right" id="QuickSetupInfoTreeToggle"></div>
+		</div>
+		<div class="quicksetup_step_controller quicksetup_step_controller_marginside">
+			<div ui="id:stepButton;type:Button;">确认方案</div>
+			<a id="QuickSetupCancelSchema" href="#" class="quicksetup_ctrl_linkbut">放弃方案</a>
+		</div>
+	</div>
+</div>
+
+<!-- target:quickSetupSchemeDetail -->
+<div class="quicksetup_schemedetail_container">
+	<div class="quicksetup_schemedetail_intro">
+		方案正常生效后你可在推广管理修改这些设置
+	</div>
+	<div class="quicksetup_schemedetail_budget">
+		<h1><span id="QuickSetupDetailBName"></span></h1>
+		<div>
+			<input type="radio" ui="type:Radio;id:QuickSetupBudgetDaily" name="bugtype" value="1" title="每日">
+			<span id="QuickSetupBudgetHelpDaily" class="ui_bubble" bubblesource="budgetHelp" bubbletitle="每日预算">&nbsp;</span>
+			<input type="radio" ui="type:Radio;id:QuickSetupBudgetWeekly" name="bugtype" value="2" title="每周">
+			<span id="QuickSetupBudgetHelpWeekly" class="ui_bubble" bubblesource="budgetHelp" bubbletitle="每周预算">&nbsp;</span>
+			<input type="radio" ui="type:Radio;id:QuickSetupBudgetNolimit" name="bugtype" value="0" title="不限定预算">
+			<span id="QuickSetupBudgetHelpNolimit" class="ui_bubble" bubblesource="budgetHelp" bubbletitle="不限定预算">&nbsp;</span>
+		</div>
+		<div id="QuickSetupSchemeDetailBudget">
+			<input type="text" id="QuickSetupCurBgtValue" name="QuickSetupCurBgtValue" />
+			<span id="QuickSetupBudgetExcept" class="quicksetup_error hide"></span>
+		</div>
+	</div>
+	<div class="quicksetup_schemedetail_wregion" id="QuickSetupDetailWregion">
+		<h1><span id="QuickSetupDetailWName"></span><span id="QuickSetupBubbleRegion" class="ui_bubble" bubblesource="defaultHelp" bubbletitle="推广地域">&nbsp;</span></h1>
+		<div id="QuickSetupSchemeDetailWregion">
+			<span id="QuickSetupRegionInfo"></span>
+			<a href="javascript:void 0;" id="QuickSetupModWregion">修改</a>
+		</div>
+	</div>
+	<div class="quicksetup_schemedetail_timescheme">
+		<h1><span id="QuickSetupDetailTName">全部计划推广时段</span><span id="QuickSetupBubbleRegion" class="ui_bubble" bubblesource="defaultHelp" bubbletitle="推广时段管理">&nbsp;</span></h1>
+		<div id="QuickSetupSchemeDetailTimescheme">
+			<span id="QuickSetupCurrTimeScheme">全部时间</span>
+			<a href="javascript:void 0;" id="QuickSetupModTimeScheme">修改</a>
+		</div>
+	</div>
+	<div ui="id:SchemeDetailButtonOK;type:Button;">确定</div>
+</div>

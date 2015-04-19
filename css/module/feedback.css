@@ -1,0 +1,135 @@
+.feedback_entry{
+	height:33px;
+	width:35px;
+	position:absolute;
+	cursor: pointer;
+	line-height: 33px;
+	overflow: hidden;
+}
+.feedback_entry.with_background{
+	background:url("../../asset/img/bg_icon.png") repeat scroll -268px -1538px transparent;
+}
+.feedback_entry .wrapper{
+	width:90px;
+}
+.feedback_entry .icon{
+	width:35px;
+	height:30px;
+	float:left;
+}
+.feedback_entry .icon.dark{
+	background:url("../../asset/img/bg_icon.png") repeat scroll -385px -1536px transparent
+}
+.feedback_entry .icon.light{
+	background:url("../../asset/img/bg_icon.png") repeat scroll -361px -1536px transparent
+}
+.feedback_entry .detail{
+	float:left;
+	width:55px;
+	text-align: center;
+}
+.wrap_overview .feedback_entry
+{
+	display:none;
+}
+.feedback_paper h4{
+	font-size:14px;
+	font-weight: bold;
+	margin:5px;
+}
+.feedback_paper .paper_desc{
+	margin : 10px;
+	color:#999;
+}
+
+/*问题模板*/
+.feedback_paper .question{
+	margin-bottom:10px;
+	list-style: none;
+}
+.feedback_paper .question.error{
+	/*border-right:2px solid #ff0000;*/
+}
+.feedback_paper .question .errorword{
+	color:#ff0000;
+	padding-left:5px;
+	font-size:12px;
+}
+.feedback_paper .question h5{
+	line-height: 25px;
+	font-size:14px;
+}
+.feedback_paper .question ul{
+	margin-left:20px;
+}
+.feedback_paper .question ul li{
+	line-height:20px;
+	height: 25px;
+}
+
+.feedback_paper .question ul li input{
+	margin-right:5px;
+	vertical-align:middle;
+}
+
+.feedback_paper .question.score .star_rate,
+.feedback_paper .question.misc table,
+.feedback_paper .question.short_answer textarea{
+	margin-left: 20px;
+	margin-top:5px;
+}
+
+.feedback_paper .question.misc th{
+	border:none;
+	line-height: 25px;
+	font-size:14px;
+	background:none;
+	color:#000000;
+}
+.feedback_paper .question.misc td{
+	border:none;
+	line-height: 25px;
+	text-align: center;
+}
+.feedback_paper .question.misc th{
+	text-align: center;
+}
+.feedback_paper .question.short_answer textarea{
+	width:400px;
+	height:100px;
+}
+
+.feedback_paper .submit{
+}
+.feedback_paper .cancel{
+	margin-left:5px;
+}
+
+.feedback_starrate_item_hover{
+	display:inline-block;
+	background-image: url("../../asset/img/bg_icon.png");
+	background-position:  0px -1129px;
+	width: 20px;
+    height: 20px;
+}
+.feedback_starrate_item{
+   	display:inline-block;
+    background-image: url("../../asset/img/bg_icon.png");
+	background-position:  0px -1089px;
+    width: 20px;
+    height: 20px;
+}
+
+#FeedbackPlan{
+	height:35px;
+	border-radius:0px;
+}
+
+#FeedbackPlan .entry{
+	position:absolute;
+	right:6px;
+	top:7px;
+}
+#FeedbackPlan h2{
+	background: url("../../asset/img/bg_icon_left.png") no-repeat scroll 8px -288px transparent;
+}

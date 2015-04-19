@@ -1,0 +1,335 @@
+<!-- target:translist -->
+<div class="tanslist-container" id="TransListContainer">
+  <div class="tab-container"> 
+  	<a class="tab corner selected" href="#PhoneTransData" id="PhoneTransDataTab">电话转化数据</a> 
+	<a class="tab corner" href="#WebTransData" id="WebTransDataTab">网页转化数据</a> 
+	<a class="tab corner" href="#SiteList" id="TransTrackSetTab">转化跟踪设置</a>
+    <div class="trans_set_all" id="TransSetAll"> <a href="#" class="set-trans" id="SetTransBtn">开通/关闭设置</a>
+      <div ui="id:SetTransBtn;type:Button;" class="ui_button skin_shrink_16"></div>
+      <div id="SetTransContainer" class="trans-dialog" style="display:none">
+        <div class="ui_selectcombo_close" id="SetTransContainerCloseBtn">&nbsp;</div>
+        <div>
+          <div class="typeB set-title">请选择百度推广的跟踪方式：</div>
+          <div class="typeB">
+            <input type="radio" value="1"  name="setTrackType" title="开启" ui="type:Radio;group:setTrackType;id:TrackSetByCookie;datasource:*trackType;" />
+            <div id="MessageSet1" class="set-message">开启跟踪后，系统会以临时生成的用户cookie来识别其带来的流量。<br>
+			注意：由于用户删除cookie等网络环境客观原因，此方式可能会造成统计数据与真实数据有一定的偏差。
+			</div>
+          </div>
+          <div class="typeB">
+            <input type="radio" value="2"  name="setTrackType" title="关闭" ui="type:Radio;group:setTrackType;id:TrackSetOff;datasource:*trackType;" />
+            <div id="MessageSet2" class="set-message">关闭跟踪之后，将停止对所有网页转化目标的跟踪，网页上也停止显示用于电话追踪的400号码，同时会停止在百度统计以及离线宝中统计搜索推广和网盟推广带来的转化数据，但离线宝服务状态维持不变。</div>
+          </div>
+        </div>
+        <div class="clearfix">&nbsp;</div>
+        <div class="ui_dialog_foot">
+          <div ui="id:SetTransOkBtn;type:Button;">确定</div>
+          <div ui="id:SetTransCancelBtn;type:Button;">取消</div>
+        </div>
+        <div class="clearfix">&nbsp;</div>
+      </div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+  </div>
+  
+  <!-- 电话转化数据 -->
+  <div id="PhoneTransDataArea">
+	  <div id="PhoneTrackSucceedArea" class="hide">
+	  	<div id="PhoneTrackPauseTip" class="hide"></div>
+		<div id="ControlPhoneTransData" class="control-item">
+			<table border="0" cellspacing="0" cellpadding="0" width="98%">
+		         <tr class="control-item-tr">
+		            <td width=230>选择时间范围</td>
+		            <td width=120>&nbsp;选择统计范围</td>
+					<td align="right"><div id="PhoneTrackSucceedStat"></div></td>
+		          </tr>
+		          <tr>
+		            <td><div ui="type:MultiCalendar;id:PhoneTransDataCalendar;" ></div></td>
+		            <td><div ui="id:PhoneTransStatsSelect;type:Select;datasource:*phoneTransStatsOption;value:*phoneTransStatSelected;width:100;" class="ui_select"></div></td>
+		          	<td>&nbsp;</td>
+				  </tr>
+				  <tr>
+				  	<td><div ui="id:PhoneTransDataInputBtn;type:Button;" class="trans-btn">查询</div></td>
+					<td></td>
+					<td align="right">
+						<ul>
+					<!--		<li><a href="${lxbBill}" target="_blank" data-log="{target:'checkLxbBill'}">查看账单>></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>-->
+							<li><a href="${lxbCall}" target="_blank" data-log="{target:'checkLxbCall'}">前往百度离线宝>></a></li>
+						</ul>
+					</td>
+				  </tr>
+		    </table>
+		</div>
+		<div class="list-container"><div ui="id:PhoneTransDataTable"></div></div>	
+		<div id="PhoneTransDataPager" class="pager-container">
+	    	<div ui="id:PhoneTransDataPage;"></div>
+	    </div>
+	  </div>
+  
+	  <div id="PhoneTrackAppFailArea" class="hide">
+	  	<div id="PhoneTrackAppFailStat" class=""></div>
+		<div id="PhoneTrackAppFailTip" class=""></div>
+	  </div>
+  </div> 
+
+  <!-- 网页转化数据 -->
+  <div id="WebTransDataArea">
+  	<div id="ControlWebTransData" class="control-item">
+  	  <div class="check-toolbar">
+        <input type="radio" value="0"  name="TransDataType" title="查看转化次数" ui="type:Radio;group:TransDataType;id:TransDataTypeNumber;datasource:*transDataTypeChecked;" />
+        <input type="radio" value="1"  name="TransDataType" title="查看转化的点击和消费" ui="type:Radio;group:TransDataType;id:TransDataTypeClick;datasource:*transDataTypeChecked;" />
+      </div>
+      <div class="select-toolbar">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr class="control-item-tr">
+            <td>选择时间范围</td>
+            <td id="SiteListTh">&nbsp;所属网站范围</td>
+            <td id="TransNameTh">&nbsp;选择转化名称</td>
+            <td>&nbsp;选择统计范围</td>
+            <td>地域</td>
+          </tr>
+          <tr>
+            <td><div ui="type:MultiCalendar;id:TransDataCalendar;" ></div></td>
+            <td id="SiteListTd"><div ui="id:SiteListSelect;type:Select;datasource:*siteListOption;options:*siteListOption;value:*siteListOptionSelected;width:100;" class="ui_select"></div></td>
+            <td id="TransNameTd"><div ui="id:TransNameSelect;type:Select;" class="ui_select"></div></td>
+            <td><div ui="id:StatsSelect;type:Select;datasource:*statsOption;value:*statsOptionSelected;width:100;" class="ui_select"></div></td>
+            <td><div id="TransAreaTip" title="全部地域">全部地域</div>
+              <div ui="id:TransAreaSelectBtn;type:Button;" class="ui_button skin_shrink_16"></div>
+              <div class="query_region" id="TransAreaContainer" style="display:none;"> 
+                <!-- import:transRegion --> 
+              </div></td>
+          </tr>
+        </table>
+      </div>
+      <div class="btn-toolbar">
+        <div ui="id:TransDataInputBtn;type:Button;" class="trans-btn">查询</div>
+      </div>
+      <div class="clearfix">&nbsp;</div>
+	</div>  	
+	<div class="list-container"><div ui="id:TransDataTable"> </div></div>	
+	
+	<div id="TransDataPager" class="pager-container">
+    	<div ui="id:TransDataPage;"></div>
+    </div>
+  </div>
+  
+  
+  <!-- 网站列表 -->
+  <div id="SiteListArea">
+	<div id="ControlSiteList" class="control-item">
+      	<table width="98%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+          	<td width=220 class="new-trans-input">http://<input type="text" ui="id:NewSite;type:TextInput;virtualValue:*domainDefaultValue" /></td>
+			<td><div class="warn" id="NewTransDomainWarn"></div></td>
+		  </tr>
+          <tr>
+            <td colspan=2><div ui="id:NewSiteBtn;type:Button;">新增网站</div></td>
+          </tr>
+          <tr>
+            <td colspan=2 align="right" id="PhoneTransDetailSet"></td>
+          </tr>
+		</table>
+	</div>
+	<div class="tabledata-cnt">网站列表（共<span id="SiteListNum"></span>个网站）</div>
+  	<div class="list-container"><div ui="id:SiteListTable"></div></div>
+	<div id="SiteListPager" class="pager-container">
+	    <div ui="id:SiteListPage;"></div>
+	</div>
+	<div class="trans-notice">注意：通过js调用安装代码，提示“未检测到代码”属正常现象，不影响数据统计</div>
+  </div>
+  
+  <!-- 转化列表 -->
+  <div id="TransListArea">
+    <div id="ControlTransList" class="control-item">
+      <div style="height:22px;"><a href="javascript:void(0)" id="ToSiteListArea">转化跟踪设置</a>&nbsp;&nbsp;>&nbsp;&nbsp;网页转化目标</div>
+      <div class="select-toolbar">
+        <table width="90%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>&nbsp;选择网站</td>
+          </tr>
+          <tr>
+            <td><div ui="id:SiteListSelectB;type:Select;datasource:*siteListOptionB;options:*siteListOptionB;value:*siteListOptionSelectedB;width:150" class="ui_select"></div></td>
+          </tr>
+		  <tr>
+		  	<td style="padding-top:8px;">&nbsp;已设置&nbsp;<span id="TransListNum" class="bold"></span>&nbsp;个转化目标</td>
+		  </tr>
+		  <tr>
+		  	<td style="padding-top:8px;">
+		  		<div class="manage_option_left" ui="id:TransListInputBtn;type:Button;">查询</div>
+        		<div ui="id:TransListNewListBtn;type:Button;" class="newtrans-btn">新增转化</div>
+		  	</td>
+		  </tr>
+        </table>
+      </div>
+    </div>
+	
+	<div class="list-container"><div ui="id:TransListTable"></div></div>	
+	
+	<div id="TransListPager" class="pager-container">
+	    <div ui="id:TransListPage;"></div>
+	</div>
+  </div>
+  
+</div>
+
+
+<!-- target: LXBStat1000 -->
+<div class="tip-container">
+	<table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width=110><div class="bphone-icon1000"></div></td>
+			<td>
+				<h2>您尚未申请开通电话追踪业务</h2>
+				<ul>
+					<li><span class="emp">百度离线宝</span>针对营销过程的三大盲点，应运而生五大监控功能，</li>
+					<li>解决三大难题，优化营销全过程！</li>
+				</ul>
+				<div class="app-button-line">
+					<div ui="id:appLxb;type:Button;">立即申请开通</div>
+					<span>(或与您的推广顾问联系开通！)</span>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<!-- target: LXBStat6 -->
+<div class="bphone-icon6 tip-container">
+	<h2>正在对您的电话追踪业务申请进行审核</h2>
+	<ul>
+		<li>1.审核结束将尽快通知您结果，请您耐心等待</li>
+		<li>2.如有疑问请联系您的推广顾问</li>
+	</ul>
+</div>
+
+<!-- target: LXBStat4 -->
+<div class="bphone-icon4 tip-container">
+	<h2>您的电话追踪业务申请未通过资质审核</h2>
+	<ul>
+		<li>1.您可以<a href="{0}" target="_blank" data-log="{target:'reapplayLxb',state:'4'}">点击这里重新申请</a></li>
+		<li>2.如有疑问请联系您的推广顾问</li>
+	</ul>
+</div>
+
+<!-- target: LXBStat0 -->
+<div class="bphone-icon0 tip-container">
+	<h2>您的400号码申请失败，电话追踪业务申请不成功</h2>
+	<ul>
+		<li>1.您可以<a href="{0}" target="_blank" data-log="{target:'reapplayLxb',state:'0'}">点击这里重新申请400号码</a></li>
+		<li>2.如有疑问请联系您的推广顾问</li>
+	</ul>
+</div>
+
+<!-- target: LXBStat8 -->
+<div class="bphone-icon8 tip-container">
+	<!-- <h2>您的电话追踪业务因欠费暂停</h2> -->
+  <h2>您的离线宝套餐已到期，<b class="red">媒体追踪等功能欠费暂停</b></h2>
+	<ul>
+		<!-- <li>1.如<b class="red">15天</b>内未能充值，<b class="red">电话将被回收</b>，请您尽快联系推广顾问进行续费</li>
+		<li>2.如有疑问请联系您的推广顾问</li> -->
+    <li>1.请尽快向离线宝账户充值并购买新的套餐</li>
+    <li>2.如有疑问请联系您的推广顾问</li>
+	</ul>
+</div>
+
+<!-- target: LXBStat9 -->
+<div class="bphone-icon9 tip-container">
+	<h2>您的电话追踪业务因长时间暂停，原来400号码已被收回</h2>
+	<ul>
+		<li>1.您可以<a href="{0}" target="_blank" data-log="{target:'reapplayLxb',state:'9'}">点击这里重新申请400号码</a></li>
+		<li>2.如有疑问请联系您的推广顾问</li>
+	</ul>
+</div>
+
+
+<!-- target:transRegion -->
+<div id="TransRegionSet">
+	<div class="manage_region">
+		<input type="radio" value="0" name="transRegion" checked="checked" title="全部地域" ui="id:TransAllRegion;type:Radio" />
+		<input type="radio" value="1" name="transRegion" title="部分地域" ui="id:TransPartRegion;type:Radio" />
+	</div>
+	<div ui="id:TransRegionBody;type:Region;mode:multi;checked:*checked;" style="display:none"></div>
+</div>
+<div class="ui_dialog_foot">
+	<div ui="id:TransRegionOk;type:Button;">确定</div>
+	<div ui="id:TransRegionCancel;type:Button;">取消</div>
+</div>
+
+<!-- target:transModify -->
+<div class="trans_modify" id="TransModify">
+    <h3>请输入您要修改的转化的相关信息：</h3>
+    <div class="trans-modify-box">
+        <div class="text">
+            <div class="text">
+                网站域名：<span id="ModifyTransDomain"></span>
+            </div>
+            <div>
+                转化名称：<input id="ModifyTransName" type="text" value="" class="trans-text">&nbsp;&nbsp; <span class="text-grey">最多输入50个字符</span>
+				<div class="warn" id="ModifyTransNameWarn"></div>
+            </div>
+            <div class="dot-div">
+                <div class="dot-div1">
+                    目标网址：<input id="ModifyTransTargetUrl" type="text" value="" style="width:311px;" class="trans-text">
+					<div class="warn" id="ModifyTransTargetUrlWarn"></div>
+                </div>
+                <div class="dot-div1">
+                    匹配模式：<div ui="id:ModifyTransMatch;type:Select;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+            &nbsp;
+        </div>
+    </div>
+	<div class="budget_btn">
+		<div ui="id:TransModifySave;type:Button;">保存</div>
+		<div ui="id:TransModifyCancel;type:Button;">取消</div>
+		<div class="warn" id="TransModifySaveWarn"></div>
+	</div>
+</div>
+
+<!-- target:getCode -->
+<div class="get_code" id="GetCode">
+    <div class="text">
+	           网站<span id="GetJsCodeContainerDomain"></span>
+	           的代码已生成，您可以点击复制代码按钮进行复制。
+		<div class="text-grey">
+			建议：请尽量在网站的所有页面加入JS代码，以帮助您对网站进行更全面的监测和统计。
+		</div>
+    </div>
+    <div class="get-code-box">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="195">
+                    <div id="GetJsCodeContainerFlashCopyBtn">
+                        复制代码
+                    </div>
+                    <div class="clearfix">
+                        &nbsp;
+                    </div>
+                    <div class="stat_ok" id="GetJsCodeContainerCopyComplete">
+                    </div>
+                </td>
+                <td>
+                    <textarea id="GetJsCodeContainerCodeTextarea" class="code-block">
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-grey">请您将代码粘贴到您的目标页面的html源代码中&lt;body&gt;与 &lt;/body&gt;之间的位置。请看示意图：</span>
+                </td>
+                <td>
+                    <div class="download_code">
+                        <p>&lt;body&gt;</p>
+                        <p class="view">请将以上代码复制到&lt;body&gt;和&lt;/body&gt;之间</p>
+                        <p>&lt;/body&gt;</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+	<div class="budget_btn">
+		<div ui="id:GetCodeClose;type:Button;">关闭</div>
+	</div>
+</div>

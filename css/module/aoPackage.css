@@ -1,0 +1,1111 @@
+/*
+ * nirvana
+ * Copyright 2012 Baidu Inc. All rights reserved.
+ * 
+ * path:    css/aoPackage.css
+ * desc:    包样式
+ * author:  LeoWang(wangkemiao@baidu.com)
+ * date:    2012/04/24
+ */
+
+
+/*** 优化包 ***/
+.no_scroll_body{
+	overflow-y: hidden;
+}
+
+.aopkg_dialog{
+	/*
+	width: auto;
+	min-width: 900px;
+	left: 30px!important;
+	top: 30px!important;
+	right: 30px;
+	bottom: 30px;
+	*/
+	width: 980px;
+	height: 550px;
+}
+    .aopkg_dialog .ui_dialog_head{
+        cursor: auto;
+    }
+    .aopkg_dialog .ui_dialog_head_hover{
+        background-image: none;
+    }
+	.aopkg_dialog .ui_dialog_body{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 28px;
+		bottom: 42px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		margin: 0;
+	}
+	.aopkg_dialog .ui_dialog_noscrollbody{
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	
+	.aopkg_dialog .ui_dialog_foot{
+		margin: 0; 
+		padding: 10px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+
+.aopkg_container{
+	position: relative; 
+	padding: 0; 
+	margin: 0;
+	width: 200%;
+	height: 100%;
+}
+
+	.aopkg_container h1{
+		font-size: 17px;
+		font-weight: 700;
+		display: inline;
+	}
+	.aopkg_container h2{
+		font-size: 15px;
+		font-weight: 700;
+		margin-left: 10px;
+		padding-top: 10px;
+		height: 33px;
+		line-height: 25px;
+		position: relative;
+	}
+
+/**
+ * 	数据区域部分
+ */
+.aopkg_dataarea_container{
+	border-bottom: 1px solid #cdcdcd;
+	padding-bottom: 5px;
+	position: relative;
+	min-height:200px;
+}
+
+.aopkg_dataarea_desc{
+	padding: 5px 10px 10px 10px;
+}
+
+.aopkg_dataarea_desc .bigger{
+	font-size: 15px;
+	margin: 5px 0;
+}
+.aopkg_dataarea_desc .normalSize{
+	font-size: 13px;
+}
+.aopkg_dataarea_desc .specFamily {
+	font-family: "宋体";
+}
+.aopkg_dataarea_desc em {
+	font-weight : 700;
+}
+.aopkg_dataareadesc_decrvalue{
+	color: #cc0d39;
+	padding-left: 23px;
+	margin-right: 5px;
+	background: url("../../asset/img/bg_icon_left.png") no-repeat 5px -1166px;
+}
+.aopkg_dataareadesc_incevalue{
+	color: #cc0d39;
+	padding-left: 23px;
+	margin-right: 5px;
+	background: url("../../asset/img/bg_icon_left.png") no-repeat 5px -1048px;
+}
+
+.aopkg_dataarea_desc .redmark {
+	color: #cc0501;
+}
+.aopkg_dataarea_desc .redmark_margined {
+    color: #cc0501;
+    margin: 0 5px;
+}
+.aopkg_dataarea_desc .bluemark {
+	color: #03c;
+}
+.aopkg_dataarea_desc .dataareactrl{
+	padding-top: 5px;
+	position: relative;
+}
+.aopkg_dataareadesc_selectctrl {
+	padding-left:30px;
+}
+.aopkg_dataareadesc_selectctrl input{
+	margin-left:25px;
+}
+
+.aopkg_dataarea_desc .dataareadescinfo{
+	padding-top: 5px;
+	margin-bottom: 10px;
+}
+
+.aopkg_dataarea_desc .star3line,
+.aopkg_dataarea_desc .star2line,
+.aopkg_dataarea_desc .star1line{
+	display: inline-block;
+	margin-left:10px;
+	width: 30px;
+	border-bottom: 3px solid #ed410c;
+	position: relative;
+	top: -3px;
+}
+.aopkg_dataarea_desc .star2line{
+	border-color : #259e01;
+}
+.aopkg_dataarea_desc .star1line{
+	border-color : #0077cc;
+}
+
+.aopkg_dataarea_desc_ralign{
+	position: absolute;
+	right: 50px;
+	top: 15px;
+}
+
+.aopkg_dataarea_desc .clickline,
+.aopkg_dataarea_desc .offtimeline{
+	display: inline-block;
+	margin-left:10px;
+	width: 30px;
+	border-bottom: 3px solid gray;
+	position: relative;
+	top: -3px;
+}
+.aopkg_dataarea_desc .offtimeline{
+	border-color : green;
+}
+.aopkg_dataarea_desc .lostline{
+	display: inline-block;
+	margin-left:10px;
+	width: 30px;
+	position: relative;
+	top: -3px;
+}
+.lostline span{
+	display: inline-block;
+	border-bottom: 3px solid red;
+	margin: 0 2px;
+	width: 11px;
+}
+
+.aopkg_dataarea_main{
+	padding: 0 10px 10px 10px;
+	position: relative;
+}
+.aopkg_dataarea_loading{
+	position: absolute;
+	top: 90px;
+	left: 430px;
+	text-align: center;
+	padding: 5px 10px;
+	background: #fff;
+}
+*+html .aopkg_dataarea_loading{
+	left: 0;
+}
+.aopkg_dataarea_loading img{
+	display: block;
+	margin: 5px auto;
+}
+.aopkg_dataarea_aside{
+	width: 130px;
+	border: 1px solid red;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.aopkg_select_lspace{
+	margin-left: 20px;
+	margin-right: 5px
+}
+.aopkg_dataarea_errorarea{
+	text-align: center;
+}
+
+/**
+ * 	摘要部分
+ */
+.aopkg_bizeff_ctrl{
+	text-align: center;
+	padding: 30px;
+	background: #fff;
+}
+.aopkg_bizeff_ctrlinfo em{
+	font-weight: 700;
+	margin:0 5px;
+}
+.aopkg_bizeff_ctrlbut{
+	margin: auto;
+	width: 116px;
+	padding: 15px 0;
+}
+
+.aopkg_overview_main{
+	padding: 0; 
+	margin: 0;
+	width: 50%;
+	height: 100%;
+	position: relative;
+}
+
+	.aopkg_overview_header{
+		border-bottom: 1px solid #cdcdcd;
+		padding: 10px;
+		background: #F3FBFF;
+	}
+	.aopkg_overview_headerdesc{
+		font-size: 12px;
+		color: gray;
+		margin-left: 15px;
+		position: relative;
+		top: -2px;
+	}
+    .aopkg_overview_main h3{
+        font-size: 13px;
+        font-weight: 700;
+        padding: 1px 0;
+        margin: 2px 0 2px 10px;
+    }
+
+.aopkg_manager_main{
+	padding: 0;
+	position: relative;
+}
+	.aopkg_manager_container{
+    	padding: 0;
+    	position: relative;
+	}
+	.aopkg_manager_bg {
+	    position: absolute;
+	    width: 100%;
+	    height: 70px;
+	    top: 0;
+	    left: 0;
+	    background: url("../../asset/img/bg_repeat_x.png") repeat-x 0 -520px;
+	}
+	.aopkg_manager_container .noadvice{
+		margin: 20px;
+	}
+	
+	.aopkg_listgroup{
+		border-bottom: 1px solid #EAF0F5;
+		margin-bottom: 10px;
+		position: relative;
+	}
+	.aopkg_listgroup_nomargin{
+		margin-bottom: 0;
+	}
+	.aopkg_listrank{}
+	
+		.aopkg_manager_container li{
+			line-height: 34px;
+			position: relative;
+		    overflow: hidden;
+		}
+		/*****智能推词包样式*****/
+		/*.recmword_pkg .aopkg_manager_main li{
+			border-bottom: solid 1px #eeeeee;
+		}
+		.recmword_pkg .aopkg_titlepic_container{
+			float: left;
+			margin: 10px 0px 10px 69px;
+			width: 136px;
+			height: 47px;
+			display: inline-block;
+			border: solid 1px #b9c9d3;
+			background-color: #ecf4f7;
+			cursor: pointer;
+		}
+		.recmword_pkg .aopkg_titlepic_pic{
+			float: left;
+			width: 45px;
+			height: 30px;
+			margin-top: 9px;
+			margin-left:12px;
+			background-image: url("../../asset/img/bg_icon.png");
+		}
+		.recmword_pkg #AoPkgAbsItem501 .aopkg_titlepic_pic{
+			background-position: -143px -1327px;
+		}
+		.recmword_pkg #AoPkgAbsItem502 .aopkg_titlepic_pic{
+			background-position: -194px -1327px;
+		}
+		.recmword_pkg #AoPkgAbsItem503 .aopkg_titlepic_pic{
+			background-position: -92px -1327px;
+		}
+		.recmword_pkg #AoPkgAbsItem504 .aopkg_titlepic_pic{
+			background-position: -245px -1327px;
+		}
+		.recmword_pkg .aopkg_titlepic_text{
+		    float: left;
+		    margin-left: 15px;
+		    margin-top: 7px;
+		    color: #385d7a;
+		    font-weight: bold;
+		}
+		.recmword_pkg .recmword_preview_item{
+			padding: 3px 6px;
+			background-color:#ecf4f7;
+			margin-left: 7px;
+			border-radius: 3px;
+			color: #000000;
+			text-decoration: none;
+		}
+		.recmword_pkg .aopkg_checkbox{
+			position: absolute;
+			top: 13.5px;
+			*top: 9px;
+			left: 230px;
+		}*/
+		/*.recmword_pkg .aopkg_manager_container li p{
+			margin-left: 228px;*/
+			/*background-color: #fff;*/
+    		/*padding: 2px 0;
+    		height: 25px;
+		    overflow: hidden;
+		    min-width: 625px;
+		}
+		.recmword_pkg .aopkg_manager_container li p.aopkg_manager_checkableItem{
+			padding-top: 3px;
+			padding-left: 23px;
+		}
+		.recmword_pkg .aopkg_manager_container li p.recmwordPreviewContainer{
+			*margin-bottom: 10px;
+		}
+		.recmword_pkg .aopkg_btn{
+			background: url("../../asset/img/bg_icon.png") no-repeat scroll -110px -970px transparent;
+			border-radius: 3px 3px 3px 3px;
+			height: 22px;
+			line-height: 22px;
+			position: absolute;
+			right: 45px;
+			text-align: center;
+			top: 25px;
+			width: 63px;
+		}
+		#AoPkgAbsItem501{
+			margin-top:-12px;
+		}
+		.recmword_pkg .aopkg_manager_container li:hover p{
+			background-color: transparent;
+		}
+		.recmword_pkg .aopkg_manager_container .light{
+			color:#9F9F9F;
+		}
+		.recmword_pkg .aopkg_dataarea_container{
+			border-bottom: 1px solid #cdcdcd;
+			padding-bottom: 5px;
+			position: relative;
+			min-height:190px;
+		}
+		.recmword_pkg .aopkg_dataarea_main{
+			padding: 0;
+			position: relative;
+		}
+		.recmword_pkg_search_container{
+			float:right;
+			margin-right:10px;
+		}
+		.recmword_pkg_search_container span{
+			float: left;
+			margin-top: 7px;
+			padding-top:2px\9;
+		}
+		.recmword_pkg_search_frame {
+			width: 170px;
+			height: 24px;
+			float:left;
+			margin-left: 10px;
+			border: solid 1px #7d7d7d;
+		}
+		.recmword_pkg_search_frame input{
+			float: left;
+			margin-top: 4px;
+			border: none;
+		}
+		.recmword_pkg_search_frame a{
+			float: right;
+			margin-right: 6px;
+			margin-top: 4px;
+			border: none;
+			width: 15px;
+			height: 15px;
+			cursor: pointer;
+			background: url("../../asset/img/bg_icon.png") -296px -1342px;
+		}
+		
+		.recmword_pkg li.aopkg_partfinished p,
+		.recmword_pkg li.aopkg_applyfailed p{
+			background: none;
+		}
+		.recmword_pkg li.aopkg_partfinished .aopkg_manager_checkableItem,
+		.recmword_pkg li.aopkg_applyfailed .aopkg_manager_checkableItem{
+			background: url("../../asset/img/bg_icon_left.png") no-repeat 4px -1180px;
+		}
+		.recmword_pkg li.aopkg_modfinished p{
+			background: none;
+		}
+		.recmword_pkg li.aopkg_modfinished .aopkg_manager_checkableItem{
+			background: url("../../asset/img/bg_icon_left.png") no-repeat 4px -1130px;
+		}
+		.recmword_pkg li.aopkg_modfinished .recmwordPreviewContainer{
+			color: #1ab801;
+			padding-left: 23px;
+		}*/
+		/*****智能推词包样式end*****/
+		li.aopkg_modfinished p,
+		li.aopkg_partfinished p,
+		li.aopkg_applyfailed{
+			color: #888;
+		}
+		li.aopkg_modfinished .aopkg_enable,
+		li.aopkg_modfinished .aopkg_btn,
+		li.aopkg_modfinished .aopkg_offer,
+		li.aopkg_modfinished .aopkg_meta,
+		li.aopkg_modfinished .aopkg_timeout,
+		li.aopkg_modfinished .aopkg_checkbox,
+		li.aopkg_modfinished .aopkg_modified,
+		li.aopkg_modfinished .aopkg_updated,
+		li.aopkg_modfinished .aopkg_link,
+		
+		li.aopkg_partfinished .aopkg_enable,
+		li.aopkg_partfinished .aopkg_btn,
+		li.aopkg_partfinished .aopkg_offer,
+		li.aopkg_partfinished .aopkg_meta,
+		li.aopkg_partfinished .aopkg_timeout,
+		li.aopkg_partfinished .aopkg_checkbox,
+		li.aopkg_partfinished .aopkg_updated,
+		li.aopkg_partfinished .aopkg_link,
+		
+        li.aopkg_applyfailed .aopkg_enable,
+        li.aopkg_applyfailed .aopkg_btn,
+        li.aopkg_applyfailed .aopkg_offer,
+        li.aopkg_applyfailed .aopkg_meta,
+        li.aopkg_applyfailed .aopkg_timeout,
+        li.aopkg_applyfailed .aopkg_checkbox,
+        li.aopkg_applyfailed .aopkg_updated,
+        li.aopkg_applyfailed .aopkg_link{
+			display: none;
+		}
+		.aopkg_manager_container li p label{
+			display: block;
+		}
+		
+		li.aopkg_modfinished p{
+			background: url("../../asset/img/bg_icon_left.png") no-repeat 13px -1130px;
+		}
+		li.aopkg_partfinished p,
+		li.aopkg_applyfailed p{
+			background: url("../../asset/img/bg_icon_left.png") no-repeat 14px -1181px;
+		}
+		.aopkg_manager_container li:hover p{
+			background-color:#f0f7fe;
+		}
+		.aopkg_listrank li p.aopkg_manager_checkableItem,
+		li.aopkg_absmainitem p{
+			padding-left: 33px
+		}
+		.aopkg_manager_container li p.aopkg_manager_checkableItem{
+			padding-left: 38px;
+		}
+		
+			.aopkg_checkbox{
+				position: absolute;
+				top: 10.5px;
+				*top: 6px;
+				left: 17px;
+			}
+			.aopkg_listrank .aopkg_checkbox{
+				left: 17px;
+			}
+			
+			.aopkg_rank.top5 {
+			    background: url("../../asset/img/bg_icon.png") no-repeat scroll -290px -995px transparent;
+			    color: #FFFFFF;
+			    margin: 0 5px 0 0;
+			}
+			.aopkg_rank {
+			    background: url("../../asset/img/bg_icon.png") no-repeat scroll -310px -995px transparent;
+			    color: #FFFFFF;
+			    font-size: 10px;
+			    font-weight: bold;
+			    height: 15px;
+			    line-height: 15px;
+			    text-align: center;
+			    width: 17px;
+			    display: inline-block;
+			    position: relative;
+			    margin: 0 5px 0 0;
+			}
+			.aopkg_em, .aopkg_status {
+			    font-weight: bold;
+			    padding: 0 6px;
+			}
+			.aopkg_em_paddingright0{
+                font-weight: bold;
+                padding: 0 0 0 6px;
+			}
+			.aopkg_time{
+				color: #999999;
+    			padding: 0 0 0 6px;
+			}
+			.aopkg_offer{
+				font-weight: bold;
+				position: absolute;
+				right: 187px;
+				top: 0;
+			}
+			.aopkg_updated{
+				padding: 2px 5px;
+				border: 1px solid #fc0;
+				background-color: #fc0;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				color: #434343;
+				margin-left: 6px;
+			}
+			.aopkg_modified{
+				padding: 2px 5px;
+				border: 1px solid #caf899;
+				background-color: #caf899;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				color: #434343;
+				margin-left: 6px;
+			}
+			.aopkg_meta {
+				font-weight:bold;
+				padding:0 0 0 6px;
+			}
+			.aopkg_timeout {
+				color:#F00;
+				cursor:pointer;
+				font-weight:bold;
+				padding:0 0 0 6px;
+			}
+			.aopkg_fail{
+			    color:#F00;
+                font-weight:bold;
+                padding:0 0 0 6px;
+			}
+			.aopkg_needRefresh{
+				font-weight:bold;
+				padding:0 0 0 6px;
+				color:#f00;
+			}
+			
+			.aopkg_enable{
+				position: absolute;
+				right: 150px;
+				top: 0;
+			}
+			.aopkg_btn{
+				background: url("../../asset/img/bg_icon.png") no-repeat scroll -110px -970px transparent;
+				border-radius: 3px 3px 3px 3px;
+				height: 22px;
+				line-height: 22px;
+				position: absolute;
+				right: 20px;
+				text-align: center;
+				top: 6px;
+				width: 63px;
+			}
+			.aopkg_link{
+				position: absolute;
+				right: 21px;
+				text-align: center;
+				top: 0;
+				width: 63px;
+			}
+			.aopkg_linkbtn{
+				text-align: center;
+				margin-left: 15px;
+			}
+
+.aopkg_sublist, .aopkg_sublist li{
+	position: relative;
+}
+.aopkg_sublist li p{
+	padding-left: 48px;
+}
+.aopkg_sublist li p.aopkg_manager_checkableItem{
+	padding-left: 68px;
+}
+.aopkg_sublist .aopkg_checkbox{
+	left: 47px;
+}
+
+li.aopkg_modfinished p{
+	background: url("../../asset/img/bg_icon_left.png") no-repeat 17px -1133px;
+}
+li.aopkg_partfinished p,
+li.aopkg_applyfailed p{
+	background: url("../../asset/img/bg_icon_left.png") no-repeat 17px -1183px;
+}
+.aopkg_sublist li.aopkg_modfinished p{
+	background: url("../../asset/img/bg_icon_left.png") no-repeat 48px -1133px;
+}
+.aopkg_sublist li.aopkg_partfinished p,
+.aopkg_sublist li.aopkg_applyfailed p{
+	background: url("../../asset/img/bg_icon_left.png") no-repeat 48px -1183px;
+}
+
+.aopkg_detail_main{
+	overflow-x:hidden;
+	overflow-y:auto;
+	position : absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	right: 0;
+	width: 50%;
+	/*height: 100%;*/
+    min-height:520px;
+}
+	.aopkg_detail_container{
+		display: block;
+	}
+
+.aopkg_optitem_loading{
+	margin-left:33px;
+}
+
+
+/********** 优化详情 **********/
+.aopkg_widget_title {
+	margin:6px 0;
+	height:14px;
+	line-height:14px;
+	overflow:hidden;
+}
+.aopkg_widget_title h3 {
+	/*border-right:1px solid #666;*/
+	color:#444;
+	float:left;
+	font-weight:bold;
+	padding:0 18px 0 11px;
+}
+.aopkg_widget_title h3 span{
+	color: #00F;
+}
+.aopkg_widget_title h3 em{
+	margin: 0 10px;
+	font-family: "宋体";
+	font-weight: 700;
+}
+.aopkg_widget_title h4 {
+    color:#00F;
+	display:inline;
+    float:right;
+    font-weight:bold;
+	margin:0 10px;
+}
+.aopkg_widget_tip {
+	background:#FFF6BD;
+	color:#666;
+	height:31px;
+	line-height:31px;
+	margin:8px 1px;
+	padding:0 5px;
+}
+.aopkg_widget_tip .count {
+	margin:0 6px;
+}
+.aopkg_widget_tab {
+	height:25px;
+	overflow:hidden;
+	padding:0 10px;
+	position:relative;
+	z-index:1;
+}
+.aopkg_widget_select {
+    border:1px solid #CCC;
+    border-bottom:0;
+    height:24px;
+    margin:-1px 6px 0 8px;
+    overflow:hidden;
+    padding:12px 15px;
+}
+.aopkg_widget_select .ui_select_cur_def{
+    width: 110px;
+}
+.aopkg_widget_modify {
+    border:1px solid #CCC;
+    /*border-top: 0;*/
+    height:24px;
+    margin:-1px 6px 0 8px;
+    overflow:hidden;
+    padding:10px 15px;
+    background-color: #ECECEC;
+}
+.aopkg_widget_modify .widget_modify_mr5{
+    margin-right: 5px;
+}
+.aopkg_widget_modify .widget_modify_Tooltip{
+    margin-left: 10px;
+    color: red;
+    line-height: 25px;
+    /*display: none;*/
+}
+.aopkg_widget_query {
+	border:1px solid #CCC;
+	border-bottom:0;
+	height:24px;
+	margin:-1px 6px 0 8px;
+	overflow:hidden;
+	padding:8px 20px;
+}
+.aopkg_widget_query .ui_button {
+    margin: 0 10px 0 15px;
+}
+.aopkg_widget_query > a {
+    cursor: pointer;
+    vertical-align: -5px;
+}
+.aopkg_widget_table {
+	margin:-1px 0 0;
+	padding:0 8px;
+}
+/******************** 恶心的逻辑啊。。。这样才能进行行内编辑 ********************/
+.aopkg_widget_table .ui_table {
+    border-top:1px solid #CCC;
+}
+.aopkg_widget_table .ui_table_body {
+    position:relative;
+    min-height: 290px;
+}
+.aopkg_widget_table .ui_table_tdcell {
+    position:relative;
+}
+.aopkg_widget_table .ui_table_trmark {
+	background:#FFD9D9!important;
+}
+.aopkg_widget_table .ui_table_trmark .td_sort{
+    background:#FFD9D9!important;
+}
+.aopkg_widget_table .ui_table .add_target dt {
+    color:#A8A8A8;
+    float:left;
+    width:38px;
+}
+.aopkg_widget_table .ui_table .add_target dd {
+    float:left;
+	overflow:hidden;
+    width:100px;
+}
+/*.aopkg_widget_table .nodata_vertical {
+    line-height: 50px;
+    margin: 0;
+    position: static;
+    text-align: center;
+}*/
+.aopkg-cell-href-btn {
+    padding-right: 12px;
+}
+.aopkg_widget_page {
+    padding:5px 6px;
+	text-align:right;
+}
+/* 新的优化详情的分页组件样式 */
+.aopkg-page-ui {
+    padding: 5px 0;
+    text-align:right;
+    margin-right: -2px;
+}
+.aopkg_widget_btn {
+	height:22px;
+	line-height:22px;
+	padding: 10px;
+}
+.aopkg_widget_btn h4 {
+    color:#00F;
+    display:inline;
+    float:left;
+    margin:0 10px;
+}
+.aopkg_widget_cont .return {
+	cursor:pointer;
+}
+
+.aopkg_widget_table a[act="watchIdea"],
+.aopkg_widget_table a[act="collapseIdea"],
+.aopkg_widget_table a[act="addIdea"],
+.aopkg_widget_table a[act="optimizeIdea"]{
+    cursor: pointer;
+}
+/**
+#AoPackageDetailMain {
+    position: relative;
+}
+**/
+.aopkg_detail_main .ui_table_subrow {
+    padding: 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.aopkg_detail_main .subTableContainer {
+    position: relative;
+    padding-top: 30px;
+}
+.aopkg_detail_main .subTableContainer .ui_table_body {
+    min-height: 50px;
+}
+.aopkg_detail_main .widget_option {
+    position: absolute;
+    left: 0;
+    right: -2px;
+    top: -2px;
+    height: 30px;
+}
+/**
+.aopkg_detail_main .widget_table {
+    border-bottom: none;
+}
+**/
+.aopkg_detail_main .widget_option .active-idea,/*div[act="activeIdeas"],*/
+.aopkg_detail_main .widget_option .enable-idea/*div[act="enableIdeas"]*/ {
+    margin-right: 10px;
+}
+.aopkg_detail_main .subPager {
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+}
+.aopkg_detail_main .effected_words > span {
+    margin-right: 10px;
+    float: left;
+    width: 145px;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    word-break:break-all;
+}
+.aopkg_detail_main .opttype_303 .ideaItem.shadow {
+    background: none;
+}
+.aopkg_detail_main .opttype_806 .ideaItem.shadow {
+    background: none;
+}
+
+.aopkg_detail_gray{
+	color: #A8A8A8;
+}
+.aopkg_detail_shortTarget .add_target dd{
+	width: 63px!important;
+}
+/*#AoDetailWidgetWarn {
+    display: inline;
+}*/
+/* 新提词详情里新增的工具栏样式 */
+/* add by Mayue */
+/*.batch_mod_table_column {
+    height: 20px;
+    margin: 0 8px;
+    padding: 5px 0;
+    background: #ECECEC;
+    border: 1px solid #CCCCCC;
+}
+.batch_mod_table_column .ui_button {
+    margin-left: 10px;
+}*/
+#acceptRecmIdea {
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+/* add by Mayue End */
+.aopkg-detail-toolbar {
+    height: 22px;
+    margin-right: -2px;
+    padding: 5px 0;
+    background: #ECECEC;
+    border: 1px solid #CCCCCC;
+    border-bottom: none;
+}
+.aopkg-detail-toolbar .ui_button {
+    margin-left: 10px;
+}
+/************addword推词模块样式************/
+.addword_table .ui_table_body{
+    border:none;
+    min-height: 345px;
+    max-height: 345px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.addword_table .addword_morecontainer{
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    width: 125px;
+    position: relative;
+}
+.addword_table {
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+}
+.addword_table_subintro {
+    background-color: #F0F0F0;
+    border-color: white #999999;
+    border-style: solid;
+    border-width: 1px 0;
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+.addword_table_subintro span {
+    margin-right: 14px;
+    text-align: left;
+}
+/************** 添加关键词 **************/
+/*.aopkg_add_word dl {
+	overflow:hidden;
+	padding:0 10px 10px;
+}
+.aopkg_add_word dt {
+	clear:left;
+	color:#666;
+    float:left;
+	font-weight:bold;
+	height:22px;
+	line-height:24px;
+	padding:5px;
+    width:90px;
+}
+.aopkg_add_word dd {
+    height:22px;
+    line-height:22px;
+    padding:5px 0;
+}
+.aopkg_add_word dd .ui_select {
+	margin:0 10px 0 0;
+}
+.aopkg_add_word .btn_area {
+	line-height:22px;
+	padding:0 15px;
+}*/
+
+/******新提词新增图标**********/
+.aopkg_detail_word .isnew {
+	background: url("../../asset/img/bg_icon.png") no-repeat -90px -1250px;
+	padding:0 10px;
+	position:relative;
+	top:2px;
+	left:4px;
+}
+.aopkg_detail_shortTarget .isnew {
+	background: url("../../asset/img/bg_icon.png") no-repeat -90px -1270px;
+	padding:0 8px;
+	position:relative;
+    top: 1px;
+    padding: 1px 9px;
+    left: 2px;
+}
+
+/**
+ *  智能提词包和修改时段用到的bar的样式 
+ */
+.aopkg-form-value .percent,
+.ui_table .percent {
+    border: 1px solid #8CB6ED;
+    background: #FFF;
+    width: 51px;
+    height: 8px;
+    float: right;
+    overflow: hidden;
+    margin: 5px 16px 0 0;
+}
+.aopkg-form-value .percent .n,
+.ui_table .percent .n {
+    background: #ADCDF7;
+    height: 8px;
+    float: left
+}
+
+
+/*新提词详情中推荐匹配行内修改的样式*/
+.inlineeditable_recmwmatch{
+	position: relative;
+	margin-right: 10px;
+}
+	.inlineeditable_recmwmatch .edit_td:hover .edit_btn,
+	.inlineeditable_recmwmatch .edit_td .edit_btn {
+		top:2px;
+		right: 2px;
+	}
+
+.inlineeditable_shortTarget{
+	position: relative;
+	margin-right: 10px;
+}
+.inlineeditable_shortTarget .edit_td:hover .edit_btn,
+.inlineeditable_shortTarget .edit_td .edit_btn {
+	top:2px;
+	right: 2px;
+}
+
+/* 节日活动样式 */
+.aopkg-holiday-pkginfo5{
+	position: relative;
+	top: -2px;
+	margin-left: 100px;
+}
+.aopkg-holiday-pkginfo5 a{
+	color: #f00;
+}
+
+/************** 优化包浮出层表单样式定义 **************/
+.aopkg-form-wrapper {
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.aopkg-form-label {
+    color: #666;
+    float: left;
+    clear: left;
+    font-weight: bold;
+    height: 22px;
+    line-height: 24px;
+    padding: 5px;
+    min-width: 90px;
+}
+
+.aopkg-form-value {
+    min-height: 22px;
+    line-height: 22px;
+    padding: 5px 0;
+    overflow: hidden;
+    zoom: 1;
+}
+.aopkg-form-value .percent {
+    float: left;
+    width: 90px;
+}
+.aopkg-form-value input {
+    vertical-align: middle;
+}
+
+.aopkg-form-value label {
+    margin: 0 5px;
+}
+
+.aopkg-form-value .ui_select {
+    margin: 0 10px 0 0;
+}
+.planunit-edit-panel {
+    padding-top: 5px;
+    height: 25px;
+}
+.planunit-edit-panel .fc-ui-input {
+    width: 142px;
+    margin-right: 15px;
+}

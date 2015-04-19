@@ -1,0 +1,151 @@
+.grey_txt{color:#999;}
+
+.reminder{width:620px; margin: 0 auto;}
+
+.ui_list_txt , .ui_list_icontxt{height:22;line-height:22px; padding-left:10px;position:relative;}
+.ui_list_txt div, .ui_list_icontxt div{display:inline-block; white-space: nowrap;} 
+.skin_reminder .ui_list_del {height:22px;width:22px;background:transparent;vertical-align:middle;}
+
+.ui_list_icontxt{padding:0 20px 0 25px; background:transparent url('../../asset/img/bg_icon_left.png') 7px -232px no-repeat; height:22px; overflow:hidden;}
+.ui_list_icontxt u {
+	background:#FF0;
+	text-decoration:none;
+}
+.ui_list_icontxt a:hover u {
+	text-decoration:underline;
+}
+
+.ui_list_txt u{
+    background:yellow;
+    text-decoration:underline;
+}
+.ui_list_txt a:hover u{
+    text-decoration:underline;
+}
+.skin_reminder{position:relative;height:160px;border:1px solid #ccc;overflow:auto;}
+.skin_reminder_line_over{
+	background-color:#fff9d7;
+}
+.skin_reminder .ui_list_del{
+	position:absolute;
+	right:0;
+	top:-9999px;
+}
+.skin_reminder_line_over a{color:#000;}
+.skin_reminder_line_over .ui_list_del{
+	background:transparent url('../../asset/img/bg_icon.png') -95px -103px no-repeat;
+	cursor:pointer;
+	top:0;
+}
+
+
+.form_value .ui_radiobox, .form_value .ui_checkbox{
+    vertical-align: -2px;
+}
+.form_value .ui_radiobox_label, .form_value .ui_checkbox_label{
+    margin-right:10px;
+    *margin-right:5px;
+    margin-left:2px;
+}
+
+#reminderRuleTM{
+    width:260px;
+    padding:3px 5px;
+    border:1px solid #ccc;
+    background:#F9FBFD;
+    
+    
+}
+#ctrlselectedlistselectedList{height:136px;border:none;}
+#ctrllistselectedList{height:110px;}
+/*当日消费到达*/
+#paySum input{float:none;}
+#paySum .ui_radiobox_label{margin-right:0;}
+#paySum .ui_text{margin:0 2px;}
+
+.skin_reminder_addWrapper{border: 1px solid #ccc; border-top:none;padding-left:10px;}
+
+
+/*提醒管理顶层TAB区*/
+.tab_text {
+    zoom:1;
+}
+.tab_text:after {
+    content:"\0020"; 
+    display:block;
+    height:0; 
+    visibility:hidden; 
+    clear:both;
+}
+.tab_text ul li{
+    float:left;
+    color:blue;
+    height:14px;
+    line-height:14px;
+    margin:5px 5px 10px 0;
+    cursor:pointer;
+    padding-left:5px;
+    border-left:1px solid #000;
+}
+
+.tab_text ul .active h6{
+    color:#000000;
+}
+.tab_text ul .first{
+    border-left:none;
+    padding-left:0;
+}
+
+/**新建/修改成功后的提示信息**/
+.reminder .successInfo{
+	height:28px;
+	line-height:28px;
+	padding-left:10px;
+	margin-top:30px;
+	background:#CCE5C0;
+	border:1px solid #339900;
+}
+
+.reminder .ruleInfo{
+	padding: 15px;
+	line-height:2em;
+	margin:10px 0 20px;
+	background:#F9FBFD;
+}
+.reminder .ruleInfo u{
+	background:yellow;
+	text-decoration:none;
+}
+
+/**Error Message 部分**/
+.error_msg{
+    color:red;
+}
+
+.global_error{
+    width:260px;
+    height:28px;
+    line-height:28px;
+    padding-left:10px;
+    border:1px solid #E48A8A;
+    margin:5px 0;
+    background:#FFE0E0;
+}
+
+.field_error{
+    height:20px;
+    line-height:20px;
+    padding-left:10px;
+    border:1px solid #E48A8A;
+    margin:2px 0;
+    background:#FFE0E0;
+    
+}
+
+
+/***物料选择框的样式***/
+#materialSelectWrapper{
+    position:absolute;
+    left:275px;
+    top:0;
+}

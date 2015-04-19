@@ -1,0 +1,34 @@
+<!-- target:ideaItem -->
+<dl class="ideaItem {className}">
+    <dt class="title">{title}</dt>
+    <dd class="desc">{desc}</dd>
+    <dd class="url">{url}</dd>
+</dl>
+
+<!-- target:ideaCell -->
+<div class="ideaCell" title="{tip}">
+    <!-- import:ideaItem -->
+    <button class="editBtn" type="button" act="editIdea"></button>
+    {shadowLink}
+</div>
+
+<!-- target:ideaShadowLink -->
+<div class="shadowLink">
+    <a act="switchShadow">{text}</a>
+</div>
+
+<!-- target:ideaState -->
+<div class="ideaState {state}">
+    <span>
+        {icon}
+        <label>{text}</label>
+    </span> 
+    <button type="button" act="{button}" actLevel="idea"></button>
+</div>
+
+<!-- target:ideaState2Icon -->
+<span class="ideaState2Icon"></span>
+
+
+
+

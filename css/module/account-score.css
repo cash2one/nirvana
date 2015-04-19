@@ -1,0 +1,179 @@
+/**
+ * nirvana
+ * Copyright 2012 Baidu Inc. All rights reserved.
+ *
+ * path:    account-qscore.css
+ * desc:    账户质量评分的样式
+ * author:  wuhuiyao
+ * date:    2012/11/08
+ **/
+/*
+ * 概况页侧边栏质量评分样式
+ * 
+ **/
+#accountScore .btn {
+    background-position: -1px -1110px;
+    width: 16px;
+    height: 16px;
+}
+#accountScore .up {
+    color: #CC0D39;
+}
+#accountScore .down {
+    color: #0A690D;
+}
+#accountScore .changed_score {
+    color: gray;
+}
+/*
+ * 账户质量评分详情样式
+ * 
+ **/
+
+/*账户质量评分Tab样式*/
+#accountScoreTabHeaders {
+    border-bottom: 1px solid #E5E5E5;
+    height: 86px;
+}
+#accountScoreTabHeaders li:hover {
+    cursor: pointer;
+}
+#accountScoreTabHeaders li.selected:hover {
+    background: none;
+    cursor: default;
+}
+#accountScoreTabHeaders .score_tab {
+    float: left;
+    width: 240px;
+    height: 85px;
+    position: relative;
+    border-top: 1px solid #F9F9F9;
+    /*border-bottom: 1px solid #E5E5E5;*/
+    border-left: 1px solid #E5E5E5;
+}
+#accountScoreTabHeaders .score_tab DIV {
+    float: left;
+    padding: 6px;
+}
+#accountScoreTabHeaders .score_type_name {
+    color: #909090;
+}
+#accountScoreTabHeaders .score_change_info {
+    padding-top: 38px;
+    font-size: 15px;
+    color: #000000;
+}
+#accountScoreTabHeaders .score_state {
+    font-weight: bold;
+}
+#accountScoreTabHeaders .good {
+    color: #FB3B3C
+}
+#accountScoreTabHeaders .bad {
+    color: #249123
+}
+#accountScoreTabHeaders .score_value {
+    color: #646569;
+    font-size:57px;
+    color:#666666;
+    padding-top: 3px;
+}
+#accountScoreTabHeaders .selected {
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 2px solid #FFFFFF;
+    margin-bottom: -2px;
+}
+#accountScoreTabHeaders .selected .score_type_name {
+    font-weight: bold;
+    color: #000000;
+}
+#accountScoreTabHeaders .selected .score_value {
+    color: #000000;
+}
+#accountScoreTabHeaders .main_tab {
+    border-left: none;
+    border-top: none;
+    width: 263px;
+}
+#accountScoreTabHeaders .main_tab DIV {
+    margin-top: -12px;
+}
+#accountScoreTabHeaders .main_tab .score_value {
+    font-size: 70px;
+}
+#accountScoreTabHeaders .main_tab .score_change_info {
+    padding-top: 48px;
+}
+/*账户质量评分各项指标显示详情区域的样式*/
+#accountScoreTabContainer .score_change_graph {
+    height: 180px;
+    padding-left: 12px;
+}
+#accountScoreTabContainer .score_details {
+    border-top: 1px solid #C9C9C9;
+    padding-top: 10px;
+    height: 289px;
+    overflow-y: auto;
+    position:relative;
+}
+#accountScoreTabContainer .qscore_item_info {
+    color: #333333;
+    /*font-size: 14px;*/
+    float: left;
+    margin-right: 40px;
+    width: 150px;
+    height: 41px;
+    padding: 20px 15px;
+    border: 1px solid #E4E4E4;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}
+#accountScoreTabContainer .qscore_item_name {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+#accountScoreTabContainer .qscore_item_bar {
+    padding-top: 28px;
+}
+#accountScoreTabContainer .qscore_item_bar .bar-descr{
+    padding-top: 6px;
+    margin-left: 15px;
+    width: 400px;
+    color: #000;
+}
+#accountScoreTabContainer .qscore_item_state {
+    height: 24px;
+    width: 24px;
+    margin-top: 10px;
+    margin-right: 15px; 
+    float: left;
+}
+#accountScoreTabContainer .qscore_item_detail {
+    height: 94px;
+    padding: 0 15px;
+}
+#accountScoreTabContainer .qscore_item_info .score_up {
+    background: url("../../asset/img/bg_icon_left.png") no-repeat 0px -1676px;
+}
+#accountScoreTabContainer .qscore_item_info .score_down {
+    background: url("../../asset/img/bg_icon_left.png") no-repeat 0px -1647px;
+}
+#accountScoreTabContainer .qscore_item_info P {
+    padding-left: 30px;
+}
+/*
+ * 话术中一些关键字的样式比如数字的提升、下降 
+ */
+.value_up, .value_down,.value_em {
+    font-weight: bold;
+    padding: 0 5px;
+}
+.value_up {
+    color: #FC1506;
+}
+.value_down {
+    color: #3EAD00;
+}
+ 

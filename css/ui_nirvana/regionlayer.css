@@ -1,0 +1,14 @@
+.region-layer-content > ul {
+    margin: 8px 0 8px 5px;
+}
+.region-layer-content .field {
+    margin-right: 10px;
+}
+.region-layer-content .leaf input[type="checkbox"],
+.region-layer-content dt input[type="checkbox"] {
+    *vertical-align: top;
+    *top: 9px;
+}
+.region-layer-content .regionSelect > dl > dt > input[type="checkbox"] {
+    *top: -1px;
+}

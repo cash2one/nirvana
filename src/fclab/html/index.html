@@ -1,0 +1,114 @@
+<!-- target:fclabIndex -->
+<div class="fclab_container">
+	<div class="fclab_side">
+		<div id="LabFeedback">
+			<h1>反馈建议</h1>
+			<p>给高级工具提建议</p>
+			<div class="lab_feedback_icon"></div>
+		</div>
+		<div class="fclab_side_module">
+			<div class="fclab_module_title">
+				<h1>帮助</h1>
+			</div>
+			<div id="LabSupport"></div>
+		</div>
+<!--		<div class="fclab_side_module">
+			<div class="fclab_module_title">
+				<h1>最新动态</h1>
+			</div>
+			<div id=""></div>
+		</div>-->
+	</div>
+	
+	<div class="fclab_section">
+		<div id="LabNav">
+			<!-- import:fclabNav -->
+		</div>
+		<div id="LabToolInfo">
+		</div>
+	</div>
+
+</div>
+
+
+
+<!-- target:fclabNav -->
+<ul class="fclab_nav">
+	<li>
+		<div id="FclabNavHome" class="fclab_tool_item">
+			<div class="fclab_nav_icon"></div>
+			<div class="fclab_nav_intro">首页</div>
+		</div>
+	</li>
+	<li><div class="fclab_nav_boundary"></div></li>
+	<li id="ToPrevTool">
+		<span></span><!--箭头可点，预留DOM-->
+	</li>
+	<li id="FclabToolList">
+		<!--一期箭头不可点，内容写死
+		<div id="FclabNavAbtest" class="fclab_tool_item">
+			<div class="fclab_nav_icon"><img src="asset/img/fclab/home.png" /></div>
+			<div class="fclab_nav_intro">AB Test工具</div>
+		</div>
+		-->
+	</li>
+	<li id="ToNextTool">
+		<span></span><!--箭头可点，预留DOM-->
+	</li>
+</ul>
+
+
+
+<!-- target:fclabHomeInfo -->
+<div id="LabToolIntro">
+	<h1>高级工具</h1>
+	<p>高级工具是百度推广为广大客户全新推出的账户分析及优化平台，在高级工具中，我们将陆续为您提供一系列精细化的账户管理工具，以便更好的满足您对账户的高级分析及调整需求。</p>
+	<p>与传统的工具提供不同，高级工具中所提供的每一个工具在开始时都只是具有少量功能的一个雏形，我们需要您及时向我们反馈使用过程中希望获得的功能以及未能被满足的需求，我们将根据您的反馈意见，对工具进行快速的升级，使这些工具能够切实的为您分析推广效果以及进行账户优化带来便利。</p>
+</div>
+<div class="lab_tool_toggle">
+	<span id="labToggleIcon" class="arrow_up"></span>
+</div>
+<div class="lab_tool_banner">
+	<img src="asset/img/fclab_home_banner.png"  />
+</div>
+<div id="LabNewTools">
+	<div class="fclab_module_title">
+		<h1>最新产品</h1>
+	</div>
+	<div id="labNewProduct"></div>
+</div>
+
+<!-- target:labNewProduct -->
+<li module="{0}">
+    <div class="new_produc_boxouter">
+        <div class="new_produc_box">
+            <div class="new_produc_boxinner">
+                <p>{1}</p>
+            </div>
+        </div>
+    </div>
+    <div class="new_produc_info">
+        <h2>{2}</h2>
+		{3}
+    </div>
+</li>
+
+<!-- target:labFeedback -->
+<div class="lab_feecback_container">
+	<h3>感谢您对高级工具的反馈，我们将会尽快处理您的建议，并可能通过您注册信息中的联系方式与您联系！</h3>
+	<div class="lab_feecback_content">
+		<div class="lab_feedback_type">
+			<input type="radio" value="home" title="高级工具" name="labfeedback" title="高级工具" ui="id:LabFBHome;type:Radio" />
+			<input type="radio" value="abtest" title="方案实验工具" name="labfeedback" title="方案实验工具" ui="id:LabFBAbtest;type:Radio" />
+			<input type="radio" value="cpa" title="转化出价工具" name="labfeedback" title="转化出价工具" ui="id:LabFBCpa;type:Radio" />
+		</div>
+		<textarea id="LabFeedbackArea" class="lab_feedback_area"></textarea>
+		
+		<div class="form_submit clearfix">
+			<div class="feedback_words_cnt"><span id="FbWordsCnt">0</span>/600个字符</div>
+		    <div ui="id:SendLabFeedback;type:Button;">发送</div>
+		    <div ui="id:CancelLabFeedback;type:Button">取消</div>
+			<span id="LabFeedbackError"></span>
+	</div>
+	</div>
+</div>

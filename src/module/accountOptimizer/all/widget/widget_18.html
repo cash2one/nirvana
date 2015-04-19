@@ -1,0 +1,50 @@
+<!-- target:widgetDetail18 -->
+<div class="widget_cont">
+	<div class="widget_tab">
+		<div ui="id:WidgetTab;type:Tab;"></div>
+		<!-- import:widgetDownload -->
+	</div>
+	<div class="widget_tip">${WidgetDetailTip}</div>
+	<div class="widget_option">
+		<div ui="id:WidgetDetailModify;type:Button;" class="widget_operation_button">修改出价</div>
+	</div>
+	<div class="widget_table">
+		<div ui="id:WidgetTable;type:Table;subrow:1"></div>
+	</div>
+	<div class="widget_page">
+		<div ui="id:WidgetPage;type:Page;"></div>
+	</div>
+	<div class="btn_area">
+		<div ui="id:AoDetailClose;type:Button;">关闭</div>
+	</div>
+	<div id="HistoryFlash" class="widget_historyflash">
+		<h3 id="HistoryFlashTitle"></h3>
+		<div id="HistoryFlashClose" href="javascript:void 0;" class="ui_dialog_close"></div>
+		<div id="HistoryFlashDetail" class="widget_floatdiv_detail"></div>
+	</div>
+</div>
+
+<!-- target:widgetOption18 -->
+<div class="panel widget_tip">${WidgetDetailTip}</div>
+<div class="widget_cont">
+	<div class="widget_detailpart">
+		<p>
+			首屏展现概率提示阈值&#12288：
+			<input type="radio" value="20" ui="type:Radio;id:screen1" title="20%" name="page" />
+			<input type="radio" value="40" ui="type:Radio;id:screen2" title="40%" name="page" />
+			<input type="radio" value="60" ui="type:Radio;id:screen3" title="60%" name="page" />
+			<input type="radio" value="80" ui="type:Radio;id:screen4" title="80%" name="page" />
+		</p>
+		<p>
+			第一位展现概率提示阈值：
+			<input type="radio" value="20" ui="type:Radio;id:top1" title="20%" name="top" />
+			<input type="radio" value="40" ui="type:Radio;id:top2" title="40%" name="top" />
+			<input type="radio" value="60" ui="type:Radio;id:top3" title="60%" name="top" />
+			<input type="radio" value="80" ui="type:Radio;id:top4" title="80%" name="top" />
+		</p>
+	</div>
+	<div class="btn_area">
+		<div ui="id:AoDetailSave;type:Button;">保存</div>
+		<div ui="id:AoDetailClose;type:Button;">关闭</div>
+	</div>
+</div>

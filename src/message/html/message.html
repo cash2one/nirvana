@@ -1,0 +1,36 @@
+<!-- target:msgSummary -->
+<div class="nav_msg_unread" id="NavMsgUnread">
+	<span id="NavMsgCnt"></span><span>消息</span>
+</div>
+<div id="NavMsgSummary" class="hide">
+	<div id="MsgSummaryList"></div>
+	<div class="msg_summary_foot">
+		<div id="CheckAllMsg" class="link">查看所有消息>></div>
+		<div class="link msg_set">设置</div>
+	</div>
+</div>
+
+<!-- target:msgItem -->
+<div class="nav_msg_item">
+	<h2>{0}({1})</h2>
+	<ul>{2}</ul>
+	<div class="link {3}" type="{4}">查看全部 > </div>
+</div>
+
+<!-- target:noMsgHint -->
+<div class="nav_msg_item no_unread_msg">
+	恭喜您，没有未读的消息！
+</div>
+
+<!-- target:msgListForSummary -->
+<li id="NavMsg{3}" itemize="{6}">
+	<span>{0}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a class="nav_msg_text pointer" title="{1}" msginfoid="{3}" typeid="{4}" data-status="0" href="{5}" target="_blank">{2}</a>
+</li>
+<!-- target:msgListForMipt -->
+<ul>
+	<li class="msginfo">
+		<span class="">{0}<a typeid="{1}" data-status="0" msginfoid="{5}" href="{2}" target="_blank">{3}</a></span>
+	</li>
+	<li>{4}</li>
+</ul>

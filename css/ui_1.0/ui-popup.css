@@ -1,0 +1,105 @@
+/*
+ * nirvana
+ * Copyright 2011 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-popup.css
+ * desc:    弹窗样式
+ * author:  LeoWang(wangkemiao@baidu.com)
+ * date:    2011/12/14
+ */
+
+.ui_popup_container{
+	background:#ffffff;
+	border:solid 1px #8C96B1; 
+	border-radius:2px;  
+	-moz-border-radius:2px; 
+	-webkit-border-radius:2px; 
+	margin:0 6px 0 0;
+	
+	z-index:88;
+ }
+ 
+.ui_popup_close {
+    position:absolute;
+    top:7px;
+    right:7px;
+    cursor:pointer;
+    height:12px;
+    width:12px;
+    overflow:hidden;
+	background:transparent url('../../asset/img/bg_icon.png') -150px -65px ;
+}
+.ui_popup_close_hover {
+    background-position: -150px -85px;
+}
+
+.ui_popup_mini {
+    position:absolute;
+    top:7px;
+    right:23px;
+    cursor:pointer;
+    height:12px;
+    width:12px;
+    overflow:hidden;
+	background:transparent url('../../asset/img/bg_icon.png') -180px -85px ;
+}
+.ui_popup_mini_hover {
+    background-position: -180px -85px;
+}
+.ui_popup_max {
+    position:absolute;
+    top:7px;
+    right:23px;
+    cursor:pointer;
+    height:12px;
+    width:12px;
+    overflow:hidden;
+	background:transparent url('../../asset/img/bg_icon.png') -180px -65px ;
+}
+.ui_popup_max_hover {
+    background-position: -180px -65px;
+}
+
+
+.ui_popup_title{
+	padding:7px;
+	font-size:12px;
+	background:url('../../asset/img/bg_repeat_x.png') 0 -280px repeat-x;
+}
+.ui_popup_title .bold{
+	color:#333366;
+	font-weight:700;
+}
+.ui_popup_title a{
+	margin-left:10px;
+}
+.ui_popup_content{
+	padding:0 7px;
+}
+.ui_popup_content ul{
+	margin-left:4px;
+	margin-top: 7px;
+}
+.ui_popup_content li{
+	line-height: 1.5em;
+	list-style:none;
+	padding-left: 8px;
+	background:url('../../asset/img/bg_icon_left.png') 0 -892px no-repeat;
+}
+.ui_popup_content .popup_detail{
+	margin-right: 10px;
+    line-height: 18px;
+}
+.ui_popup_content li a{
+	
+}
+.ui_popup_content li .specFamily{
+	font-family: "宋体"
+}
+.ui_popup_foot{
+	padding:7px;
+}
+
+.ui_popup_content .popup_blockinfo{
+	padding: 6px 0;
+}

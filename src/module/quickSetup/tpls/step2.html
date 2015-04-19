@@ -1,0 +1,45 @@
+<!-- target:quickSetupStep2 -->
+<div id="QuickSetupBody">
+	<div class="quicksetup_step_content">
+		<div id="QuickSetupWordList" class="quicksetup_wordlist_container"></div>
+		<div class="quicksetup_step_controller quicksetup_step_controller_marginside">
+			<div ui="id:stepButton;type:Button;">生成方案</div>
+			<a id="QuickSetupGoBackLink" href="#" class="quicksetup_ctrl_linkbut">返回上一步</a>
+		</div>
+	</div>
+</div>
+
+<!-- target:newQuickSetupStep2 -->
+<div id="QuickSetupStep2">
+    <div id="quickSetupKR"></div>
+</div>
+
+<!-- target:quickkr -->
+<div class="kr_theme_quick">
+    <div id="kr">
+        <!-- import:quickkrAddWords -->
+        <!-- import:quickkrRecommendWords -->
+    </div>
+</div>
+
+<!-- target:quickkrAddWords -->
+<div class="addWords">
+    <h1>已选择关键词 （<span><em class="selected_num">0</em> / <span id="krAddWordLimit"></span></span>）</h1>
+    <textarea class="word_box"></textarea>
+    <div class="quicksetup_kr_step">
+        <div ui="id:stepButton;type:Button;">生成方案</div>
+    </div>
+</div>
+
+<!-- target:quickkrRecommendWords -->
+<div class="recommendWords">
+    <!-- import:skrHead -->
+    <!-- import:quickkrToolbar -->
+    <div id="krRecommandResult"></div>
+</div>
+
+<!-- target:quickkrToolbar -->
+<div id="krToolbar" class="clearfix">
+    <div id="krAddWordsBtn"></div>
+    <div id="krFilter"></div>
+</div>

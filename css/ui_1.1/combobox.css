@@ -1,0 +1,191 @@
+.fc-ui-combobox .fc-ui-button .ui-wrapper > div {
+    padding: 0;
+}
+.fc-ui-combobox .button-placement-left .button-text {
+    margin: 0;
+}
+
+.fc-ui-combobox .button-text {
+    padding: 0 3px;
+}
+.fc-ui-combobox .combobox-icon {
+    width: 19px;
+    background: url('../../asset/img/ui-icon.png') no-repeat 5px -14px;
+    border-left: 1px solid transparent;
+}
+.fc-ui-combobox > .ui-wrapper,
+.fc-ui-combobox .fc-ui-button {
+    float: left;
+}
+.fc-ui-combobox .fc-ui-list {
+    display: none;
+    position: absolute;
+    top: 21px;
+    left: 0;
+    z-index: 1000;
+}
+.fc-ui-combobox .combobox-up .fc-ui-list {
+    top: auto;
+    bottom: 21px;
+}
+.fc-ui-combobox .popup-opened .fc-ui-list {
+    display: block;
+}
+.fc-ui-combobox .popup-opened .combobox-icon {
+    background-position: 5px 6px;
+}
+
+
+.fc-ui-combobox.ui-skin-default .fc-ui-button .ui-wrapper {
+    border-radius: 0;
+}
+.fc-ui-combobox.ui-skin-default .fc-ui-button .ui-wrapper > div {
+    border: none;
+}
+.fc-ui-combobox.ui-skin-default .button-text {
+    height: 20px;
+    line-height: 20px;
+    background-color: white;
+}
+.fc-ui-combobox.ui-skin-default .button-icon {
+    border-color: #A6ADB7;
+    height: 20px;
+}
+.fc-ui-combobox.ui-skin-default .fc-ui-button:hover .button-icon {
+    border-color: #888F9B;
+}
+.fc-ui-combobox.ui-skin-default .popup-opened .fc-ui-button .ui-wrapper,
+.fc-ui-combobox.ui-skin-default .popup-opened .button-icon {
+    border-color: #888F9B;
+}
+.fc-ui-combobox.ui-skin-default .fc-ui-button.button-disabled .button-icon,
+.fc-ui-combobox.ui-skin-default .fc-ui-button.button-disabled:hover .button-icon {
+    border-color: #CFCFCF;
+}
+
+
+.fc-ui-combobox.ui-skin-menu .fc-ui-button .ui-wrapper:hover,
+.fc-ui-combobox.ui-skin-menu .popup-opened .fc-ui-button .ui-wrapper {
+    border-color: #888F9B;
+    background-clip: content-box;
+background-image: -moz-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: -ms-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: -ms-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: -o-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: -webkit-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: linear-gradient(top, #DEE0E5, #FFFFFF);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEE0E5', endColorstr='#FFFFFF')\9\0;
+*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEE0E5', endColorstr='#FFFFFF');
+
+}
+.fc-ui-combobox.IE9.ui-skin-menu .fc-ui-button .ui-wrapper:hover,
+.fc-ui-combobox.IE9.ui-skin-menu .popup-opened .fc-ui-button .ui-wrapper {
+    background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0NDEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNERUUwRTUiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0NDEpIiAvPgo8L3N2Zz4=);    
+}
+.fc-ui-combobox.ui-skin-menu .fc-ui-button .ui-wrapper:hover > div,
+.fc-ui-combobox.ui-skin-menu .popup-opened .fc-ui-button .ui-wrapper > div {
+    border-color: #EFA73B;
+}
+.fc-ui-combobox.ui-skin-menu .fc-ui-button .button-press,
+.fc-ui-combobox.ui-skin-menu .fc-ui-button.button-disabled .ui-wrapper:hover,
+.fc-ui-combobox.ui-skin-button .fc-ui-button.button-disabled .ui-wrapper:hover {
+    background-image: none;
+    filter: none;
+}
+.fc-ui-combobox.ui-skin-menu .combobox-icon {
+    background-position: 5px -16px;
+}
+.fc-ui-combobox.ui-skin-menu .popup-opened .combobox-icon {
+    background-position: 5px 4px;
+}
+
+.fc-ui-combobox.ui-skin-menu .fc-ui-button.button-disabled .ui-wrapper:hover,
+.fc-ui-combobox.ui-skin-button .fc-ui-button.button-disabled .ui-wrapper:hover {
+    border-color: #CFCFCF;
+    background-color: #F6F6F6;
+}
+.fc-ui-combobox.ui-skin-menu .fc-ui-button.button-disabled .ui-wrapper:hover > div,
+.fc-ui-combobox.ui-skin-button .fc-ui-button.button-disabled .ui-wrapper:hover > div {
+    border-color: transparent;
+}
+
+
+.fc-ui-combobox.ui-skin-button .button-text {
+    text-align: center;
+}
+.fc-ui-combobox.ui-skin-button .button-icon {
+    border-left-color: #A6ADB7;
+}
+.fc-ui-combobox.ui-skin-button .fc-ui-list {
+    left: auto;
+    right: 0;
+}
+.fc-ui-combobox.ui-skin-button .fc-ui-list li {
+    color: #0033CC;
+}
+.fc-ui-combobox.ui-skin-button .fc-ui-button .ui-wrapper:hover {
+    border-color: #888F9B;
+    background-clip: content-box;
+background-image: -moz-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: -ms-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: -ms-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: -o-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: -webkit-linear-gradient(top, #DEE0E5, #FFFFFF);
+background-image: linear-gradient(top, #DEE0E5, #FFFFFF);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEE0E5', endColorstr='#FFFFFF')\9\0;
+*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEE0E5', endColorstr='#FFFFFF');
+
+}
+.fc-ui-combobox.IE9.ui-skin-button .fc-ui-button .ui-wrapper:hover {
+    background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0NDEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNERUUwRTUiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0NDEpIiAvPgo8L3N2Zz4=);    
+}
+.fc-ui-combobox.ui-skin-button .fc-ui-button .ui-wrapper:hover > div {
+    border-color: #EFA73B;
+}
+.fc-ui-combobox.ui-skin-button .popup-opened .fc-ui-button {
+    position: relative; 
+    z-index: 1001;
+}
+.fc-ui-combobox.ui-skin-button .popup-opened .fc-ui-button .ui-wrapper {
+    border-color: #888F9B;
+    border-bottom-right-radius: 0;
+    background-clip: content-box;
+background-image: -moz-linear-gradient(top, #FFFFFF, #DEE0E5);
+background-image: -ms-linear-gradient(top, #FFFFFF, #DEE0E5);
+background-image: -ms-linear-gradient(top, #FFFFFF, #DEE0E5);
+background-image: -o-linear-gradient(top, #FFFFFF, #DEE0E5);
+background-image: -webkit-linear-gradient(top, #FFFFFF, #DEE0E5);
+background-image: linear-gradient(top, #FFFFFF, #DEE0E5);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#DEE0E5')\9\0;
+*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#DEE0E5');
+
+}
+.fc-ui-combobox.IE9.ui-skin-button .popup-opened .fc-ui-button .ui-wrapper {
+    background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcxNTkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNERUUwRTUiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cxNTkpIiAvPgo8L3N2Zz4=);    
+}
+.fc-ui-combobox.ui-skin-button .popup-opened .button-icon {
+    border-color: #888F9B;
+    background-color: #F7F7F7;
+    width: 20px;
+    height: 21px;
+    top: -1px !important;
+}
+.fc-ui-combobox.ui-skin-button .popup-opened .fc-ui-button .ui-wrapper > div {
+    border-right-width: 0;
+}
+.fc-ui-combobox.ui-skin-button .popup-opened .fc-ui-button .ui-wrapper:hover > div {
+    border-color: transparent;
+}
+.fc-ui-combobox.ui-skin-button .popup-opened.combobox-up .button-icon {
+    top: -2px !important;
+}
+.fc-ui-combobox.ui-skin-button .popup-opened.combobox-up .fc-ui-button .ui-wrapper {
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 0;
+}
+.fc-ui-combobox.ui-skin-button .combobox-icon {
+    background-position: 5px -16px;
+}
+.fc-ui-combobox.ui-skin-button .popup-opened .combobox-icon {
+    background-position: 5px 7px;
+}

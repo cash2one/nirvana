@@ -1,0 +1,79 @@
+<!-- 这里用mc来前缀修饰当前会用到的类和id，防止冲突 -->
+<!-- target: messageBox -->
+<div class="mc-message-tabs clearfix" ui="id:McMessageBoxTab;type:Tab;tab:0"></div>
+<div id="McMessageListTabC" class="mc-message-container clearfix" style="display:none;">
+<!-- import:mcMessageList -->
+</div>
+
+<div id="McMessageSetsTabC" class="mc-message-container clearfix" style="display:none;">
+<!-- import: mcMessageSets -->
+</div>
+
+<div id="McMessageReceiversTabC" class="mc-message-container clearfix" style="display:none;">
+<!-- import: mcMessageReceivers -->
+</div>
+
+<!-- target: mcMessageList -->
+	<div class="mc-ml-sidebar">
+		<input type="checkbox" title="全选当前页" ui="id:McSelectAll;type:CheckBox;"/>
+		<div title="将您在右侧所勾选的消息标记为已读" ui="id:McMarkSelectedRead;type:Button;">标记勾选已读</div>
+		<div title="将您当前类型的所有消息标为已读，包括其他页的消息" ui="id:McMarkAllRead;type:Button">标记全部已读</div>
+		<ul id="McMlNavUl">
+			<li class="mc-li-header" data-category="0" data-status="0" title="全部未读消息">未读消息<span id="McAllUnreadMsgCnt"></span></li>
+			<li  data-category="2" data-status="0" title="未读消费消息">消费消息<span id="McPaysumUnreadMsgCnt"></span></li>
+			<li  data-category="3" data-status="0" title="未读优化消息">优化消息<span id="McOptimizeUnreadMsgCnt"></span></li>
+			<li  data-category="1" data-status="0" title="未读系统消息">系统消息<span id="McSystemUnreadMsgCnt"></span></li>
+			<li class="mc-li-header"  data-status="2" data-category="0" title="全部消息">全部消息</li>
+			<li  data-category="2" data-status="2" title="所有消费消息">消费消息</li>
+			<li  data-category="3" data-status="2" title="所有优化消息">优化消息</li>
+			<li  data-category="1" data-status="2" title="所有系统消息">系统消息</li>
+		</ul>
+	</div>
+	<div class="mc-ml-content">
+		<div id="McMessageList">
+			<!-- 这里的内容是用js来渲染的
+			<div>
+				
+				<input type="checkbox" title="今天" ui="id:McTodaySelect; type:CheckBox;" />
+				<ul class="mc-message-ul">
+					<li>
+						<input type="checkbox" ui="id:Mc"
+					</li>
+				</ul>
+			</div>
+			-->
+		</div>
+		<div ui="id:McMlPagination;type:Page;page:1"></div>
+	</div>
+
+
+<!-- target: mcMessageSets -->
+	<div id="McMessageSetsTable"></div>
+	<div id="McMessageSetsSync" class="rightalign">
+		<input title="在手机版上已读的消息，不重复提示" type="checkbox" ui="id:McMessageSetsCheckBoxSync;type:CheckBox;" />
+	</div>
+	<div class="mc-buttons clearfix">
+		<div ui="id:McMessageSetOk;type:Button;" >确定</div>
+		<div ui="id:McMessageSetCancel;type:Button;">取消</div>
+		<span id="McMessageSetError" class="warn"></span>
+	</div>
+	
+
+<!-- target: mcMessageReceivers -->
+	<p class="mc-label">还可以设置激活<span id="McLeftReceiverNum">0</span>个邮箱和短信号码</p>
+	<p class="mc-label">联系方式:</p>
+	<div id="McMessageReceiversTable" class="mc-receiver-table"></div>
+	<div id="McAddReceiverArea" class="mc-addreceiver-area clearfix" style="display:none; position:relative">
+		<div class="clearfix mc-receiver-inputs">
+			<input type="text" ui="id:McAddReceiverNameInput;type:TextInput;"/>
+			<input type="text" ui="id:McAddReceiverMailInput;type:TextInput;"/>
+			<input type="text" ui="id:McAddReceiverCellInput;type:TextInput;"/>
+			<div ui="id:McMessageReceiverAddBtn;type:Button;">添加</div>
+		</div>
+		<div id="McMessageReceiverClose" class="ui_dialog_close"></div>
+		<br/>
+		<p class=" warn" id="McMessageReceiverAddError"><p>
+	</div>
+	<p >
+		<span id="McAddReceiverLink" class="mc-active">添加联系方式</span>
+	</p>

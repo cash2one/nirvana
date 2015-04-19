@@ -1,0 +1,69 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-treeview.css
+ * desc:    树结构样式
+ * author:  chenjincai
+ * date:    2010/12/12
+ */
+
+/**newKR行业词**/
+.ui_treeview table{
+    table-layout:fixed;
+    width:100%;
+}
+
+.ui_treeview tr{height:22px;cursor:pointer;}
+
+.ui_treeview_hitarea{
+    width:12px;
+    height:12px;
+    vertical-align:middle;
+    *vertical-align:1px;
+    _vertical-align:-2px;
+    display:inline-block;
+    background:red;
+	outline: none;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+/* Safari 3.0 and Chrome rules here */
+.skin_folder .ui_treeview_hitarea{vertical-align:middle;}
+}
+
+.skin_folder_hitarea , .skin_tree_default_hitarea{
+    width:16px;
+    height:14px;
+    margin-right:2px;
+    background:transparent url('../../asset/img/bg_icon_left.png') 0 -30px ;
+}
+.skin_tree_default_hitarea{
+    background-position: 2px -578px;
+}
+.ui_treeview_expanded  .skin_folder_hitarea{
+    background-position:0 0;
+}
+
+.ui_treeview_expanded  .skin_tree_default_hitarea{
+    background-position:2px -596px;
+}
+
+.skin_folder .ui_treeview_lineover, .skin_folder .ui_treeview_line_selected{
+    background:#E4EAF9;
+}
+
+
+.skin_tree_default .ui_treeview_lineover, .skin_tree_default .ui_treeview_line_selected{
+    background:#E4EAF9;
+}
+
+
+.ui_treeview_selected{
+    font-weight:bold;
+}
+
+.skin_folder td{
+	width:200px;
+}

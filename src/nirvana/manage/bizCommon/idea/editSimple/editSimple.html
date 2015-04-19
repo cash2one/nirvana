@@ -1,0 +1,135 @@
+<!-- target:similarWordsDialog -->
+<div id="similarWords">
+    <p>你可以点击关键词选作创意填写参考</p>
+</div>
+
+<!-- target:similarWordsTable -->
+<table>
+    <col class="col1"/>
+    <col class="col2"/>
+    <col class="col3"/>
+    <thead>
+        <tr>
+            <th>推广计划</th>
+            <th>推广单元</th>
+            <th>单元内关键词举例</th>
+        </tr>
+    </thead>
+    <tbody>
+        {tbody}
+    </tbody>
+</table>
+
+<!-- target:similarWordsItem -->
+<tr>
+    <td><label class="plan" title="{planname}">{planname}</label></td>
+    <td><label class="unit" title="{unitname}">{unitname}</label></td>
+    <td class="words">{words} 等</td>
+</tr>
+
+<!-- target:similarWord -->
+<a id="{id}" class="word" act="selectWord" title="{word}">{text}</a>
+
+
+
+
+
+<!-- target:ideaEditSimple -->
+<div id="idea-edit-simple">
+    <div>
+        <label class="tip"></label>
+        <ul>
+            <li><label>1. </label><input type="text" id="titleInput"/></li>
+            <li><label>2. </label><input type="text" id="desc1Input"/></li>
+            <li><label>3. </label><input type="text" id="desc2Input"/></li>
+            <li><label>4. </label><input type="text" id="urlInput"/></li>
+        </ul>
+
+        <div class="options">
+            <label>
+                <input type="checkbox">
+                以 <em class="word short-string">{word}</em> 作为通配符
+            </label>
+            
+            <div class="ui-bubble" _ui="type:Bubble;source:wildcard;"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- target:newIdeaPreview -->
+<div class="new-idea-preview">
+</div>
+
+<!-- target:addNewIdea -->
+<div id="add-new-idea">
+
+    <div class="header">
+        为达到较佳推广效果，建议你为不同类型关键词撰写不同的创意
+
+        <div class="selector">
+            <div class="legend">
+                <span class="new-idea-undo"></span> 未完成
+                <span class="new-idea-done"></span> 已完成
+            </div>
+
+            <div id="selectIdeaItem"></div>还需填写<em class="idea-rest"></em>条
+        </div>
+
+        <div class="guide-word">
+            <a class="try-other">试试其它同类关键词</a>
+            请为 <em class="word short-string"></em> 撰写创意
+        </div>
+    </div>
+
+    <!-- import:ideaEditSimple -->
+
+    <div class="footer">
+        <div class="operate">
+            <em class="error"></em>
+            <div id="saveIdea">保存创意</div>
+            <a class="write-later" title="至少保存一条创意哦">将来再写</a>
+        </div>
+
+        <a>返回标准版创意撰写</a>
+        <label>此搜索结果仅用于创意撰写, 实际展现效果以线上为准</label>
+    </div>
+
+</div>
+
+<!-- target:recommendIdea -->
+<div id="recommend-idea">
+    <div class="title">
+        <h1>参考创意</h1> <div class="ui-bubble" _ui="type:Bubble;source:refrenceIdea;"></div>
+    </div>
+
+    <div class="idea-list">
+        <div class="idea">
+            <h1 class="title">11111111</h1>
+            <p class="desc">2222222222啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊萨达斯的</p>
+            <p><em class="url">http://www.baidu.com</em> - <a>推广</a></p>
+        </div>
+
+        <div class="idea">
+            <h1 class="title">11111111</h1>
+            <p class="desc">2222222222啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊萨达斯的</p>
+            <p><em class="url">http://www.baidu.com</em> - <a>推广</a></p>
+        </div>
+
+        <div class="idea">
+            <h1 class="title">11111111</h1>
+            <p class="desc">2222222222啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊萨达斯的</p>
+            <p><em class="url">http://www.baidu.com</em> - <a>推广</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- target:addIdeaGuide -->
+<div id="add-idea-guide">
+    <span class="search-input"></span>
+    <!-- import:addNewIdea -->
+    <!-- import:newIdeaPreview -->
+    <!-- import:recommendIdea -->
+</div>
+
+

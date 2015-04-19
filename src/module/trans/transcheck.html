@@ -1,0 +1,113 @@
+<!-- target:transcheck -->
+<div class="trans-container trans-check">
+    <h1>全面检查</h1>
+    <p class="tip">
+        为全面跟踪您设定的转化，请保障推广页面和转化跟踪页面代码均安装正确。
+    </p>
+    <h4>请选择检查范围：</h4>
+    <div class="inputArea">
+        <ul id="SelectUrlContainer">
+            <li>
+                <input type="radio" value="0" name="CheckType" title="推广访问URL" ui="type:Radio;group:CheckType;id:PromotionURL;datasource:*checkTypeChecked;" /><span>检查在搜索推广中设置过的URL页面代码安装情况</span>
+            </li>
+            <li>
+                <input type="radio" value="1" name="CheckType" title="网页跟踪URL" ui="type:Radio;group:CheckType;id:TransURL;datasource:*checkTypeChecked;" /><span>检查设置了网页跟踪URL的代码安装情况，仅支持检查完全匹配的URL</span>
+                <div class="" id="TransURLScope">
+                    请选网站范围：
+                    <div ui="id:SiteListInDataSelect;type:Select;datasource:*siteListInDataSelect;value:*siteListInDataSelectSelected;width:180;" class="ui_select">
+                    </div>
+                    转化名称： 
+                    <div ui="id:TransformNameSelect;type:Select;width:180;" class="ui_select">
+                    </div>
+                    <em id="TransURLScopeWarn" class="hide">当前不存在可以检查的URL，请更改网站范围进行检查。</em>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="budget_btn">
+        <div ui="id:PromotionURLBtn;type:Button;" class="trans-btn">
+            开始检查
+        </div>
+        <div ui="id:TransURLBtn;type:Button;" class="trans-btn">
+            开始检查
+        </div>
+        <div ui="id:CheckEndBtn;type:Button;" class="trans-btn">
+            返回转化跟踪设置
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="stat_ok"></span>
+    </div>
+	<div class="transAllResult" id="PromotionURLResult">
+		<h3>推广访问URL检查</h3>
+		<p class="check_loading" id="PromotionURLLoading"></p>
+		<h4></h4>
+		<div class="cont hide">
+		    <ul></ul>
+		</div>
+	</div>
+	<div class="transAllResult hide" id="TransURLResult">
+		<h3>网页跟踪URL检查</h3>
+		<p></p>
+		<div class="cont hide">
+			<dl class="hide"></dl>
+		</div>
+	</div>
+</div>
+
+<!-- target:transCheckSingle -->
+<div class="trans-container newtrans">
+    <h1 id="TransCheckTitle"></h1>
+    <div class="trans_check" id="NewTransStep2A">
+        <h3 id="CodeStatus"></h3>
+        <div class="trans-loading hide" id="CodeLoading"></div>
+		<div id="TransCheckTip"></div>
+        <div class="btn-bar">
+            <div ui="id:TransEndBtn;type:Button;" class="trans-btn">完成</div>
+            <div ui="id:TransCheckCancelBtn;type:Button;" class="trans-btn">取消</div>
+            <div ui="id:TransCheckAllBtn;type:Button;" class="trans-btn">全面检查</div>
+            <span class="text-grey" id="CheckAllTip">为全面跟踪您设定的转化，请对推广URL进行页面代码安装检查。</span>
+        </div>
+    </div>
+    <div class="hide" id="NewTransStep2B">
+        <div class="check-result">
+        	<div class="text">转化目标 <a href="#" id="CheckReultTransTargetUrl" target="_blank"></a>的检查结果：</div>
+			<div id="ResultInfo"></div>
+        </div>
+        <div class="text">
+            请按以下方法安装代码：
+        </div>
+        <div class="get-code-box input_area">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="195">
+                        <div id="TransCopyBtn">
+                        </div>
+                        <div class="copy-ok-tip stat_ok" id="CopyEndTip"></div>
+                    </td>
+                    <td>
+                        <textarea id="TransCodeTextarea" class="code-block">
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>请您将代码粘贴到您的目标页面的html源代码中&lt;body&gt;与 &lt;/body&gt;之间的位置。请看示意图：</span>
+                    </td>
+                    <td>
+                        <div class="download_code">
+                        	<p>&lt;body&gt;</p>
+                        	<p class="view">请将以上代码复制到&lt;body&gt;和&lt;/body&gt;之间</p>
+                        	<p>&lt;/body&gt;</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+        </div>
+        <div class="btn-bar">
+            <div ui="id:TransCheckErrorEndBtn;type:Button;" class="trans-btn">完成</div>
+            <div ui="id:TransCheckAgainBtn;type:Button;" class="trans-btn">重复检查</div>
+            <span class="text-grey">如果您已完成安装代码，建议您重复检查，确保安装正确。</span>
+        </div>
+    </div>
+</div>

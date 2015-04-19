@@ -1,0 +1,187 @@
+.fc-ui-table .table-thead > table,
+.fc-ui-table .table-group-list,
+.fc-ui-table .table-unit {
+    table-layout: fixed;
+}
+
+.fc-ui-table .table-thead {
+    position: relative;
+    zoom: 1;
+}
+.fc-ui-table .table-thead > table {
+    width: 100%;
+    border-collapse: separate;
+}
+
+.fc-ui-table .table-unit {
+    border-collapse: collapse;
+}
+
+.fc-ui-table th,
+.fc-ui-table td {
+    vertical-align: top;
+}
+
+
+.fc-ui-table .table-thead th {
+    border-right: 0px solid transparent;
+}
+.fc-ui-table .table-thead {
+    background: #ECECEC;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #C9C9C9;
+}
+
+.fc-ui-table .table-th {
+    
+    height: 30px;
+    cursor: col-resize;
+    position: relative;
+}
+.fc-ui-table .table-thead-cell {
+    padding: 0 5px;
+}
+
+
+.fc-ui-table .table-th .table-thead-cell {
+    cursor: default;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.fc-ui-table .table-thead-title {
+    color: #666666;
+    font-weight: bold;
+
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+
+.fc-ui-table .table-thead-cell .table-checkbox {
+    vertical-align: -10px;
+}
+.fc-ui-table.IE7 .table-thead-cell .table-checkbox {
+    vertical-align: -6px;
+}
+
+.fc-ui-table .table-thead-drag-left .table-thead-cell {
+    left: 1px;
+}
+
+.fc-ui-table .table-thead-drag-right .table-thead-cell {
+    right: 1px;
+}
+
+
+.fc-ui-table .col-resize-marker {
+    background-color: #444444;
+    cursor: default;
+
+    position: absolute;
+    top: 0;
+    left: -999px;
+    width: 1px;
+    height: 100%;
+    
+    z-index: 10;
+}
+.table-icon-sort,
+.table-icon-filter {
+    background: url('../../asset/img/ui-icon.png') no-repeat;
+    cursor: pointer;
+    height: 100%;
+}
+
+
+.table-icon-sort {
+    background-position: right -141px;
+    padding-right: 12px !important;
+}
+
+.table-icon-sort-asc {
+    background-position: right -162px;
+}
+
+.table-icon-sort-desc {
+    background-position: right -183px;
+}
+.table-thead .fc-ui-bubble {
+    margin-left: 5px;
+    position: relative;
+    top: 9px;
+    vertical-align: top;
+}
+
+.table-icon-filter {
+    background-position: 0 -200px;
+    width: 12px;
+    vertical-align: top;
+    visibility: hidden;
+}
+.table-thead-cell:hover .table-icon-filter {
+    visibility: visible;
+}
+
+
+.table-tbody-cell,
+.table-tbody-cell * {
+    line-height: 18px;
+}
+.fc-ui-table .table-header-row td {
+    height: 0px !important;
+    line-height: 0 !important;
+    font-size: 0px !important;
+    border: none !important;
+}
+.fc-ui-table .table-td {
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #EFEFEF;
+    border-top: 0 none !important;
+
+    
+}
+.fc-ui-table .table-tbody-cell {
+    display: block;
+    padding: 5px; 
+    position: relative;
+}
+.table-tbody {
+    background: white;
+    position: relative;
+    
+    overflow-x: hidden !important;
+    overflow-y: auto;
+}
+.fc-ui-table.IE7 .table-tbody,
+.fc-ui-table.IE7 .table-tbody .table-group,
+.fc-ui-table.IE7 .table-tbody .table-unit {
+    zoom: 1;
+}
+.table-tbody > table {
+    position: relative;
+}
+
+.table-group-title:hover,
+.table-row:hover {
+    background-color: #F0F7FE;
+}
+
+
+.fc-ui-table .table-row-selected {
+    background-color: #FFF9D7 !important;
+}
+
+
+.table-group-foldable {
+    cursor: pointer;
+}
+.fc-ui-table .table-group-title {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 5px;
+    line-height: 18px;
+}

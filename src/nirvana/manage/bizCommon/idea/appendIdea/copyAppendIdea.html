@@ -1,0 +1,19 @@
+
+<!--  target: copyAppendIdea -->
+<div style="width:100%;padding-top:2px">
+${typeName}信息
+<div class='xj_copySublinkInfo'>计划：<span class='xj_copy_name'>${planName}</span>单元：<span class='xj_copy_name'>${unitName}</span></br>
+    ${typeName}：<span id='sublinkContent'>${typeHTML}</span>
+    
+</div>
+请选择目标单元：
+<div ui="id:appendIdeaCopySelect;type:InterLockingBox;"></div>
+<div class='xi_copynote warn'>注意：单元中已有的${typeName}会被覆盖</div>
+<div class='xj_copySubButtonArea'>
+    <div ui="id:okButton;type:Button" class='xj_copySubConfirmBut'>确定</div>
+    <div ui="id:cancelButton;type:Button">取消</div>
+    <span id='copySubLinkError' class="warn copySubLinkError hide"></span>
+</div>
+</div>
+
+

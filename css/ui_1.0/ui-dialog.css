@@ -1,0 +1,136 @@
+/*
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-dialog.css
+ * desc:    弹出层样式
+ * author:  zhaolei,erik,linzhifeng
+ * date:    2010/04/01
+ */
+
+.ui_dialog {
+    position:absolute;
+    z-index:1001;
+    width:440px;
+    background:#fff;
+    border:2px solid #394459;
+}
+.skin_alert,.skin_confirm{
+	border:2px solid #FDED95;
+}
+.skin_modeless {
+	border:1px solid #A8ADB6;
+	border-top:2px solid #394459;	
+}
+.ui_dialog_close {
+    position:absolute;
+    top:7px;
+    right:7px;
+    cursor:pointer;
+    height:12px;
+    width:12px;
+    overflow:hidden;
+	background:transparent url('../../asset/img/bg_icon.png') -150px -65px ;
+}
+.ui_dialog_close_hover {
+    background-position: -150px -85px;
+}
+
+.ui_dialog_head {
+    background:#394459;
+	cursor:move;
+    height:28px;	
+}
+.skin_alert_head,.skin_confirm_head{
+	background:#FDED95;
+}
+.skin_modeless_head{
+	cursor:pointer;
+	background:#fff;
+}
+.ui_dialog_head_hover {
+	background:#394459 url('../../asset/img/bg_icon_center.png') center 10px no-repeat;
+}
+.skin_alert_head_hover,.skin_confirm_head_hover{
+	background:#FFC436 url('../../asset/img/bg_icon_center.png') center 10px no-repeat;
+}
+
+.skin_modeless_head_hover {
+	background:#fff;
+}
+.ui_dialog_title {
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    line-height:27px;
+    padding-left:12px;
+}
+.skin_alert_title,.skin_confirm_title{
+	color:red;
+}
+.skin_modeless_title{
+	color:#000;
+	background:#fff;
+}
+.ui_dialog_foot {
+	clear:both;
+	margin:0 8px 10px 8px;
+}
+
+.ui_dialog_foot .ui_button {
+    margin-right:5px;
+}
+
+.ui_dialog_body {
+    margin:10px 8px;
+    /*position:relative;*/
+}
+
+.ui-dialog-text{/*added by chenjincai*/
+    line-height:1.5em;
+}
+
+.skin_dialognobodymargin .ui_dialog_body {
+    padding:0;
+}
+
+.ui_dialog_foot:after {
+    content:"\0020"; 
+    display:block;
+    height:0; 
+    visibility:hidden; 
+    clear:both;
+}
+
+.ui_dialog_icon {
+    width:16px;
+    height:15px;
+    overflow:hidden;
+    position:absolute;
+}
+
+.ui_dialog_icon_warning {
+    background:url(/assets/img/BlockSprites.png) -109px -314px no-repeat;
+}
+
+.ui_dialog_icon_notice {
+    background:url("/assets/img/BlockSprites.png") no-repeat scroll -141px -315px transparent;
+    height:17px;
+    width:14px;
+}
+
+.ui_dialog_text {
+    padding-left:23px;
+}
+
+.ui_dialog_custom_notice {
+    color:#E17800;
+    font-size:14px;
+    border-bottom:1px solid #c3d9ff;
+    margin-bottom:10px;
+    padding-bottom:10px;
+}
+.dialog_error_msg{
+	float:left;
+	color:red;
+	padding: 5px 0 0 5px;
+}

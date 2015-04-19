@@ -1,0 +1,168 @@
+/*
+ * cb-web
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-schedule.css
+ * desc:    定位控件样式
+ * author:  zhaolei,erik
+ * date:    $Date: 2010/05/25 17:54:36 $
+ */
+.ui_schedule_sel_wtop {
+    color:#37a;
+    text-decoration:underline;
+    cursor:pointer;    
+}
+
+.ui_schedule_sel_weektime {
+    padding:2px;
+}
+
+.ui_schedule_sel_wthead,
+.ui_schedule_sel_wtfoot {
+
+    height:28px;
+    line-height:28px;
+    padding-left:10px;/*15px;*//*Modified by Wu huiyao*/
+}
+
+.ui_schedule_sel_wtfoot b{
+    color:#ff9500;
+}
+
+.ui_schedule_sel_wtfoot .ui_schedule_sel_wttime {
+    margin-top:4px;
+}
+
+.ui_schedule_sel_wtbody {
+    padding:7px;
+}
+
+.ui_schedule_sel_wtfoot_eg {
+    float:right;
+}
+
+.ui_schedule_sel_wt_egtext {
+    float:left;   
+    padding:0 15px 0 5px; 
+    line-height:28px;
+}
+
+.ui_schedule_sel_wtbodyline {
+    height:18px;
+    padding:2px 0;
+    border:1px solid #fff;
+}
+
+.ui_schedule_sel_wtbodylinehover {
+    border:1px solid #e6e6e6;
+    background:#ffffff;
+}
+
+.ui_schedule_sel_wttimezone {
+    float:left;
+    padding-left:9px;
+    width:121px;
+}
+
+.ui_schedule_sel_wttimeseg {
+    float:left;
+    width:130px;
+}
+
+
+.ui_schedule_sel_wtday {
+    width:90px;
+    float:left;
+    line-height:18px;
+    padding-left:2px;
+}
+
+.ui_schedule_sel_wtday label {
+    margin-left:2px;
+}
+
+.ui_schedule_sel_wttime {
+    width:16px;
+    height:16px;
+    line-height:16px;
+    margin-right:2px;
+    background:#e6e6e6;
+    color:#e6e6e6;
+    float:left;
+    font-size:11px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid #e6e6e6;
+    border-radius:2px;
+    -moz-border-radius:2px;
+}
+
+.ui_schedule_sel_wtzonenight,
+.ui_schedule_sel_wtzoneday {
+    float:left;
+    background-image:url('../../asset/img/bg_icon.png');
+    height:16px;
+    width:16px;
+    margin-right:4px;
+}
+.ui_schedule_sel_wtzonenight {
+    background-position:-33px -439px;
+}
+.ui_schedule_sel_wtzoneday {
+    background-position:-49px -439px;
+}
+
+.ui_schedule_sel_wttimehead {
+    width:18px;
+    height:17px;
+    line-height:16px;
+    margin-right:2px;
+    background:url('../../asset/img/bg_icon.png') -394px -106px;
+    float:left;
+    font-size:11px;
+    cursor:pointer;
+    overflow:hidden;
+}
+.ui_schedule_sel_wthead_eg{
+    float:right;
+}
+
+.ui_schedule_sel_wthead_eg .ui_schedule_sel_wttime{
+    margin-top:5px;
+}
+
+.ui_schedule_sel_wttimehead_active {
+    background:red;
+    background:url('../../asset/img/bg_icon.png') -410px -106px;
+}
+.ui_schedule_sel_wktimehover {
+    background:#fff;
+    color:#339900;
+    border:1px solid #a2d688;
+}
+
+.ui_schedule_sel_wktimesel {
+    background:#339900;
+    color:#ffffff;
+    border:1px solid #339900;
+}
+
+.ui_schedule_sug_wktimesug {
+    background:#fd812b;
+	color:#fd812b;
+    border:1px solid #fd812b;
+}
+/*Added by Wu huiyao*/
+.ui_schedule_sel_recmd {
+    padding-right: 23px;
+}
+.ui_schedule_sel_recmd input {
+    margin-right: 3px;   
+}
+.ui_schedule_sel_weektime label {
+    vertical-align: middle;
+}
+.ui_schedule_sel_weektime input {
+    vertical-align: middle;
+}
+/*Added end*/

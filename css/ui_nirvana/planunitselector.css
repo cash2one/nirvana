@@ -1,0 +1,7 @@
+.fc-ui-planunitselector {
+	line-height: 0 !important;
+}
+.fc-ui-planunitselector .plan,
+.fc-ui-planunitselector .unit {
+    margin-right: 10px;
+}

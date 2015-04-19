@@ -1,0 +1,84 @@
+<!-- target:estimator -->
+<div class="estimator">
+    <div class="estimator_form clearfix">
+        <div class="clearfix">
+        <div class="estimator_keyword">
+            <div class="form_key">输入关键词：<span class="grey_txt">（每行一个词，最大只能输入100个词）</span></div>
+            <div class="form_value">
+                <div ui="id:keywordsToEstimate;type:TextLine;"></div>
+                <p id="keywordsError" class="error_msg" style="display:none;"></p>
+            </div>
+        </div>
+        <div class="estimator_bid_region">
+            <div class="form_key">每次点击最高出价:<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="出价(估算工具)">&nbsp;</span></div>
+            <div class="form_value">
+                <div class="clearfix" style="width:180px;"><input type="text" ui="id:keywordBid;" /> <span class="value_unit">元</span></div>
+                <p id="keywordBidError" class="error_msg" style="display:none;"></p>
+            </div>
+            <div class="form_key clearfix">
+
+                <div id="estimatorRegionDisplay" style="float:left;">地域：<span id="displayRegion">全部地域</span></div>
+                <div ui="id:setEstimatorRegion;" ></div>
+            </div>
+            
+            <div class="form_value" style="position:relative;" >
+                
+                <div id="setEstimatorRegion" class="estimator_region" style="display:none;">
+                    <h4 class="layer_title">选择投放地域：</h4>
+                    <div class="all_retion_toggle">
+                        <input type="radio" value="0" name="region" checked="checked" title="全部地域" ui="id:estimatorAllRegion;type:Radio" />
+                        <input type="radio" value="1" name="region" title="部分地域" ui="id:estimatorPartRegion;type:Radio" />
+                    </div>
+                    <div class="ui_selectcombo_close" id="estimatorCloseRegionSet">&nbsp;</div>
+                    <div ui="id:estimatorRegion;" style="display:none;"></div>
+                    <div class="ui_dialog_foot">
+                        <div ui="id:estimatorRegionOk;type:Button;">确定</div>
+                        <div ui="id:estimatorRegionCancel;type:Button;">取消</div>
+                    </div>
+                </div>
+            </div>
+            <div id="estimatorVCodeWrapper" style="display:none;">
+                <div class="form_key clearfix">请输入验证码：</div>
+                <div class="form_value">
+                    <input type="text" ui="id:estimatorVCode" /><img id="estimatorVCodeImg" src="" /><a id="refreshVCode" href="#">看不清楚?</a>
+                    <p id="estimatorVCodeError" class="error_msg" style="display:none;"></p>
+                </div>
+            </div>
+        </div>
+        <div class="advance_tip">
+            <div class="form_key clearfix">
+                <div class="form_text"><a id="advanceTipLink" href="#">高级：如何设定匹配方式</a></div><div ui="id:advanceTipDetailBtn;" ></div><span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="如何设定匹配方式">&nbsp;</span>
+            </div>
+            <div class="form_value" style="position:relative;">
+                <div id="advanceTipDetail" class="form_layer" style="display:none;">
+                    <div class="ui_selectcombo_close" id="estimatorCloseAdvance">&nbsp;</div>
+                <h4>如何设定估算词的匹配方式？</h4>
+                <p>我们为您提供了精确匹配、短语匹配、广泛匹配三种匹配方式的估算结果，您可以通过特殊符号标示关键词估算的匹配模式，包括：</p>
+                <p>关键词 = 广泛匹配</p>
+                <p>"关键词" = 短语匹配</p>
+                <p>[关键词] = 精确匹配</p>
+                <p>比如：输入 鲜花表示为“鲜花”这个关键词在广泛匹配下估算；</p>
+                <p><strong>注：同一个词不能在一次估算中选择不同匹配方式，这种情况下估算工具只按输入顺序选择第一个。</strong></p>
+                <p><div ui="id:gotcha;type:Button;">知道了</div></p>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    <div>
+        <div ui="id:estimateButton;type:Button;">立即估算</div>
+    </div>
+    </div>
+    <div class="tool_info" style="padding-left:15px;">本工具按照当前购买情况进行估算，各项结果仅供您决策参考；真实结果请以关键词上线后实际表现为准</div>
+    <div class="estimator_result" id="EstimatorResultWrap">
+        <h3 class="section_title">估算结果</h3>
+        <div ui="id:estimatorResult;"></div>
+		<div class="clearfix manage_page">
+			<div ui="id:pagination;type:Page;page:*pageNo;total:*pageTotal"></div>
+		</div>
+        <div class="tool_info">估算点击是基于历史点击展现数据来预估今天可获得的点击量，实际点击量还受您预算限制、其他客户出价调整以及网民检索行为等因素的影响
+
+估算排名是关键词在所有可展现的推广中的排名，实际展现位置受质量度的影响</div>
+        
+    </div>    
+</div>

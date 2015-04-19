@@ -1,0 +1,183 @@
+
+<!--  target: appendIdeaEdit -->
+<div style="width:100%;">
+    <ul class="left append-edit-area sublink-edit-ul">
+        <li class="append-editarea-title"><strong>新增至：</strong></li>
+        <li><div ui="id:appendPlanSelect;type:Select"></div><div ui="id:appendUnitSelect;type:Select"></div></li>
+        <li class="warn hide" id="appendLevelError"></li>
+        <li class="sublink-info gray-text">请至少撰写三条子链，总长度小于56个字符，尽量确保子链飘红、与关键词相关。</li>
+        
+
+        <li class="append-editarea-title"><strong class="left">子链一：</strong><span id="sublinkLeftInfo1" class="info right hide"></span></li>
+        <li class="nonsensical-5p"><p><label  class="left" for="ctrltextsublinkTitle1">名称：</label><input type="text" ui="id:sublinkTitle1;type:TextInput"/></p></li>
+        <li ><label class="left" for="ctrltextsublinkUrl1">URL：</label><input type="text" ui="id:sublinkUrl1;type:TextInput"></li>
+
+
+
+        <li class="append-editarea-title"><strong class="left">子链二：</strong><span id="sublinkLeftInfo2" class="info right"></span></li>
+        <li class="nonsensical-5p"><label  class="left" for="ctrltextsublinkTitle2">名称：</label><input type="text" ui="id:sublinkTitle2;type:TextInput"/></li>
+        <li ><label class="left" for="ctrltextsublinkUrl2">URL：</label><input type="text" ui="id:sublinkUrl2;type:TextInput"></li>
+
+
+
+        <li class="append-editarea-title"><strong class="left">子链三：</strong><span id="sublinkLeftInfo3" class="info right"></span></li>
+        <li class="nonsensical-5p"><label  class="left" for="ctrltextsublinkTitle3">名称：</label><input type="text" ui="id:sublinkTitle3;type:TextInput"/></li>
+        <li ><label class="left" for="ctrltextsublinkUrl3">URL：</label><input type="text" ui="id:sublinkUrl3;type:TextInput"></li>
+        <li class="append-editarea-title"><strong class="left">子链四：</strong><span id="sublinkLeftInfo4" class="info right"></span></li>
+        <li class="nonsensical-5p"><label  class="left" for="ctrltextsublinkTitle4">名称：</label><input type="text" ui="id:sublinkTitle4;type:TextInput"/></li>
+        
+        <li ><label class="left" for="ctrltextsublinkUrl4">URL：</label><input type="text" ui="id:sublinkUrl4;type:TextInput"></li>
+        <li class="append-editarea-title"><strong class="left">子链五：</strong><span id="sublinkLeftInfo5" class="info right"></span></li>
+        <li class="nonsensical-5p"><label  class="left" for="ctrltextsublinkTitle5">名称：</label><input type="text" ui="id:sublinkTitle5;type:TextInput"/></li>
+        <li ><label class="left" for="ctrltextsublinkUrl5">URL：</label><input type="text" ui="id:sublinkUrl5;type:TextInput"></li>
+        <li class="clearfix append-buttons">
+            <div ui="id:okButton;type:Button" style="margin-right:5px;">确定</div>
+            <div ui="id:cancelButton;type:Button">取消</div>
+            <div class="right" ui="id:resetButton;type:Button">全部清空</div>
+        </li>
+    </ul>
+
+    <div class="gray-triangle left"></div>
+
+    <div class="sublink-preview-area left">
+        <div id="relatedKeywordsPreviewArea" class="keywords-preview-area hide">
+            <p class="keywords-existedsublink-title">当前单元中的关键词：</p>
+            <p><span class="unit-keyword"></span><span class="unit-keyword"></span><span class="unit-keyword"></span><span class="unit-keyword"></span><span class="unit-keyword"></span><span class="unit-keyword"></span></p>
+        </div>
+        <div id="existedSublinksPreviewArea" class="existed-sublink-area hide">
+            <p class="keywords-existedsublink-title">当前单元中已存在的子链：</p>
+            <p><span class="existed-sublink"></span><span class="existed-sublink"></span><span class="existed-sublink"></span><span class="existed-sublink"></span><span class="existed-sublink"></span></p>
+        </div>
+        <div class="related-idea-preview-area">
+            <strong>子链预览</strong>
+            <p class="gray-text ">推广位预览：</p>
+            <div class="sublink-ppa-preview">
+                <h3 id="ideaPPATitle"></h3>
+                <p>
+                    <span id="ideaPPADesc1"></span>
+                    <span id="ideaPPADesc2"></span>
+                </p>
+                <ul class="sublinks-preview-ul clearfix">
+                    <li class="sublink-title-preview1"><i class="li-img"></i>子链预览1</li>
+                    <li class="sublink-title-preview2"><i class="li-img"></i>子链预览2</li>
+                    <li class="sublink-title-preview3"><i class="li-img"></i>子链预览3</li>
+                    <li class="sublink-title-preview4"><i class="li-img"></i>子链预览4</li>
+                    <li class="sublink-title-preview5"><i class="li-img"></i>子链预览5</li>
+                </ul>
+                <p id="ideaPPAUrl" class="showurl-preview"></p>
+            </div>
+            <p class="gray-text">推广链接位预览：</p>
+            <div class="sublink-ppl-preview">
+                <div class="clearfix"><h3 id="ideaPPLTitle" class="idea-content-margin left"></h3><span id="ideaPPLUrl" class="showurl-preview left"></span></div>
+                <p id="ideaPPLDesc1" class="idea-content-margin"></p>
+                <ul class="sublinks-preview-ul clearfix">
+                    <li class="sublink-title-preview1"><i class="li-img"></i>子链预览1</li>
+                    <li class="sublink-title-preview2"><i class="li-img"></i>子链预览2</li>
+                    <li class="sublink-title-preview3"><i class="li-img"></i>子链预览3</li>
+                    <li class="sublink-title-preview4"><i class="li-img"></i>子链预览4</li>
+                    <li class="sublink-title-preview5"><i class="li-img"></i>子链预览5</li>
+                </ul>
+            </div>
+
+            <!-- import: serverReturnError -->
+        </div>
+    </div>
+
+</div>
+
+
+<!-- target: serverReturnError -->
+<div id="serverReturnErrorArea" class="server-return-error hide" >
+    <p class="server-return-error-title" id="serverReturnErrorTitle">错误：</p>
+    <p id="serverReturnError" style="width:369px;"></p>
+</div>
+
+
+<!-- target: appIdeaPreview -->
+    <div class="gray-triangle left"></div>
+    <div class="left app-preview-area">
+        <strong>创意预览</strong>
+        <p class="gray-text">移动设备推广位预览</p>
+        <div class="app-preview-square">
+            <h3 id="appIdeaTitle"></h3>
+            <p ><span  class="showurl-preview" id="appIdeaUrl"></span><span class="info">推广</span></p>
+            <p id="appIdeaDesc"></p>
+            <p class="app-show-line" style="line-height:26px;"><img id="appImg24" class="icon24 left"><span class="app-download-btn">&nbsp;</span><span class="info">|</span><a class="underline info">应用详情&nbsp;&gt;</a></p>
+        </div>
+        <!-- import: serverReturnError -->
+        <div class="info absolute" style="bottom:15px; left:345px;line-height:1.4">
+            <p style="margin-bottom: 8px;">若您在百度开发者中心对App进行了修改，则搜索推广中的App推广会展现最新的App信息。</p>
+
+            <p>若您的App在百度开发者中心被删除或下线，该App推附加创意会变为“无效”，但其所在的单元及其中的创意的状态保持不变，请考虑是否对该单元及其中的创意进行调整以保证展现效果。 <p>
+        </div>
+    </div>
+
+<!-- target: appRadiosList -->
+<div id="AccountAppList"></div>
+
+<!-- target: appendOCButtons -->
+<div ui="id:okButton;type:Button" style="margin-right:5px;">确定</div>
+<div ui="id:cancelButton;type:Button">取消</div>
+
+<!-- target: appIdeaEdit -->
+<div style="width:100%" class="relative clearfix">
+    <div class="left append-edit-area app-edit-area" >
+        <div>
+            <p class="append-editarea-title" ><strong>新增至：</strong></p>
+            <div class="clearfix">
+                <div ui="id:appendPlanSelect;type:Select" class="left"></div>
+                <div ui="id:appendUnitSelect;type:Select" class="left"></div>
+            </div>
+            <p class="warn hide" id="appendLevelError"></p>
+            <p class="append-editarea-title clearfix" ><strong class="left">请选择App：</strong><span class="right info">没有要推广的App？<a target="_blank" id="noAppLinkId" style="font-size:1.09em">去上传App</a></span></p>
+            <!-- import: appRadiosList -->
+            <div class="clearfix append-buttons">
+                <!-- import: appendOCButtons -->
+            </div>
+        </div>
+    </div>
+    <!-- import: appIdeaPreview -->
+</div>
+
+
+<!-- target: appendUnitMultiSelect -->
+<div ui="id:appendIdeaCopySelect;type:InterLockingBox;rightMaxCount:1000;" class="app-multi-unit-select"></div>
+
+
+<!-- target: appIdeaToMultiEdit -->
+<div>
+    <div class="append-edit-area" id="appToMultiStepOne">
+        <p class="app-multi-steps"><strong >第一步：添加目标单元</strong><strong class="gray-text">第二步：请选择App</strong></p>
+        <p class="app-multi-control-label">请选择目标单元</p>
+        <!-- import: appendUnitMultiSelect -->
+        <div class="clearfix append-buttons">
+            <div ui="id:appToMultiNextOk;type:Button;">下一步：选择App</div>
+            <div ui="id:appToMultiNextCancel;type:Button;">取消</div>
+            <span class="warn" id="appToMultiNextError"></span>
+        </div>
+    </div>
+    <div id="appToMultiStepTwo" style="display:none">
+        <div class="left append-edit-area app-edit-area">
+            <p class="app-multi-steps"><strong class="gray-text">第一步：添加目标单元</strong><strong>第二步：请选择App</strong></p>
+            <p class="app-multi-control-label"><span class="gray-text">没有要推广的App？</span><a target="_blank" id="noAppLinkId" href="#">去上传</a></p>
+            <!-- import: appRadiosList -->
+            <div class="clearfix append-buttons">
+                <!-- import: appendOCButtons -->
+                <span id="appToMultiToPrevStep" class="link">返回上一步</span>
+            </div>
+        </div>
+        <!-- import: appIdeaPreview -->
+    </div>
+    
+
+
+
+</div>
+
+
+
+
+<!-- target: noAppIdeaEdit -->
+<div  class="no-app-dialog" style="width:100%">
+    <div class="no-app-tips">没有要推广的App？<a target="_blank" id="noAppLinkId">去上传App</a></div>
+</div>

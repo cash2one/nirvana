@@ -1,0 +1,24 @@
+<!-- target:modifySchedule -->
+<div class="schedule_edit" ui="type:Schedule;id:scheduleEditor;"></div>
+
+<!-- target:scheduleOptimizer -->
+<div class="widget_tip">{tip}</div>
+<div id="scheduleOptimize" class="schedule_optimize clearfix">
+    <div class="recommend_analyze">
+        <div class="recom_schedule_table" ui="type:Table;id:scheduleRecmTable;"></div>
+    </div>
+    <!-- import:modifySchedule -->
+</div>
+
+<!-- target:decreasePkgSchedule -->
+<div class="widget_tip decrease_pkg_schedule_tip"></div>
+<!-- import:modifySchedule -->
+
+<!-- target:aoPkgRecmScheduleTip -->
+建议添加<strong>{cycnum}</strong>个行业热门时段，提高在线时长
+
+<!-- target:decreasePkgScheduleTip -->
+{endDate}（{endWeek}）较{beginDate}（{beginWeek}）时段设置不合理，未覆盖网民搜索的高峰时段，建议启用系统推荐的搜索量较大的时段。
+
+<!-- target:aoScheduleTip -->
+<!-- import:aoPkgRecmScheduleTip -->

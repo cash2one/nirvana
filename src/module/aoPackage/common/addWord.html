@@ -1,0 +1,27 @@
+<!-- target:aopkgAddWordForm -->
+<div class="aopkg-form aopkg-addword-form">
+    <dl class="aopkg-form-wrapper">
+        <dt class="aopkg-form-label">关键词：</dt>
+        <dd class="aopkg-form-value">{showword}</dd>
+        <dt class="aopkg-form-label">日均检索量：</dt>
+        <dd class="aopkg-form-value">
+            {dailypv}
+        </dd>
+        <dt class="aopkg-form-label">竞争激烈程度：</dt>
+        <dd class="aopkg-form-value">
+            {kwc}
+        </dd>
+        <dt class="aopkg-form-label">计划和单元：</dt>
+        <dd class="aopkg-form-value">
+            <!-- import:planUnitEditFormItem -->
+        </dd>
+        <dt class="aopkg-form-label">出价：</dt>
+        <dd class="aopkg-form-value">
+            <input type="text" ui="id:AddwordBid;type:TextInput;">
+        </dd>
+        <dt class="aopkg-form-label">匹配：</dt>
+        <dd class="aopkg-form-value">
+            <div ui="id:AddwordWmatch;type:Select;"></div>
+        </dd>
+    </dl>
+</div>

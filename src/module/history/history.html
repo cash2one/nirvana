@@ -1,0 +1,52 @@
+<!-- target:history -->
+<div class="history_div_option" id="historyDivOption">
+	<div class="form_value" id="historyTargetTypeDiv">
+        <input type="radio" value="3"  name="historyTargetType" title="推广账户" ui="type:Radio;group:historyTargetType;id:historyTypeAccount;datasource:*historyTargetType;" />
+        <input type="radio" value="2"  name="historyTargetType" title="推广计划" ui="type:Radio;group:historyTargetType;id:historyTypePlan;datasource:*historyTargetType;" />
+        <input type="radio" value="1"  name="historyTargetType" title="推广单元" ui="type:Radio;group:historyTargetType;id:historyTypeUnit;datasource:*historyTargetType;" />       
+        <input type="radio" value="5"  name="historyTargetType" title="关键词"   ui="type:Radio;group:historyTargetType;id:historyTypeKeyword;datasource:*historyTargetType;" />
+        <input type="radio" value="4"  name="historyTargetType" title="创意"     ui="type:Radio;group:historyTargetType;id:historyTypeIdea;datasource:*historyTargetType;" />    
+        <input type="radio" value="7"  name="historyTargetType" title="附加创意" ui="type:Radio;group:historyTargetType;id:historyTypeCreativeIdea;datasource:*historyTargetType;" />    
+    </div>
+	<div class="form_key">选定的对象列表： <span id="selectedObjNumWrapper" class="grey_txt">(<span id="HistorySelectedObjNum"></span>个)</span> <span id="targetValueErrorMsg" style="display:none;" class="error_msg"></span></div>
+	<div class="form_value" style="position:relative;">
+        <div class="history_selected" id="historySelectedWrap">
+            <div name="targetValue" ui="id:historySelectedList;type:SelectList;datasource:*historySelectedData;skin:reminder;deleteHandler:*historySelectedDeleteHandler;autoState:*historyAutoState;numberId:HistorySelectedObjNum"></div>
+        </div>			
+		<div class="history_optionmenu">
+			<div>选择时间范围：</div>
+			<div ui="type:MultiCalendar;id:historyCalendar;value:*historyCalendarDateSelected;availableRange:*historyCalendarAvailableRange;show:form" ></div>
+			<div id="optUserDiv">
+				<div>操作人：</div>
+				<div><input type="text" ui="id:optUser;type:TextInput;width:215;height:20;value:*historyOptName" />&nbsp;</div>
+			</div>
+			<div style="margin-top:10px">选择操作内容：</div>
+			<div>
+				<span style="float:left;" id="optRange">全部</span>
+				<div style="padding-top:3px;"><div ui="id:optSelect;type:Button;skin:shrink_16"></div></div>
+				<span id="optErrorMsg" style="float:left;display:none;padding-left:10px;" class="error_msg"></span>
+			</div>
+		</div>				
+		<div class="history_material" id="historyMaterialWrap" >
+            <div ui="id:historyMaterialList;type:MaterialSelect;"></div>
+        </div>
+    </div>
+	<div ui="id:queryHistory;type:Button;">查询</div>
+</div>
+
+<p class="history_download_p">
+	<a id='historyDownload' href="#" class="download" title="下载历史操作记录" target="_blank">下载历史操作记录</a>
+</p>
+<div class="history_div_table" id="historyTableDiv">
+	<div class = "title_area">
+		<strong>历史记录</strong>
+	</div>
+	<div ui = "id:historyTableList"></div>
+	<div id="historyPagerDiv" class="clearfix manage_page" >
+		<div class="scope">
+			<h4>每页显示</h4>
+			<div ui="id:historyPageSizeSelect;value:*historyPageSize;"></div>
+		</div>
+		<div ui="id:historyPagination;type:Page;page:*historyPageNo;"></div>
+	</div>
+</div>	

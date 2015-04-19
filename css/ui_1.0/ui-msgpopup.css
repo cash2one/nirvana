@@ -1,0 +1,81 @@
+/*
+ * nirvana
+ * Copyright 2011 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-msgpopup.css
+ * desc:    弹窗样式
+ * author:  LeoWang(wangkemiao@baidu.com)
+ * date:    2011/12/14
+ */
+
+.ui_msgpopup_container{
+	background:#ffffff;
+	border:solid 1px #8C96B1; 
+	border-radius:2px;  
+	-moz-border-radius:2px; 
+	-webkit-border-radius:2px; 
+	margin:0 6px 0 0;
+	width:300px;
+	z-index:88;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+ }
+ 
+.ui_msgpopup_close {
+    position:absolute;
+    top:7px;
+    right:7px;
+    cursor:pointer;
+    height:12px;
+    width:12px;
+    overflow:hidden;
+	background:transparent url('../../asset/img/bg_icon.png') -150px -65px ;
+}
+.ui_msgpopup_close_hover {
+    background-position: -150px -85px;
+}
+.ui_msgpopup_title{
+	padding:7px;
+	font-size:12px;
+	font-weight:bold;
+	background:url('../../asset/img/bg_repeat_x.png') 0 -280px repeat-x;
+}
+.ui_msgpopup_title .bold{
+	color:#333366;
+	font-weight:700;
+}
+.ui_msgpopup_title a{
+	margin-left:10px;
+}
+.ui_msgpopup_content{
+	padding:0 7px;
+	line-height:18px;
+}
+.ui_msgpopup_content ul{
+	margin-left:4px;
+	margin-top: 7px;
+}
+.ui_msgpopup_content li{
+	line-height: 1.5em;
+	list-style:none;
+	padding-left: 8px;
+	background:url('../../asset/img/bg_icon_left.png') 0 -892px no-repeat;
+}
+.ui_msgpopup_content .msgpopup_detail{
+	margin-right: 10px;
+}
+.ui_msgpopup_foot ul{
+	padding:10px;
+	float:right;
+}
+.ui_msgpopup_foot li{
+	float: left;
+	padding-left:5px;
+	line-height:24px;
+}
+
+.ui_msgpopup_foot .previous, .ui_msgpopup_foot .next{
+	cursor:pointer;
+	color:blue;
+}

@@ -1,0 +1,30 @@
+.fc-ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 400px;
+}
+.fc-ui-layer > .ui-wrapper {
+    border: 1px solid gray;
+    border-top-width: 2px;
+    background: #FFFFFF;
+    padding: 10px 8px;
+    box-shadow: 2px 2px 0px #DEDEDE;
+}
+.fc-ui-layer .layer-close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    background: url('../../asset/img/ui-icon.png') no-repeat 0 -91px;
+}
+.fc-ui-layer .layer-footer {
+    margin-top: 10px;
+    padding-left: 8px;
+}
+.fc-ui-layer .layer-footer .fc-ui-button {
+    margin-right: 10px;
+}

@@ -1,0 +1,83 @@
+.field,
+.field .value,
+.keyword_icons,
+.percent-bar {
+    display: inline-block;
+    +display: inline;
+    +zoom: 1;
+}
+.field input[type="checkbox"],
+.field input[type="radio"] {
+    width: 14px;
+    height: 14px;
+}
+.field .key {
+    float: left;
+    margin-right: 3px;
+}
+.field .key,
+.field .value {
+    height: 14px;
+    line-height: 14px;
+}
+
+/**
+ * 关键词 + icons 的组合
+ */
+.keyword_icons {
+	line-height: 16px;
+}
+.keyword_icons span[class*="fc_icon_show_reason"] {
+	vertical-align: top;
+	margin-left: 3px;
+}
+
+/**
+ * 水平垂直居中对齐
+ */
+.align-outer {
+    display: table;
+    width: 100%;
+    height: 100%;
+    *position:relative;
+}
+.align-middle {
+    display: table-cell; 
+    vertical-align: middle !important;
+    text-align: center;
+    *position: absolute; 
+    *top: 50%;
+    *left: 50%;
+}
+.align-inner {
+    display: inline-block;
+    text-align: left;
+    line-height: 18px;
+    *display: inline;
+    *zoom: 1;
+    *position: relative; 
+    *top: -50%;
+    *left: -50%;
+}
+
+/**
+ * 百分比横条
+ */
+.percent-bar {
+    border: 1px solid #8CB6ED !important;
+    width: 60px;
+    height: 8px;
+    text-align: left;
+}
+.percent-value {
+    background-color: #ADCDF7;
+    display: block;
+    height: 100%;
+}
+/**
+ * 一般用在表格里，所以这里调整一下位置，避免重复代码
+ */
+.fc-ui-table .percent-bar {
+    margin-top: 3px;
+    margin-right: 10px;
+}

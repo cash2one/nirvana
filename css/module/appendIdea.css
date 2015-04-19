@@ -1,0 +1,147 @@
+/**
+ * 附加创意
+ */
+.xj_sublink{
+	text-decoration: underline;
+	margin-right: 17px;
+	color: #03C;
+	
+}
+
+.xj_copySublinkInfo{
+	color: #999;
+	margin-top: 8px;
+	line-height: 19px;
+	padding: 4px;
+	background: #FFF9C9;
+    border: 1px solid #EDE495;
+	margin-bottom: 7px;
+}
+.xj_copy_name {
+    color: black;
+    font-weight: bolder;
+    margin-right: 20px;
+}
+#sublinkContent a {
+    margin-right: 10px;
+    text-decoration: underline;
+}
+.xj_bg_rawidea{
+	background:#ffdfd5
+}
+.xj_copySubButtonArea{
+	margin-bottom: 30px;
+	
+	
+}
+.xj_copySubConfirmBut{
+	margin-right: 10px;
+}
+.copySubLinkError{
+    display: inline-block;
+	
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.xj_copyUnitName{
+	display: inline-block;
+	
+	width: 138px;
+	overflow: hidden;
+	height: 26px;
+	margin-bottom: -9px;
+}
+.xj_copyUnitNameLong{
+	display: inline-block;
+	width: 184px;
+	overflow: hidden;
+	height: 26px;
+	margin-bottom: -9px;
+}
+.xj_copyHaslinkChar{
+	display: inline-block;
+}
+.xj_copy_tips{
+	color:#999;
+}
+.xi_copynote{
+    position: relative;
+	
+    top: -8px;
+}
+
+#appendIdeaType{
+	border:1px solid #CCC;
+	border-top:0;
+	height: 40px;
+	background-color: #FFF;
+	font-size: 14px;
+}
+#appendIdeaType span{
+	margin:13px 0 15px 10px;
+	display:inline-block;
+	padding-top:2px;
+}
+#appendIdeaType .typeItem{
+	cursor: pointer;
+	color:#0000FF;
+}
+#appendIdeaType span.current{
+	color:#000000;
+	font-weight:bold;
+	cursor: default;
+}
+#unbindUserTip{
+    padding-top: 7px;
+    background-color: #FFF;
+}
+#unbindUserTip .bigContainer{
+    border:#CCCCCC solid 1px;
+    height:265px;
+    padding-top:35px;
+    font-size: 13px;
+    color: #666666;
+}
+#unbindUserTip .container{
+    width: 460px;
+    margin:0 auto;
+}
+#unbindUserTip .icon{
+    background: url("../../asset/img/bg_icon.png") repeat scroll -500px -1270px transparent;
+    display: inline-block;
+    height:23px;
+    width:22px;
+    margin:0 5px -5px 0;
+}
+#unbindUserTip .title{
+    font-weight: bold;
+    margin-top:25px;
+}
+#unbindUserTip .bindUserBtn{
+    top:25px;
+    left:160px;
+}
+#unbindUserTip .bindUserBtn .ui_button_label{
+    color: #0000FF;
+}
+.xj_copyPlanName{
+	display: inline-block;
+	max-width: 165px;
+	overflow: hidden;
+	height: 20px;
+	width:auto	;
+	word-break: break-all;
+	top:2px \9;
+	position:relative \9;
+	*line-height: 20px ;
+	*position: static;
+	
+}
+/**firefox hack**/
+@-moz-document url-prefix(){
+	.xj_copyPlanName{
+		top:2px;
+	position:relative;}
+	}
+
+

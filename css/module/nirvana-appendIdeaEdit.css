@@ -1,0 +1,449 @@
+
+
+/******** 每种附加创意都需要的小三角 ***********/
+.gray-triangle {
+  	width:8px;
+  	background: url(../../asset/img/bg_icon.png) no-repeat -100px -836px;
+  	height: 15px;
+  	margin-top:20px;
+}
+
+
+.left {
+	float: left;
+}
+.right{
+	float: right;
+}
+.gray-text {
+	color: #93969f;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.relative {
+	position:relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.icon64 {
+	width: 64px;
+	height: 64px;
+}
+
+.icon24 {
+	width: 24px;
+	height: 24px;
+}
+
+/*公用的右侧编辑区域*/
+.append-edit-area {
+	background: #e4eafa;
+	padding-left: 8px;
+}
+
+/*公用的计划选择列表样式*/
+#ctrlselectappendPlanSelect {
+	margin-right: 11px;
+}
+
+/* 编辑区域底部按钮*/
+.append-buttons {
+	padding: 8px 11px 10px 0;
+}
+
+.append-buttons>.ui_button {
+	margin-right: 1em;
+}
+
+.append-buttons>span {
+	line-height: 24px;
+	height: 24px;
+}
+.append-buttons>.link {
+	color: #30e;
+	cursor: pointer;
+}
+
+/* 合用的预览位的p */
+
+.sublink-ppa-preview p, .sublink-ppl-preview p, .app-preview-square p {
+	margin-left: 6px;
+	/*margin-bottom: 6px;*/
+	font-size: 13px;
+	color: #000;
+	line-height: 1.4;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.sublink-ppa-preview p, .sublink-ppl-preview p {
+	margin-bottom: 6px;
+}
+
+
+
+#ctrldialogappendIdeaEditDialogbody,#ctrldialogappendIdeaEditDialogfoot {
+	margin: 0px;
+}
+
+
+.sublink-edit-ul {
+	width: 348px;
+}
+
+.sublink-edit-ul li {
+	height: 24px;
+}
+
+.sublink-edit-ul li.nonsensical-5p {
+	margin-bottom: 5px ;
+	*margin-bottom: 3px;
+}
+
+.sublink-edit-ul li.append-editarea-title {
+	margin-top: 11px;
+	margin-bottom: 6px;
+	height:14px;
+	line-height:14px;
+}
+
+#appendLevelError {
+	line-height: 15px;
+	min-height: 12px;
+	padding-left: 5px;
+	height:auto;
+}
+
+
+.append-editarea-title .info, .append-editarea-title .warn {
+	margin-right: 10px;
+}
+
+.sublink-edit-ul li.sublink-info {
+	margin-top: 10px;
+	margin-left: 4px;
+	height: 26px;
+	line-height: 13px;
+}
+
+.sublink-edit-ul li label {
+	line-height: 24px;
+	width: 36px;
+}
+
+.sublink-preview-area {
+	background: #ffffff;
+	/*width: 622px;*/
+	margin-top:14px;
+	margin-left: 3px;
+}
+
+.app-preview-area strong, .sublink-preview-area strong{
+	line-height: 16px;
+	height: 16px;
+}
+
+
+
+.keywords-preview-area, .existed-sublink-area {
+	background: #fff6db;
+	border: 1px solid;
+}
+
+.keywords-preview-area, .existed-sublink-area {
+	height: 48px;
+	width: 608px;
+	/*margin-left: 3px;*/
+}
+
+.keywords-preview-area {
+	border-color: #cfcd92;
+}
+
+.existed-sublink-area {
+	border-color: #cbc5a1;
+	margin-top: 5px;
+}
+
+.keywords-existedsublink-title {
+	color: #818181;
+	margin: 6px 0 8px 7px;
+}
+
+.unit-keyword, .existed-sublink {
+	margin-left: 7px;
+}
+
+.existed-sublink {
+	color: blue;
+	text-decoration: underline;
+	line-height:18px;
+	height:18px;
+}
+
+.related-idea-preview-area {
+	margin-top:6px;
+	width: 618px;
+}
+
+.related-idea-preview-area p.gray-text {
+	margin-top:15px;
+}
+
+.related-idea-preview-area h3, .app-preview-area h3 {
+	text-decoration: underline;
+	font-size: 15px;
+	color: blue;
+	margin: 12px 6px 0px ;
+	height: 20px;
+	line-height: 20px;
+}
+
+.related-idea-preview-area h3 {
+	margin-bottom: 6px;
+}
+
+.related-idea-preview-area u, .app-preview-area u{
+	text-decoration: none;
+	background-color: yellow;
+}
+
+.related-idea-preview-area h3 u, .app-preview-area h3 u {
+	text-decoration: underline;
+}
+
+
+
+.sublink-ppa-preview, .sublink-ppl-preview {
+	border: #cbcbcb solid 1px;
+	margin-top: 5px;
+	width: 608px;
+	/*padding: 12px 6px;*/
+}
+
+.sublinks-preview-ul {
+	margin-left:6px;
+	margin-bottom: 6px;
+}
+
+.sublinks-preview-ul li {
+	float: left;
+	color: blue;
+	text-decoration: underline;
+	height:12px;
+	line-height: 12px;
+	margin-right: 10px;
+}
+
+.li-img {
+	background:url(../../asset/img/bg_icon.png) no-repeat -510px -1450px;
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.showurl-preview {
+	color: green;
+}
+
+span.showurl-preview {
+	margin-top:17px;
+}
+
+.sublink-ppa-preview p.showurl-preview {
+	margin-bottom: 6px;
+	color: green;
+}
+
+.server-return-error {
+	background: #fbe3e3;
+	border: 2px solid #fbc2c4;
+}
+
+.server-return-info {
+	background: #d9edf7;
+	border: 2px solid #bce8f1;
+}
+
+.server-return-error, .server-return-info {
+	padding: 10px;
+	margin: 10px 6px 10px 0px;
+	border-left-style: none;
+	border-right-style: none;
+	color: #3e4349;
+}
+
+
+.server-return-error {
+  /*width: 379px;*/
+  padding: 10px;
+  border: 2px solid #fbc2c4;
+  margin: 10px 6px 10px 0px;
+  color: #3e4349;
+  background: #fbe3e4;
+  border-right-style: none;
+  border-left-style: none;
+  /*width: 100%;*/
+}
+
+.server-return-title {
+  margin: 0px 10px 5px 0px;
+  font-weight: bold;
+}
+
+#serverReturnError {
+  line-height: 18px;
+}
+
+
+/* App推广样式 */
+
+
+.app-preview-area {
+	/*width: 505px;*/
+	margin-top:20px;
+	margin-left:6px;
+}
+
+.app-preview-square {
+	border: #ccc 1px solid;
+	width: 316px;
+}
+
+.app-preview-square .info {
+	margin-left: 10px;
+}
+
+.app-edit-area {
+	width: 315px;
+	padding-top: 8px;
+	padding-right: 8px;
+}
+
+.app-edit-area .append-editarea-title {
+	margin: 8px 0 6px;
+}
+
+#AccountAppList {
+	background: #fff;
+	margin-right: 5px;
+	border: #aaa solid 1px;
+	margin-left: 3px;
+	height: 300px;
+	overflow-y: auto;
+}
+
+.app-edit-list {
+	height: 74px;
+	border-bottom: #ccc 1px dashed;
+}
+
+.app-edit-detail {
+	margin: 5px 0 0 5px;
+}
+
+.app-edit-desc {
+	line-height: 1.36;
+	padding: 2px 0 2px 5px ;
+}
+
+.app-radio {
+	padding: 5px 5px 0px 5px;
+	height: 69px;
+	/**height: 74px;*/
+	/*height: 74px \0;*/
+	border-right: 1px #ccc solid;
+}
+
+.app-preview-area .gray-text {
+	margin: 10px 0 8px 0;
+}
+
+.app-show-line {
+	height: 26px;
+	margin-bottom: 8px;
+}
+
+.app-show-line .icon24 {
+	margin-top: 4px;
+}
+.app-download-btn {
+	width: 91px;
+	height: 26px;
+	background: url(../../asset/img/bg_icon.png) -150px -1210px;
+	display: inline-block;
+	margin: 3px 8px;
+}
+
+.no-app-tips {
+	height: 28px;
+	margin: 188px auto;
+	line-height: 28px;
+	width: 406px;
+	text-align:center;
+	background: #fff6db;
+    border-color: #cbc5a1;
+    font-size: 1.09em;
+}
+
+.no-app-dialog {
+	text-align: center;
+}
+
+
+/* 添加App到多个单元中去 */
+.app-multi-steps {
+	padding: 1em 0;
+}
+
+.app-multi-steps>strong {
+	margin-right: 1.2em;
+}
+
+.app-multi-control-label {
+	margin-bottom: 0.5em;
+}
+
+.app-multi-control-label>a {
+	margin-left: 1em;
+}
+
+
+.app-multi-unit-select>.ui_InterLockingBox_Wrapper {
+	margin-top: 0;
+	background-color: #fff;
+	width: 322px;
+	height: 300px;
+}
+
+.app-multi-unit-select>.ui_interlockingbox_arrowLeft {
+	border-color:  transparent  transparent transparent #b5b5b5; 
+	margin-top: 135px;
+}
+
+.app-multi-unit-select>.ui_InterLockingBox_foot {
+	width: 100%;
+	text-align: left;
+}
+
+.app-multi-unit-select>.ui_InterLockingBox_foot>.warn {
+	margin-right: 165px;
+}
+
+.app-multi-unit-select>.ui_InterLockingBox_foot>a {
+	margin-left: 172px;
+}
+
+.app-edit-area>.app-multi-steps {
+	margin-top: 3px;
+}
+
+
+

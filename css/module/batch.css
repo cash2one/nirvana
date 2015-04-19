@@ -1,0 +1,60 @@
+/*
+ * nirvana
+ * Copyright 2011 Baidu Inc. All rights reserved.
+ * 
+ * path:    manage.css
+ * desc:    批量下载
+ * author:  liuyutong
+ * date:    2011/8/3
+ */
+.batchDialog{
+	margin : 0px 5px;	
+}
+.batchDialog .batch_first{
+	line-height:25px;
+}
+.batchDialog .batch_first,.batchDialog .batch_control{
+	margin-left:3px;
+}
+.batch_close{
+	margin-left: 10px;
+}
+.batchDialog .batch_second{
+	background-color:#FFF9D8;
+	text-indent:10px;
+	margin-bottom:10px;
+	height:25px;
+	line-height: 25px;
+}
+.batchDialog #cancelBatchDownload{
+	margin-left:200px;
+	display:inline-block;
+}
+.batchDialog  .batch_control{
+	position:relative;
+	line-height:22px;
+}
+.batchDialog .clear{
+	clear:both;
+}
+.batchDialog .batch_loading{
+	vertical-align:middle;
+	margin-right:10px;
+}
+.batchDialog  .batch_grey{
+	color:#ccc;
+	margin:0px 5px;
+	display:inline-block;
+}
+.batchDialog  .batch_error{
+	color:#B4260E;
+}
+.batchDialog .batch_control .ui_button_label {
+	position:static;
+}
+.batchDialog .batch_control{
+	position:static;
+}
+.batchDialog .batch_control .ui_button{
+	position:static;
+}

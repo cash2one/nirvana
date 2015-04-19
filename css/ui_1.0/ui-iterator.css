@@ -1,0 +1,73 @@
+.ui_iterator{
+    display:inline-block;
+    height: 24px;
+    position:relative;
+    *display: inline;
+    *zoom: 1;
+}
+.ui-iterator-input{
+    display:inline-block;
+    height:29px;
+    
+    float: left;
+    border: 1px solid #A8ADB6;
+    border-right:none; 
+    
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    line-height:29px;
+    
+    ime-mode: disabled;
+    background-color: white;
+    *display: inline;
+    *zoom: 1;
+}
+.ui-iterator-input-hover{
+    border-color: #6E8AB8;
+}
+.ui-iterator-right{
+    float: left;
+}
+.ui-iterator-up,
+.ui-iterator-down{
+    display:block;
+    height:14px;
+    width:20px;
+    border: 1px solid #A8ADB6;
+    background-image: url("../../asset/img/bg_icon.png");
+    background-position: -1px -210px;
+    cursor: pointer;
+}
+.ui-iterator-btn-hover{
+    background-position: -1px -234px;
+}
+.ui-iterator-down{
+    border-top:none;
+}
+.ui-iterator-up-icon,
+.ui-iterator-down-icon{
+    width:0;
+    height:0;
+    position : relative;
+    left:4px;
+    display:inline-block;
+    border-style:solid;
+    border-width:6px;
+    *display: inline;
+    *zoom: 1;
+}
+.ui-iterator-up-icon{
+    top:-2px;
+    border-color: transparent transparent #6A6B6D transparent;
+}
+.ui-iterator-down-icon{
+    top:4px;
+    border-color:#6A6B6D transparent transparent transparent;
+}
+.ui-iterator-btn-disabled .ui-iterator-up-icon{
+    border-color: transparent transparent #BDBDBD transparent;
+}
+.ui-iterator-btn-disabled .ui-iterator-down-icon{
+    border-color:#BDBDBD transparent transparent transparent;
+}
+

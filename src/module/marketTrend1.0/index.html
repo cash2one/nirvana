@@ -1,0 +1,343 @@
+﻿<!-- target:marketTrendIndex1 -->
+<div id="market_trend">
+    <!-- import:marketAnalysis -->
+    <div ui="id:marketAnalysisTab;type:Tab" class="tab"></div>
+	<div id="marketAnalysis_industry">
+		<div class="lift">
+			电梯直达：
+			<span targetId='market_industry_trend'>行业规模趋势</span>
+			<span targetId='market_timedistribution'>时段分布</span>
+			<span targetId='market_areadistribution'>地域分布排行榜</span>
+			<span targetId='wordsTrendIndustry'>行业热点披露</span>
+		</div>
+		<!-- import:industryTrend -->
+		<!-- import:timeDistribution -->
+		<!-- import:areaDistribution -->
+		<div id="wordsTrendIndustry">
+			<!-- import:wordsTrend -->
+		</div>
+	</div>
+    <div id="marketAnalysis_market">
+    	<div class="lift">
+			电梯直达：
+			<span targetId='market_mytrend'>行业竞争趋势</span>
+			<span targetId='wordsTrendMarket'>行业竞争披露</span>
+		</div>
+   	 	<!-- import:myTrend -->
+  		<div id="wordsTrendMarket">
+			<!-- import:wordsTrend -->
+		</div>
+    </div>
+</div>
+
+<!-- target:marketAnalysis -->
+<div id="market_analysis">
+    <div class="title">
+        <h2>市场分析</h2>
+        <a id="backBtn" href="#">返回</a>
+    </div>
+    <form class="content">
+        <div class="item">
+           <span class="label">分析对象：</span><span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="客户所属行业">&nbsp;</span>
+            <div ui="id:selectIndustry;type:Select"></div>
+        </div>
+        <div id="query_bytime">
+            <div ui="type:Button;id:query;" class="query_button">
+                查询
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- target:areaDistribution -->
+<div id="market_areadistribution">
+    <div class="title">
+        <h2>地域分布排行榜</h2><div ui="type:Button;id:setArea">设置账户推广地域</div><!-- import:marketTrendGoback -->
+    </div>
+    <div class="content">
+        <div class="content_wrapper">
+            <div>
+	    		<div ui="id:areaDistributionType;type:Select" class="select_button area_distribution_type"></div>
+	    		<span class="ui_bubble" bubblesource="defaultHelp"
+                        bubbletitle="行业饱和度地域分布">&nbsp;</span>
+	    		<div ui="id:areaDistributionTime;type:MultiCalendar" class="area_distribution_time"></div>
+	        	<div class='error_area'>目前仅支持8.11以后的数据，预计1个月之内修复。</div>
+	        </div>
+            <div class="main_content">
+                <div id="searchAmountRank">
+                    <div ui="type:TopN;id:searchAmount"></div>
+                </div>
+                
+                <div id="areadistribution_flash"></div>
+            </div>
+        </div>
+        <!-- import:marketTrendLoading -->
+        <!-- import:marketTrendError -->
+    </div>
+</div>
+
+<!-- target:myTrend -->
+<div id="market_mytrend">
+    <div class="title">
+        <h2>
+        	行业竞争趋势
+      	</h2>
+      	<div ui="type:Button;id:myTrendSetBudget" class='mytrend_btn'>设置账户预算</div>
+      	<div ui="id:myTrendTime;type:MultiCalendar" class="mytrend_time"></div>
+    </div>
+    <div class="content">
+        <div class="content_wrapper">
+            <div id="left_showshare" class="trend">
+                <div class="trend_header">
+                    <h3>
+                        左侧展现趋势<span class="ui_bubble" bubblesource="defaultHelp"
+                            bubbletitle="左侧展现趋势">&nbsp;</span>
+                    </h3>
+                    <ul>
+                        <li>
+                            <span id="showshare_most">&nbsp;</span>
+                            最高客户左侧展现份额
+                            <span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="最高客户左侧展现份额">&nbsp;</span>
+                            
+                        </li>
+                        <li>
+                            <span id="showshare_avg">&nbsp;</span>
+                            行业平均的左侧展现份额
+                            <span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="行业平均的左侧展现份额">&nbsp;</span>
+                        </li>
+                        <li>
+                            <span id="showshare_mine">&nbsp;</span>
+                            我的左侧展现份额
+                            <span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="我的左侧展现份额">&nbsp;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mytrend_flash"></div>
+            </div>
+            <div class="trend">
+                <div class="trend_header">
+                    <h3>
+                        左侧展现量
+                        <span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="左侧展现量">&nbsp;</span>
+                    </h3>
+                    <ul>
+                        <li>
+                            <span id="promotionshow_avg">&nbsp;</span>
+                            行业平均的左侧推广展现量
+                            <span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="行业平均左侧推广展现量">&nbsp;</span>
+                        </li>
+                        <li>
+                            <span id="promotionshow_mine">&nbsp;</span>
+                            我的左侧展现量
+                            <span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="我的左侧展现量">&nbsp;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mytrend_flash"></div>
+            </div>
+        </div>
+        <!-- import:marketTrendLoading -->
+        <!-- import:marketTrendError -->
+    </div>  
+</div>
+
+<!-- target:industryTrend -->
+<div id="market_industry_trend">
+	<div class="title">
+		<h2>行业规模趋势</h2>
+	</div>
+	<div class="content">
+		<div class="content_wrapper">
+			<div id="industry_trend_type">
+				<div class="type_selected first_div type_div">
+					<div class="type">
+						<span class="chunk"></span>
+						行业饱和度
+						<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="行业饱和度">&nbsp;</span>
+					</div>
+					<div class="value"></div>
+					<div class="rate">总量环比：<span class="rate_num"></span></div>
+				</div>
+				<div class="type_div">
+					<div class="type">
+						<span class="chunk"></span>
+						行业词检索量趋势
+						<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="行业词检索量趋势">&nbsp;</span>
+					</div>
+					<div class="rate">总量环比：<span class="rate_num"></span></div>
+				</div>
+				<div class="type_div">
+					<div class="type">
+						<span class="chunk"></span>
+						商业检索量趋势
+						<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="商业检索量趋势">&nbsp;</span>
+					</div>
+					<div class="rate">总量环比：<span class="rate_num"></span></div>
+				</div>
+			</div>
+			<div>
+				<div ui="id:industryTrendTime;type:MultiCalendar" class="trend_distribution_time"></div>
+				<div class="error_area">目前仅支持8.11以后的数据，预计1个月之内修复。</div>
+				<div id="industry_trend_flash"></div>
+			</div>
+		</div>
+		<!-- import:marketTrendLoading -->
+        <!-- import:marketTrendError -->
+	</div>
+</div>
+<!-- target:timeDistribution -->
+<div id="market_timedistribution">
+    <div class="title">
+        <h2>
+            时段分布
+        </h2><!-- import:marketTrendGoback -->
+    </div>
+    <div class="content">
+        <div class="content_wrapper">
+            <div id="timeDistribution_node" class="day">
+            	<div >
+		    		<div ui="id:timeDistributionType;type:Select" class="time_distribution_type select_button"></div>
+		    		<span class="ui_bubble" bubblesource="defaultHelp"
+		                        bubbletitle="行业饱和度时段分布">&nbsp;</span>
+		    		<div ui="id:timeDistributionTime;type:Select" class='time_distribution_time'></div>
+		        </div>
+                <div class="topTime">
+                    <h3>高峰时段</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="timedistribution_flash">
+                    <div class="options" id='timeDistribution_radio'>
+                        <label id="options_label">查看：</label>
+                        <ul>
+                            <li><input type="radio" name="timeMode" value="0" id="timeMode1" checked="true"/><label for="timeMode1">全部平均</label></li>
+                            <li><input type="radio" name="timeMode" value="1" id="timeMode2"/><label for="timeMode2">工作日平均</label></li>
+                            <li><input type="radio" name="timeMode" value="2" id="timeMode3"/><label for="timeMode3">周末平均</label></li>
+                        </ul>
+                    </div>
+                    <div id="timedistribution_flash">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- import:marketTrendLoading -->
+        <!-- import:marketTrendError -->
+    </div>
+</div>
+
+
+<!-- target:wordsTrend -->
+<div class="wordsTrend">
+	<div class="title">
+	    <h2>关键词行业展现趋势</h2><!-- import:marketTrendGoback -->
+	</div>
+	<div class="content">
+	    <div class="content_wrapper">
+	        
+	        <form class="downloadWordsForm" action="/nirvana/tool/ao/download_keyword.do" method="post">
+	            <input type="hidden" name="userid"/>
+	            <input type="hidden" name="params"/>
+	        </form>
+	        <div class="tab_wrapper">
+	            <!--<div ui="id:wordsTrendTab;type:Tab"></div>-->
+	            <!--<div class="tab_container">-->
+	           	<div class="wordstrend_select"></div>
+	            <div class="wordstrend_oneday_wrap">
+	                <div class="top_words_wrap">
+	                    <h3>
+						</h3>
+	                    <div class="top_words rank_head_wrap">
+	                        <div class="rank_header">
+	                            <span class="column1">&nbsp;</span>
+	                            <span class="column2"><input type="checkbox"
+	                                class="oneday_select_all_topwords"/>&nbsp;<label>关键词</label></span>
+	                            <span class="column3">展现量</span>
+	                            <span class="column4"></span>
+	                        </div>
+	                        
+	                    </div>
+	                    <div class="top_words topWordsOneday"></div>
+	                </div>
+	                <div class="explosive_words_wrap">
+	                    <h3>
+	                    </h3>
+	                    <div class="explosive_words rank_head_wrap">
+	                        <div class="rank_header">
+	                            <span class="column1">&nbsp;</span>
+	                            <span class="column2"><input type="checkbox"
+	                                class="oneday_select_all_explosivewords"/>&nbsp;<label>关键词</label></span>
+	                            <span class="column3">展现量</span>
+	                            <span class="column4">同比</span>
+	                        </div>
+	                    </div>
+	                    <div class="explosive_words explosiveWordsOneday"></div>
+	            	</div>
+	            </div>
+	            <div class="wordstrend_sevenday_wrap">
+	                <div class="top_words_wrap">
+	                    <h3>
+	                    </h3>
+	                    <div class="top_words rank_head_wrap">
+	                        <div class="rank_header">
+	                            <span class="column1">&nbsp;</span>
+	                            <span class="column2"><input type="checkbox"
+	                                class="sevenday_select_all_topwords"/>&nbsp;<label>关键词</label></span>
+	                            <span class="column3">展现量</span>
+	                            <span class="column4"></span>
+	                        </div>
+	                        
+	                    </div>
+	                    <div class="top_words topWordsSevenday"></div>
+	                </div>
+	                <div class="explosive_words_wrap">
+	                    <h3>
+	                    </h3>
+	                    <div class="explosive_words rank_head_wrap">
+	                        <div class="rank_header">
+	                            <span class="column1">&nbsp;</span>
+	                            <span class="column2"><input type="checkbox"
+	                                class="sevenday_select_all_explosivewords"/>&nbsp;<label>关键词</label></span>
+	                            <span class="column3">展现量</span>
+	                            <span class="column4">同比</span>
+	                        </div>
+	                    </div>
+	                    <div class="explosive_words explosiveWordsSevenday"></div>
+	            	</div>
+	            </div>
+	            <!--</div>-->
+	        </div>
+	        <div class="shortcuts">
+	                                    已选中<span class="wordsTrendCheckedNum strong">0</span>个关键词
+	            <div class="wordsTrendDownload"></div>
+	            <div class="wordsTrendAddWords"></div>
+	        </div>
+	    </div>
+	    
+	    <!-- import:marketTrendLoading -->
+	    <!-- import:marketTrendError -->
+	</div>
+</div>
+
+<!-- target:downloadWords -->
+<div class="download_words_dialog">
+	<!-- import:contentFormat -->
+	<div class="btn_area">
+		<div ui="id:wordDownloadSubmit;type:Button;">下载</div>
+		<div ui="id:wordDownloadCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:marketTrendLoading -->
+<div class="loading">
+    <img src="asset/img/loading.gif"/>正在读取数据，请稍候...
+</div>
+
+<!-- target:marketTrendError -->
+<div class="error">
+    对不起，当前没有数据。
+</div>
+<!-- target:marketTrendGoback -->
+<span class="marketTrend_goback">回到顶部<span class='back_icon'></span></span>

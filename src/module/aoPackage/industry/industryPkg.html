@@ -1,0 +1,128 @@
+<!-- target: industryPkgChartDescr -->
+<span class="title {clazz}">同行点击量分布：</span><span class="descr">{descr}</span>
+<!-- target: industryPkgChart -->
+<div class="click_chart">
+    <div class="pkg_light_head {lighttype} light{rankindex}"><span></span></div>
+    <div class="pkg_click_tip" style="display:none;">
+        <p class="num">{currvalue}</p>
+        <p class="lable">您的点击量</p>
+    </div>
+</div>
+<ul class="click_interval clearfix">
+    <li class="bad"><div class="label">较差水平</div></li>
+    <li class="good"><div class="label">中等水平</div><div class="graduation">平均值<span class="value">{avgvalue}</span></div></li>
+    <li class="excellent"><div class="label">良好水平</div><div class="graduation">良好值<span class="value">{goodvalue}</span></div></li>
+</ul>
+    
+<!-- target: industryPkgBarIntro -->
+<ul class="bar_intro">
+    <li class="bad"><span class="color"></span><span class="meaning">低于平均</span></li>
+    <li class="good"><span class="color"></span><span class="meaning">优于平均</span></li>
+    <li class="excellent"><span class="color"></span><span class="meaning">优于良好</span></li>
+</ul>   
+
+<!-- target: industryPkgOptAbstract -->
+<h3 id="{groupTitleId}"> {groupName} </h3>
+<ul class="aopkg_group_container clearfix {groupClass}">
+    <li class="aopkg_industry_info {category_class}">
+        <ul class="aopkg_data_bar"></ul>
+    </li>
+    <li class="aopkg_opt_group">
+        <ul id="{optGroupId}" class="aopkg_listgroup"></ul>
+    </li>
+</ul>
+
+<!-- target: industryPkgChartClickState1 -->
+<span class="click_up">优于{percent}%</span>的同行
+<!-- target: industryPkgChartClickState2 -->
+<span class="click_down">低于{percent}%</span>的同行
+<!-- target: industryPkgChartClickState3 -->
+<span class="click_up">在行业中表现优秀</span>
+
+<!-- target: industryPkgChartClickRank1 -->
+ ，比前一日<span class="click_up"><span class="up">提升</span>{rankchange}名</span>
+<!-- target: industryPkgChartClickRank2 -->
+，比前一日<span class="click_down"><span class="down">降低</span>{rankchange}名</span>
+<!-- target: industryPkgChartClickRank3 -->
+，与前一日持平
+
+<!-- target: industryPkgChartAccountRank1 -->
+<span class="click_up">提升</span>
+<!-- target: industryPkgChartAccountRank2 -->
+<span class="click_down">降低</span>
+
+<!-- target: industryPkgChartAccountState1 -->
+点击量<span class="click_up">优于同等级{percent}%</span>的同行
+<!-- target: industryPkgChartAccountState2 -->
+点击量<span class="click_down">低于同等级{percent}%</span>的同行
+<!-- target: industryPkgChartAccountState3 -->
+点击量<span class="click_up">在同等级行业中表现优秀</span>
+
+<!-- target: industryPkgChartClickInfo0 -->
+{month}月{date}日（{weekDay}）点击量{state}{rank}
+<!-- target: industryPkgChartClickInfo1 -->
+{month}月{date}日（{weekDay}）账户等级{rank}，{state}
+
+<!-- target: aoPkgGroupNoOpt1 -->
+<li class="no_group_opt">当前没有优化时长建议项</li>
+<!-- target: aoPkgGroupNoOpt2 -->
+<li class="no_group_opt">当前没有优化展现建议项</li>
+<!-- target: aoPkgGroupNoOpt3 -->
+<li class="no_group_opt">当前没有优化出价建议项</li>
+<!-- target: aoPkgGroupNoOpt4 -->
+<li class="no_group_opt">当前没有质量度优化建议 </li>
+
+<!-- target: aoPkgAbsItem6011 -->
+<span class="aopkg_em">{percent}%</span>的同行下线时间晚于您，建议预算<span class="aopkg_em">{suggestbudget}</span>元
+<!-- import:aoPkgAbsItemBtn -->
+<!-- target: aoPkgAbsItem6012 -->
+受预算限制，{bgtinfo}共损失<span class="aopkg_em">{clklost}</span>个访问，建议预算<span class="aopkg_em">{suggestbudget}</span>元
+<!-- import:aoPkgAbsItemBtn -->
+<!-- target: aoPkgAbsItem6013 -->
+为获得更多客户访问，提高行业竞争力，建议预算<span class="aopkg_em">{suggestbudget}</span>元
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem6021 -->
+因计划预算限制，近期共损失<span class="aopkg_em">{clklost}</span>个访问，<span class="aopkg_em">{count}</span>个计划建议您提高预算
+<!-- target: aoPkgAbsItem6022 -->
+为获得更多客户访问，提高行业竞争力，<span class="aopkg_em">{count}</span>个计划建议您提高预算
+<!-- target: aoPkgAbsItem602Sub -->
+其中<span class="aopkg_em" title="{plantitle}">{planname}</span>，建议预算 <span class="aopkg_em">{suggestbudget}</span>元
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem603 -->
+您有<span class="aopkg_em">{count}</span>个计划未购买行业热门时段，建议添加
+<!-- target: aoPkgAbsItem603Sub -->
+其中<span class="aopkg_em" title="{plantitle}">{planname}</span>， 建议添加 <span class="aopkg_em">{cycnum}</span>个行业热门时段
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem604 -->
+建议添加 <span class="aopkg_em">{totalnum}</span>个行业优质词，抢占商机
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem605 -->
+<span class="aopkg_em">{count}</span>个搜索无效词，建议调整出价
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem606 -->
+<span class="aopkg_em">{count}</span>个优质关键词建议调整匹配，获得更多点击
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem607 -->
+提高左侧展现概率，建议调整 <span class="aopkg_em">{count}</span>个词的出价
+<!-- import:aoPkgAbsItemBtn -->
+
+<!-- target: aoPkgAbsItem608 -->
+提高三星词比例，建议去质量度优化包优化创意
+
+<!-- target:aoPkgDetailTip604 -->
+添加您的推广业务下同行关注的关键词，把握行业动向
+
+<!-- target:aoPkgDetailTip605 -->
+<span class="count">-</span>个搜索无效词，建议调整出价
+
+<!-- target:aoPkgDetailTip606 -->
+<span class="count">-</span>个优质关键词建议调整匹配模式，获得更多点击
+
+<!-- target:aoPkgDetailTip607 -->
+提高账户左侧展现概率，建议调整 <span class="count">-</span>个词的出价

@@ -1,0 +1,555 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-button.css
+ * desc:    按钮样式
+ * author:  zhouyu
+ * date:    2010/12/14
+ */
+
+/**
+ * 基础按钮样式
+ */
+.ui_button, .ui_button_label {
+    background-image:url('../../asset/img/bg_icon.png');
+    display:inline-block;
+	float:left;
+}
+
+.ui_button {
+    padding-right:5px;
+    margin-left:5px;
+    background-position:right 0;
+    text-align:center;
+    cursor:pointer;
+	position:relative;
+    zoom:1;
+}
+
+.ui_button_label {
+    position:relative;
+    line-height:21px;
+    overflow:hidden;
+    margin-left:-5px;
+    padding:0 5px 0 10px;
+    background-position:2000px 2000px;
+    font-size:12px;
+    height:20px;
+    text-decoration:none;
+    color: #000000;
+}
+
+.ui_button_label a {
+    text-decoration:none;
+}
+
+
+/**
+ *  默认按钮
+ */
+/****22px****/
+.ui_button {
+	background-position:right -209px;
+	height:22px;
+}
+.ui_button_hover {
+	background-position:right -231px;
+}
+.ui_button_press {
+	background-position:right -253px;
+}
+.ui_button_disabled {
+	background-position:right -275px;
+	color:#AAA;
+}
+.ui_button_label {
+	background-position:left -209px;
+	height:22px;
+	line-height:22px;
+	/*
+	*line-height:25px;
+	line-height:25px\0;
+	*/
+}
+.ui_button_hover .ui_button_label, .ui_button_label:hover, .ui_button_label:active  {
+	background-position:left -231px;
+    text-decoration:none;
+}
+.ui_button_press .ui_button_label {
+	background-position:left -253px;
+}
+.ui_button_disabled .ui_button_label {
+	background-position:left -275px;
+	color:#AAAAAA;
+	cursor: default;
+}
+
+/**
+ * 收缩按钮22px*22px
+ */
+.skin_shrink_22_up {
+	background-position:left -590px;
+}
+.skin_shrink_22_up_hover {
+	background-position:-30px -590px;
+}
+.skin_shrink_22_up_press {
+	background-position:-60px -590px;
+}
+.skin_shrink_22_down {
+	background-position:left -560px;
+}
+.skin_shrink_22_down_hover {
+	background-position:-30px -560px;
+}
+.skin_shrink_22_down_press {
+	background-position:-60px -560px;
+}
+.skin_shrink_22_up, .skin_shrink_22_down {
+	width:22px;
+	height:22px;
+}
+/**
+ * 收缩按钮17px*16px
+ */
+.skin_shrink_16 {
+	background-position:left -620px;
+	width:17px;
+	height:16px;
+}
+.skin_shrink_16_hover {
+	background-position:-30px -620px;
+}
+.skin_shrink_16_pressed {
+	background-position:-60px -620px;
+}
+.skin_shrink_16 .ui_button_label,
+.skin_shrink_16_hover .ui_button_label,
+.skin_shrink_press .ui_button_label{
+	background:none;
+}
+.skin_shrink_16.ui_button_disabled {
+	background-position:-30px -650px;
+}
+/****16px，没有下拉箭头****/
+.skin_common_16 {
+	background-position:-207px -995px;
+	height:16px;
+	width:17px;
+}
+.skin_common_16_hover {
+	background-position:-237px -995px;
+}
+.skin_common_16_press {
+	background-position:-267px -995px;
+}
+.skin_common_16 .ui_button_label,
+.skin_common_16_hover .ui_button_label,
+.skin_common_16_press .ui_button_label {
+	background:none;
+	height:16px;
+	line-height:16px;
+}
+/**
+ * 模拟下拉框
+ */
+.skin_select {
+	background-position:right -545px;
+	height:22px;
+	padding-right:25px;
+}
+.skin_select_label {
+	background-position:-207px -545px;
+}
+
+.skin_select_hover {
+	background-position:right -567px;
+	height:22px;
+	padding-right:25px;
+}
+.skin_select_hover .skin_select_label {
+	background-position:-207px -567px;
+}
+
+.skin_select_active {
+	background-position:right -589px;
+}
+.skin_select_active .skin_select_label {
+	background-position:-207px -589px;
+}
+
+
+/**
+ * 模拟下拉框
+ */
+/**默认操作**/
+/**不可用
+.skin_select_default {
+	background-position:right -650px;
+	height:22px;
+	padding-right:25px;
+}
+.skin_select_default_label {
+	background-position:-207px -650px;
+}
+
+/**打开默认操作下拉框**/
+/**不可用
+.skin_select_default_active {
+	background-position:right -620px;
+}
+.skin_select_default_active .skin_select_default_label {
+	background-position:-207px -620px;
+}
+***/
+/**更多操作**/
+/**不可用
+.skin_select_more {
+	background-position:right -560px;
+	height:22px;
+	padding-right:15px;
+}
+.skin_select_more_label {
+	background-position:-207px -560px;
+}
+/**打开更多操作下拉框**/
+/**不可用
+.skin_select_more_active {
+	background-position:right -590px;
+}
+.skin_select_more_active .skin_select_more_label {
+	background-position:-207px -590px;
+}
+.skin_select_default_label, .skin_select_more_label{
+	height:22px;
+	line-height:22px;
+}*/
+/**
+ * 普通按钮 
+ */
+/****22px****/
+.skin_common_22 {
+	background-position:right -209px;
+	height:22px;
+}
+.skin_common_22_hover {
+	background-position:right -231px;
+}
+.skin_common_22_press {
+	background-position:right -253px;
+}
+.skin_common_22_disabled {
+	background-position:right -275px;
+}
+.skin_common_22_label {
+	background-position:left -209px;
+	height:22px;
+	line-height:22px;
+}
+.skin_common_22_hover .skin_common_22_label {
+	background-position:left -231px;
+}
+.skin_common_22_press .skin_common_22_label {
+	background-position:left -253px;
+}
+.skin_common_22_disabled .skin_common_22_label {
+	background-position:left -275px;
+}
+/****26px****/
+.skin_common_26 {
+	background-position:right -363px;
+	height:26px;
+}
+.skin_common_26_hover {
+	background-position:right -389px;
+}
+.skin_common_26_press {
+	background-position:right -415px;
+}
+.skin_common_26_disabled {
+	background-position:right -441px;
+}
+.skin_common_26_label {
+	background-position:left -363px;
+	height:26px;
+	line-height:26px;
+}
+.skin_common_26_hover .skin_common_26_label{
+	background-position:left -389px;
+}
+.skin_common_26_press .skin_common_26_label{
+	background-position:left -415px;
+}
+.skin_common_26_disabled .skin_common_26_label{
+	background-position:left -441px;
+}
+/**
+ * 着重按钮
+ */
+/****22px****/
+.skin_empha_22 {
+	background-position:right -297px;
+	height:22px;
+}
+.skin_empha_22_hover {
+	background-position:right -319px;
+}
+.skin_empha_22_press {
+	background-position:right -341px;
+}
+.skin_empha_22_disabled {
+	background-position:right -275px;
+}
+.skin_empha_22_label {
+	background-position:left -297px;
+	height:22px;
+	line-height:22px;
+}
+.skin_empha_22_hover .skin_empha_22_label{
+	background-position:left -319px;
+}
+.skin_empha_22_press .skin_empha_22_label{
+	background-position:left -341px;
+}
+.skin_empha_22_disabled .skin_empha_22_label{
+	background-position:left -275px;
+}
+/****26px****/
+.skin_empha_26 {
+	background-position:right -467px;
+	height:26px;
+}
+.skin_empha_26_label {
+	background-position:left -467px;
+	height:26px;
+	line-height:26px;
+}
+.skin_empha_26_hover {
+	background-position:right -493px;
+}
+.skin_empha_26_hover .skin_empha_26_label{
+	background-position:left -493px;
+}
+.skin_empha_26_press {
+	background-position:right -519px;
+}
+.skin_empha_26_press .skin_empha_26_label{
+	background-position:left -519px;
+}
+.skin_empha_26_disabled {
+	background-position:right -441px;
+}
+.skin_empha_26_disabled .skin_empha_26_label{
+	background-position:left -441px;
+}
+/**
+ * 工具栏
+ */
+/*数据分析*/
+.skin_data_analyse {
+	background-position:left -680px;
+	width:87px;
+	height:26px;
+}
+.skin_data_analyse_hover {
+	background-position:left -720px;
+}
+.skin_data_analyse_press {
+	background-position:left -760px;
+}
+/*关键词推荐*/
+.skin_kw_recommend {
+	background-position:-94px -680px;
+	width:101px;
+	height:26px;
+}
+.skin_kw_recommend_hover {
+	background-position:-94px -720px;
+}
+.skin_kw_recommend_press {
+	background-position:-94px -760px;
+}
+
+/* KR自动分组的button*/
+.skin_kr_autounit {
+	background-position:-408px -1310px;
+	width:84px;
+	height:22px;
+}
+.skin_kr_autounit_hover {
+	background-position:-408px -1335px;
+}
+.skin_kr_autounit_press {
+	background-position:-408px -1361px;
+}
+
+.skin_kr_autounit_label{
+	padding-left:35px;
+	background:none;
+}
+
+/*估算工具*/
+.skin_bid_estimator {
+	background-position:-202px -680px;
+	width:86px;
+	height:26px;
+}
+.skin_bid_estimator_hover {
+	background-position:-202px -720px;
+}
+.skin_bid_estimator_press {
+	background-position:-202px -760px;
+}
+/*转化跟踪*/
+.skin_trans_contract {
+	background-position:-295px -680px;
+	width:86px;
+	height:26px;
+}
+.skin_trans_contract_hover {
+	background-position:-295px -720px;
+}
+.skin_trans_contract_press {
+	background-position:-295px -760px;
+}
+/*推广实况*/
+.skin_tool_preview {
+	background-position:-388px -680px;
+	width:86px;
+	height:26px;
+}
+.skin_tool_preview_hover {
+	background-position:-388px -720px;
+}
+.skin_tool_preview_press {
+	background-position:-388px -760px;
+}
+/*历史操作记录*/
+.skin_history {
+	background-position:-87px -550px;
+	width:113px;
+	height:26px;
+}
+.skin_history_hover {
+	background-position:-87px -590px;
+}
+.skin_history_press {
+	background-position:-87px -630px;
+}
+/*搜索词报告*/
+.skin_query_report {
+	background-position:0 -910px;
+	width:100px;
+	height:26px;
+}
+.skin_query_report_hover {
+	background-position:0 -940px;
+}
+.skin_query_report_press {
+	background-position:0 -970px;
+}
+/*转化跟踪*/
+.skin_trans {
+	background-position:-295px -680px;
+	width:86px;
+	height:26px;
+}
+.skin_trans_hover {
+	background-position:-295px -720px;
+}
+.skin_trans_press {
+	background-position:-295px -760px;
+}
+/*优化建议*/
+.skin_proposal {
+	background-position:0 -1000px;
+	width:86px;
+	height:26px;
+}
+.skin_proposal_hover {
+	background-position:0 -1030px;
+}
+.skin_proposal_press {
+	background-position:0 -1060px;
+}
+/*推广回放*/
+.skin_effectAnalyse {
+	background-position:-397px -905px;
+	width:86px;
+	height:26px;
+}
+.skin_effectAnalyse_hover {
+	background-position:-397px -939px;
+}
+.skin_effectAnalyse_press {
+	background-position:-397px -977px;
+}
+/*高级工具*/
+.skin_advance {
+	background-position:0 -1484px;
+	width:86px;
+	height:26px;
+}
+.skin_advance_hover {
+	background-position:-112px -1484px;
+}
+.skin_advance_press {
+	background-position:0 -1514px;
+}
+/**工具栏label*/
+.skin_data_analyse_label, .skin_kw_recommend_label, 
+.skin_bid_estimator_label, .skin_trans_contract_label, 
+.skin_tool_preview_label,.skin_history_label, 
+.skin_query_report_label, .skin_trans_label, 
+.skin_proposal_label, .skin_effectAnalyse_label,
+.skin_advance_label{
+	line-height:26px;
+	padding-left:35px;
+}
+/* 超链接的按钮样式 */
+.skin_href_btn, .skin_href_btn .ui_button_label {
+    background: none;
+    color: #03C;
+}
+.skin_href_btn .ui_button_label:hover {
+    text-decoration: underline;
+}
+/* 重点词包的定制按钮的样式 */
+.skin_cword_sel_btn,
+.skin_cword_btn {
+    background: url(../../asset/img/bg_icon.png) no-repeat -274px -1502px;
+    width: 105px;
+    height: 35px;
+}
+.skin_cword_sel_btn .ui_button_label,
+.skin_cword_btn .ui_button_label {
+    font-weight: bold;
+    color: #587D8F;
+    line-height: 33px;
+    height: 35px;
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+.skin_cword_sel_btn .ui_button_label {
+    background: url(../../asset/img/bg_icon_right.png) no-repeat right -761px;
+    width: 80%;
+    text-align: left;
+    padding-left: 15px;
+}
+.skin_cword_sel_btn.ui_button_disabled {
+    border: 1px solid #ccc;
+    background-image: none;
+    background-color: #F7F7F7;
+    height: 32px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: default;
+}
+.skin_cword_sel_btn_disabled .ui_button_label {
+    color: #AAA;
+}

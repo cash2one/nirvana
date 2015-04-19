@@ -1,0 +1,1035 @@
+<!-- target:sideNavTpl -->
+<div ui="id:SideNavDemo;type:SideNav;">
+	<div class="ui_sidenav_header">
+		<div id="SideNavFixed" class="ui_sidenav_fixed"></div>	
+		<div id="SideNavAutoHide" class="ui_sidenav_autohide"></div>		
+		<h3>我的账户树</h3>
+	</div>
+	<div id="SideNavContent" class='ui_sidenav_content' ></div>
+	<div class='ui_sidenav_foot' ></div>
+</div>
+
+<!-- target:materialLevel -->
+<div ui="id:manageLevel;type:MaterialLevel;space:&gt;;material:*materialLevel;"></div>
+
+<!-- target:manageStatLoading -->
+<div id="manage-stat-loading">
+    <img src="asset/img/loading.gif" alt="loading" /> 读取中
+</div>
+
+<!-- target:acctStat -->
+<ul class="manage_stat" id="acctStat">
+	<li class="noborder">状态：<span ui="id:acctStatus;type:Label;datasource:*acct_userstat"></span></li>
+	<li><span ui="id:acctBudgetType;type:Label;datasource:*acct_bgttype"></span>：<span ui="id:acctBudget;type:Label;datasource:*acct_budgetvalue" class="detail"></span><a id="modifyAcctBudget" href="#" data-log="{target:'modifyAcctBudget_btn'}">修改</a></li>
+	<li>推广地域：<span ui="id:acctRegion;type:Label;datasource:*acct_wregion;title:*acct_wregion_title;" class="detail"></span><a id="modifyAcctRegion" href="#" data-log="{target:'modifyAcctRegion_btn'}">修改</a></li>
+	<li id="batchDownload_acct"></li>
+	<li><a id="acctSetMore" href="#" data-log="{target:'acctSetMore_btn'}">其它设置</a></li>
+</ul>
+		
+<!-- target:materialQuery -->
+<div class="manage_query">
+	<div ui="id:materialQuery;type:SearchCombo;searchState:*SearchState;precise:*SearchPrecise;searchStateValue:*searchStateValue;searchQueryValue:*searchQueryValue;searchPreciseValue:*searchPreciseValue;"></div>
+</div>
+
+<!-- target:materialQueryAdvance -->
+<div class="manage_query">
+	<div ui="id:materialQuery;type:SearchCombo;searchState:*SearchState;precise:*SearchPrecise;searchStateValue:*searchStateValue;searchQueryValue:*searchQueryValue;searchPreciseValue:*searchPreciseValue;advance:*searchAdvance;searchAdvanceValue:*searchAdvanceValue"></div>
+</div>
+
+<!-- target:materialAo -->
+<div class="manage_ao height" id="ManageAo">
+    <div class="ao_loading" id="ManageAoLoading">
+        <p>
+            <img src="asset/img/loading.gif" alt="loading" />
+            正在分析您的账户，请稍候
+        </p>
+    </div>
+    <div class="summary hide" id="ManageAoSummary">
+        <h2 title="优化建议为您账户在计算机端的推广进行全面分析和诊断">优化建议</h2>
+        <div class="manage_ao_widget" id="ManageAoWidget"></div>
+		<div class="manage_ao_page">
+			<p id="ManageAoPageLoading"><img src="asset/img/loading_ao.gif" alt="分析还在继续..." title="分析还在继续..." /></p>
+			<div ui="id:ManageAoPage;type:Page;"></div>
+		</div>
+    </div>
+	<div id="ManagerAoPkgArea" class="manage_ao_pkgarea hide"><p></p></div>
+    <div class="fold hide" id="ManageAoFoldProp">
+        <p><label id="ManageAoNum"></label><span id="AoExpandTipSpan">点击展开查看详情</span></p>
+    </div>
+	<div class="hide" id="AoFoldDetail">
+		<div class="ao_area_hide hide" id="AoFoldTip">
+			[-] 收起
+		</div>
+		<div class="ao_area_hide hide" id="AoExpandTip">
+			[+] 展开
+		</div>
+	</div>
+</div>
+
+<!-- target:materialBulletin -->
+<div class="manage_bulletin scroll_y_top_fixed">
+	<div ui="id:calendar;miniOption:*miniOption"></div>
+	<span class="ui_bubble" bubblesource="managerCalendar" id="ManagerCalendarBubble">&nbsp;</span>
+	<ul class="bulletin">
+		<li><h3 ui="id:shows;type:Label;datasource:*totalShows;title:*totalShowsTitle;"></h3>展现</li>
+		<li><h3 ui="id:clks;type:Label;datasource:*totalClks;title:*totalClksTitle;"></h3>点击</li>
+		<li><h3 ui="id:paysum;type:Label;datasource:*totalPaysum;title:*paysumTitle"></h3>消费</li>
+		<li  id='ManageTransSum'><h3 ui="id:trans;type:Label;datasource:*transRate"></h3>转化(网页)</li>
+		<li><h3 ui="id:clkrate;type:Label;datasource:*clickRate"></h3>点击率</li>
+		<li><h3 ui="id:avgprice;type:Label;datasource:*avgprice"></h3>平均点击</li>
+	</ul>
+</div>
+
+<!-- target:planTable -->
+<div class="manage_table">
+	<div ui="id:planTableList"></div>
+</div>
+
+<!-- target:materialPage -->
+<div class="clearfix manage_page">
+	<div class="scope">
+		<h4>每页显示</h4>
+		<div ui="id:pageSizeSelect;value:*pageSize;"></div>
+	</div>
+	<div ui="id:pagination;type:Page;page:*pageNo;"></div>
+</div>
+
+<!-- target:planStat -->
+<ul class="manage_stat" id="planStat">
+	<li class="noborder">状态：<span ui="id:planStatus;type:Label;datasource:*plan_planstat"></span></li>
+	<li><span ui="id:planBudgetType;type:Label;datasource:*plan_bgttype"></span>：<span ui="id:planBudget;type:Label;datasource:*plan_budgetvalue" class="detail"></span><a id="modifyPlanBudget" href="#" data-log="{target:'modifyPlanBudget_btn'}">修改</a></li>
+	<li>推广地域：<span ui="id:planRegion;type:Label;datasource:*plan_wregion;title:*plan_wregion_title;" class="detail"></span><a id="modifyPlanRegion" href="#" data-log="{target:'modifyPlanRegion_btn'}">修改</a></li>
+	<li>推广时段<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="推广时段管理">&nbsp;</span>：<span ui="id:planTimeInterval;type:Label;datasource:*plancycText" class="detail"></span><a id="modifyPlanSchedule" href="#" data-log="{target:'modifyPlanSchedule_btn'}">修改</a></li>
+	<li id='mprice-factor' class='hide'>移动出价比例<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="移动出价比例">&nbsp;</span>：<span ui="id:mPriceFactor;type:Label;datasource:*plan_mPriceFactor" class="detail"></span><a id="modifyMPriceFactor" href="#" data-log="{target:'modifyMPriceFactor_btn'}">修改</a></li>
+    <li>否定关键词<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="否定关键词">&nbsp;</span>：<span ui="id:planNegative;type:Label;datasource:*plan_allnegativecnt" class="detail"></span>个&nbsp;&nbsp;<a id="modifyPlanNegat" href="#" data-log="{target:'modifyPlanNegat_btn'}">修改</a></li>
+<!--	<li id='batchDownload_plan'></li>-->
+	<li><a id="planSetMore" href="#" data-log="{target:'planSetMore_btn'}">其它设置</a></li>
+</ul>
+		
+<!-- target:unitTable -->
+<div class="manage_table">
+	<div ui="id:unitTableList"></div>
+</div>
+
+<!-- target:unitStat -->
+<ul class="manage_stat" id="unitStat">
+	<li class="noborder">状态：<span ui="id:unitStatus;type:Label;datasource:*unit_unitstat"></span></li>
+	<li>单元出价<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="推广单元出价">&nbsp;</span>：<span ui="id:unitbid;type:Label;datasource:*unit_unitbid" class="detail"></span></span><a id="modifyUnitBid" href="#" data-log="{target:'modifyUnitBid_btn'}">修改</a></li>
+	<li>否定关键词<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="否定关键词">&nbsp;</span>：<span ui="id:unitNegative;type:Label;datasource:*unit_allnegativecnt" class="detail"></span>个&nbsp;&nbsp;<a id="modifyUnitNegat" href="#" data-log="{target:'modifyUnitNegat_btn'}">修改</a></li>
+<!--	<li id="batchDownload_unit"></li>-->
+	<li><a id="unitSetMore" href="#" data-log="{target:'unitSetMore_btn'}">其它设置</a></li>
+</ul>
+		
+<!-- target:keywordTable -->
+<div class="manage_table">
+	<div ui="id:wordTableList"></div>
+</div>
+
+<!-- target:region -->
+<div id="planRegionset">
+	<div class="manage_region">
+		<input type="radio" value="0" name="region" checked="checked" title="全部地域" ui="id:allRegion;type:Radio" />
+		<input type="radio" value="1" name="region" title="部分地域" ui="id:partRegion;type:Radio" />
+	</div>
+	<div ui="id:regionBody;type:Region;mode:multi;checked:*checked;" style="display:none"></div>
+</div>
+<p id="setQueryRegion1" class="hide">
+	<input type="checkbox" title="${queryReginTip}" datasource="${checkedValue}" value="${currentValue}" ui="id:runQueryRegion;type:CheckBox;" />
+	<span id="QueryReginBubble" class="ui_bubble" bubblesource="defaultHelp" bubbletitle="${queryReginBubble}"></span>
+	<span id="AcctQueryClose"></span>
+</p>
+<div class="ui_dialog_foot">
+	<div ui="id:regionOk;type:Button;">确定</div>
+	<div ui="id:regionCancel;type:Button;">取消</div>
+</div>
+
+<!-- target:planRegion -->
+<div class="manage_dialog">
+	<div class="manage_region" id="planRegionSwitch">
+		<span id="useAcctRegion">使用账户推广地域</span>
+		&nbsp;|&nbsp;
+		<span id="usePlanRegion">使用计划推广地域</span>
+	</div>
+	<div id="acctRegionList">
+		账户推广地域：<span ui="id:acctRegionList;type:Label;datasource:*acctRegionData;"></span>
+	</div>
+	<div class="common_notice hide" id="DenyAreaNotice"><p>您的产品或业务涉及地域性问题，仅能以目前系统设置的地域进行推广；如有问题，请联系您的维护顾问或致电百度推广热线400-890-0088</p></div>
+	<!-- import:region -->
+</div>
+
+
+
+<!-- target:ideaShowMethod -->
+	<p>创意展现方式<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="创意展现方式">&nbsp;</span>：</p>
+	<p>
+		<input type="radio" value="1" checked="checked" name="showmethod" title="优选" ui="id:planOpt;type:Radio">
+		&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="2" name="showmethod" title="轮替" ui="id:planSpell;type:Radio">
+	</p>
+
+<!-- target:modifyPlanShowProb -->
+<div class="manage_dialog">
+	<!-- import:ideaShowMethod -->
+	<div class="ui_dialog_foot">
+		<div ui="id:showProbOk;type:Button;">确定</div>
+		<div ui="id:showProbCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:setPlanQrstat -->
+<div class="manage_dialog">
+	<p>搜索意图定位：</p>
+	<p>
+		<input type="radio" value="0" checked="checked" name="queryRegionStat" title="开启" ui="id:qrstatOpt;type:Radio">
+		&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="1" name="queryRegionStat" title="关闭" ui="id:qrstatClose;type:Radio">
+	</p>
+	<div class="ui_dialog_foot">
+		<div ui="id:qrstatOk;type:Button;">确定</div>
+		<div ui="id:qrstatCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:createPlan -->
+<div class="manage_dialog" id="createPlan">
+	<p>输入推广计划名称：</p>
+	<p><input type="text" ui="id:newPlanName;type:TextInput;width:200;height:22;" />
+		&nbsp;&nbsp;<span class="num_tip" id="planNameNumTip"></span>
+	</p>
+	<p class="red" id="createPlanErrorTip"></p>
+	<!-- import:ideaShowMethod -->
+	<p>推广地域：</p>
+	<p>
+		<input type="radio" value="0" checked="checked"  name="newPlanRegion" title="使用账户推广地域" ui="id:newPlanUseAcctRegion;type:Radio">
+		&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="1" name="newPlanRegion" title="使用计划推广地域" ui="id:newPlanRegion;type:Radio">
+	</p>
+
+	<div class="region_list" id="newRegionList"></div>
+	<div id="setPlanRegion" class="new_plan_region">
+		<p>选择投放地域：</p>
+		<div class="ui_selectcombo_close" id="closeRegionSet">&nbsp;</div>
+		<!-- import:region -->
+	</div>
+	
+	<!-- import:devicePhone -->
+	<div class="common_notice hide" id="DenyAreaNotice"><p>您的产品或业务涉及地域性问题，仅能以目前系统设置的地域进行推广；如有问题，请联系您的维护顾问或致电百度推广热线400-890-0088</p></div>
+	</br>
+	<!-- import:pricefactor -->
+	
+	<div class="ui_dialog_foot">
+		<div ui="id:createPlanOk;type:Button;">确定</div>
+		<div ui="id:okAndCreateUnit;type:Button;">确定并新建单元</div>
+		<div ui="id:createPlanCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:setPlanBase -->
+<div class="manage_dialog" id="setPlanBase">
+	<div class="plan_set_tab" ui="id:planSetTab;type:Tab;title:*planSetTab;tab:0"></div>
+	<p>推广计划名称：</p>
+	<p><input type="text" ui="id:setPlanName;type:TextInput;width:200;height:22;" />
+		&nbsp;&nbsp;<span class="num_tip" id="setPlanNameNumTip"></span>
+		&nbsp;&nbsp;<span class="red" id="setPlanBaseErrorTip"></span>
+	</p>
+	<p>创建时间：</p>
+	<p id="planCreateTime"></p>
+	<!-- import:ideaShowMethod -->
+	<p class="red" id="saveTip"></p>
+	<div class="ui_dialog_foot">
+		<div ui="id:setPlanBaseOk;type:Button;">保存</div>
+		<div ui="id:setPlanBaseCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:setIpExclusion -->
+<div class="manage_dialog">
+	<p>您最多可以输入${ipMaxNum}个IP地址，每个地址一行</p>
+	<div style="position:relative;">
+		<div ui="id:${ipType}IpExclusion;type:TextLine;width:200;height:200;"></div>
+		<div class="iptip">
+			<p>小提示：</p>
+			<p>您可将IP地址的最后一段设为*，以屏蔽一段地址内的广告展现。例如：</p>
+			<p>202.38.64.3</p>
+			<p>202.38.64.*</p>
+			<p id="ipSaveTip" class="red"></p>
+		</div>
+	</div>
+	<div class="ui_dialog_foot">
+		<div ui="id:${ipType}IpExclusionOk;type:Button;">保存</div>
+		<div ui="id:${ipType}IpExclusionCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:setPlanIpExclusion -->
+<div class="manage_dialog" id="setPlanIpExclusion">
+	<div class="plan_set_tab" ui="id:planSetTab;type:Tab;title:*planSetTab;tab:1"></div>
+	<!-- import:setIpExclusion -->
+</div>
+<!-- target:modifyMPriceFactor -->
+<div class="manage_dialog" id="modifyMPriceFactor">
+     
+   <!-- import:pricefactor -->
+    
+   <div class="ui_dialog_foot">
+        <p id="saveTip" class="red" style="visibility:hidden;">保存成功</p>
+        <div ui="id:setPlanAdvancedOk;type:Button;">确定</div>
+        <div ui="id:setPlanAdvancedCancel;type:Button;">取消</div>
+    </div> 
+</div>
+
+
+<!-- target:setPlanAdvanced -->
+<div class="manage_dialog" id="setPlanAdvanced">
+    <div class="plan_set_tab" ui="id:planSetTab;type:Tab;"></div>
+    <div id="deviceCfg" >
+
+        <dl>
+           
+            <dd >
+                <label>投放设备：</label>
+                <label id="planDevice"></label>
+            </dd>
+        </dl>
+       
+        <!-- import:planbridge -->
+        
+        <dl id="oldPhone" class="top_margin hide">
+            <dt>
+                <label>推广电话：</label>
+                <span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="推广电话">&nbsp;</span>
+            </dt>
+            <dd>
+                <input type="text" id="phoneNumber"/>
+                <p id="reviewFail" class="red" style="visibility:hidden;">推广电话审核未通过</p>
+            </dd>
+        </dl>
+        
+        
+    </div>
+    <!-- import:mobileWebsite -->
+    <div class="ui_dialog_foot">
+        <p id="saveTip" class="red" style="visibility:hidden;">保存成功</p>
+        <div ui="id:setPlanAdvancedOk;type:Button;">确定</div>
+        <div ui="id:setPlanAdvancedCancel;type:Button;">取消</div>
+    </div> 
+</div>
+<!-- target:setAcctBase -->
+<div class="manage_dialog" id="setAcctBase">
+	<div class="acct_set_tab" ui="id:acctSetTab;type:Tab;title:*acctSetTab;tab:0"></div>
+	<p>关键词/创意激活时长设置<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="激活时长设置">&nbsp;</span>：</p>
+	<div>管理员为您提交关键词/创意后<div ui="id:activeTime;type:Select;datasource:*activeTimeSelect;value:0;width:100;"></div><span class="red" id="acctBaseSeccessTip"></span></div>
+	<div class="ui_dialog_foot">
+		<div ui="id:setAcctBaseOk;type:Button;">保存</div>
+		<div ui="id:setAcctBaseCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:setAcctIpExclusion -->
+<div class="manage_dialog" id="setAcctIpExclusion">
+	<div class="acct_set_tab" ui="id:acctSetTab;type:Tab;title:*acctSetTab;tab:1"></div>
+	<!-- import:setIpExclusion -->
+</div>
+
+<!-- target:setAcctAdvancedIpExclusion -->
+<div class="manage_dialog" id="setAcctAdvancedIpExclusion">
+    <div class="acct_set_tab" ui="id:acctSetTab;type:Tab;title:*acctSetTab;tab:2"></div>
+      <div class='advIpExclusion_wrapper '><p>您最多可以设置3个高级IP排除地址</p> 
+        <div id='AdvancedIpExclusionWrapper'></div>
+      </div>
+      <div class="ui_dialog_foot">
+		<div ui="id:${ipType}IpExclusionOk;type:Button;">保存</div>
+		<div ui="id:${ipType}IpExclusionCancel;type:Button;">取消</div>
+		<span class='red advIpExcludeWarning' id='advIpExcludeWarning'>您输入的IP格式有误，请修改</span>
+		<span class='red advIpExcludeWarning' id='advIpExcludeSaveSucc'>保存成功</span>
+	</div>
+      
+</div>
+
+<!-- 精确匹配扩展（地域词扩展）模板 -->
+<!-- target:exactMatchExp -->
+<div class="manage_dialog" id="exactMatchExp">
+	<div class="acct_set_tab" ui="id:acctSetTab;type:Tab;title:*acctSetTab;tab:*tabValue"></div>
+	<p class="open_exact_mat">
+		<input type="checkbox" ui="type:CheckBox;id:OpenExactMat" name="OpenExactMat" checked="checked" title="启用精确匹配扩展（地域词扩展）功能" />
+		<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="精确匹配扩展（地域词扩展）">&nbsp;</span>
+		<span class="red" id="saveExactMatTip" style="display:none;">保存成功</span>
+	</p>
+	<div class="ui_dialog_foot">
+		<div ui="id:setExactMatOk;type:Button;">保存</div>
+		<div ui="id:setExactMatCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:setNegative -->	
+<div class="manage_dialog">
+	<p>否定/精确否定关键词仅对“广泛” “短语”匹配的关键词生效</p>
+	<div class="acct_set_tab" ui="id:negSetTab;type:Tab;title:*acctSetTab;tab:0"></div>
+	<p class="neg_explain" id="negExplain">当且仅当网民的搜索词中<span class="red">完全包含</span>否定关键词时，您的推广结果将不会展现</p>
+	<div style="position:relative;">
+		<div ui="id:negword;type:TextLine;width:200;height:200;"></div>
+		<div class="negtip">
+			<p>每个否定关键词一行，长度最长为20个汉字或40个英文。您最多可以设置${negCount}个否定关键词</p>
+			<p id="negWordTip" class="red"></p>
+		</div>
+	</div>
+	<div class="ui_dialog_foot">
+		<div ui="id:setNegOk;type:Button;">保存</div>
+		<div ui="id:setNegCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:setAccNegative -->	
+<div class="manage_dialog">
+	<p>否定/精确否定关键词仅对“广泛” “短语”匹配的关键词生效</p>
+	<div class="acct_set_tab" ui="id:negAccSetTab;type:Tab;title:*acctSetTab;tab:1"></div>
+	<p class="neg_explain" id="accNegExplain">当且仅当网民的搜索词与精确否定关键词<span class="red">完全一致</span>时，您的推广结果将不会展现</p>
+	<div style="position:relative;">
+		<div ui="id:accNegword;type:TextLine;width:200;height:200;"></div>
+		<div class="negtip">
+			<p>每个否定关键词一行，长度最长为20个汉字或40个英文。您最多可以设置${negCount}个精确否定关键词</p>
+			<p id="accNegWordTip" class="red"></p>
+		</div>
+	</div>
+	<div class="ui_dialog_foot">
+		<div ui="id:setAccNegOk;type:Button;">保存</div>
+		<div ui="id:setAccNegCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:createUnit -->	
+<div class="manage_dialog">
+	<p>目标计划名：</p>
+	<p>	
+		<div ui="id:planNameOfUnit;type:Select;datasource:*planNameOfUnit;value:0;width:200;"></div>
+		&nbsp;&nbsp;<span class="red" id="targetPlan"></span>
+	</p>
+	<p>输入推广单元名称：</p>
+	<p>
+		<input type="text" ui="id:newUnitName;type:TextInput;width:200;height:22;" />
+		&nbsp;&nbsp;<span class="num_tip" id="unitNameNumTip"></span>
+	</p>
+	<p class="red" id="createUnitErrorTip"></p>
+	<p>单元出价（元）：</p>
+	<p>
+		<input type="text" ui="id:newUnitPrice;type:TextInput;width:200;height:22;" />
+		<div style="clear:both"></div>
+	</p>
+	<!-- import:mpriceFactorTip-->  
+	<p class="red" id="unitPriceErrorTip"></p>
+	<div class="ui_dialog_foot">
+		<div ui="id:createUnitOk;type:Button;">确定</div>
+		<div ui="id:okAndAddKw;type:Button;">确定并添加关键词</div>
+		<div ui="id:createUnitCancel;type:Button;">取消</div>
+	</div>
+</div>	
+
+
+<!-- target:setUnit -->
+<div class="manage_dialog">
+	<p>推广单元名称：</p>
+	<p><input type="text" ui="id:setUnitName;type:TextInput;width:200;height:22;" />
+		&nbsp;&nbsp;<span class="num_tip" id="setUnitNameNumTip"></span>
+		&nbsp;&nbsp;<span class="red" id="createUnitErrorTip"></span>
+	</p>
+	<p>创建时间：</p>
+	<p id="unitCreateTime"></p>
+	<div class="ui_dialog_foot">
+		<div ui="id:setUnitOk;type:Button;">确定</div>
+		<div ui="id:setUnitCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:modifyUnitPrice -->
+<div class="manage_dialog">
+	<div class="keyword_add_error hide" id="KeywordUnitBid">
+		<h3>以下这些关键词因为低于最低展现价格可能无法展现：</h3>
+		<ul id="KeywordErrorUL"></ul>
+	</div>
+
+	<p id="UnitBidTitle">出价：</p>
+	<div style="height:24px;"><input type="text" ui="id:setUnitPrice;type:TextInput;width:200;height:22;" /></div>
+	<div style="clear:both"></div>
+	<div class="red" id="priceErrorTip"></div>
+	<div class="exception hide" id="KeywordUnitBidTip">建议您提高推广单元出价，避免部分关键词因出价过低而无法展现。</div>
+	<!-- import:mpriceFactorTip-->  
+	<div class="ui_dialog_foot">
+		<div ui="id:modifyUnitPriceOk;type:Button;">确定</div>
+		<div ui="id:modifyUnitPriceCancel;type:Button;">取消</div>
+		
+		<div ui="id:KeywordModUnitBid;type:Button;" class="hide">修改单元出价</div>
+		<div ui="id:KeywordIgnore;type:Button;" class="hide">忽略</div>
+	</div>
+</div>
+
+
+<!-- target:budget -->
+<div class="budget" id="Budget">
+	<div id="BudgetInfo">
+		<table>
+			<tr>
+				<td class="bgt_table_left">预算：</td>
+				<td>
+					<div class="budget_type">
+						<span id="BudgetDailyBubbleContainer">
+							<input type="radio" ui="type:Radio;id:BudgetDaily" name="bugtype" value="1" title="每日">
+							<span id="BudgetHelpRadioDailyBudget" class="ui_bubble" bubblesource="budgetHelp" bubbletitle="每日预算">&nbsp;</span>
+						</span>
+						<span id="BudgetWeeklyBubbleContainer">
+							<input type="radio" ui="type:Radio;id:BudgetWeekly" name="bugtype" value="2" title="每周">
+							<!--span id="BubbleNewFuncShowOnce" class="ui_bubble" bubblesource="budgetOnceTipInMOD" style="position:absolute;" bubbletitle=""></span-->
+							<span id="BudgetHelpRadioWeeklyBudget" class="ui_bubble" bubblesource="budgetHelp" bubbletitle="每周预算">&nbsp;</span>
+						</span>
+						
+						<input type="radio" ui="type:Radio;id:BudgetNolimit" name="bugtype" value="0" title="不限定预算">
+						<span id="BudgetHelpRadioNolimitBudget" class="ui_bubble" bubblesource="budgetHelp" bubbletitle="不限定预算">&nbsp;</span>
+					</div>
+					<p class="budget_warn budget_input hide" id="BudgetWeekWarn"></p>
+					<div id="BudgetInputNormal" class="budget_input">
+						<label id="CurBgtValueLabel" for="CurBgtValue"></label>
+						<input type="text" id="CurBgtValue" name="CurBgtValue" />
+						<span id="CurBgtPlusInfo"></span>
+					</div>
+					<p class="budget_warn hide" id="BudgetWarn"></p>
+					<div class="exception hide" id="BudgetExcept"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="BudgetAnalysisInfo" class="budget_info noborder" >
+		<h2>预算分析：</h2>
+		<div class="budget_detail_info">
+			<ul id="budgetAnalysisDetailList" class="budget_ul_listinfo">
+			</ul>
+		</div>
+	</div>
+	<div class="budget_info" id="BudgetDiffInfo">
+		<h2 id="BudgetDiffTitle"></h2>
+		<div id="BudgetDiffDetail" class="budget_detail_info"></div>
+	</div>
+	<div class="budget_info" id="BudgetOffLine">
+		<h2>到达预算下线时间：<span id="BudgetHelpRadioOfflineTime" class="ui_bubble" bubblesource="budgetHelp" bubbletitle="到达预算下线时间">&nbsp;</span></h2>
+		<div id="BudgetOffLineDetail"></div>
+	</div>
+	
+	<div class="budget_btn">
+		<div ui="id:BudgetSubmit;type:Button;">确定</div>
+		<div ui="id:BudgetCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:budgetAnalysisInfomationv1 -->
+<li>建议您分别选择计划设置预算，会为您提供预算分析和下线时间作为预算参考</li>
+
+<!-- target:budgetAnalysisInfomationv2 -->
+<li>您当前设置的预算较为合理，建议您继续关注您的推广效果</li>
+
+<!-- target:budgetAnalysisInfomationv3t1 -->
+<li>建议每日预算设为<strong>%v</strong></li>
+
+<!-- target:budgetAnalysisInfomationv3t2 -->
+<li>建议每周预算设为<strong>%v</strong></li>
+
+<!-- target:budgetAnalysisInfomationv3t3 -->
+<li>推广效果突降，建议您恢复%specdate预算：<strong>%v</strong></li>
+
+<!-- target:budgetAnalysisInfomationv4t1 -->
+<li>
+	<div style="float:right; display:block;">
+		<div id="ViewBudgetAnalysisButtonContainer"></div>
+		<div id="BudgetAnalysisDetail" class="budget_analysis_detail hide">
+			<div id="BudgetAnalysisInfoContainer"></div>
+			<div id="BudgetAnalysisDetailClose" class="ui_dialog_close">&nbsp;</div>
+		</div>
+		<div id="MaskForBudgetAnalysis" class="budgetanalysis_mask hide"></div>
+	</div>
+	因%s限制，%l您共损失<strong>%n</strong>个客户访问
+</li>
+<!-- target:budgetAnalysisInfomationv4t10 -->
+<li>把握商机，获得更多客户访问</li>
+
+<!-- target:budgetAnalysisInfomationv4t2 -->
+<li>因您的预算设置过低，在投放<strong>%w</strong>的%g中，有<strong>%m</strong>个投放效果优于您，及时调整预算将获取更多行业流量</li>
+
+<!-- target:budgetAnalysisInfomationv4t3 -->
+<li>您当前设置的预算低于近期曾经设置的预算<strong>%o</strong>元，有损失客户访问的风险</li>
+<li>建议您在可接受的范围内尽量提高预算，然后优化账户，比如添加更多相关的关键词，调整排名以及优化推广创意等来获得更多的客户访问量</li>
+
+<!-- target:budgetAnalysisInfoSaveClks -->
+，挽回<strong>%saveClks%</strong>的损失点击
+<!-- target:modIdeaUrl -->
+<ul class='idea_input_area bg_white' id='batch-mod-url'>
+    <!-- import:ideaUrl -->
+    
+</ul>
+<div class='idea_input_area bg_white'>
+ <!-- import:ideaMurl -->   
+</div>
+
+
+<div class="ui_dialog_foot">
+    <div ui="id:modOk;type:Button;">
+        确定
+    </div>
+    <div ui="id:modCancel;type:Button;">
+        取消
+    </div>
+</div>
+
+
+<!-- target:modIdeaMUrl -->
+<ul class='idea_input_area bg_white'>
+    <!-- import:ideaMurl -->
+
+</ul>
+<div class="ui_dialog_foot">
+        <div ui="id:modOk;type:Button;">确定</div>
+        <div ui="id:modCancel;type:Button;">取消</div>
+</div>
+<!-- target:ideaUrl -->
+<li>
+    <h3 id="IdeaHrefTitle">默认访问URL：</h3>
+    <input type="text" ui="id:IdeaHref;">
+    <p class="info" id="IdeaHrefInfo"></p>
+    <p class="warn hide" id="IdeaHrefError">
+        警告信息
+    </p>
+    <a target="_blank" href="" id="previewPhoneUrl" class="preview_phone_url">查看访问URL在手机上的效果</a>
+
+</li>
+<li>
+    <h3 id="IdeaUrlTitle">默认显示URL：</h3>
+    <input type="text" ui="id:IdeaUrl;">
+    <p class="info" id="IdeaUrlInfo"></p>
+    <p class="warn hide" id="IdeaUrlError">
+        警告信息
+    </p>
+</li>
+<!-- target:ideaMurl -->
+<ul id='ideaPhoneToggleArea' >
+ <li>
+    <h3 >移动访问URL(选填)：</h3>
+    <input type="text" ui="id:MIdeaHref;">
+    <p class="info" id="MIdeaHrefInfo"></p>
+    <p class="warn hide" id="MIdeaHrefError">
+        警告信息
+    </p>
+    <a target="_blank" href="" id="MpreviewPhoneUrl" class="preview_phone_url">查看访问URL在手机上的效果</a>
+
+</li>
+
+<li>
+    <h3 >移动显示URL(选填)：</h3>
+    <input type="text" ui="id:MIdeaUrl;">
+    <p class="info" id="MIdeaUrlInfo"></p>
+    <p class="warn hide" id="MIdeaUrlError">
+        警告信息
+    </p>
+</li>
+</ul>
+<!-- target:ideaEdit -->
+<div class="idea_edit" id="idea_edit">
+    <div class="widget_tip" id="IdeaSaveas_matchnoun" style="display:none;">小提示：当前创意可能与其它关键词匹配展现,建议将修改后的创意以<span style="font-weight:bold;">新增</span>的方式保存。</div>
+    <div id="idea-dialog-body-container" class="clearfix">
+    <div class="idea_input_area fleft" id="IdeaInput">
+        <div id="idea-left-background"></div>
+        <ul>
+            <li>
+                <h3>新增至：</h3>
+                <!-- import:levelSelect -->
+                <p class="idea_batch_ref_block hide" id="IdeaBatchRefBlock">请<span id="IdeaBatchRefGenju">根据</span><a id="IdeaBatchRefWord"></a><a href="#" id="IdeaBatchRefChange" class="idea_batch_ref_change"></a>撰写创意</p>
+            </li>
+            <li>
+                <h3>创意标题：</h3>
+                <input type="text" ui="id:IdeaTitle;">
+                <p class="idea_insert">
+                    <a class="idea_wildcard" href="#" title="通配符" id="IdeaWildCardTitle">插入通配符</a>
+                    <a class="idea_linebreak hide" href="#" title="断句符" id="IdeaLinebreakTitle">插入断句符</a>
+                </p>
+                <p class="info" id="IdeaTitleInfo"></p>
+                <p class="warn hide" id="IdeaTitleError">警告信息</p>
+            </li>
+            <li>
+                <h3 id="IdeaDesc1Title">创意描述第一行：</h3>
+                <div ui="id:IdeaDesc1;type:TextLine;"></div>
+                <p class="idea_insert">
+                    <a class="idea_wildcard" href="#" title="通配符" id="IdeaWildCardDesc1">插入通配符</a>
+                    <a class="idea_linebreak hide" href="#" title="断句符" id="IdeaLinebreakDesc1">插入断句符</a>
+                </p>
+                <p class="info" id="IdeaDesc1Info"></p>
+                <p class="warn hide" id="IdeaDesc1Error">警告信息</p>
+            </li>
+            <li id="IdeaDesc2Area">
+                <h3>创意描述第二行：</h3>
+                <div ui="id:IdeaDesc2;type:TextLine;"></div>
+                <p class="idea_insert">
+                    <a class="idea_wildcard" href="#" title="通配符" id="IdeaWildCardDesc2">插入通配符</a>
+                </p>
+                <p class="info" id="IdeaDesc2Info"></p>
+                <p class="warn hide" id="IdeaDesc2Error">警告信息</p>
+            </li>
+            <!-- import:ideaUrl -->
+            <li>
+                <div id='ideaPhoneUrlWrap' >
+                     
+                    
+                          <!-- import:ideaMurl -->
+                           
+                      
+
+                    </div>
+                </li>
+            
+        </ul>
+        <!-- import:mobileWebsite -->
+        <!-- p class="gray idea-left-tip">创意中请勿填写电话号码/QQ号，否则会被系统过滤，导致创意语义不通顺。</p-->
+        <div class="idea_btn">
+            <div ui="id:IdeaSubmit;type:Button;">确定</div>
+            <div ui="id:IdeaSaveas;type:Button;" style = "display:none">新增创意</div>
+            <div ui="id:IdeaCancel;type:Button;">取消</div>
+            <a id="LightIdeaSubmit" class="hide light_idea_submit" href="#">保存修改</a>
+            <a id="LightIdeaCancel" class="hide light_idea_cancel" href="#">取消</a>
+            <div ui="id:IdeaBatchNext;type:Button;" class="hide">下一条创意</div>
+            <div id="IdeaBatchTip" class="hide idea_batch_tip"></div>
+            <a href="#" id="IdeaBatchSkip" class="hide idea_batch_skip">跳过本条</a>
+            <p class="warn hide" id="IdeaError">警告信息</p>
+        </div>
+    </div>
+    <div class="fleft" id="IdeaRightArea">
+        <div class="idea_tip_area hide" id="IdeaTipArea">
+            <h2 id="IdeaTipTitle"></h2>
+            <h3 id="IdeaTipContent"></h3>
+        </div>
+        <div class="idea_preview_area" id="idea_preview_area">
+            <h2>创意预览</h2>
+            <div id="ideaComputerPreview">
+                <h3>推广位预览：</h3>
+                <div id="IdeaPreviewPP" class="idea_preview"></div>
+                <h3>推广链接位预览：</h3>
+                <div id="IdeaPreviewPPIM" class="idea_preview"></div>
+                <h3>右侧推广位预览：</h3>
+                <div id="IdeaPreviewIM" class="idea_preview"></div>
+            </div>
+            
+            <div id="ideaPhonePreview">
+                <h3>移动设备推广位预览：</h3>
+                 <div id="IdeaPreviewPhone" class="idea_preview"></div>
+                <h6>您可在“附加创意”中配置更丰富的推广内容并进行预览。</h6>
+                <h6 id="modifyPhoneTip">${mobileModifyTip}</h6>
+                
+                <h6>创意实际显示效果可能因设备操作系统和分辨率略有不同。</h6>
+            </div>
+            <!-- import:promotionPolicy -->
+        </div>
+    </div>
+    </div>
+    <div class="links">
+        <a class="back_to_simple" style="display:none;">返回精简版创意撰写</a>
+    </div>
+</div>
+
+
+<!-- target:promotionPolicy -->
+<div class="promotion-policy">
+            如有疑问，您可拨打我们的服务热线： 400-890-0088，或访问“
+    <a href="http://defensor.baidu.com/userchk/policy" target="_blank">百度推广政策中心</a>
+    ”。
+</div>
+
+<!-- target:levelSelect -->
+<div ui="id:LevelPlan;type:Select;"></div>
+<div ui="id:LevelUnit;type:Select;"></div>
+<p class="warn hide" id="LevelError">警告信息</p>
+
+<!-- target:keywordAdd -->
+<div class="keyword_add">
+	<div class="keyword_input_area">
+		<div class="keyword_level">
+			<h3>新增至：</h3>
+			<!-- import:levelSelect -->
+		</div>
+		<div class="keyword_input">
+			<h3>已选择关键词 (<span id="KeywordNumber">0</span><span class="total">/100</span>)</h3>
+			<div ui="id:KeywordBox;type:TextLine;"></div>
+			<p class="warn hide" id="KeywordWarn"></p>
+			<div class="keyword_btn">
+				<div ui="id:KeywordSubmit;type:Button;">确定</div>
+				<div ui="id:KeywordToIdea;type:Button;">确定并新增创意</div>
+				<div ui="id:KeywordCancel;type:Button;">取消</div>
+			</div>
+		</div>
+		<div class="keyword_industry">
+		</div>
+	</div>
+	<div class="keyword_recommend_area">
+	</div>
+</div>
+
+<!-- target:keywordAddError -->
+<div class="keyword_add_error">
+	<h3>以下这些关键词添加不成功：</h3>
+	<ul id="KeywordErrorUL">
+		<li>
+			<h4>关键词：鲜花</h4>
+			<p class="warn">触犯注册商标</p>
+		</li>
+		<li>
+			<h4>关键词：鲜花</h4>
+			<p>最低展现价格：0.1元</p>
+		</li>
+	</ul>
+	<h3 class="hide">修改单元出价（元）：</h3>
+	<input class="hide" type="text" ui="id:KeywordUnitBid;">
+	<div class="exception hide">建议您提高推广单元出价，避免部分关键词因出价过低而无法展现。</div>
+	<div class="keyword_btn">
+		<div ui="id:KeywordModUnitBid;type:Button;" class="hide">修改单元出价</div>
+		<div ui="id:KeywordIgnore;type:Button;" class="hide">忽略</div>
+		<div ui="id:KeywordConfirm;type:Button;">确定</div>
+	</div>
+</div>
+
+<!-- target:keywordTransfer -->
+<div class="keyword_transfer">
+    <div id="KeywordTransfer">
+        <ul class="keyword_transfer_ul">
+            <li>
+                <h3>目标计划名：</h3>
+                <div ui="id:TargetPlan;type:Select;"></div>
+				<p class="warn hide" id="TargetPlanWarn">错误信息</p>
+            </li>
+            <li>
+                <h3>目标单元名：</h3>
+                <div ui="id:TargetUnit;type:Select;"></div>
+                <input class="hide" type="text" ui="id:TargetUnitName;">
+				<p class="warn hide" id="TargetUnitWarn">错误信息</p>
+            </li>
+        </ul>
+		<div class="keyword_btn">
+			<div ui="id:ConfirmTransfer;type:Button;">确定</div>
+			<div ui="id:CancelTransfer;type:Button;">取消</div>
+		</div>
+    </div>
+    <div class="hide" id="KeywordTransferInfo">
+    	<div id="KeywordTransferInfoContent"></div>
+    	<div>
+	    	<div id="AddSuggestWordsWrap" class="add_end_suggest1 keyword_transfer_content"><div class="expedition"></div></div>
+			<div class="keyword_btn">
+				<div id="SaveSuggestWordsContainer" class="fleft"></div>
+				<div ui="id:Close;type:Button;">关闭</div>
+				<div ui="id:TransferAll;type:Button;">全部转移</div>
+				<div ui="id:TransferOnly;type:Button;">只转移不重复词</div>
+				<div ui="id:CancelAll;type:Button;">全部取消</div>
+				<div id="SaveErrorExpe2" class="save_error_expe"></div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<!-- target:modWordBid -->
+<div class="manage_dialog mod_wordbid">
+	<p>
+		<input type="radio" value="1" checked="checked" name="wordbid" title="修改出价:" ui="id:modWordBid;type:Radio" />
+		<div style="clear:both"></div>
+	</p>
+	<p>	
+		<input type="text" ui="id:modWordBidInput;type:TextInput;width:200;height:22;" />&nbsp;元
+		<div style="clear:both"></div>
+	</p>
+	<p class="red" id="modWordBidErrorTip"></p>
+	<p>
+		<input type="radio" value="2" name="wordbid" title="将出价:" ui="id:improveWordBid;type:Radio" />
+	</p>
+	<p>
+		<div ui="id:bidModType;type:Select;datasource:*improveSelect;value:0;width:50;"></div>
+		<input type="text" ui="id:improveBid;type:TextInput;width:200;height:22;" />&nbsp;元
+		<div style="clear:both"></div>
+	</p>
+	<div class="word_batch_error_tip" id="improveWordBidErrorTip"></div>
+	<p id="useUnitBid">
+		<input type="radio" value="0" name="wordbid" title="使用单元出价" ui="id:useUnitBid;type:Radio" />
+	</p>
+	<!-- import:mpriceFactorTip-->   
+	<div class="ui_dialog_foot">
+		<div ui="id:modWordBidOk;type:Button;">确定</div>
+		<div ui="id:modWordBidCancel;type:Button;">取消</div>
+	</div>
+</div>	
+<!-- target:mpriceFactorTip -->
+<div id='mprice-tip-block' class='hide'>
+	   当前计划的移动出价比例<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="移动出价比例">&nbsp;</span>:<span id='mprice-factor-intip' ></span>
+</div>
+<!-- target:modWordBidAdv -->
+<div class="">
+	<div>
+		<div class="save_confirm_icon"></div>
+		<div class="mod_wordbid_tip" id="ModWordBidTip"></div>
+	</div>
+	<div class="mod_wordbid_content_wrap">
+		您现在可以为这些关键词修改出价。<span class='text_gray'>（默认为所在推广单元的出价）</span>
+		<div class="mod_wordbid_edit_wrap" id="ModWordBidEditWrap"></div>
+	</div>
+	<div class="ui_dialog_foot">
+		<div ui="id:modWordBidOk;type:Button;">保存修改</div>
+		<div ui="id:modWordBidCancel;type:Button;">关闭</div>
+		<span class="warn" id="ModWordBidError"></span>
+	</div>
+</div>
+
+<!-- target:modWordWmatch -->
+<div class="manage_dialog">
+	<p>
+		<input type="radio" value="15" checked="checked" name="wordmatch" title="广泛" ui="id:wordBroad;type:Radio" />
+	</p>
+	<p>	
+		<input type="radio" value="63" name="wordmatch" title="精确" ui="id:wordPrecise;type:Radio" />
+	</p>
+	<p>
+		<input type="radio" value="31" name="wordmatch" title="短语" ui="id:wordPhrase;type:Radio" />
+	</p>
+	<p class="red" id="improveWordUrlErrorTip"></p>
+	<div class="ui_dialog_foot">
+		<div ui="id:modWordWmatchOk;type:Button;">确定</div>
+		<div ui="id:modWordWmatchCancel;type:Button;">取消</div>
+	</div>
+</div>	
+
+<!-- target:modWordUrl -->
+<div class="manage_dialog">
+	<p>URL :</p>
+	<p>	
+		<input type="text" ui="id:newWordUrl;type:TextInput;width:375;height:22;" />
+		<div style="clear:both"></div>
+	</p>
+	
+	<p class="red" id="modWordUrlErrorTip"></p>
+	<div class='act-on-unit'>
+         <input type="checkbox" id="act-on-unit"/> 
+         <span class="use-text">将该URL应用到本单元所有关键词上</span>
+         <p class='red hide' id="act-on-unit-tips">注意：所选关键词属于不同单元，无法将该URL应用到多个单元下的所有关键词，此次操作仅对本页所选的关键词有效</p>
+    </div>
+	<div class="ui_dialog_foot">
+		<div ui="id:modWordUrlOk;type:Button;">确定</div>
+		<div ui="id:modWordUrlCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:offlineReason -->
+<div class="offlineReason">
+	${offlineReasonCotent}
+</div>
+
+<!-- target:offlineReasonOK -->
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr><td>&nbsp;</td></tr>
+	</tbody>
+	<!-- import:offlineReasonFoot-->	
+</table>
+
+<!-- target:offlineReasonDetail -->
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		{0}
+	</tbody>
+	<!-- import:offlineReasonFoot-->	
+</table>
+
+<!-- target:offlineReasonRow -->
+<tr>
+	<th>{0}</th>
+	<td>{1}</td>
+</tr>
+
+<!-- target:offlineReasonFoot -->
+<tfoot>
+	<tr>
+		<td colspan="2">
+		           如有疑问，您可拨打我们的服务热线: 400-890-0088，或访问“
+            <a href="http://defensor.baidu.com/userchk/policy" target="_blank">百度推广政策中心</a>
+            ”。
+        </td>
+	</tr>
+</tfoot>
+	
+<!-- target:searchComboTip -->
+<div id="searchComboTip" class="searchcombo_tip clearfix" style="display:none;">
+    <span class="searchcombo_tip_content" id="searchComboTipContent" style="float:left;">您的结果是根据“xxx”状态“xxx”筛选</span>
+</div>
+
+<!-- target:searchComboTipAdvance -->
+<div id="searchComboTip" class="searchcombo_tip clearfix" style="display:none;">
+	<div ui="id:MonitorFilterResult;type:Button;">一键监控</div> 
+	<span class="ui_bubble" bubblesource="monitorShortcut" id="MonitorShortcutBubble" style="float:right">&nbsp;</span>
+    <span class="searchcombo_tip_content" id="searchComboTipContent">您的结果是根据“xxx”状态“xxx”筛选</span>
+</div>
+
+<!-- target:batch -->
+<div id="batch" class="batch">
+	12345
+</div>
+
+<!-- target:device -->
+<div id="setPlanDevice">
+	<p>投放设备：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="投放设备">&nbsp;</span></p>
+	<p>
+		<input type="radio" name='newPlanDevice' value='0' checked="checked" title="全部设备" ui="id:newPlanDeviceAll;type:Radio"/>
+		<input type="radio" name='newPlanDevice' value='1' title="仅计算机" ui="id:newPlanDevicePC;type:Radio"/>
+		<input type="radio" name='newPlanDevice' value='2' title="仅移动设备" ui="id:newPlanDevicePhone;type:Radio"/>
+		<!-- import:mobileWebsite -->
+	</p>
+	<p id='setDeviceTip' class='red hidden'>新建计划时设置为“仅移动设备”后，将无法修改投放设备。</p>
+</div>
+<!-- target:devicePhone -->
+<div id="planDevicePhone" class='hide'>
+	<p>投放设备：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="投放设备">&nbsp;</span></p>
+	<p class='gray'>&nbsp;&nbsp;&nbsp;&nbsp;仅移动设备 <!-- import:mobileWebsite --></p>
+	
+</div>
+<!-- target:mobileWebsite -->
+<a target="_blank" href="" class="mobile_website"  id='mobile_website'>仅需3步，免费拥有移动页面</a>
+
+<!-- target:pricefactor -->
+<div id="planPriceFactor">
+    <p>移动设备投放的价格：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="移动设备投放的价格">&nbsp;</span></p>
+    <span id="price-factor-text">关键词出价</span><span id="x-icon" class="gray">x</span>
+    <div ui="type:Iterator;id:plan-iterator;"></div><!-- import:mobileWebsite -->
+    <P id ='price-compute'>示例：若某关键词出价设为<strong>1.00</strong>元，则该关键词在移动设备上的出价为<strong id='mobilePrice'></strong>元</P>
+    <p id="priceFactorTip" class="red">1</p>
+</div>
+
+<!-- target:planbridge -->
+<div id="planBridge" class="top_margin">
+    <p>移动咨询方式</p>
+    <p class="gray">方便移动搜索用户与您联系，提升推广转化</p>
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td>
+                    <span class="phonenum-text">电话</span>
+                    <span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="推广电话">&nbsp;</span>
+                </td>
+                <td><input type="text" id="phoneNumberBridge"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>商桥移动咨询<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="商桥移动咨询">&nbsp;</span></p>
+                    
+                </td>
+                <td>
+                	<div id='bridgeCheckOpt' class='hide'>
+                		<input type="checkbox" id="bridgeCheckbox"/> 
+                        <span class="use-text">启用</span>
+                        <span id='bridgeUnableTip' class='hide red'></span>
+                	</div>
+                	<div id='bridgeTips' class='hide'>
+	                    <div>您需要安装百度商桥才能使用商桥移动咨询</div>
+	                    <a id='bridgeUrl' target="_blank">了解详情</a>
+	                </div>
+	                <div id='bridgeErrorTips' class='hide request_exception'>
+	                    <div>数据异常，建议刷新重试</div>
+	                   
+	                </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p id="planBridgeTip" class="red">1</p>
+</div>

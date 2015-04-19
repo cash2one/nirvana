@@ -1,0 +1,707 @@
+/**实时报告生成参数部分**/
+.hidden{ visibility:collapse;}
+.report_container {
+	position:relative;
+}
+.report_container h1 {
+	font-size:16px;
+	font-weight:bold;
+	line-height:1.2;
+}
+.report_container h1 span {
+	border-left:2px solid #000;
+	padding:0 12px;
+}
+.report_container h1 span.noborder {
+	padding-left:0;
+}
+.main-title {
+	padding:10px 20px 0px;
+	border:1px solid #ccc;
+	border-left:none;
+	border-right:none;
+	background:#ccd6ef;
+	min-width:1000px;
+}
+.main-body {
+	padding:0 0 5px 0;
+	background:#f9f9fc;
+}
+.auth_report {
+	float:left;
+	width:130px;
+}
+.auth_span {
+	color:#0033cc;
+	cursor:hand;
+}
+.auth_select_btn {
+	float:right;
+	margin-top:3px;
+	position:relative;
+    width:17px;
+	height:16px;
+    background: url(../../asset/img/bg_icon.png) left -620px no-repeat;	
+    cursor:pointer;
+	z-index:100;
+	zoom:1;
+}
+.auth_select_list {
+	position:absolute;
+	top:16px;
+	left:-109px;
+	width:125px;
+	height:50px;
+	border:1px solid #c6c6c6;
+	padding:2px 0;
+	background:#fff;
+	z-index:100;
+	-moz-user-select:none;
+}
+.auth_select_list li{
+	background:#fff;
+	cursor:pointer;
+	color:#0033cc;
+	line-height:20px;
+	padding:0 0 0 10px;
+	text-align:left;
+}
+.auth_select_list li:hover {
+	background:#f0f7fe;
+}
+.time_option_disabled {
+	color:#999999;
+	text-decoration:none;
+	cursor:default;
+}
+
+#NewReportContainer { 
+	line-height:150%; 
+	border-bottom:1px solid #ccd6ef;
+	min-width:1040px;
+}
+#SpecialAuthorityReport a{padding:0 0 0 10px;}
+div.main-view div.report-calendar {
+	height:24px;
+	line-height:24px;
+	margin: 16px 10px 2px 0;
+}
+div.main-view div.report-calendar span.time-text {font-size:13px; vertical-align:top;}
+div.main-view div.shortcut-bar {
+	color:#cfc4ed;
+    font-size: 13px;
+    height: 22px;
+    line-height: 22px;
+    padding: 3px 20px;
+	border-bottom:1px solid #ededed;
+	min-width:1000px;
+	zoom:1;
+}
+div.main-view div.shortcut-bar .option-title{color:#000;}
+div.main-view div.shortcut-bar span {display:block;float:left;}
+div.main-view div.shortcut-bar span.auth_span {
+	padding:0 10px;
+	position:relative;
+		
+    cursor:pointer;
+}
+div.main-view div.shortcut-bar a{padding:0 10px;display:block;float:left;}
+div.main-view div.shortcut-bar a.current{
+	cursor:default;
+	color:#000;
+	font-weight:bold;
+}
+div.main-view div.shortcut-bar a.current:link,
+div.main-view div.shortcut-bar a.current:visited,
+div.main-view div.shortcut-bar a.current:hover{
+	text-decoration:none;
+}
+div.main-view div.shortcut-bar a.new_report_type {
+	padding:0 25px 0 10px;
+	margin:0 10px 0 0;
+	background:url("../../asset/img/kr_rsn_1.gif") no-repeat right center;
+}
+div.main-view div.shortcut-bar li a {padding:5px 10px;}
+div.main-view div.report-option{
+	color:#cfc4ed;
+	font-size:13px;
+	height:22px;
+	line-height:22px;
+	padding:3px 20px;
+	border-bottom:1px solid #ededed;
+	min-width:1000px;
+}
+div.main-view div.report-option .option-title{color:#000;}
+div.main-view div.report-option a{
+	padding:0 10px;
+}
+div.main-view div.report-option a.current:link,
+div.main-view div.report-option a.current:visited,
+div.main-view div.report-option a.current:hover{
+	color:#000;
+	font-weight:bold;
+	text-decoration:none;
+	cursor:default;
+}
+div.main-view div.report-option a.time_option_disabled:hover{
+	text-decoration:none;
+	cursor:default;
+}
+div.main-view div.report-option a.by_week_adjust {
+	padding:0 2px 0 10px;
+}
+div.main-view div.generate-button {padding:12px 20px 16px;position:relative;min-width:1000px;}
+div.main-view div.text-tip{margin:5px 0 2px 0px}
+
+div.main-view table td {vertical-align:top}
+#ReportParams {
+	border-bottom:1px solid #ccd6ef;	
+}
+#NewReportContainer #ctrllistselectedList{height:135px}
+#NewReportContainer div.fold-bar,
+.report_wrapper div.fold-bar{ text-align:center; background:#ccd6ef; height:18px; overflow:hidden; line-height:18px;}
+.report_wrapper div.fold-bar{background:#F7F7F7;}
+#LoopSettingContainer{ background:#fff; padding:12px 15px; width:355px;}
+a {outline: none;}
+:focus { outline:0; }
+.report_params_area{background:#ffffff;padding:0 70px;}
+.tip_container{
+	font-size:13px;
+	background:#adbee3;
+	color:#fff;
+	height:24px;
+	line-height:24px;
+	padding:3px 270px 3px 70px;
+	position:relative;
+	min-width:700px;
+	z-index:1;
+}
+.tipLabel{background:#fff; color:#000; padding:2px 10px;}
+.report_tips .tipIdea u{background:#ffff00; text-decoration:none;}
+
+.report_tips div{
+	float:left;
+}
+.report_tips_btn{
+	float:right;
+}
+.tips_btn {
+	background:url("../../asset/img/bg_icon.png") no-repeat;
+	height:22px;
+	width:22px;
+	margin:0 5px;
+	float:left;
+}
+
+.btn_left_active{
+	background-position:-193px -108px;
+	cursor:pointer;
+}
+.btn_right_active{
+	background-position:-227px -108px;
+	cursor:pointer;
+}
+.btn_left_inactive{
+	background-position:-120px -108px;
+}
+.btn_right_inactive{
+	background-position:-156px -108px;
+}
+/**指标选择控件**/
+#ctrldialogReportItemSelectDialog{
+	
+}
+#ctrldialogReportItemSelectDialog .skin_modeless_title{
+	padding-left:17px;
+}
+#ctrldialogReportItemSelectDialog .ui_dialog_body{
+	margin:0 0 10px;	
+}
+#ctrldialogReportItemSelectDialog .ui_checkbox{
+	top:2px;
+	margin-right:10px;
+}
+#ctrldialogReportItemSelectDialog tr.odd{
+	background:#F9F9F9;
+}
+#ctrldialogReportItemSelectDialog tr{
+	height:25px;
+	width:272px;
+}
+#ctrldialogReportItemSelectDialog td{
+	height:25px;
+	width:158px;
+	padding:0 14px;
+}
+
+
+/**实时报告报表显示部分***/
+.report_wrapper{
+	padding:20px;
+}
+.report_wrapper .bold{
+	font-weight:bold;
+	padding:0 3px;
+}
+.report_wrapper h1{
+	font-size:16px;
+	line-height:28px;
+	font-weight:bold;
+}
+
+.report_fold_btn {
+	float:left;
+	margin:0px 15px;
+	padding:7px 10px 0;
+	font-size:13px;
+	height:22px;
+	font-weight:normal;
+	border:1px solid #999999;
+}
+.report_return_icon {
+	background:url("../../asset/img/bg_icon.png") no-repeat 0 -835px;
+	margin:5px 0 0 ;
+	width:16px;
+	height:15px;
+}
+.report_header {
+	position:relative;
+}
+.report_header h1{
+	float:left;
+	line-height:30px;
+	padding-left:5px;
+}
+.report_ctrl{
+	width:320px;
+	padding-left:8px;
+	height:28px;
+	border:1px solid #999;
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.report_ctrl span{
+	display:inline-block;
+	height:28px;
+	line-height:26px;
+	margin-left:24px;
+}
+.report_ctrl span a{
+	padding-left:20px;
+}
+
+.report_download,
+.report_cycle,
+.report_mail{
+	background:url("../../asset/img/bg_icon.png") no-repeat -508px -880px;
+}
+.report_download{
+	background-position:-508px -914px;
+}
+.report_download.disabled{
+	background-position:-508px -1011px;
+}
+.report_cycle{
+	background-position:-510px -948px;
+}
+.report_cycle.disabled{
+	background-position:-510px -979px;
+}
+.report_download.disabled a,
+.report_cycle.disabled a,
+.report_mail.disabled a{
+	color:#999;
+	cursor:default;
+	text-decoration:none;
+}
+
+.report_latency{
+	color:#999;
+	line-height:25px;
+}
+
+.report_error{
+	border:1px solid #999;
+	padding:30px 0;
+	text-align:center;	
+	background:#ffffcc;
+	margin-top:10px;
+}
+
+.report_chart{
+	margin-top:50px;
+}
+.report_chart_content{
+	border:1px solid #999;
+	overflow:hidden;
+}
+
+.report_chart_content.fold{
+	border:none;
+	margin-top:20px;
+	height:0px;
+}
+.report_chart_ctrl{
+	height:29px;
+	line-height:29px;
+	border-bottom:1px solid #999;
+	background:#E4EAF9;
+	padding-left:16px;
+	margin-bottom:10px;
+}
+.report_chart_ctrl .ui_checkbox{
+	top:3px;
+	*top:1px;
+}
+.report_chart_item{
+	float:right;
+	width:580px;
+	text-align:right;
+}
+.report_chart_item label{
+	padding:0 15px 0 5px;
+	*padding:0 10px 0 0;
+}
+
+.report_table_content{
+	border-top:1px solid #C9C9C9;
+}
+
+.item_select_title{
+	font-weight:bold;
+	font-size:13px;
+}
+a.report_link_selected{
+	color:#000;
+}
+.report_table_option{
+	background:#F2F2F2;
+	border:1px solid #C9C9C9;
+	border-bottom:none;
+	height:22px;
+	line-height:22px;
+	padding:3px 0;
+	width:100%;
+}
+.report_table_option a{
+	padding:0 10px;
+}
+.report_table_option a.current:link,
+.report_table_option a.current:visited,
+.report_table_option a.current:hover{
+	color:#000;
+	font-weight:bold;
+	text-decoration:none;
+	cursor:default;
+}
+.idea_icon {
+	background:url("../../asset/img/history_icon.jpg") no-repeat -14px 0;
+	display:inline-block;
+	margin:0 5px;
+	width:14px;
+	height:14px;
+}
+span.idea_icon:hover {
+	cursor:pointer;
+}
+.expandReportBubble{
+	width:220px;
+	padding-top:5px;
+}
+.expandReportBubble p{
+	line-height:18px;
+	margin:5px 0;
+}
+.report_expand_matrix{
+	width:610px;
+	margin-bottom:25px;
+}
+a.report_no_expand:link,
+a.report_no_expand:visited,
+a.report_no_expand:hover{
+	color:#000;
+	text-decoration:none;
+	cursor:default;
+}
+/************ 我的报告  wanghuijun***************/
+.myreport_container {
+	padding:10px 40px 26px;
+	position:relative;
+}
+.myreport_container h1 {
+	font-size:16px;
+	font-weight:bold;
+	line-height:1.2;
+}
+/*蹊径*/
+.report_container h1.reportXijingTitle{
+	display:block;
+	width:200px;
+}
+.report_external_link{
+	position:absolute;
+	right:20px;
+	top:5px;
+	padding-right:10px;
+	background-position: -213px -904px;
+	line-height:20px;
+}
+/*
+.myreport_container h1 span {
+	border-left:2px solid #000;
+	padding:0 12px;
+}
+.myreport_container h1 span.noborder {
+	padding-left:0;
+}
+*/
+.type_bar {
+	background:#FFF;
+	height:14px;
+	line-height:14px;
+	margin:12px 0;
+	padding:8px 10px;
+	position:relative;
+}
+.tab_showtype {
+	position:absolute;
+	top:8px;
+	left:70px;
+}
+.tab_showtype li {
+	border-left:1px solid #000;
+	color:#00F;
+	cursor:pointer;
+	float:left;
+	padding:0 10px;
+}
+.tab_showtype li.first {
+	border:0;
+}
+.tab_showtype li.active h6 {
+	color:#000;
+	font-weight:bold;
+}
+.skin_reportlist {
+	margin-top:10px;
+	background:#FFF;
+	border:0;
+}
+.skin_reportlist .ui_table_head_row {
+	background:#FFF;
+}
+.skin_reportlist .ui_table_thcell {
+    border-bottom: 1px solid #E4EAF9;
+}
+.skin_reportlist .ui_table_body {
+	position:relative; /*主要是用于行内编辑获取offsetParent*/
+}
+.skin_reportlist .ui_table_row {
+    border-bottom: 1px solid #E4EAF9;
+}
+.skin_reportlist .ui_table_row_over {
+	/*background:#FFF9D7;*/
+}
+.skin_reportlist .ui_table_tdcell {
+	border:0;
+	position:relative;
+}
+.skin_reportlist .type {
+	/*background:url("../../asset/img/bg_icon.png") no-repeat -179px -160px;*/
+	display:inline-block;
+	height:16px;
+	width:50px;
+	position:relative;
+	top:2px;
+}
+/*
+.skin_reportlist .type_order { 
+	background-position:-180px -140px;
+}*/
+.skin_reportlist .going {
+	color:#666;
+}
+.skin_reportlist .handle a, .skin_reportlist .going {
+	margin:0 5px;
+}
+.fold_bar {
+	background:#CCD6EF;
+	height:16px;
+	line-height:16px;
+	margin:0 -40px;
+	text-align:center;
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:40px;
+}
+.fold_bar a,
+.fold-bar a{
+	background:url("../../asset/img/bg_icon.png") no-repeat -514px -135px;
+	color:#999;
+	padding:0 0 0 15px;
+	text-decoration:none;
+}
+.fold_bar a.folded,
+.fold-bar a.folded{
+	background-position:-514px -155px;
+	color:#00F;
+}
+.report_info {
+	border:1px solid #999;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin:10px 0;
+	padding:5px 10px;
+}
+.report_info ul {
+	height:25px;
+	overflow:hidden;
+}
+.report_info li {
+	float:left;
+	line-height:25px;
+	padding:0 70px 0 0;
+}
+.report_info li h3 {
+	display:inline;
+}
+.report_info .ui_bubble {
+	color:#00F;
+	cursor:pointer;
+}
+.mtl_name {
+	line-height:18px;
+}
+
+/************ 下载报告  wanghuijun***************/
+.report_download_dialog {
+	padding:0 20px;
+}
+.content_format {
+	height:22px;
+	line-height:22px;
+	margin:5px 0 10px;
+}
+.content_format h2 {
+	float:left;
+	padding:0 15px 0 0;
+}
+.content_format ul {
+	float:left;
+}
+.content_format li {
+	float:left;
+	padding:0 15px 0 0;
+}
+.content_format li input {
+	margin:0 5px 0 0;
+	position:relative;
+	top:2px;
+}
+.recent_loop {
+	margin:10px 0;
+}
+.recent_loop ul {
+	padding:5px 20px 0;
+}
+.recent_loop li {
+	height:22px;
+	line-height:22px;
+	overflow:hidden;
+	padding:0 30px 0 0;
+	position:relative;
+}
+.recent_loop li a {
+	display:block;
+}
+.recent_loop li.deled a {
+	color:#CCC;
+	cursor:default;
+    text-decoration:none;
+}
+.recent_loop li .download {
+	background:url("../../asset/img/bg_icon_left.png") no-repeat 0 -646px;
+	padding:0 0 0 30px;
+}
+.recent_loop li.deled .download {
+	background-position:0 -676px;
+}
+.recent_loop li .del {
+	position:absolute;
+	top:0;
+	right:0;
+}
+.btn_area {
+	overflow:hidden;
+}
+#AddQueryBtnArea {
+    height: 22px;
+    overflow: visible;
+}
+.report_download_dialog .btn_area .ui_button, .report_mail_dialog .btn_area .ui_button, .report_cycle_dialog .btn_area .ui_button {
+	margin:0 10px 0 5px;
+}
+
+/************ 发送报告  wanghuijun***************/
+.mail_address {
+	line-height:22px;
+	margin:0 0 10px;
+}
+.mail_address h2 {
+	float:left;
+}
+.mail_address span {
+	margin:0 0 0 5px;
+}
+.mail_address .tip {
+	color:#999;
+}
+.mail_address .warn {
+	clear:both;
+	display:block;
+	margin:0 0 0 71px;
+}
+/************ 循环报告  wanghuijun***************/
+.cycle_rate {
+	line-height:22px;
+	margin:10px 0;
+}
+.cycle_rate .ui_select {
+	margin:0 5px 0 0 ;
+}
+.cycle_rate p {
+	display:inline;
+}
+.cycle_rate p input {
+	top:2px;
+}
+.report_cycle_wrap .report_mail_wrap {
+	background:#F9FBFD;
+	padding:1px 10px;
+	\0padding:10px 10px;
+}
+
+.report_chart_graph{
+	height:280px;
+}
+
+.region_fix_bubble{
+	position:relative;
+	left:-2px;
+	top:-2px;
+}
+
+/************ 监控文件夹报告  yangji***************/
+div.link_icon{
+	background:url("../../asset/img/bg_icon_right.png") no-repeat -5px -731px;
+	width:11px;
+	height:11px;
+	cursor:pointer;
+	display:block;
+	clear:both;
+	float:right;
+}

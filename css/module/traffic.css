@@ -1,0 +1,91 @@
+/**
+ * 流量相关
+ */
+#ctrldialogaddTrafficDialog .ui_dialog_body {
+    padding: 0;
+    margin: 0;
+}
+#ctrldialogaddTrafficDialog .ui_dialog_foot {
+    display: none;
+}
+
+.addtrafficdialog {
+    background-color: #F6F7F8;
+}
+.addtrafficdialog_header,
+.addtrafficdialog_content,
+.addtrafficdialog_footer {
+    padding-left: 15px;
+}
+.addtrafficdialog_header {
+    padding: 20px 15px;
+    background-color: white;
+    border-bottom: 1px solid #DDE1E6;
+    color: #999;
+}
+.addtrafficdialog_header .fc_icon_success {
+    float: left;
+    position: relative;
+    top: -7px;
+    margin-right: 5px;
+}
+.addtrafficdialog_header h1 {
+    display: inline;
+    color: black;
+    font-weight: bold;
+}
+.addtrafficdialog_content > h2 {
+    color: #999;
+    margin: 15px 0;
+}
+.addtrafficdialog_content .tool {
+    margin-bottom: 10px;
+}
+.addtrafficdialog_content .select_all,
+.addtrafficdialog_content .toggle_all {
+    color: blue;
+    cursor: pointer;
+}
+.addtrafficdialog_content .select_all {
+    margin-right: 10px;
+}
+.addtrafficdialog_content td {
+    width: 210px;
+    padding: 4px 0;
+    vertical-align: top;
+}
+.addtrafficdialog_content .field {
+    position: relative;
+}
+.addtrafficdialog_content .key {
+    position: absolute;
+    top: 2px;
+}
+.addtrafficdialog_content .value {
+    height: auto;
+    line-height: 18px;
+    margin-left: 18px;
+    vertical-align: top;
+}
+.addtrafficdialog_footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.addtrafficdialog_footer > .fc-ui-button {
+    margin-right: 10px;
+}
+.addtrafficdialog_footer > .error,
+.addtrafficdialog_footer > .field {
+    vertical-align: top;
+    position: relative;
+    top: 4px;
+}
+.addtrafficdialog_footer > .error {
+    float: right;
+    color: red;
+    margin-right: 20px;
+}
+.addtrafficdialog_footer > .field {
+    margin-left: 10px;
+}
+

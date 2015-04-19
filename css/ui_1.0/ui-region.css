@@ -1,0 +1,31 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-region.css
+ * desc:    地域样式
+ * author:  zhouyu
+ * date:    2010/12/14
+ */
+/****多选地域********/
+.regionSelect {width:100%;background:#fff;text-align:left;}
+.regionSelect dl,
+.regionSelect dt,
+.regionSelect dd {margin:0;padding:0;}
+.regionSelect dt {background:#D3E5FB;line-height:32px;_height:32px;padding-left:10px;_padding-top:6px;}
+.regionSelect dd dt,
+.regionSelect dd dd{background:none;_padding-top:0;}
+.regionSelect dd {line-height:32px;_height:32px;}
+.regionSelect dd label {zoom:1;}
+.regionSelect dd dt {float:left;padding-left:0;padding-right:20px;color:#666666;} 
+.regionSelect dd dt label {color:#666666;}
+.regionSelect dd dd{padding-left:88px;*padding-left:91px;_padding-left:0;}
+.regionSelect input {position:relative;top:1px;margin-right:3px;}
+.regionSelect dt  input{*top:-1px;_top:0;}
+.regionSelect dt  label{position:relative;*top:-3px;_top:0;}
+.regionSelect dd dt  input{*top:1px;_top:0;}
+.regionSelect dd dt  label{position:relative;*top:0px;_top:0;}
+.regionSelect .leaf {display:inline-block;margin-right:7px;}
+.regionSelect .graybg {background:#F9F9F9;border-bottom:1px solid #E4E4E4;padding-left:10px;}
+.regionSelect .whitebg {padding-left:10px;border-bottom:1px solid #E4E4E4;}
+	

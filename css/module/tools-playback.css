@@ -1,0 +1,117 @@
+div.tools-playback-head{background:#e4eaf9; padding:15px 20px;width:100%;}
+div.tools-playback-head h3 {padding-bottom:3px}
+div.wronginfoinline{color:#F00; padding:5px 0; margin:3px 0 0 0;}
+div.tools-playback-head div.ui_select_cur{font-weight:bold}
+.playback-option{
+	height:24px;
+	line-height:24px;
+	vertical-align:middle;
+	padding:0 0 4px 0;
+	min-width:900px;
+}
+.adpreview-date-value{
+	width:500px;
+	display:inline;
+}
+.playback-marquee{
+	margin:0 0 0 123px;
+	width:432px;
+}
+.option-span{
+	display:inline-block;
+	width:120px;
+}
+.playback-option img{
+	vertical-align:middle;
+}
+.playback-option input{
+	margin:0 3px;
+	vertical-align:middle;
+}
+.resultTips{
+	background-color:#f3f4fc;
+	padding:10px 20px;
+}
+.resultTips span{
+	display:inline-block;
+	margin:8px 0 4px 20px;
+}
+.tools-playback-input{ width:443px; height:20px; border:#abadb3 1px solid; display:inline-block;}
+div.ui-slider-marquee_short { position:relative; font-size:12px; margin:0 0 3px 3px; overflow:hidden; height:26px; line-height:26px; width:445px; background:#fffad2 }
+div.ui-slider-marquee_short-center {overflow:hidden; height:26px; margin:0 90px 0 70px; width:300px;}
+div.ui-slider-marquee_short-center ul{width:430px;}
+div.ui-slider-marquee_short-center li { float:left; margin:0 5px; width:65px; overflow:hidden;}
+div.ui-slider-marquee_short-center li a{ text-decoration:none; color:#000}
+div.ui-slider-marquee_short-center li a.heightlight{font-weight:bold}
+div.ui-slider-marquee_short-left { position:absolute; left:0; top:0; width:70px; color:#ec9464; text-align:center; }
+div.ui-slider-marquee_short-right { position:absolute; top:0; right:0px; width:76px; text-align:left; color:#cccccc; }
+div.ui-slider-marquee_short-right a {display:inline-block; width:5px; height:10px; padding:0 3px 0 3px; background:url(../../asset/img/bg_icon.png) no-repeat; }
+div.ui-slider-marquee_short-right a.prev{ background-position:-370px -130px; cursor:text}
+div.ui-slider-marquee_short-right a.prev-active{ background-position:-370px -150px; cursor:pointer}
+div.ui-slider-marquee_short-right a.next{ background-position:-390px -130px; cursor:text}
+div.ui-slider-marquee_short-right a.next-active{ background-position:-390px -150px; cursor:pointer}
+/**无线凤巢融合添加**/
+.first-title-span {
+	margin-left : 15px;
+}
+.second-title-span {
+	margin-left: 127px;
+}
+.preview-p-title {
+	height: 30px;
+	line-height: 20px;
+}
+.preview-iphone-box {
+	width: 391px;
+	padding: 180px 50px 160px;
+	background: url("../../asset/img/phone2.png") no-repeat;
+	height: 623px;
+}
+.preview-iphone-body {
+	overflow: auto;
+	height: 613px;
+}
+#AdPreviewFrameContainer {
+	position: relative;
+}
+.preview-all-left {
+	position: relative;
+	margin-right: 250px;
+}
+.preview-all-left #AdPreviewFramePC {
+	position: relative;
+}
+.preview-all-right {
+	position: absolute;
+	top: 48px;
+	right: -280px;
+}
+.preview-big-btn {
+	background: #000;
+	opacity: .1;
+	filter: alpha(opacity=10);
+	color: white;
+	position: fixed;
+	top: 300px;
+	width: 50px;
+	height: 300px;
+	line-height: 300px;
+	font-size: 80px;
+	font-family: '宋体';
+	font-weight: bold;
+	text-align: center;
+}
+
+#preview-right-btn {
+	right: 26px;
+}
+#PlaybackFrameContainer {
+	position: relative;
+	padding: 48px 5px 0;
+}
+#PlaybackFrame {
+	position: relative;
+}
+#AdPreviewFrameContainer {
+	min-height: 1050px;
+}

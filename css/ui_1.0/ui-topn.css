@@ -1,0 +1,27 @@
+/**
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ *
+ * path:    ui_topn.css
+ * desc:    
+ * author:  zhujialu
+ * date:    2011/12/27
+ **/
+.ui_topn th,
+.ui_topn td {
+    font-size: 13px;
+    line-height: 18px;
+    height: 18px;
+    padding: 4px 0;
+    zoom: 1;
+}
+.ui_topn .valueBar {
+    background: #74B1E0;
+    float: left;
+    border-radius: 2px;
+}
+.ui_topn .valueLiteral {
+    display: inline;
+    margin-left: 5px;
+}
+

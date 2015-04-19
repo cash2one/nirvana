@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root title="搜索指数">
+	<record name="广东" className="guangdong" id="913" data="304805" order="1" color="1" />
+	<record name="江苏" className="jiangsu" id="916" data="100000" order="3" color="1" />
+	<record name="山东" className="shandong" id="901" data="174445" order="4" color="1" />
+	<record name="浙江" className="zhejiang" id="917" data="173240" order="5" color="1" />
+	<record name="上海" className="shanghai" id="910" data="158059" order="6" color="1" />
+	<record name="河南" className="henan" id="927" data="126189" order="7" color="1" />
+	<record name="河北" className="hebei" id="920" data="95083" order="8" color="1" />
+	<record name="湖北" className="hubei" id="906" data="94059" order="9" color="1" />
+	<record name="四川" className="sichuan" id="914" data="81624" order="10" color="1" />
+	<record name="福建" className="fujian" id="909" data="77518" order="11" color="1" />
+	<record name="辽宁" className="liaoning" id="907" data="77422" order="12" color="1" />
+	<record name="安徽" className="anhui" id="928" data="55119" order="13" color="1" />
+	<record name="陕西" className="shangxi" id="924" data="54140" order="14" color="1" />
+	<record name="天津" className="tianjin" id="923" data="52817" order="15" color="1" />
+	<record name="湖南" className="hunan" id="908" data="49502" order="16" color="1" />
+	<record name="山西" className="shanxi" id="929" data="44097" order="17" color="1" />
+	<record name="黑龙江" className="heilongjiang" id="921" data="40380" order="18" color="1" />
+	<record name="重庆" className="chongqing" id="904" data="38027" order="19" color="1" />
+	<record name="广西" className="guangxi" id="912" data="35067" order="20" color="6" />
+	<record name="吉林" className="jilin" id="922" data="33306" order="21" color="1" />
+	<record name="江西" className="jiangxi" id="903" data="31835" order="22" color="1" />
+	<record name="云南" className="yunnan" id="915" data="27705" order="23" color="1" />
+	<record name="内蒙古" className="neimenggu" id="905" data="22079" order="24" color="1" />
+	<record name="贵州" className="guizhou" id="902" data="17811" order="25" color="1" />
+	<record name="甘肃" className="gansu" id="925" data="12964" order="26" color="1" />
+	<record name="海南" className="hainan" id="930" data="9164" order="27" color="1" />
+	<record name="宁夏" className="ningxia" id="919" data="5244" order="28" color="1" />
+	<record name="青海" className="qinghai" id="918" data="3289" order="29" color="1" />
+	<record name="西藏" className="xizang" id="932" data="1179" order="30" color="1" />
+	<record name="台湾" className="taiwan" id="931" data="1152" order="31" color="1" />
+	<record name="新疆" className="xinjiang" id="926" data="26" order="32" color="1" />
+	<record name="香港" className="xianggang" id="933" data="100" order="33" color="1" />
+	<record name="澳门" className="aomen" id="934" data="70" order="34" color="1" />
+	<record name="北京" className="beijing" id="911" data="304804" order="2" color="1" />
+</root>

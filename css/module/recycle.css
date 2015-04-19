@@ -1,0 +1,66 @@
+.recycledialog {
+    padding: 5px;
+}
+.recycledialog-header h1,
+.recycledialog-size
+ {
+    float: left;
+}
+.recycledialog-header h1 {
+    font-size: 120%;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.recycledialog-size {
+    position: relative;
+    top: 2px;
+}
+.recycledialog-header .fc_icon_recycle {
+    float: left;
+    margin-right: 5px;
+    position: relative;
+    top: -1px;
+}
+.recycledialog-tip {
+    float: right;
+    color: #666;
+    margin-right: 5px;
+}
+.recycledialog-notice {
+    color: red;
+}
+.recycledialog-content {
+    border: 5px solid #EFEFEF;
+    margin: 10px 0;
+}
+.recycledialog-content .table-tbody {
+    height: 370px;
+}
+.recycledialog-content .table-tbody td {
+    border-color: transparent;
+    border-left: none !important;
+    border-right: none !important;
+}
+.recycledialog .keyword {
+    width: 250px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow:ellipsis;
+}
+.recycledialog .fc_icon_restore {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+.recycledialog .table-row:hover .fc_icon_restore {
+    visibility: visible;
+}
+.recycledialog .recycledialog-deltip {
+    background-color: #fff9c8;
+    border: 1px solid #d9d48c;
+    color: #666000;
+    height:26px;
+    line-height:26px;
+    padding-left: 10px;
+}

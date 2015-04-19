@@ -1,0 +1,162 @@
+/*
+ * nirvana
+ * Copyright 2012 Baidu Inc. All rights reserved.
+ *
+ * path:    css/modules/overview-guide.css
+ * desc:    概况页优化包的引导页样式定义
+ * author:  Wu Huiyao(wuhuiyao@baidu.com)
+ * date:    2012/12/03
+ */
+/**
+ * 用于优化包区域新包样式     
+ */
+#AoPackageArea .cont_area .reset_FF {
+    outline: none !important;
+    /*border: 1px solid #FFDA82 !important;*/
+    box-shadow: 0 0 0 1px #FFDA82;
+}
+#AoPackageArea .cont_area .upgrade_pkg,
+#AoPackageArea .cont_area .new_pkg {
+    overflow: visible;
+}
+#AoPackageArea .cont_area .upgrade_pkg:hover,
+#AoPackageArea .cont_area .new_pkg:hover {
+    outline: none;
+    box-shadow: 0 0 0 1px #FFDA82;
+}
+.newpkg_highlight,
+.upgradepkg_highlight {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    border-width: 2px;
+    border-style: solid;
+}
+.newpkg_highlight {
+    border-color: #F66948;
+}
+.upgradepkg_highlight {
+    border-color: #6AC82C;
+}
+.new_pkg_flag,
+.upgrade_pkg_flag {
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    width: 28px;
+    height: 28px;
+    padding: 1px;
+    background-image: url(../../asset/img/bg_icon.png);
+    background-repeat: no-repeat;
+}
+.new_pkg_flag {
+    background-position: -362px -869px;
+}
+.upgrade_pkg_flag {
+    background-position: -317px -905px;
+}
+#maskLevel11 {
+    opacity: .6;
+    filter:alpha(opacity=50);
+}
+/*
+ * 行业包引导页定制样式
+ */
+.industry_pkg_guide .guide-content a.close:hover {
+    background-position: -64px -155px;
+}
+.industry_pkg_guide .guide-content a.try {
+    background-position: 0 -249px;
+}
+.industry_pkg_guide .guide-content a.try:hover {
+    background-position: -161px -249px;
+}
+.industry_pkg_guide .guide-indicator span {
+    background-position: -45px -183px;
+}
+/*
+ * 重点词排名包引导页定制样式
+ */
+.corewords_pkg_guide .guide-content a.close:hover {
+    background-position: -96px -155px;
+}
+/*
+ * 移动包引导页定制样式
+ */
+.mobile_pkg_guide .guide-content a.try {
+    left: 535px;
+    top: 369px;
+}
+.mobile_pkg_guide .guide-content a.close:hover {
+    background-position: -128px -155px;
+}
+/*
+ * 行业旺季包引导页定制样式
+ */
+.season_pkg_guide .guide-content a.close:hover {
+    background-position: -128px -155px;
+}
+.season_pkg_guide .guide-indicator span {
+    background-position: -81px -183px;
+}
+.season_pkg_guide .guide-indicator span.sel-page {
+    background-position: -63px -183px;
+}
+/*
+ * 无线建站引导页定制样式
+ */
+.wireless-guide .guide-content a.try {
+    background-position: 0 -300px;
+    width: 182px;
+    height: 56px;
+    left: 483px;
+    bottom: 51px;
+}
+.wireless-guide .guide-content a.try:hover {
+    background-position: 0 -300px;
+}
+.wireless-guide .guide-content a.close {
+    top: 7px;
+}
+.wireless-guide .guide-content a.close:hover {
+    background-position: -128px -155px;
+}
+.wirelss-guide-intro,
+.wireless-activity {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-family: '微软雅黑';
+}
+.wirelss-guide-intro {
+    font-size: 16px;
+    top: 95px;
+    right: 30px;
+    width: 255px;
+    line-height: 24px;
+}
+.wireless-industry-name,
+.wireless-usernum {
+    font-size: 20px;
+    color: #FFCE31;
+}
+.wireless-activity {
+    bottom: 30px;
+    right: 64px;
+}
+/**
+ * 智能优化积分活动引导页定制样式
+ */
+.aopoint-guide .guide-content a.try {
+    background-image: url(../../asset/img/guide/ao_point_activity.png);
+    background-position: -3px -445px;
+}
+.aopoint-guide .guide-content a.try:hover {
+    background-position: -3px -445px;
+}
+.aopoint-guide .guide-content a.close:hover {
+    background-image: url(../../asset/img/guide/ao_point_activity.png);
+    background-position: -168px -455px;
+}

@@ -1,0 +1,25 @@
+<!-- target:planUnitEditFormItem -->
+<div>
+    <input type="radio" ui="type:Radio;id:planunit-edit-type-old"
+           name="planunit-edit-type" value="0" title="选择已有" />
+    <input type="radio" ui="type:Radio;id:planunit-edit-type-new"
+           name="planunit-edit-type" value="1" title="选择新建" />
+</div>
+<div class="planunit-edit-panel hide" edittype="old">
+    <div ui="id:wordtarget-plan-old;type:Select;width:150;"></div>
+    <div ui="id:wordtarget-unit-old;type:Select;width:150;"></div>
+</div>
+<div class="planunit-edit-panel hide" edittype="new">
+</div>
+
+<!-- target:planUnitEditDlg -->
+<div class="aopkg-form aopkg-wordtarget-form">
+    <dl class="aopkg-form-wrapper">
+        <dt class="aopkg-form-label {wordStyle}">关键词：</dt>
+        <dd class="aopkg-form-value {wordStyle}">{showword}</dd>
+        <dt class="aopkg-form-label">计划和单元：</dt>
+        <dd class="aopkg-form-value">
+            <!-- import:planUnitEditFormItem -->
+        </dd>
+    </dl>
+</div>

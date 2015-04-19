@@ -1,0 +1,25 @@
+/*
+ * cb-web
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:   .ui_materiallevel.css
+ * desc:    物料层级组件
+ * author:  zhouyu
+ * date:    2010/12/24
+ */
+
+.ui_materiallevel{
+	height:30px;
+	line-height:22px;
+}
+.ui_materiallevel i{
+	font-style:normal;
+	color:#999;
+	padding:0 2px;
+}
+.ui_materiallevel_word{
+	color:blue;
+	cursor:pointer;
+}
+
+

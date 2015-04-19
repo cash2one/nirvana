@@ -1,0 +1,14 @@
+.fc-ui-materialmarquee {
+    background-color: #FFFAD2;
+    border-radius: 3px;
+}
+.fc-ui-materialmarquee .marquee-label {
+    color: #EC9464;
+}
+.fc-ui-materialmarquee .marquee-slider li {
+    border-right: 1px solid #BCCAF7;
+}
+
+.fc-ui-materialmarquee .marquee-slider .marquee-item-selected {
+    font-weight: bold;
+}

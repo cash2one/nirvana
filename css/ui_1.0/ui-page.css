@@ -1,0 +1,99 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui_page.css
+ * desc:    分页结构样式
+ * author:  wanghuijun
+ * date:    2010/12/13
+ */
+
+/**分页控件**/
+.ui_page ul {
+	border:1px solid #CCC;
+	display:inline-block;
+	*display:inline;
+	height:26px;
+	*height:23px;
+	overflow:hidden;
+	*zoom:1;
+}
+.ui_page_match{
+	display:inline-block;
+	*display:inline;
+	margin-left:15px;
+}
+.ui_page_match ul{
+	margin-left:20px;
+	border:none;
+}
+.ui_page li {
+	color:#03C;
+	cursor:pointer;
+	display:inline-block;
+	*display:inline;
+	font-family:Verdana, "宋体";
+	height:12px;
+	line-height:12px;
+	*margin:-3px 0 0;
+	overflow:hidden;
+	padding:7px 6px;
+	*zoom:1;
+}
+
+.ui_page li.ui_page_prev, .ui_page li.ui_page_next {
+	background:url("../../asset/img/bg_icon.png") no-repeat -195px -851px;
+	padding:7px 14px;
+	*padding:9px 14px 5px;
+}
+.ui_page li.ui_page_prev {
+	padding-right:5px;
+}
+.ui_page li.ui_page_next {
+	background-position:-255px -851px;
+	padding-left:5px;
+}
+.ui_match .ui_page li.ui_page_prev ,.ui_match .ui_page li.ui_page_next {
+	*padding-bottom : 8px;
+}
+.ui_page li.omit {
+	color:#CCC;
+	cursor:default;
+	font-weight:bold;
+	line-height:6px;
+}
+.ui_page li.ui_page_hover {
+	background-color:#E4E9F9;
+}
+.ui_page li.ui_page_active {
+	color:#5B5B5B;
+	cursor:default;
+	font-size:16px;
+	font-weight:bold;
+	height:16px;
+	line-height:16px;
+	padding:5px 6px;
+}
+.ui_page_match li.ui_page_active {
+	font-size:12px;
+	*margin:-3px 0 0;
+	overflow:hidden;
+	*padding:7px 6px;
+	*zoom:1;
+}
+.ui_page li.ui_page_disabled {
+	color:#CCC;
+	cursor:default;
+}
+.ui_match .match_total{
+	display:inline-block;
+	*display:inline;
+	font-family:Verdana, "宋体";
+	height:12px;
+	line-height:12px;
+	*margin:-3px 0 0;
+	overflow:hidden;
+	padding:7px 6px;
+	*padding-bottom:5px;
+	*zoom:1;
+}

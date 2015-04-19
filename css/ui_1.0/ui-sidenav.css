@@ -1,0 +1,192 @@
+.ui_sidenav {
+    width:202px;
+    background:#fff;
+    left:10px;
+    position:absolute;
+}
+.ui_sidenav_header{
+	height:37px;
+	background:transparent url('../../asset/img/bg_icon.png') left -788px no-repeat;
+}
+
+.ui_sidenav_header h3{
+	display:inline-block;
+	height:35px;	
+	line-height:35px;
+	padding-left:7px;
+}
+
+.ui_sidenav_icon_account{
+	background:transparent url('../../asset/img/bg_icon.png') -349px -106px no-repeat;
+	padding-right:15px;
+	height:12px;
+}
+.ui_sidenav_icon_folder{
+	background:transparent url('../../asset/img/bg_icon.png') -369px -106px no-repeat;
+	padding-right:15px;
+	height:13px;
+}
+.ui_sidenav_autohide, .ui_sidenav_fixed, .ui_sidenav_autohide_hover, .ui_sidenav_fixed_hover{
+	width:59px;
+	height:15px;
+	margin:10px 10px 0 0;
+	vertical-align:middle;
+	background:transparent url('../../asset/img/bg_icon.png') left -65px no-repeat;
+	cursor:pointer;
+	float:right;
+}
+.ui_sidenav_autohide_hover{
+	background-position:left -85px;
+}
+.ui_sidenav_fixed{
+	width:36px;
+	background-position:-64px -65px;
+}
+.ui_sidenav_fixed_hover{
+	width:36px;
+	background-position:-64px -85px;
+}
+.ui_sidenav_content{
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+.ui_sidenav_foot{
+	height:6px;
+	background:transparent url('../../asset/img/bg_icon.png') left -827px no-repeat;
+}
+.ui_sidenav_minibar {
+    position:fixed;
+    width:25px;
+    border-right:1px solid #d1d1d1;
+    background:#eaeaea;
+    z-index:1;
+    cursor:pointer;
+    _position:absolute;
+}
+.ui_sidenav_minibar_top{
+	background:transparent url('../../asset/img/bg_icon.png') right -100px no-repeat;
+	position:absolute;
+	top:0;
+	right:-1px;
+	width:26px;
+	height:6px;
+	zoom:1;
+}
+.ui_sidenav_minibar_bottom{
+	background:transparent url('../../asset/img/bg_icon.png') right -110px no-repeat;
+	position:absolute;
+	bottom:0;
+	right:-1px;
+	width:26px;
+	height:6px;
+	zoom:1;
+}
+.ui_sidenav_minibar_hover {
+   
+}
+
+.ui_sidenav_minibar_text{
+	width:12px;
+	margin:0 auto;
+	padding:8px 0;
+}
+.ui_sidenav_minibar_arrow{
+	background:transparent url('../../asset/img/bg_icon.png') -100px -860px no-repeat;
+	width:6px;
+	height:10px;
+	position:absolute; 
+	top:50%; 
+	left:50%;
+	margin:-5px 0 0 -3px;
+}
+.ui_sidenav_minibar_hover .ui_sidenav_minibar_text{
+	color : blue;
+}
+.ui_sidenav_minibar_hover .ui_sidenav_minibar_arrow{
+	background-position: -300px -860px;
+}
+.ui_sidenav_neighbor {
+    margin-left:220px;
+}
+
+.ui_sidenav_neighbor_hide {
+    margin-left:35px;
+}
+/*
+ * 计划状态
+ * 0, "有效"					绿
+ * 1, "处在暂停时段"			黄
+ * 2, "暂停推广"				黄
+ * 3, "推广计划预算不足"		红
+ * 11, "账户预算不足"		红
+ */
+.ui_sidenav_status_wrap{
+	position:relative;
+}
+.ui_sidenav_status_wrap span{
+	background:transparent url('../../asset/img/bg_icon.png') 0 0 no-repeat;
+	width:8px;
+	height:8px;
+	zoom:1;
+	position:absolute;
+	left:-12px;
+	bottom:0;
+}
+span.ui_sidenav_plan_status_0{
+	background-position:-117px -132px;
+}
+span.ui_sidenav_plan_status_1,span.ui_sidenav_plan_status_2{
+	background-position:-128px -132px;
+}
+span.ui_sidenav_plan_status_3,span.ui_sidenav_plan_status_11{
+	background-position:-139px -132px;
+}
+/**
+ * 单元状态
+ * 0, "有效"					绿
+ * 1, "暂停推广"				黄
+ * 11, "推广计划暂停推广"	黄
+ */
+span.ui_sidenav_unit_status_0{
+	background-position:-70px -130px;
+	top:3px;
+}
+span.ui_sidenav_unit_status_1,span.ui_sidenav_unit_status_11{
+	background-position:-85px -130px;
+	top:3px;
+}
+/*
+ * 下层物料为空的提醒
+ */
+.ui_sidenav .mtl_empty_remind{
+	display:inline-block;
+	font-size:10px;
+	color:#fff;
+	padding:0 5px;
+	background-color:red;
+	position:relative;
+	top:-2px;
+	*top:0;
+}
+.ui_sidenav tr[nodeType="children"] .mtl_empty_remind{
+	top:-5px;
+	*top:0;
+}
+.ui_sidenav .ui_sidenav_mtl_name{
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+	display:inline-block;
+	max-width:130px;
+}
+.ui_sidenav tr[nodeType="children"] .ui_sidenav_mtl_name{
+	line-height:18px;
+}
+.ui_sidenav .ui_accordion_header .mtl_empty_remind{
+	display:inline-block;
+	font-size:10px;
+	line-height:12px;
+	color:#fff;
+	padding:0 5px;
+	background-color:red;
+}

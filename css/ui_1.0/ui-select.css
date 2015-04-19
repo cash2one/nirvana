@@ -1,0 +1,187 @@
+/*
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-select.css
+ * desc:    组合框样式
+ * author:  linzhifeng
+ * date:    2010/12/16
+ */
+
+/**
+ * 基础样式
+ */
+
+.ui_select {
+    font-size:12px;
+	margin:0px 3px;
+	height:20px;
+	line-height:22px;
+	vertical-align:middle;
+    background:#FFF;
+    border:1px solid #bdbdbd;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+.ui_select_disabled, .ui_select_readonly{
+    border:1px solid #ccc;
+    background:#EEE;
+    color:#999;
+}
+.select_menu{
+	background: #fff url(../../asset/img/bg_icon.png) left -209px no-repeat;
+	border-width:0;
+	height:22px;
+}
+.select_button{
+	background: #fff url(../../asset/img/bg_icon.png) left -209px no-repeat;
+	border-width:0;
+	height:22px;
+}
+/*当前文字*/
+.ui_select_cur {
+    padding:0 0 0 4px;
+	height:18px;
+	line-height:19px;
+	line-height:21px\0;
+	vertical-align:middle;
+    text-align:left;
+    color:#000;
+    cursor:pointer;
+    overflow:hidden;
+	float:left;
+}
+.select_menu .ui_select_cur,.select_button .ui_select_cur{
+	padding:1px 0 0 4px;
+}
+/*默认文字*/
+.ui_select_cur_def {
+    color:#333;
+}
+.ui_select_disabled .ui_select_cur, .ui_select_readonly .ui_select_cur{
+    background:#EEE;
+    color:#aaa;
+    cursor: default;
+}
+.ui_select_disabled .ui_select_cur{
+	background:transparent;
+}
+.select_menu.ui_select_disabled .ui_select_cur,.select_menu.ui_select_readonly .ui_select_cur
+.select_button.ui_select_disabled .ui_select_cur,.select_button.ui_select_readonly .ui_select_cur{
+    background:none;
+    color:#aaa;
+}
+
+.ui_select_btn {
+    float:right;
+    width:19px;
+	border-left:1px solid #ccc;
+	height:20px;
+	margin-left:2px;
+    background: #fff url(../../asset/img/bg_icon.png) -2px -561px no-repeat;	
+    cursor:pointer;
+}
+.ui_select_disabled .ui_select_btn {
+	background: #fff url(../../asset/img/bg_icon.png) -2px -561px no-repeat;
+}
+.ui_select_disabled .ui_select_btn, .ui_select_readonly .ui_select_btn{
+    cursor: default;
+}
+.select_menu .ui_select_btn{
+	width:20px;
+	height:22px;
+	border-width:0;
+	background: #fff url(../../asset/img/bg_icon.png) right -545px no-repeat;	
+}
+.select_button .ui_select_btn{
+	width:20px;
+	height:22px;
+	border-width:0;
+	background: #fff url(../../asset/img/bg_icon.png) right -611px no-repeat;	
+}
+.ui_select_layer {
+    text-align:left;
+	z-index:2000;
+    background:#FFF;
+    border:1px solid #888F9B;
+    font-size:12px;
+    position:absolute;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.ui_select_item {
+    line-height:18px;
+    height:18px;
+    background:#FFFFFF;
+    border:1px solid #FFF;
+    padding:1px 2px;
+    cursor:pointer;
+    overflow:hidden;
+    zoom:1;
+}
+
+.select_button_layer .ui_select_item {
+	color:#03C;
+}
+/**
+ * 状态样式
+ */
+/*normal*/
+.ui_select_hover,.ui_select_active{
+	border:1px solid #888F9B;
+}
+.ui_select_hover .ui_select_btn{
+	border-left:1px solid #888F9B;
+	background-position:-32px -561px;
+}
+.ui_select_active .ui_select_btn{
+	border-left:1px solid #888F9B;
+	background-position:-32px -591px;
+}
+/*menu模式*/
+.select_menu.ui_select_hover,.select_menu.ui_select_active{
+	border-width:0;
+	background-position:left -253px;
+}
+.select_menu.ui_select_hover .ui_select_btn{
+	border-width:0;
+	background-position:right -567px;
+}
+.select_menu.ui_select_active .ui_select_btn{
+	border-width:0;
+	background-position:right -589px;
+}
+/*button模式*/
+.select_button.ui_select_hover{
+	border-width:0;
+	background-position:left -253px;
+}
+.select_button.ui_select_active {
+	border-width:0;
+    background-position:left -231px;
+}
+
+.select_button.ui_select_hover .ui_select_btn {
+	border-width:0;
+    background-position:right -633px;
+}
+.select_button.ui_select_active .ui_select_btn {
+	border-width:0;
+    background-position:right -655px;
+}
+.select_button_layer.ui_select_layer{
+	border-top-width:0;
+}
+
+
+.ui_select_item_hover {
+	background-color: #E4EAF9;
+}
+.ui_select_item_disabled {
+    color: #CCC !important;
+    cursor:default !important;
+}
+.ui_select_item_selected {
+    background-color: #DBE2F7;
+}

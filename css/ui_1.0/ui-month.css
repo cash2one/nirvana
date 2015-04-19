@@ -1,0 +1,61 @@
+/*
+ * cb-web
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-month.css
+ * desc:    月份组件
+ * author:  zhaolei,erik
+ * date:    $Date: 2010/05/10 08:59:23 $
+ */
+
+.ui-month {
+    width:190px;
+    text-align:center;
+}
+
+.ui-month table {
+    background:#FFF;
+    border:1px solid #D3DDE9;
+}
+
+.ui_month_title {
+    width:27px;
+    height:22px;
+    line-height:22px;
+    background:#F1F1F1;
+    color:#999;
+}
+
+.ui_month_item,
+.ui_month_virtual {
+    width:26px;
+    height:22px;
+    line-height:22px;
+    border-bottom:1px solid #F1F1F1;
+    cursor:pointer;
+    color:#3600BE;
+}
+
+.ui_month_over {
+    background:#E4EAF9;
+}
+
+.ui_month_selected{
+    background:#FFF6BD;
+    color:#333;
+}
+
+.ui_month_inrange {
+ 	
+ }
+
+.ui_month_selected {
+    font-weight:700;   
+}
+
+.ui_month_virtual {
+    color:#ccc;
+    cursor:default;
+	font-weight:normal;
+	background:none;
+}

@@ -1,0 +1,362 @@
+<!-- target:fclabAbtestInfo -->
+<div id="FclabAbtestInfo">
+	<div class="abtest_info_title">
+		<h1>方案实验工具</h1>
+		<div class="tool_operation">
+			<span class="new_oper" id="CreateNewTest1" data-log="{target:'labCreateNewTest_btn'}">+ 新建实验</span>
+			<span class="backto_intro hide">查看介绍</span>
+		</div>
+	</div>
+	<div class="abtest_statistics">
+		<ul class="abtest_sort" id="AbtestSort">
+			<li stat=0 class="current">全部(<span id="SortAllCnt"></span>)</li>
+			<li stat=1>未开始(<span id="SortNewCnt"></span>)</li>
+			<li stat=2>实验中(<span id="SortDoingCnt"></span>)</li>
+			<li stat=3>已完成(<span id="SortDoneCnt"></span>)</li>
+		</ul>
+		<ul class="abtest_cnt">
+			<li><div id="AllMtlCnt"></div><p>累计实验对象数量</p></li>
+			<li><div id="MtlCnt"></div><p>当前实验对象数量</p></li>
+			<li><div id="AllTestcnt"></div><p>累计实验数量</p></li>
+			<li><div id="TestCnt"></div><p>当前实验数量</p></li>
+		</ul>
+	</div>
+	<div id="AbtestList"></div>
+	<div ui="id:AbtestListPage;type:Page;"></div>
+</div>
+<form method="POST" id="TestMtlForm" name="testMtlForm"></form>
+
+<!-- target:abtestItem -->
+<div class="abtest_item">
+	<table cellpadding=0 cellspacing=0 width=100%>
+		<tr class="abtest_item_info">
+			<td align=left>{0}<span class="abtest_item_name">{1}</span></td>
+			<td align=right>
+				{4}
+				<div class="abtest_item_duration">
+					<span>共{2}个关键词</span>
+					<span>|</span>
+					<span>{3}</span>
+				</div>
+			</td>
+			<td rowspan=2 class="abtest_item_operation" labid="{7}">{5}</td>
+		</tr>
+		<tr height=120>
+			<td colspan=2>{6}</td>
+		</tr>
+	</table>
+</div>
+
+
+<!-- target:abtestOperation1 -->
+<p op="begin" data-log="{target:'labStartTest_btn'}">开始</p>
+<p op="edit" data-log="{target:'labEditTest_btn'}">编辑</p>
+<p op="delete" data-log="{target:'labDeleteUnstartTest_btn'}">删除</p>
+
+<!-- target:abtestOperation2 -->
+<p op="viewdata" labname="{0}" data-log="{target:'labViewTestData_btn'}">查看数据</p>
+<p op="downdata" data-log="{target:'labDownLoadTestData_btn'}">下载数据</p>
+<p op="delete" data-log="{target:'labDeleteUndergoingTest_btn'}">删除</p>
+
+<!-- target:abtestOperation3 -->
+<p op="viewreport" labname="{0}" data-log="{target:'labViewTestReport_btn'}">查看报告</p>
+<p op="downreport" data-log="{target:'labDownLoadTestReport_btn'}">下载报告</p>
+<p op="delete" data-log="{target:'labDeleteDoneTest_btn'}">删除</p>
+
+
+<!-- target:abtestPkBar -->
+<div class="abtest_pkbar_head">
+	<p>实验组</p>
+	<p class="abtest_pkbar_vsicon">VS</p>
+	<p>对照组</p>
+</div>
+<!-- import:abtestPkBarList -->
+	
+	
+<!-- target:abtestPkBarList -->
+<div class="abtest_pkbar">
+	<ul>{0}</ul>
+</div>
+
+<!-- target:abtestPkBarItem -->
+<li class="abtest_pkbar_{0}">
+	<p>{1}:<b>{2}</b>{3}</p>
+	<div class="pkbar_square">{4}</div>
+	<div class="pkbar_square">{5}</div>
+	<p>{1}:<b>{6}</b></p>
+</li>
+
+
+<!-- target:abtestNodata -->
+<div class="abtest_item notest">
+	<p>您可以创建第一个实验，了解实验流程，并向我们提出您的建议</p>
+	<span class="new_oper" id="CreateNewTest2" data-log="{target:'labCreateNewTest_btn'}">+ 新建实验</span>
+</div>
+
+
+
+<!-- target:createTest -->
+<div class="create_test_head">
+	<ul>
+		<li id="CreateTestHead1">
+			1.实验基本设置
+		</li>
+		<li>></li>
+		<li id="CreateTestHead2">
+			2.设定实验类型、选定对象
+		</li>
+		<li>></li>
+		<li id="CreateTestHead3">
+			3.设置实验组内容
+		</li>
+	</ul>
+</div>
+<div id="CreateTestBody">
+	<!-- import:createTestStep1 -->
+	<!-- import:createTestStep2 -->
+	<!-- import:createTestStep3 -->
+</div>
+
+<!-- target:createTestStep1 -->
+	<div id="CreateTestStep1" class="abtest_step_container hide">
+		<ul class="abtest_step_layer">
+			<li>
+				<p>实验名称：<span id="NewTestNameError" class="red hide"></span></p>
+				<p class="clearfix"><input type="text" ui="id:newTestName;type:TextInput;width:300;height:25;" /></p>
+			</li>
+			<li>
+				<p>
+					实验持续时间：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="实验持续时间">&nbsp;</span>
+				</p>
+				<div id="DurationBar"></div>
+				<p class="hint">为保证最佳实验效果，推荐您实验3周</p>
+			</li>
+			<li>
+				<p>
+					流量分配：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="流量分配">&nbsp;</span>
+				</p>
+				<div class="ratio_slide_value clearfix">
+					<p class="fleft">实验组：<b id="ExperRatio"></b><b>%</b></p>
+					<p class="fright rightalign">对照组：<b id="CompareRatio"></b><b>%</b></p>
+				</div>
+				<div id="RatioSlideBar"></div>
+				<p class="hint">为保证最佳实验效果，推荐您保持默认设置</p>
+				<p class="hint">我们会根据您对流量的分配，将您所挑选的实验对象在实验组设置和对照组设置下均匀的展示广告</p>
+			</li>
+			<li class="clearfix">
+				<div ui="id:ToCreateTestStep21;type:Button;">下一步</div>
+			</li>
+		</ul>
+	</div>
+
+<!-- target:createTestStep2 -->
+	<div id="CreateTestStep2" class="abtest_step_container hide">
+		<ul class="abtest_step_layer">
+			<li>
+				<p>实验类型：</p>
+				<div id="LabTypeBar"></div>
+			</li>
+			<li>
+				<p>重点关注指标：</p>
+				<div id="LabFocusBar"></div>
+				<p class="hint">我们将根据您选择的重点关注指标为您的实验结果提供分析</p>
+			</li>
+			<li>
+				<div class="clearfix">
+					<p class="fleft">
+						选择实验对象（<span id="TestWordsChosen"></span>/100）：
+						<span class="hide red" id="TestWordsUpperHint"></span>
+					</p>
+					<p class="fright rightalign hint">
+						选择完毕请检测关键词是否符合实验规则
+						<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="实验规则">&nbsp;</span>
+					</p>
+				</div>
+				<div class="test_words_chosen clearfix">
+					<div class="fleft test_words_list">
+						<div ui="id:testWordList;"></div>
+						<div class="test_words_check">
+							<div class="fleft link" id="CheckWordsAvailable">检测可否实验</div>
+							<div class="fright rightalign">
+								<span class="red" id="TestWordsUnavail"></span>个不符合&nbsp;&nbsp;
+								<span class="link hide" id="DeleteUnavailWords">删除</span>
+							</div>
+						</div>
+					</div>
+					<div class="fright">
+						<div ui="id:testWordSelect;"></div>
+					</div>
+				</div>			
+			</li>
+			<li class="clearfix">
+				<div ui="id:ToCreateTestStep1;type:Button;">上一步</div>
+				<div ui="id:ToCreateTestStep3;type:Button;">下一步</div>
+			</li>
+		</ul>
+	</div>
+
+<!-- target:createTestStep3 -->
+	<div id="CreateTestStep3" class="abtest_step_container hide">
+		<div class="manage_option clearfix">
+			<div ui="id:setTestWordsBid;type:Button;">批量设置实验出价</div>
+			<div class="fleft testbid_hint">实验结束后关键词出价将恢复为现有出价，您可在实验报告中应用实验组出价</div>
+		</div>
+		<div class="noborder test_bidset_table" ui="id:testBidSetTable"></div>
+		<div class="clearfix">
+			<div class="fright" ui="id:testBidSetPage;type:Page;"></div>
+		</div>
+		<ul class="abtest_step_layer">
+			<li class="clearfix">
+				<div ui="id:ToCreateTestStep23;type:Button;">上一步</div>
+				<div ui="id:SaveTest;type:Button;" data-log="{target:'labSaveTest_btn'}">保存并关闭</div>
+				<div ui="id:StartTest;type:Button;" data-log="{target:'labStartTest_btn'}">开始实验</div>
+				<div class="fleft" id="CreateTestError"></div>
+			</li>
+		</div>
+	</div>
+	
+<!-- target:testBidTableShowword -->	
+<span class={0} title={1}>{1}</span>
+<span class="ui_bubble table_inline_bubble" bubblesource="{3}" winfoid={2}>&nbsp;</span>
+
+<!-- target:testTableWordsBubble -->	
+<table cellpadding=0 cellspacing=0 class="table_bubble">
+	<tr>
+		<th width=60>推广计划：</td>
+		<td>{0}</td>
+	</tr>
+	<tr>
+		<th align=right>推广单元：</td>
+		<td>{1}</td>
+	</tr>
+	<tr>
+		<th align=right>质&nbsp;&nbsp;量&nbsp;&nbsp;度：</td>
+		<td>{2}</td>
+	</tr>
+	<tr>
+		<th align=right>匹配模式：</td>
+		<td>{3}</td>
+	</tr>
+</table>
+
+<!-- target:testBidTableBid -->	
+<div class="test_edit_column">
+	<div class="edit_td test_edit_row" winfoid={0} control={1}>
+		<span class="title">实验组：</span>
+		<span class="test_bid">{1}</span>
+		<a class="edit_btn" edittype="testbid"></a>
+	</div>
+	<div>
+		<span class="title">对照组：</span>
+		<span>{2}</span>
+	</div>
+</div>
+
+<!-- target:testBidTableDetail -->	
+展现：{0}，点击：{1}，消费：{2}
+<span class="ui_bubble" bubblesource="testTableDetail" winfoid={3}>&nbsp;</span>
+
+<!-- target:testTableDetailBubble -->
+<div class="test_edit_column">
+	<div><b>平均点击价格：</b>{2}</div>	
+	<div><b>转化：</b>{0}</div>
+	<div><b>点击率：</b>{1}</div>
+</div>
+
+<!-- target:setTestWordsBid -->
+<div class="manage_dialog mod_wordbid">
+	<p class="clearfix">
+		<input type="radio" value="1" checked="checked" name="wordbid" title="修改出价:" ui="id:testSameBid;type:Radio" />
+	</p>
+	<p class="clearfix">	
+		<input type="text" ui="id:testSameBidInput;type:TextInput;width:200;height:22;" />&nbsp;元
+	</p>
+	<p class="clearfix">
+		<input type="radio" value="2" name="wordbid" title="比对照组出价:" ui="id:testDiffBid;type:Radio" />
+	</p>
+	<p class="clearfix">
+		<div ui="id:testbidSetType;type:Select;width:60;"></div>
+		<input type="text" ui="id:testDiffBidInput;type:TextInput;width:200;height:22;" />&nbsp;元
+	</p>
+	<div class="word_batch_error_tip" id="testWordBidErrorTip"></div>
+	<div class="ui_dialog_foot">
+		<div ui="id:testWordBidOk;type:Button;">确定</div>
+		<div ui="id:testWordBidCancel;type:Button;">取消</div>
+	</div>
+</div>	
+
+
+<!-- target:checkMtlList -->
+<div class="check_mtl_list">
+	<ul class="clearfix" id="TestMtlTab">
+		<li class="tipprefix">实验状态：</li>
+		<li stat="0">
+			全部（<label></label>）
+		</li>
+		<li stat="1">
+			推荐实验组（<label></label>）
+		</li>
+		<li stat="2">
+			推荐对照组（<label></label>）
+		</li>
+		<li stat="3">
+			推荐继续观察（<label></label>）
+		</li>
+		<li stat="4">
+			调整完成（<label></label>）
+		</li>
+	</ul>
+	<div id="viewTestConfig">查看实验配置</div>
+	<div id="TestMtlTotal"></div>
+	<div class="manage_option clearfix" id="testMtlOpContainer"></div>
+	<div class="noborder test_mtl_table" ui="id:testMtlListTable"></div>
+	<div class="clearfix">
+		<div class="fright" ui="id:testMtlPage;type:Page;"></div>
+	</div>
+</div>
+
+<!-- target:testMtlDownload -->
+<div ui="id:downloadTest;type:Button;">{0}</div>
+<div class="fleft testbid_hint">{1}</div>
+
+<!-- target:viewTestConfig -->
+	<div class="abtest_step_container abtest_config_dialog">
+		<ul>
+			<li>
+				<p>
+					实验持续时间：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="实验持续时间">&nbsp;</span>
+				</p>
+				<div id="ConfigDurationBar"></div>
+				<p class="hint" id="ConfigDuration"></p>
+			</li>
+			<li>
+				<p>重点关注指标：</p>
+				<div id="ConfigFocusBar"></div>
+			</li>
+			
+            <li>
+                <p> 流量分配：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="流量分配">&nbsp;</span> </p>
+                <div class="ratio_slide_value clearfix">
+	                <p class="fleft">实验组：<b>{0}%</b></p>
+	                <p class="fright rightalign">对照组：<b>{1}%</b></p>
+                </div>
+                <div class="slidebar_outter">
+                    <span style="width:{0}%"></span><span style="width:{1}%" class="compare"></span>
+                </div>
+            </li>
+		</ul>
+	</div>
+	
+<!-- target:viewTestTableShowWord -->
+<div class="compare_row">
+	<span class={0} title={1}>{1}</span>
+	<span class="ui_bubble table_inline_bubble {8}" bubblesource="{3}" winfoid={2}>&nbsp;</span>
+</div>
+<div class="compare_row">
+	置信度：
+	<div class="inline_block" title="{7}">
+		<span class="{4}"></span>
+		<span class="{5}"></span>
+		<span class="{6}"></span>
+	</div>
+</div>

@@ -1,0 +1,42 @@
+.ui_selectcombo{
+		border:1px solid #a8adb6;
+		border-top:2px solid #394459;
+		padding:5px;
+		position:relative;
+}
+.ui_selectcombo .ui_page{
+	margin-top:10px;
+}
+
+/**
+ * 关闭
+ */
+.ui_selectcombo_close{
+	position:absolute;
+	top:6px;
+	right:6px;
+	background:url(../../asset/img/bg_icon.png) no-repeat -150px -65px;
+	width:12px;
+	height:12px;
+	cursor:pointer;
+}
+
+td .ui_selectcombo_disabled{
+	color:#999999;
+	cursor:default;
+	text-decoration:none;
+}
+.ui_selectcombo .mtl_showdel {
+	border-top:1px solid #999;
+	height:30px;
+	padding:0 10px 0 0;
+	text-align:right;
+}
+.ui_selectcombo .mtl_showdel input {
+	position:relative;
+	top:2px;
+}
+.ui_selectcombo .mtl_showdel label {
+	color:#666;
+	position:relative;
+}

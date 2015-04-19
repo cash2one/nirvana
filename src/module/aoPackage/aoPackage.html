@@ -1,0 +1,152 @@
+<!-- target:defaultAoPkgTpl -->
+<div id="{appID}AoPkgContainer" class="aopkg_container">
+	<div id="{appID}AoPkgOverviewContainer" class="aopkg_overview_main">
+		<div id="{appID}AoPkgOverviewHeader" class="aopkg_overview_header"></div>
+		<div id="{appID}AoPkgDataAreaContainer" class="aopkg_dataarea_container">
+			<div id="{appID}AoPkgDataAreaDesc" class="aopkg_dataarea_desc"></div>
+			<div id="{appID}AoPkgDataAreaMain" class="aopkg_dataarea_main"></div>
+			<div id="{appID}AoPkgDataAreaLoading" class="aopkg_dataarea_loading hide">
+				<img src="./asset/img/loading_ao.gif" />
+				数据正在加载中...
+			</div>
+		</div>
+		<div class="aopkg_manager_container" id="{appID}AoPkgManagerContainer">
+		    <div class="aopkg_manager_bg"></div>
+			<h2 id="{appID}AoPkgManagerTitle" class="aopkg_manager_title"></h2>
+			<div id="{appID}AoPkgManagerMain" class="aopkg_manager_main"></div>
+		</div>
+	</div>
+	<div id="{appID}AoPkgDetailContainer" class="aopkg_detail_main" style="display:none;">
+	</div>
+</div>
+	
+<!-- target:aoPkgFooterApplyAllBtn -->
+		<div ui="id:{appID}AoPkgApplyAllBtn;type:Button;">应用所选</div>
+<!-- target:aoPkgFooterCloseBtn -->
+		<div ui="id:{appID}AoPkgCloseBtn;type:Button;">关闭</div>
+
+<!-- target:aoPkgDefaultDetail -->
+	<div class="aopkg_detail_container">
+		<div id="AoPkgDetailMain">
+		</div>
+	</div>
+
+<!-- target: aoPkgAbsItemBtn -->
+<a class="aopkg_btn" href="javascript:void 0;">查看详情</a>
+<!-- target: aoPkgAbsItemEnableAllBtn -->
+<a class="aopkg_enable" href="javascript:void 0;">全部启用</a>
+
+<!-- target:aoPkgCheckableOptItem -->
+<li id="AoPkgAbsItem{opttypeid}" action_data="{opttypeid}" class="aopkg_absmainitem">
+    <p class="aopkg_manager_checkableItem">
+        <label for="AoPackageOptimizerCheckbox{opttypeid}" action_data="{opttypeid}">
+            {detailhtml}
+            {plushtml}
+        </label>
+    </p>
+    <input hidefocus="true" type="checkbox" checked="checked" id="AoPackageOptimizerCheckbox{opttypeid}" action_type="{input_action_type}" action_data="{input_action_data}"{input_plusattr} class="aopkg_checkbox">
+</li>
+
+<!-- target:aoPkgDefaultOptItem -->
+<li id="AoPkgAbsItem{opttypeid}" action_data="{opttypeid}" class="aopkg_absmainitem">
+    <p>
+        {detailhtml}
+        {plushtml}
+    </p>
+</li>
+
+<!-- target:aoPkgExtendableMainItem -->
+{itemhtml}
+<ul id="AoPkgSublist{opttypeid}" class="aopkg_sublist{extraclassname}">{subhtml}</ul>
+
+<!-- target:aoPkgExtendableSubItem -->
+<li id="AoPkgAbsItem{opttypeid}" action_data="{opttypeid}" class="aopkg_abssubitem">
+    <p class="aopkg_manager_checkableItem">
+        <label for="AoPackageOptimizerCheckbox{opttypeid}" action_data="{opttypeid}">
+            {detailhtml}
+            {plushtml}
+        </label>
+    </p>
+    <input hidefocus="true" type="checkbox" checked="checked" id="AoPackageOptimizerCheckbox{opttypeid}" action_type="{input_action_type}" action_data="{input_action_data}"{plusattr} class="aopkg_checkbox">
+</li>
+
+
+<!-- target:aoPkgAbsTimeTip -->
+<span class="aopkg_time" title="%tiptime">%time</span>
+<span class="aopkg_meta"></span>
+
+
+<!-- target:aoPkgAbsRankNo -->
+<span class="aopkg_rank"></span>
+
+<!-- target:aoPkgAbsItemTimeoutInfo -->
+<span class="aopkg_timeout" title="{msg}">请求超时</span>
+
+<!-- target:aoPkgAbsItemNeedRefreshInfo -->
+<span class="{classname}">
+	{msg}，请<a id="AoPkgItemRefresher{opttypeid}" href="javascript:void 0;" class="aopkg_refresh_btn">重新获取</a>
+</span>
+
+
+<!-- target:aoPkgAbsTimeout -->
+<p>
+	%msg
+	<span class="aopkg_time" title="该时间为最近一次分析完成的时间。">%time</span>
+	<span class="aopkg_meta aopkg_timeout" title="%msg">超时</span>
+	<!-- import:widgetLevelTip -->
+</p>
+
+
+<!-- target:aoPkgDetail -->
+<div class="aopkg_widget_cont ${opttype_class}" id="WidgetCont">
+	<div class="aopkg_widget_title">
+		<h3>${widget_title}</h3>
+		<h4 class="return">返回上一级</h4>
+	</div>
+	<div class="aopkg_widget_tip ${widget_tipclass}">${widget_tip}</div>
+	<div class="aopkg_widget_tab ${widget_tabclass}">
+		<div ui="id:WidgetTab;type:Tab;"></div>
+	</div>
+   <!-- <div class="aopkg_widget_select ${widget_selectclass}">
+        筛选方案：&lt;!&ndash; import:levelSelect &ndash;&gt;
+    </div>-->
+    <div class="aopkg_widget_modify ${widget_modifyclass}">
+        <div class="widget_modify_mr5"  ui="id:WidgetModifyPC;type:Button;">修改PC url</div>
+        <div  ui="id:WidgetModifyMobile;type:Button;">修改移动url</div>
+    </div>
+	<div class="aopkg_widget_query ${widget_queryclass}">
+		<input type="text" ui="id:WidgetQueryInput;type:TextInput;">
+		<div ui="id:WidgetQueryBtn;type:Button;">查询</div>
+		<a>取消查询</a>
+	</div>
+	<div class="aopkg_widget_table">
+		<div ui="id:WidgetTable;type:Table;"></div>
+	</div>
+	<div class="aopkg_widget_page ${widget_pageclass}">
+		<div ui="id:WidgetPage;type:Page;"></div>
+	</div>
+	<div class="aopkg_widget_btn">
+		<div ui="id:WidgetApply;type:Button;">${widget_btn}</div>
+		<h4 class="return">返回上一级</h4>
+		<p id="AoDetailWidgetWarn" class="warn hide">警告信息</p>
+	</div>
+</div>
+
+<!-- target:addwordContainer -->
+<div id="addwordMoreContainer" class="addword_morecontainer">
+    <div ui="id:addwordMore;type:Button;">
+        <span class="arrow_button">获得更多关键词</span>
+    </div>
+</div>
+
+<!-- target:recmwordPkgSearch -->
+<div class="recmword_pkg_search_container">
+	<span>您可能还需要其他关键词</span>
+	<div class="recmword_pkg_search_frame">
+		<input type="text" id="recmwordSearchInput" placeholder="搜索关键词" />
+		<a id="recmwordSearchBtn"></a>
+	</div>
+</div>
+
+<!-- target:inlineModTip -->
+您已经进行了行内修改，需要勾选并点击“{btn}”按钮才能生效。

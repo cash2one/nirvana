@@ -1,0 +1,19 @@
+.button-icon,
+.button-text {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.button-text {
+    height: 16px;
+    line-height: 16px;
+}
+.IE9 .button-text,
+.IE7 .button-text {
+    line-height: 17px;
+}
+.button-placement-left .button-text,
+.button-placement-right .button-icon {
+    margin-right: 4px;
+}

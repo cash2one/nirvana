@@ -1,0 +1,73 @@
+<!-- target:planList -->
+<div class="manage_cont">
+	<div class="manage_section">
+        <div id="manage-stat-container" class="hide">
+		  <!-- import:materialLevel -->
+		  <!-- import:acctStat -->
+        </div>
+        <!-- import:manageStatLoading -->
+		<div class="manage_tab clearfix">
+			<div  ui="id:tab;type:Tab;title:*tab"></div>
+			<div id="ExtraTab"></div>
+			<div class="xijing_clear"></div>
+		</div>
+		<!-- import:materialQuery -->
+        <!-- import:searchComboTip -->
+		<!-- import:materialAo -->
+		<!-- import:materialBulletin -->
+		<div class="manage_option scroll_y_top_fixed">
+            <div class="manage_addword">
+                <span id="BubbleNewAccountTip" _ui="id:BubbleNewAccountTip;type:Bubble;source:tip_newaccount;"></span>
+            	
+                <div ui="id:addplan;type:Button;">新建计划</div>
+				<div ui="id:AddPlanPlus;type:Select;" class="select_button"></div>
+			</div>
+            <div class="manage_option_left"><div ui="id:modifyPlanBudget;type:Button;">修改预算</div></div>
+			<div class="manage_option_left"><div ui="id:runPause;type:Select;datasource:*runPause;value:-9999;width:100;disabled:1;" class="select_menu"></div></div>
+            <div class="manage_option_left"><div ui="id:moreOpt;type:Select;datasource:*moreOpt;value:-9999;width:100;disabled:1;" class="select_menu"></div></div>
+			<div class="manage_option_right"><div ui="id:userDefine;type:Button;skin:select" class="manage_userdefine">自定义列</div></div>
+        </div>
+		<!-- import:planTable -->
+		<!-- import:materialPage -->
+	</div>
+</div>
+
+
+
+<!-- target:mobileNotice -->
+<div class="mobile-notice">
+		<h1>尊敬的客户：</h1>
+		<p> 百度搜索推广平台将在5月18日升级，升级后将取消多设备推广管理选项，您无需任何操作就可以实现推广结果在不同
+屏幕上的展现，并且可以通过调整出价比例来体现您的投放意愿。</p>
+        <div class="mobile-notice-img"></div>
+		<p>您现有的分设备推广计划（仅计算机、仅移动、全部设备）将会在升级时统一转为整合型推广计划，
+即该计划下的关键词在移动设备投放的价格 = PC关键词出价*出价比例（{0}~10）</p>
+
+		<div class="mobile-notice-step">
+		    例如：“鲜花” 升级前出价为1元
+		    </br>
+		    </br>
+			<h4>如在投放设备为“仅计算机”的计划里，</h4>
+			<ul>
+				<li>
+                升级时，计算机设备上的出价不变，移动设备上的出价 = 关键词出价*{0} = 1*{0}
+				</li>
+			</ul>
+			<h4>如在投放设备为“仅移动”的计划里，</h4>
+			<ul>
+				<li>升级时，计算机设备上的出价=（升级前出价/出价比例上限）=1/10；</li>
+				<li>移动设备上的出价 =（升级前出价/出价比例上限）*出价比例上限 = 0.1*10</li>
+			</ul>
+			<h4>其余计划，</h4>
+            <ul>
+                <li>升级时，计算机设备上的出价不变，移动设备上的出价 = 关键词出价*1 = 1*1</li>
+            </ul>
+            <p>建议您提前做好“仅计算机”与“仅移动”计划的合并和迁移，</p>
+            <h3>升级时便可立即体验跨屏多融合营销推广带给您的便捷！</h3>
+		</div>
+	
+</div>
+<div class="mobile-notice-link">
+	<div class="mobile-notice-readbtn" title="我知道了" id="ReadMobileNotice" data-log="{target:'ReadMobileNotice_btn'}"></div>
+	<a class="mobile-link" target="_blank" href="http://yingxiao.baidu.com/support/topic/119/">了解移动搜索推广》</a>
+</div>		

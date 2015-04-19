@@ -1,0 +1,73 @@
+/*
+ * ColorBar组件的样式信息 
+ */
+.ui-colorbar {
+}
+.ui-colorbar li {
+   line-height: normal !important;
+   float: left;
+   vertical-align: middle;
+}
+.ui-colorbar .bar-view {
+    margin: 0px 15px;
+    /*height: 30px;*/
+    /*width: 300px;*/
+    position: relative;
+    overflow: visible;
+}
+.ui-colorbar .bar-view .interval {
+    height: 100%;
+    /*min-width: 36px;*//*如果设置了这个样式，如果前面区间宽度比较大导致最后一个区间宽度已经不足36px为了保证最小宽度，就会导致换行*/
+    float: left;
+    position: relative;
+}
+.ui-colorbar .bar-label {
+    margin-top: -1px;
+    /*line-height: 30px;*/
+    vertical-align: middle;
+    /*color: #FFF;*/
+    text-align: center;
+}
+.ui-colorbar .bar-graduation {
+    position: absolute;
+    text-align: center;
+    /*left: -15px;*/
+    /*top: 30px;*/
+}
+.ui-colorbar .bar-graduation .value{
+    color: #454545;
+    padding-top: 5px;
+}
+.ui-colorbar .bar-graduation .note{
+    color: #C3C3C3;
+    margin-top: 1px;
+}
+/*.ui-colorbar .right-offset {
+    right: -15px;
+    left: inherit;
+}*/
+.ui-colorbar .bar-title, .ui-colorbar .bar-descr {
+    color: #CCCCCC;
+    /*line-height: 30px;*/
+    /*overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;*/
+}
+.ui-colorbar .bar-title {
+    font-weight: bold;
+    color: #B2B2B2;
+}
+.ui-colorbar .bar-descr {
+    /*width: 300px;*/
+    color: #666666;
+}
+.ui-colorbar .bar-mask {
+    left:0;
+    right: 0; 
+    bottom: 0; 
+    background: #000;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    height: 5px;
+    position: absolute;
+}

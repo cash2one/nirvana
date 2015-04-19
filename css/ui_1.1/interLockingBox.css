@@ -1,0 +1,87 @@
+.ui_interlockingbox_arrowLeft{
+    margin-left: 2px;
+    border-width: 5px;
+	border-color: white white white #b5b5b5;
+	border-style: solid;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	display:inline-block;
+}
+.ui_interlockingbox_arrowBottom{
+  	border-width: 5px;
+	border-color: #b5b5b5 white  white white;
+	border-style: solid;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	display:inline-block;
+  	margin-bottom: -4px;
+  	margin-right: 2px;
+}
+.ui_interlockingbox_arrow{
+    margin-left: 7px;
+    float: left;
+	
+    margin-top: 118px;
+}
+.ui_InterLockingBox_Wrapper {
+    overflow-y: auto;
+    margin-top: 7px;
+    height: 203px;
+    width: 275px;
+    float: left;
+    border: 1px solid #ddd;
+}
+
+
+.ui_InterLockingBox_foot {
+    padding-top: 4px;
+    text-align: right;
+    width: 570px;
+    clear: both;
+}
+.ui_InterLockingBox_foot a {
+    margin-left: 128px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.ui_interlockingbox_td1 {
+    border-bottom: 1px solid #DEDEDE;
+    width: 85%;
+    border-right: 1px solid #DEDEDE;
+}
+.ui_interlockingbox_td2 {
+    text-align: center;
+    width: 15%;
+    border-bottom: 1px solid #DEDEDE;
+}
+.ui_InterLockingBox_Wrapper table {}
+.ui_InterLockingBox_Wrapper table {
+    line-height: 28px;
+    width: 100%;
+}
+.ui_interlockingbox_sencondLevel{
+	padding-left: 28px;
+}
+.ui_interlockingbox_grayFont{
+	color: #828282
+}
+.ui_interlockingbox_btnActive{
+	color: #03C
+	
+;
+	cursor: pointer;
+}
+.ui_interlockingbox_btnDisable{
+		color: #828282
+}
+.ui_interlockingbox_firstLevelChar{
+	display: inline-block;
+	
+	margin-left: 12px;
+}
+
+.ui_interlockingbox_firstLevel{
+	cursor: pointer;
+}

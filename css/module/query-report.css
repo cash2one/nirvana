@@ -1,0 +1,412 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    tools-history.css
+ * desc:    搜索词报告样式
+ * author:  wanghuijun
+ * date:    2011/02/10
+ */
+.tools_option_area {
+	background:#E4EAF9;
+	padding:10px 20px 40px;
+	position:relative;
+	z-index:1;
+}
+.material_select_area {
+	line-height:22px;
+	position:relative;
+	width:280px;
+	z-index:2;
+}
+#QueryReportOption h3 {
+	clear:both;
+	line-height:18px;
+	margin:3px 0;
+}
+#QueryReportOption .scope_select_area h3 {
+	margin-top:10px;
+}
+#QueryReportOption h3 span {
+	color:#999;
+}
+#QueryReportOption .ui_selectedlist {
+	background:#FFF;
+	width:270px;
+}
+#QueryReportOption .ui_selectedlist .ui_list {
+	height:135px;
+}
+#QueryReportOption .ui_materialselect {
+	background:#FFF;
+}
+#QueryReportOption #ToolMaterialListWrap {
+    position:absolute;
+    top:0;
+	left:280px;
+}
+.scope_select_area {
+	position:absolute;
+	top:50px;
+	left:350px;
+	z-index:1;
+}
+.day_sensitive {
+	position:absolute;
+	top:34px;
+	left:210px;
+	white-space:nowrap;
+}
+#SearchEngine ,#queryDevice{
+	height:20px;
+}
+#SearchEngine .title ,#queryDevice .title{
+	float:left;
+	line-height:14px;
+	margin:3px 0 0;
+}
+#QueryRegion{
+	left:8px;
+}
+#queryDeviceDialog{
+	width:250px;
+	height:85px;
+	padding-top: 15px;
+	top:110px;
+	left:8px;
+}
+#queryDeviceDialog p{
+	padding : 5px 10px;
+}
+#queryDeviceDialog label{
+	margin-left:5px;
+	vertical-align: top;
+}
+#SEType {
+	font-weight:normal;
+}
+#SEType a {
+	color:#000;
+}
+#SEType .active {
+	font-weight:bold;
+}
+.se_list {
+	height:150px;
+	margin:0 -8px 10px;
+	overflow:auto;
+	position:relative;
+}
+.se_list li {
+	line-height:30px;
+	padding:0 10px;
+}
+.se_list li.odd {
+	background:#F9F9F9;
+}
+.se_list li input {
+	margin:0 5px;
+	position:relative;
+	top:2px;
+}
+#QueryReportRegion {
+	height:25px;
+}
+.query_region {
+	background: #FFF;
+    border: solid gray;
+    border-width: 2px 1px 1px;
+	padding:5px 10px;
+	position:relative;
+	width:400px;
+	z-index:1;
+}
+.query_region .ui_dialog_foot {
+	margin:10px 0;
+}
+.query_region_msg {
+	float:left;
+	line-height:16px;
+}
+#ctrlbuttonBuildReport {
+	position:absolute;
+	left:20px;
+	bottom:10px;
+}
+.tools_content_area {
+	margin:10px;
+}
+.tools_content_title {
+	padding:0 0 0 25px;
+}
+.tools_content_title p {
+	color:#999;
+	line-height:20px;
+}
+.tools_content_area .download_area {
+	margin:-10px 0 10px;
+	text-align:right;
+}
+.tools_content_area .table_area {
+	border:1px solid #CCC;
+}
+.tools_content_area .ui_table {
+	border:0;
+}
+.tools_content_area .ui_table .ui_table_tdbreak {
+	position:relative;
+}
+.tools_content_area .option_area {
+	background:#F2F2F2 url("../../asset/img/bg_icon_left.png") no-repeat 13px -480px;
+	border-bottom:1px solid #CCC;
+	height:22px;
+	padding:3px 0 3px 40px;
+	position:relative;
+}
+.query_tokr {
+	position:absolute;
+	top:8px;
+	right:10px;
+}
+.tools_content_area .manage_page {
+	overflow:hidden;
+    padding:10px;
+}
+/***** 搜索词信息 *****/
+.tools_content_area .ui_table .ui_bubble {
+	border-bottom:1px dashed #CCC;
+	cursor:pointer;
+}
+.query_stat_bubble {
+    color: #666000;
+    _height: 210px;
+    max-height: 210px;
+    overflow: auto;
+	padding:10px 0 0 10px;
+    position: relative;
+}
+.query_stat_bubble h4 {
+    border-bottom: 1px solid #C0B76B;
+    font-weight: bold;
+    margin: 0 5px 0 0;
+    padding: 0 0 6px;
+}
+.query_stat_bubble h4 span {
+    font-weight: normal;
+}
+.query_stat_bubble h4 strong {
+    color: #F00;
+}
+.query_stat_bubble ul {
+    border-bottom: 1px dashed #C0B76B;
+    margin: 0 5px 0 18px;
+    padding: 3px 0 3px 62px;
+    *width: 153px;
+}
+.query_stat_bubble ul.noborder {
+    border: 0;
+    margin-bottom: 10px;
+}
+.query_stat_bubble li {
+    line-height: 20px;
+}
+
+.query_stat_bubble li h5 {
+    margin: 0 0 -20px;
+    position: relative;
+    left: -62px;
+}
+.query_added {
+    background: #FFC;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #960;
+    display: block;
+    margin: 4px 0;
+    padding: 0 4px;
+    width: 38px;
+}
+/***** 添加关键词 *****/
+.add_query {
+	padding:5px 10px;
+}
+.add_query h2 {
+	margin:0 0 8px;
+}
+.add_query h3 {
+	color:#888;
+	font-weight:bold;
+	margin:0 0 10px;
+}
+.query_number {
+	color:#F00;
+	font-weight:bold;
+}
+.query_list {
+    background:#F8FBFD;
+    border:1px solid #CCC;
+	max-height:214px;
+	_height:214px;
+	margin:0 0 10px;
+    overflow:auto;
+	position:relative;
+}
+.query_list_short {
+	max-height:110px;
+	_height:110px;
+}
+.query_list li {
+    background:#F8FBFD;
+    border-top:1px dashed #CCC;
+	line-height:1.2;
+    overflow:hidden;
+    padding:0 40px 0 10px;
+    margin:0;
+	position:relative;
+}
+#AddQueryCallback .query_list li {
+	border:0;
+}
+.query_list li:hover {
+	background:#FFF9C8;
+}
+.query_list li h4 {
+	font-size:14px;
+	font-weight:bold;
+	margin:7px 0 6px 0;
+	padding:0;
+}
+.query_list li p {
+	margin:0 0 10px 0;
+}
+.query_list li p.tip {
+	color:#060;
+}
+.query_list li p span.query_list_title {
+	color:#888;
+}
+.query_list li p span.query_list_title_notfirst {
+	margin-left:20px;
+}
+.query_list li .cancel {
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+.query_level {
+	padding:0 5px;
+}
+.query_level li {
+	height:22px;
+	margin:0 0 6px;
+}
+.query_level li h5 {
+    display: inline;
+    float: left;
+	line-height:22px;
+    width: 100px;
+}
+.query_match {
+	padding:5px 5px 10px;
+}
+.query_match h5 {
+    display: inline;
+    float: left;
+	line-height:22px;
+    width: 100px;
+}
+.add_query .btn_area .ui_button {
+	margin: 0 10px;
+}
+#QuerySelectNeg {
+    padding: 10px 0 10px 100px;
+	position:relative;
+    width: 322px;
+}
+#QuerySelectNeg h4, #QuerySelectNeg p {
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+}
+#QuerySelectNeg h4 {
+    color: #000;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0 0 -22px;
+    width: 50px;
+    position: relative;
+    left: -50px;
+}
+#QuerySelectNeg p input {
+    position: relative;
+    top: 1px;
+}
+#QuerySelectNeg .query_level {
+    background: #F9FBFD;
+    margin: 0 0 0 20px;
+    padding: 10px;
+}
+
+#QuerySelectNeg .query_level li h5 {
+    width: 66px;
+}
+#AddQueryNeg .query_match h5 {
+	text-align:right;
+}
+
+
+/**
+ * 	以下为KR远征二期的CSS样式
+ */
+
+
+.add_end_suggest{
+	margin-bottom:10px;
+}
+
+.query_mode{
+	color:#666666;
+}
+.keyword_add_errormsg {
+	color:#FF0000;
+	font-size:12px;
+	font-weight:300;
+	margin-left:10px;
+}
+
+/**
+ * 修改bubble的样式
+ */
+.ui_bubble_wrap_query_report {
+	border: 1px solid #D5CA81;
+	/*只修改了宽度*/
+	width: 294px;
+	background-color: #FFF6BD;
+	position: absolute;
+	display: none;
+	z-index: 2000;
+}
+.ui_bubble_wrap_query_report_exact {
+	display: inline-block;
+	margin: 5px 0 6px 19px;
+	height: 16px;
+	line-height: 16px;
+}
+.ui_bubble_wrap_query_report_exact_hr {
+	display: block;
+	border-bottom: 1px solid #C0B76B;
+	margin-bottom: 8px;
+}
+/*只针对这里的h4进行修改*/
+.ui_bubble_wrap_query_report h4 {
+	border: none !important;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,313 @@
+<!-- target:report -->
+<div class="report_container" id="NewReportContainer">
+  <div class="main-view">
+	<div class="main-title">
+	<h1 class="reportXijingTitle">
+		<span class="noborder">新建报告</span>
+		<span><a href="javascript:void(0)" id="ToMyReport" data-log="{target:'ToMyReport'}">我的报告</a></span>
+	</h1>
+<!--	<span class="report_xijing report_mail" ui="id:ReportXijing;type:Label;datasource:*reportXijing"></span>-->
+	<div class="report_external_link" id="ReportExtLink"></div>
+     <div class="report-calendar"><span class="time-text">选择时间范围：&nbsp;</span>
+      <div ui="type:MultiCalendar;id:NewReportCalendar;show:form" ></div></div>
+	</div>
+	<div class="main-body">
+	<div class="shortcut-bar" id="ReportParamsShortcut"><span class="option-title">选择报告类型：</span>
+	<a href="#" rel="account"  class="current" data-log="{target:'accountShortCut_btn'}">账户报告</a>
+	<span>|</span><a href="#" rel="plan" data-log="{target:'planShortCut_btn'}">计划报告</a>
+	<span>|</span><a href="#" rel="unit" data-log="{target:'unitShortCut_btn'}">单元报告</a>
+	<span>|</span><a href="#" rel="keyword" data-log="{target:'keywordShortCut_btn'}">关键词报告</a>
+	<span>|</span><a href="#" rel="idea" data-log="{target:'ideaShortCut_btn'}">创意报告</a>
+	<span>|</span><a href="#" rel="sublink" class="new_report_type" data-log="{target:'sublinkShortCut_btn'}">蹊径子链报告</a>
+	<span>|</span><a href="#" rel="region" data-log="{target:'regionShortCut_btn'}">分地域报告</a>
+	<span>|</span><a href="#" id="AvatarReport" class="new_report_type" rel="avatar" data-log="{target:'avatarShortCut_btn'}">监控文件夹报告</a>
+	<span>|</span><a href="#" id="CustomReport" class="new_report_type" rel="custom" data-log="{target:'customShortCut_btn'}">指定范围报告</a>
+	<div id="SpecialAuthorityReport" class="auth_report"></div>
+	</div>
+	<div id="AuthSelectList" class="auth_select_list hide">
+		<ul><li id="InvalidClk">无效点击报告</li><li id="MatchClk">分匹配模式报告</li></ul>
+	</div>
+    <div id="ToggleArea">
+	<div id="ReportParams" class="hide">
+	<div class="tip_container" id="TipContainer">
+		<div class="report_tips" id="ReportTips"></div>
+		<div class="report_tips_btn" id="ReportTipsBtn"></div>
+	</div>
+	<div id="ReportParmasArea" class="report_params_area">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="390"><div class="text-tip">选定层级：</div>
+            <div class="form_value" id="NewReportTargetTypeDiv">
+              <input type="radio" value="2"  name="NewReportTargetType" title="账户" ui="type:Radio;group:NewReportTargetType;id:NewReportAccount;datasource:*newReportTargetType;" />
+              <input type="radio" value="3"  name="NewReportTargetType" title="推广计划" ui="type:Radio;group:NewReportTargetType;id:NewReportPlan;datasource:*newReportTargetType;" />
+              <input type="radio" value="5"  name="NewReportTargetType" title="推广单元" ui="type:Radio;group:NewReportTargetType;id:NewReportUnit;datasource:*newReportTargetType;" />
+              <input type="radio" value="6" name="NewReportTargetType" title="关键词"   ui="type:Radio;group:NewReportTargetType;id:NewReportKeyword;datasource:*newReportTargetType;" />
+              <input type="radio" value="7"  name="NewReportTargetType" title="创意"     ui="type:Radio;group:NewReportTargetType;id:NewReportIdea;datasource:*newReportTargetType;" />
+            </div>
+            <div class="form_key">选定的对象列表： <span id="selectedObjNumWrapper" class="grey_txt">(<span id="ReportSelectedObjNum"></span>个)</span> <span id="NewReportTargetValueErrorMsg" style="display:none;" class="error_msg"></span></div>
+            <div class="form_value" style="position:relative;z-index:1;">
+              <div class="history_selected" id="NewReportSelectedWrap">
+                <div name="targetValue" ui="id:NewReportSelectedList;type:SelectList;datasource:*newReportSelectedData;skin:reminder;deleteHandler:*newReportSelectedDeleteHandler;autoState:*newReportSelectedAutoState;numberId:ReportSelectedObjNum"></div>
+              </div>
+              <div class="history_material" id="NewReportMaterialWrap">
+                <div ui="id:NewReportMaterialList;type:MaterialSelect;"></div>
+              </div>
+            </div>
+
+           </td>
+
+          <td width="30" style="border-left:1px solid #ccd6ef;"></td>
+
+          <td><div class="text-tip">推广方式:</div>
+            <div class="form_value" id="NewReportPlatformDiv">
+              <input type="radio" value="0"  name="NewReportPlatform" title="所有推广方式" ui="type:Radio;group:NewReportPlatform;id:NewReportPlatformAll;" />
+              <input type="radio" value="1"  name="NewReportPlatform" title="搜索推广" ui="type:Radio;group:NewReportPlatform;id:NewReportPlatformFengchao;" />
+              <input type="radio" value="2"  name="NewReportPlatform" title="网盟推广" ui="type:Radio;group:NewReportPlatform;id:NewReportPlatformBeidou;" />
+            </div>
+            <div class="text-tip">查询层级:</div>
+            <div class="form_value" id="NewReportSearchTypeDiv">
+              <input type="radio" value="2"  name="NewReportSearch" title="账户" ui="type:Radio;group:NewReportSearch;id:NewReportLevelAccount;datasource:*newReportSearch;" />
+              <input type="radio" value="3"  name="NewReportSearch" title="推广计划" ui="type:Radio;group:NewReportSearch;id:NewReportLevelPlan;datasource:*newReportSearch;" />
+              <input type="radio" value="5"  name="NewReportSearch" title="推广单元" ui="type:Radio;group:NewReportSearch;id:NewReportLevelUnit;datasource:*newReportSearch;" />
+              <input type="radio" value="6" name="NewReportSearch" title="关键词"   ui="type:Radio;group:NewReportSearch;id:NewReportLevelKeyword;datasource:*newReportSearch;" />
+              <input type="radio" value="7"  name="NewReportSearch" title="创意"     ui="type:Radio;group:NewReportSearch;id:NewReportLevelIdea;datasource:*newReportSearch;" />
+            </div>
+            <div class="text-tip clearfix">
+				<div class="text-tip">数据指标:</div>
+				<span style="float:left;" id="itemSelectResult">全部</span>
+				<div style="padding-top:3px;">
+					<div ui="id:itemSelect;type:Button;skin:shrink_16"></div>
+				</div>
+				<span id="optErrorMsg" style="float:left;display:none;padding-left:10px;" class="error_msg"></span>
+				<div style="padding-left:20px; float:left">
+					<input type="checkbox" value="area" title="地域指标" ui="id:NewReportAreaOption;type:CheckBox;"><span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="地域指标">&nbsp;</span>
+				</div>
+			</div>
+            <div class="text-tip">排序指标:</div>
+            <div ui="id:reportOrderByOption;type:Select;datasource:*reportOrderByOption;width:75" class="ui_select"></div>
+			</div></td>
+        </tr>
+      </table>
+	  </div>
+    </div>
+	<div class="report-option hide" id="WMatchModeOption">
+		<span class="option-title">选择触发模式：</span>
+		<a href="#" class="current" rel="30" data-log="{target:'wmatchAll_lbl'}">全部</a>
+		|<a href="#" rel="63" data-log="{target:'wmatchAccu_lbl'}">精确触发</a>
+		|<a href="#" rel="31" data-log="{target:'wmatchWord_lbl'}">短语触发</a>
+		|<a href="#" rel="15" data-log="{target:'wmatchWide_lbl'}">广泛触发</a>
+	</div>
+	<div class="report-option hide" id="AvatarOption">
+		<span class="option-title">选择查询层级：</span>
+		<a href="#" class="current" rel="avatarfile" data-log="{target:'avatarReportFile_lbl'}">监控文件夹</a>
+		|<a href="#" rel="avatarword" data-log="{target:'avatarReportWord_lbl'}">监控关键词</a>
+	</div>
+	<div class="report-option" id="DeviceOption">
+        <span class="option-title">选择推广设备：</span>
+        <a href="#" class="current" rel="all" data-log="{target:'allDevice_lbl'}">全部</a>|<a href="#" rel="0" data-log="{target:'computerDevice_lbl'}">计算机</a>|<a href="#" rel="1" data-log="{target:'mobileDevice_lbl'}">移动设备</a>
+    </div>
+	<div class="report-option" id="ReportTimeOption"><!--原为ReportTableOption-->
+		<span class="option-title">选择时间单位：</span>
+		<a href="#" class="current" rel="byDefault" data-log="{target:'reportTableOptionPeriod_lbl'}">默认</a>
+		|<a href="#" rel="byDay" data-log="{target:'reportTableOptionDay_lbl'}">分日</a>
+		|<a href="#" id="Week" rel="byWeek" data-log="{target:'reportTableOptionWeek_lbl'}">分周</a>
+		<div ui="id:firstDayByOption;type:Select;datasource:*firstDayOptions;value:1;width:110" class="ui_select"></div>
+		|<a href="#" rel="byMonth" data-log="{target:'reportTableOptionMonth_lbl'}">分月</a>
+	</div> 
+	<div class="report-option hide" id="RegionFixMethod">
+		<span class="option-title">地域定位方式
+			<span class="ui_bubble region_fix_bubble" bubblesource="defaultHelp" bubbletitle="地域定位方式"></span>：
+			<input type="radio" title="按地理位置定位" checked name="fixChose" ui="id:siteFix;type:Radio;" />
+		<!--	<span class="ui_bubble region_fix_bubble" bubblesource="defaultHelp" bubbletitle="按地理位置定位"></span> -->
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" title="按搜索意图定位" name="fixChose" ui="id:purposeFix;type:Radio;" />
+		<!--	<span class="ui_bubble region_fix_bubble" bubblesource="defaultHelp" bubbletitle="按搜索意图定位"></span> -->
+		</span>
+	</div> 
+	 <div class="generate-button" id="ReportButton"><div ui="id:launchNewReport;type:Select;value:-9999;width:80;datasource:*generateReport;clickRightOnly:1;" class="select_menu"></div></div>
+	 </div>
+  </div>
+  </div>
+  <div id="FoldBar" class="fold_bar hide"><a href="#" id="ToggleParam">点击收起选项</a></div>
+</div>
+<div class="report_wrapper center" id="NewReportPrompt">
+	<p>请选择具体的报告选项,后点击“<a href="#" id="NewReportPromptLaunchBtn">生成报告</a>”。</p>
+</div>	
+<!-- import:reportView -->
+
+<!-- target:reportView -->
+<div class="report_wrapper hide" id="ReportView">
+  <div class="report_header clearfix">
+    <!--div ui="id:reportCalendar;" class="vm fleft"></div-->
+    <h1 ui="id:reportName;type:Label;" class="report_name vm fleft">
+    </h1>
+	<div class="report_fold_btn hide">
+		<span class="report_return_icon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  		<a href="#" id="ReportFoldBtn" data-log="{target:'backToLastReport_btn'}">返回上一级报告</a>
+		</div>
+    <div class="report_ctrl" id="ReportControl">
+    	<span class="report_download"><a href="#" data-log="{target:'downloadReport_btn'}">下载报告</a></span><span class="report_cycle ui_bubble ui_bubble_add" bubblesource="defaultHelp" bubbletitle="循环报告"><a href="#" data-log="{target:'cycleReport_btn'}">循环报告</a></span><span class="report_mail"><a href="#" data-log="{target:'mailReport_btn'}">发送报告</a></span>
+	</div>
+  </div>
+  <div class="report_info hide" id="ReportInfo">
+  	<ul>
+  		<li><h3>选定对象列表：</h3><span id="ReportInfoMtldim"></span></li>
+		<li><h3>推广方式：</h3><span id="ReportInfoPlatform"></span></li>
+		<li><h3>查询层级：</h3><span id="ReportInfoMtllevel"></span></li>
+		<li id='ReportInfoAuth'><h3>查看权限：</h3><span id="ReportInfoReportlevel"></span></li>
+	</ul>
+  	<ul id="ReportInfoLoop">
+		<li><h3>循环频率：</h3><span id="ReportInfoReportcycle"></span></li>
+		<li><h3>保存类型：</h3><span id="ReportInfoFiletype"></span></li>
+		<li><h3>收件人邮箱：</h3><span id="ReportInfoMailaddr"></span></li>
+		<li><h3>查看权限：</h3><span id="ReportInfoLoopReportlevel"></span></li>
+	</ul>
+  </div>
+  <p class="report_latency">报告为非实时数据，系统可能无法为您提供3小时内的点击消费数据和当日展现数据（昨日展现数据每日中午12时起提供）。蹊径子链报告仅展现有点击的子链。</p>
+  <p id="phonetransTip" class="hide report_latency"></p>
+  <div class="report_error hide" id="ReportErrorNeedDownload">
+  	<p>
+  		因为数据量过大,可能无法在这里呈现,但您可以选择
+		<strong class="bold"><a href="#" rel="download" data-log="{target:'downloadReport_btn'}">下载报告</a></strong>
+		或者<strong class="bold"><a href="#" rel="send" data-log="{target:'mailReport_btn'}">发送报告</a></strong>, 以及
+		<strong class="bold"><a href="#" rel="cycle" data-log="{target:'cycleReport_btn'}">循环生成此报告</a></strong>。
+  	</p>
+  </div>
+  <div class="report_error hide" id="ReportErrorNeedSubscribe">
+	<p>
+  		因为数据量过大,预约报告无法立即生成,但您可以选择
+		<strong class="bold"><a href="#" rel="cycle" data-log="{target:'cycleReport_btn'}">循环生成此报告</a></strong>
+		或者<strong class="bold"><a href="#" rel="send" data-log="{target:'mailReport_btn'}">发送报告</a></strong>。您可以在<strong class="bold">“<a href="#" id="MyReportRedirectPrompt">我的报告</a>”</strong>中查看该报告。
+  	</p>
+  </div>	
+  <div class="report_table hide" id="ReportTableWrap">
+	<div class="report_expand_matrix hide" id="ReportMatrix">
+		<div class="report_table_option report_expand_matrix_ctrl">
+			<a href="#" id="ReportFoldBtn1" data-log="{target:'backToLastReport_btn'}">&lt;&lt;返回上一个报告</a>
+		</div>
+		<div ui="id:reportMaxtrixTable;type:Table;isMatrix:true" class="report_table_content"></div>
+	</div>
+	
+	<div ui="id:reportTable;type:Table;" class="report_table_content"></div>
+	<div class="manage_page">
+        <div ui="id:reportPagination;"></div>
+    </div>
+  </div>
+    <div class="report_chart hide" id="ReportChart">
+    <div class="report_chart_content" id="ReportChartContainer">
+      <div class="report_chart_ctrl" id="ReportChartControl">
+      	<div class="clearfix">
+	        <div class="report_chart_item"> 指标：&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" value="clks" title="点击" name="flashItems" ui="id:chartClks;type:CheckBox;group:flashItems">
+				<input type="checkbox" value="paysum" title="消费" name="flashItems" ui="id:chartPaysum;type:CheckBox;group:flashItems">
+				<input type="checkbox" value="shows" title="展现" name="flashItems" ui="id:chartShows;type:CheckBox;group:flashItems">
+				<input type="checkbox" value="clkrate" title="点击率" name="flashItems" ui="id:chartClkrate;type:CheckBox;group:flashItems">
+				<input type="checkbox" value="avgprice" title="平均点击价格" name="flashItems" ui="id:chartAvgprice;type:CheckBox;group:flashItems">
+				<input type="checkbox" value="trans" title="转化(网页)" name="flashItems" ui="id:chartTrans;type:CheckBox;group:flashItems">
+			</div>
+			图表选项：
+	        <input type="checkbox" value="1" title="显示平均值" ui="id:chartAvg;type:CheckBox;">
+		</div>
+      </div>
+      <div class="report_chart_graph" id="ReportChartGraph"> </div>
+    </div>
+    <div class="fold-bar"><a id="ToggleReportChart" href="#" rel="unfold">点击收起报告图表</a></div>
+  </div>
+</div>
+
+
+<!-- target:reportItemSelectTitle -->
+<div class="item_select_title"><a href="#" id="reportItemSelectAll">全部</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" id="reportItemSelectCustom">自定义</a></div>
+
+<!-- target:reportItemSelectContent -->
+<div class="item_select_wrap">
+<table>
+	<tbody>{0}</tbody>
+</table>
+</div>
+<!-- target:reportItemSelectRow -->
+<tr class="{0}">
+	{1}
+</tr>
+<!-- target:reportItemSelectCol -->
+<td class="{4}"><input type="checkbox" value="{0}" title="{1}" name="reportItemCheckbox{2}" ui="id:reportItemCb{0};type:CheckBox;group:reportItemCheckbox{2};{3}"></td>
+
+<!-- target:myReport -->
+<div class="tools_option_area report_container" id="MyReportContainer">
+	<h1><span class="noborder"><a href="javascript:void(0)" id="ToNewReport" data-log="{target:'ToNewReport_btn'}">新建报告</a></span><span>我的报告</span></h1>
+<!--	<span class="report_xijing report_mail" ui="id:myReportXijing;type:Label;datasource:*myReportXijing"></span>-->
+	<div class="report_external_link" id="MyReportExtLink"></div>
+	<div ui="id:ReportlistTable;type:Table;"></div>
+	<div class="fold_bar"><a id="ToggleParam" href="#">点击收起选项</a></div>
+</div>
+<!-- import:reportView -->
+
+<!-- target:reportDownload -->
+<div class="report_download_dialog">
+	<!-- import:contentFormat -->
+	<div class="recent_loop" id="RecentLoop">
+		<h2>最近<span id="RecentLoopNum">三</span>份循环报告：</h2>
+		<ul id="RecentLoopList">
+			<li><a>循环报告名称</a><a>删除</a></li>
+		</ul>
+	</div>
+	<div class="btn_area">
+		<div ui="id:ReportDownloadSubmit;type:Button;">下载</div>
+		<div ui="id:ReportDownloadCancel;type:Button;">取消</div>
+		<div ui="id:ReportDownloadOk;type:Button;">确定</div>
+	</div>
+</div>
+
+<!-- target:reportMail -->
+<div class="report_mail_dialog">
+	<!-- import:reportMailContent -->
+	<div class="btn_area">
+		<div ui="id:ReportMailSubmit;type:Button;">发送</div>
+		<div ui="id:ReportMailCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+<!-- target:reportCycle -->
+<div class="report_cycle_dialog">
+	<!-- import:reportCycleContent -->
+	<div class="btn_area">
+		<div ui="id:ReportCycleSend;type:Button;">保存</div>
+		<div ui="id:ReportCycleSave;type:Button;">保存</div>
+		<div ui="id:ReportCycleCancel;type:Button;">取消</div>
+	</div>
+</div>
+
+
+<!-- target:reportCycleContent -->
+<div class="report_cycle_wrap">
+	<div class="cycle_rate">
+		<h2>循环频率：</h2>
+		<div ui="id:CycleRate;type:Select;"></div>
+		<p><input type="checkbox" ui="id:DoSend" title="同时发送报告至邮箱"></p>
+	</div>
+	<!-- import:reportMailContent -->
+	<div class="cycle_rate">
+		<h2>查看权限：</h2>
+		<div ui="id:ReportLevel;type:Select;"></div>
+	</div>
+</div>
+
+<!-- target:contentFormat -->
+<div class="content_format">
+	<h2>内容格式：</h2>
+	<ul>
+		<li><input type="radio" title="CSV" value="0" name="contentFormatRadio" ui="id:ContentFormatCSV;type:Radio;group:contentFormatRadio;"></li>
+		<li><input type="radio" title="TXT" value="1" name="contentFormatRadio" ui="id:ContentFormatTXT;type:Radio;group:contentFormatRadio;"></li>
+	</ul>
+</div>
+
+<!-- target:reportMailContent -->
+<div class="report_mail_wrap" id="ReportMailWrap">
+	<!-- import:contentFormat -->
+	<div class="mail_address">
+		<h2>收件人邮箱：</h2>
+		<input type="text" ui="id:MailInput">
+		<span class="tip">用逗号分隔多个邮箱</span>
+		<span class="warn hide" id="MailInputWarn"></span>
+	</div>
+</div>

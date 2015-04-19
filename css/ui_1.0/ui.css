@@ -1,0 +1,16 @@
+/*
+ * nirvana
+ * Copyright 2012 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui.css
+ * desc:    放一些UI组件公用的基础样式，或者一些特定的ui样式（可能是工具方法里用到的），但不属于特定的ui组件
+ * author:  wuhuiyao (wuhuiyao@baidu.com)
+ * date:    2012/11/19
+ */
+/*用于失焦、聚焦功能*/
+.little_trigger{
+    position:absolute;
+    top:0;
+    left:0;
+    outline: none;
+}

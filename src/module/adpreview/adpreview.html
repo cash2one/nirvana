@@ -1,0 +1,123 @@
+<!-- target:adpreview -->
+<div id="ToolsMarlinContainer" class="tools-playback-head">
+<div class="playback-option"><span class="option-span">选择查询时间：</span>
+ <div class="adpreview-date-value" id="PreviewDateOptionDiv">
+    <input type="radio" value="0"  name="DateType" title="当前" ui="type:Radio;group:DateType;id:DateNow;datasource:*dateTypeOption;" />
+    <input type="radio" value="1"  name="DateType" title="${dateOption1}" ui="type:Radio;group:DateType;id:DateOneBefore;datasource:*dateTypeOption;" />
+    <input type="radio" value="2"  name="DateType" title="${dateOption2}" ui="type:Radio;group:DateType;id:DateTwoBefore;datasource:*dateTypeOption;" />
+    <input type="radio" value="3" name="DateType" title="${dateOption3}"   ui="type:Radio;group:DateType;id:DateThreeBefore;datasource:*dateTypeOption;" />
+    <input type="radio" value="4"  name="DateType" title="${dateOption4}"     ui="type:Radio;group:DateType;id:DateFourBefore;datasource:*dateTypeOption;" />
+  </div>
+  	
+	<span id='deviceTitle' class='second-title-span'>投放设备：</span>
+    <!--div ui="id:DeviceSelect;type:Select;datasource:*deviceTypeOption;value:*deviceOptionSelected;width:100;" class="select_menu"></div-->
+    <span id="device-radio">
+        <input type="radio" name='newPlanDevice' value='0' checked="checked" title="全部设备" ui="id:newPlanDeviceAll;type:Radio"/>
+        <input type="radio" name='newPlanDevice' value='1' title="仅计算机" ui="id:newPlanDevicePC;type:Radio"/>
+        <input type="radio" name='newPlanDevice' value='2' title="仅移动设备" ui="id:newPlanDevicePhone;type:Radio"/>
+    </span>
+    <!--div ui="id:dateSelect;type:Select;datasource:*dateOption;value:*dateOptionSelected;width:140;" class="select_menu"></div-->
+</div>
+<div class="playback-option"><span class="option-span">输入关键词：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="输入关键词">&nbsp;</span></span>
+    <input id="KeyWordInput" type="input" maxlength="100" value="${keyword}" class="tools-playback-input" />
+    <span id='regionTitle' class='first-title-span'>搜索地域：</span>
+    <div ui="id:AreaSelect;type:Select;datasource:*areaTypeOption;value:*areaOptionSelected;width:100;" class="select_menu"></div>
+	
+	</div>
+    <div class="playback-marquee">
+    <div id="KeywordSliderMarquee" class="ui-slider-marquee_short" ui="id:KeywordSliderMarquee;type:SliderMarquee;datasource:*keyWordList;keywordSelected:*keyWordListSelected;isshow:*isshowflag">
+        <div class="ui-slider-marquee_short-left">选定对象</div>
+        <div class="ui-slider-marquee_short-center"><ul></ul></div>
+        <div class="ui-slider-marquee_short-right">
+            <span>翻页更多&nbsp;</span><a href="#" class="prev"></a><a href="#" class="next-active"></a>
+        </div>
+    </div>
+    </div>
+    <div id="ShowCheckcodeInput" class="playback-option">
+        <span class="option-span">验证码：</span>
+            <input type="text" id="SearchVcodeInput" maxlength="4" />&nbsp;<img src="" alt="" id="SearchVcodeImg"/><a href="#" id="RefreshVcode" title="更换验证码">看不清楚?</a>&nbsp;&nbsp;
+    </div>
+    <div class="wronginfoinline" id="PreviewWrong">
+		<span ui="id:InputCheckTip;type:Label;datasource:*inputCheckTip;"></span>&nbsp;&nbsp;
+		<span ui="id:CodeCheckTip;type:Label;datasource:*codeCheckTip;"></span>
+	</div>
+    <div class="playback-option">
+        <div ui="id:AdPreviewBtn;type:Button;">查询推广实况</div>
+    </div>
+</div>
+<div id="showResultTips" class="resultTips hide">
+    <p>未找到相关结果，您尚未购买该关键词或该关键词在查询时间范围内无展现。</p>
+</div>
+<div id="AdpreviewShowResult">
+    <div id='KRExpeTopMesInAdpreview' class='kr_expe_top_wrap' style="display:none">
+        <span class='kr_expe_top_mes'>
+            <span class="word_icon"></span>
+            与您的查询相关的关键词：
+        </span>
+    	<span id='KREpxeTopMesWordInAdpreview'>&nbsp;</span>
+    	<a id='KRExpeTopMesLinkInAdpreview' class='kr_expe_top_link' href='javascript:void(0)'>查看详细</a>
+    </div>
+    <div id="AdPreviewFrameContainer">
+    	<div id="AdPreviewFrameTip">
+        	<span>关键词<b></b>的推广实况结果如下</span>
+        	<p>百度推广实况的结果与实际搜索结果有部分差异属正常情况，每日8点后可查看昨日推广实况结果</p>
+    	</div>
+    	<form id="AdPreviewFormPC" target="AdPreviewFramePC" method="POST" action="">
+    		<input type="hidden" name="path" id="AdPreviewParamsPathPC" value="GET/Live"/>
+    		<input type="hidden" name="params" id="AdPreviewParamsParamsPC" value=""/>
+    		<input type="hidden" name="userid" id="AdPreviewParamsUseridPC" value=""/>
+    		<input type="hidden" name="token" id="AdPreviewParamsTokenPC" value=""/>
+    	</form>
+        <div id="preview-pc-iframe-container" class="hide">
+            <p class="preview-p-title">计算机推广实况：</p>
+            <iframe frameborder="0" scrolling="no" id="AdPreviewFramePC" name="AdPreviewFramePC" style="width:100%; height:2000px;" src="about:blank"></iframe>
+        </div>
+
+        <form id="AdPreviewFormPhone" target="AdPreviewFramePhone" method="POST" action="">
+            <input type="hidden" name="path" id="AdPreviewParamsPathPhone" value="GET/Live"/>
+            <input type="hidden" name="params" id="AdPreviewParamsParamsPhone" value=""/>
+            <input type="hidden" name="userid" id="AdPreviewParamsUseridPhone" value=""/>
+            <input type="hidden" name="token" id="AdPreviewParamsTokenPhone" value=""/>
+        </form>
+        <div id="preview-phone-iframe-container" class="hide">
+            <p class="preview-p-title">移动设备推广实况：</p>
+            <div class="preview-iphone-box">
+                <div  class="preview-iphone-body">
+                    <iframe frameborder="0" scrolling="no" id="AdPreviewFramePhone" name="AdPreviewFramePhone" style="width:100%; height:2000px;" src="about:blank"></iframe>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <a id='KRExpeBottomMesLinkInAdpreview' class='kr_expe_bottom_link' href='javascript:void(0)' style="display:none">回到顶部</a>
+    <div id='KrExpeInAdpreview'>
+        <div>
+        </div>
+    </div>
+</div>
+<div id="PlaybackFrameContainer" style="display:none;">
+    <form id="PlaybackForm" target="PlaybackFrame" method="POST" action="">
+        <input type="hidden" name="path" id="PlaybackParamsPath" value="GET/Playback"/>
+        <input type="hidden" name="userid" id="PlaybackParamsUserid" value=""/>
+        <input type="hidden" name="params" id="PlaybackParamsParams" value=""/>
+        <input type="hidden" name="token" id="PlaybackParamsToken" value=""/>
+    </form>
+    
+    <div id="playback-pc-iframe-container" class="hide">
+        <p class="preview-p-title">计算机推广实况：</p>
+        <iframe frameborder="0" scrolling="auto" id="PlaybackFrame" name="PlaybackFrame" style="width:100%; height:2000px;" src="about:blank"></iframe>
+    </div>
+    <div id="playback-phone-iframe-container" class="hide">
+        <p class="preview-p-title">移动设备推广实况：</p>
+        <div class="preview-iphone-box">
+            <div  class="preview-iphone-body">
+                抱歉，移动设备暂不提供历史查询功能。
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="preview-left-btn" class="preview-big-btn hide"><</div>
+<div id="preview-right-btn" class="preview-big-btn hide">></div>
+
+

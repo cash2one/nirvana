@@ -1,0 +1,49 @@
+/*
+ * 推广时段优化组件样式定义 
+ */
+.schedule_optimize {
+    margin-top: 8px;
+    border: solid #C9C9C9;
+    border-width: 1px 1px 1px 0;
+}
+
+.schedule_optimize .recommend_analyze { 
+    float:left;
+    margin-right:10px; 
+    width: 320px;
+}
+.schedule_optimize .recommend_analyze .ui_table_body { 
+    min-height: 240px;
+    max-height: 240px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: none;
+}
+.schedule_optimize .schedule_edit { 
+    overflow: hidden;
+    zoom: 1;
+} 
+.schedule_optimize .ui_table_row_over .td_sort {
+    background:#F0F7FE !important;
+}
+.schedule_optimize .schedule_selected,.schedule_optimize .schedule_selected .td_sort {
+    background: #DBFFC9 !important;
+   /* color: #CCCCCC;*//*#888*/
+    /*position: relative;*/
+}
+/*.schedule_optimize .ui_table_body {
+    position: relative;
+}*/
+/*.schedule_optimize .ui_table_row_over {
+    background:#FFF9CA;
+}*/
+/*.schedule_optimize .disable_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#FFFFFF;
+    opacity: .6;
+    filter:alpha(opacity=60);
+}*/

@@ -1,0 +1,39 @@
+<!-- target:fuseSuggestionTitle -->
+<div class="fusesug-title ui_bubble" bubblesource="{bubbleSource}" action={action}>{title}[{mark}]</div>
+
+
+<!-- target:minFuseSuggestion -->
+<div class="fusesug-container-min">
+    <span class="fusesug-battery-{color}"></span>
+</div>
+<div class="fusesug-floatingdetail">
+    <span class="fusesug-reason">{reason}</span>
+    <span class="fusesug-suggestion clickable" action="fusesug-optimize" data="{suggestKey}" index="{index}">{suggestion}</span>
+</div>
+
+<!-- target:maxFuseSuggestion -->
+<div class="fusesug-container-max">
+    <span class="fusesug-battery-{color}"></span>
+    <span class="fusesug-reason clickable" action="fusesug-optimize" data="{suggestKey}" index="{index}">{reason}</span>
+</div>
+
+
+<!-- target:floatingFuseSuggestion -->
+<div class="fusesug-floatingSuggestion" id="{id}-floatingFuseSug" style="display:none;">
+    <table>
+        <tr>
+            <td class="icon"></td>
+            <td class="sugg"></td>
+        </tr>
+    </table>
+</div>
+
+
+<!-- target:minNoFuseSuggestion -->
+<div class="fusesug-container-min-nosug">
+    -
+</div>
+<!-- target:maxNoFuseSuggestion -->
+<div class="fusesug-container-max-nosug">
+    -
+</div>

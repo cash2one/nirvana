@@ -1,0 +1,518 @@
+/*
+ * nirvana
+ * Copyright 2012 Baidu Inc. All rights reserved.
+ *
+ * path:    css/modules/coreword-pkg.css
+ * desc:    重点词排名包样式
+ * author:  Wu Huiyao(wuhuiyao@baidu.com)
+ * date:    2012/12/03
+ */
+#ctrldialogAoPkgCoreWordsDialogbody {
+    overflow-y: hidden;
+    position: static;
+    height: 484px;
+}
+#ctrldialogAoPkgCoreWordsDialogfoot {
+    border-top: 1px solid #C9C9C9;
+    position: static;
+    *margin-top: 1px;
+    padding-top: 8px;
+}
+/* 重点词对话框标题区域按钮的样式 */
+.mod_cword_btn {
+    margin-right: 8px;
+}
+.sel_region_btn {
+    /*width: 62px;*/
+}
+
+/* 重点词对话框footer区域的样式 */
+.diagnosis_info {
+    text-align: center;
+    line-height: 20px;
+    color: #999;
+}
+.diagnosis_counter {
+    color: #999;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.counter_remain,
+.counter_unit {
+    color: #00CC00;
+    font-weight: bold;
+}
+.coreword_update_btn {
+    width: 72px;
+    line-height: 24px;
+    color: #FFF;
+    background-color: #00CC00;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    *display: inline;
+    zoom: 1;
+}
+.diagnosis_info .coreword_update_btn {
+    margin-left: 10px;
+}
+.coreword_update_btn:hover {
+    text-decoration: underline;
+}
+
+/* 用于重点词表格倒计时样式 */
+.coreword_rank_counter {
+    border: 1px solid #CCCCCC;
+    padding: 3px;
+}
+.coreword_modify_info {
+    margin: 0 5px 5px 0;
+    line-height: 1em;
+}
+
+/* 重点词轮播的样式 */
+.recmd_coreword_wrapper {
+    position: absolute;
+    /*float: right;*/
+    right: 10px;
+    top: 20px;
+    line-height: 18px;
+}
+.broadcast_container {
+    float: left;
+    padding-right: 15px;
+    color: #999;
+}
+.sel-recmcorword-info .num,
+.recmcoreword-num,
+.recmd_reason {
+    padding: 0 3px;
+    font-weight: bold;
+}
+.recmd_coreword {
+    font-weight: bold;
+    color: #666;
+    padding-left: 3px;
+}
+.add_coreword_btn {
+    margin-top: -2px;
+}
+.add_coreword_btn .ui_button_label {
+    color: #00CC00;
+}
+.more_recmd_cword {
+    float: left;
+    padding-left: 15px;
+}
+.recmcoreword-add-info,
+.recmcoreword-del-info {
+    color: #666666;
+}
+.view-recmcoreword-info {
+    float: left;
+    padding-right: 7px;
+}
+
+/* 重点词分析筛选样式定义 */
+.coreword_toolbar {
+    border-bottom:1px solid #C9C9C9;
+    height: 40px;
+}
+.coreword_filter {
+    padding: 0 0 0 15px;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    color: #666666;
+}
+.coreword_filter_title {
+    font-weight: bold;
+}
+.corword_filter_label {
+    margin-right: 15px;
+}
+.coreword_filter_sel {
+    text-decoration: none !important;
+    cursor: default !important;
+    color: #666666;
+}
+
+/* 推荐重点词对话框的样式 */
+.recmd_coreword_info .ui_table {
+    border: none;
+}
+.recmd_coreword_title {
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 25px;
+}
+.recmd_cword_reason {
+    padding-right: 8px;
+}
+.skin_recmd_cword_body {
+    margin: 0;
+    height: 328px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+.skin_recmd_cword_foot {
+    margin: 0;
+    padding: 10px 8px;
+    border-top: 1px solid #c9c9c9;
+}
+.skin_recmd_cword_body .ui_table_body {
+    /*之所以不是直接设height而是整一个min和max，为了修复IE7滚动条闪烁问题*/
+    min-height: 251px;
+    max-height: 251px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: none;
+}
+.recmcoreword-detail-wrapper .ui_table_body {
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+}
+.recmcoreword-detail-wrapper .aopkg_overview_header {
+    border-top: 1px solid #cdcdcd;
+}
+.recmd_coreword_table .ui_table_row:last-child {
+    border-bottom: none;
+}
+.sel-recmcorword-info {
+    color: #999999;
+    text-align: right;
+    padding-right: 10px;
+}
+/* 重点词表格的样式 */
+.coreword_th {
+    padding-left: 20px;
+}
+.show_region {
+    color: #666;
+    font-weight: normal;
+    padding-right: 8px;
+}
+.region_name {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.diagnosis_time {
+    padding-right: 3px;
+}
+.remove_coreword {
+    background: transparent url('../../asset/img/bg_icon.png') -150px -65px;
+    height: 12px;
+    visibility: hidden;
+    display: inline;
+    /*float: left;*/
+    position: absolute;
+    margin-top: 3px;
+}
+.remove_coreword:hover {
+    background-position: -150px -85px;
+}
+.ui_table_row_over .remove_coreword {
+    visibility: visible;
+}
+.showcoreword_cell {
+    margin-right: 5px;
+    width: 78% !important;
+    padding-left: 18px;
+}
+.coreword_left_rank {
+    color: #666;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1em;
+}
+.invalid_cell_value {
+    color: #979797;
+}
+.coreword-rank-down,
+.coreword-rank-up {
+    background: url("../../asset/img/bg_icon.png") no-repeat;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 7px;
+    right: 40px;
+}
+.coreword-rank-down {
+    background-position: -386px -166px;
+}
+.coreword-rank-up {
+    background-position: -366px -166px;
+}
+.coreword_table {
+    overflow: visible;
+    border: none;
+}
+
+/* 重点词表格和推荐重点词表格的公共样式定义 */
+.recmd_coreword_table .ui_table_body td,
+.coreword_table .ui_table_body td {
+    background: none;
+    vertical-align: middle;
+    height: 40px;
+}
+.coreword_table .ui_table_body td {
+    height: 50px;/*60px;*/
+}
+.recmd_coreword_table .ui_table_row,
+.coreword_table .ui_table_row {
+    border-bottom: 1px dashed #CCC;
+}
+.edit_idea {
+    background: none;
+    position: absolute;
+    right: 40px;
+    top: 3px;
+}
+.ui_table_row_over .edit_idea {
+    display: block;
+}
+.coreword_table .ui_table_body {
+    *max-height: 357px;
+    min-height: 320px;
+    *height: auto !important;
+    position:relative;
+    border: none;
+}
+.coreword_table .ui_table_tdcell {
+    position: relative;
+}
+.coreword_table .ui_table_tdcell,
+.coreword_table table,
+.coreword_table td {
+    overflow: visible;
+}
+
+/* 地域选择组件的样式定义 */
+.region_wrapper {
+    padding-left: 10px;
+    line-height: 32px;
+}
+.region_category {
+    float: left;
+    font-weight: bold;
+
+}
+.sub_region_list {
+    display: block;
+    overflow: hidden;
+    zoom:1;
+}
+.subregion_name {
+    margin-left: 20px;
+    padding: 0px 6px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.disabled_region {
+    color: #AAA;
+    cursor: default;
+    text-decoration: none;
+    display: none;
+}
+.selected_region {
+    background:#4D88CE;
+    color:#FFF;
+    cursor: default;
+    text-decoration:none;
+}
+
+/* 修改重点词（关注新重点词对话框）的样式信息定义 */
+.coreword-limit-tip {
+    float: right;
+}
+.coreword-limit-tip .num {
+    padding: 0 3px;
+    color: red;
+    font-weight: bold;
+}
+.aopkg_modCWord_main{
+    position: relative;
+}
+.aopkg_modCWord_main h1{
+    margin-bottom: 10px;
+}
+.aopkg_modCWord_left{
+    width: 281px;  /*310px*/
+    height: 394px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.aopkg_modCWord_chosenlist{
+    background: #f9fbfd;
+    border: 1px solid #ccc;
+    height: 370px;
+    overflow-y: auto;
+    position: relative;
+}
+.aopkg_modCWord_chosenlist .nodata{
+    text-align: center;
+}
+.aopkg_modCWord_chosenlist .coreWord_item{
+    border-top: 1px dashed #ccc;
+    height: 60px;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+}
+.aopkg_modCWord_chosenlist .coreWord_item h2{
+    font-weight: 700;
+    margin: 5px 0;
+}
+.aopkg_modCWord_chosenlist .coreWord_item a{
+    display: block;
+    top: 5px;
+    right: 5px;
+    display: none;
+    position: absolute;
+}
+.aopkg_modCWord_chosenlist .coreWord_item:hover{
+    background: #fff9c8;
+}
+.aopkg_modCWord_chosenlist .coreWord_item:hover a{
+    display: block;
+}
+
+.aopkg_modCWord_chosenlist .coreWord_info{
+    color: #999;
+}
+.aopkg_modCWord_chosenlist .coreWord_info li{
+    line-height: 17px;
+}
+.aopkg_modCWord_chosenlist .coreWord_info span{
+    color: #000;
+}
+
+.aopkg_modCWord_split{
+    background: url(../../asset/img/bg_icon.png) no-repeat -403px -124px;
+    width: 25px;
+    height: 60px;
+    position: absolute;
+    top: 170px;
+    left: 282px;
+}
+
+.aopkg_modCWord_right{
+    margin-left: 312px;
+    height: 394px;
+    overflow: hidden;
+}
+.aopkg_modCWord_right strong{
+    font-weight: 700;
+    margin: 0 5px;
+}
+.aopkg_modCWord_searcharea{
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+}
+.aopkg_modCWord_searcharea input{
+    float: left;
+}
+.aopkg_modCWord_searcharea .ui_button{
+    margin-left: 15px;
+}
+.aopkg_modCWord_infoguide{
+    padding: 7px 5px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    height: 13px;
+    line-height: 13px;
+}
+.aopkg_modCWord_infoguide span{
+    font-family: '宋体';
+}
+
+.aopkg_modCWord_infolist{
+    border: 1px solid #ccc;
+    height: 312px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+.aopkg_modCWord_infolist ul li{
+    padding: 7px 4px;
+}
+.aopkg_modCWord_infolist ul li:hover{
+    background: #f0f7fe;
+}
+.aopkg_modCWord_infolist .ui_table{
+    position: relative;
+    border-left: none;
+    border-right: none;
+    padding-top: 31px;
+    min-height: 300px;
+}
+.aopkg_modCWord_infolist .ui_table_head{
+    position: fixed;
+    z-index: 100;
+    margin-top: -31px;
+}
+.aopkg_modCWord_infolist .ui_table_head_row{
+    background: #fff;
+}
+.aopkg_modCWord_infolist .ui_table_body{
+    position: relative;
+    border-bottom: none;
+}
+.aopkg_modCWord_infolist .ui_table_tdcell,
+.aopkg_modCWord_infolist .ui_table table,
+.aopkg_modCWord_infolist .ui_table table td {
+    overflow: visible;
+}
+
+.aopkg_modCWord_infolist .ui_table_tdcell {
+    position: relative;
+    zoom: 1;
+}
+.aopkg_modCWord_infolist .ui_table_body .ui_table_row{
+    border-bottom: none;
+}
+.aopkg_modCWord_infolist .ui_table .ui_table_row td{
+    background: none;
+}
+.aopkg_modCWord_infolist .ui_table_body .leadicon{
+    color: #03c;
+    font-family: '宋体';
+}
+.aopkg_modCWord_infolist .ui_table_body .noadding{
+    color: #999;
+}
+#AoPkgModCWordContainer .btn_area{
+    margin-top: 10px;
+    height: 32px;
+    line-height: 26px;
+    clear: left;
+}
+
+.aopkg_modCWord_infolist .ui_bubble {
+    padding-top: 3px;
+}
+.aopkg_modCWord_infolist .bubble-content span {
+    color: #5B5902;
+    font-weight: bold;
+}
+.aopkg_modCWord_infolist ul.bubble_content li{
+    padding: 0;
+}
+.aopkg_modCWord_infolist ul.bubble_content li:hover{
+    background: none;
+}
+
+.aoPkg_optlist_loading{
+    margin-left: 10px;
+    display: inline;
+    position: relative;
+    top: 2px;
+}

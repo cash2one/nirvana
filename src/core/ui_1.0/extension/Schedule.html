@@ -1,0 +1,56 @@
+<!-- target:UIOrientSelectorWeektime -->
+<div class="ui_schedule_sel_weektime">
+    <div class="ui_schedule_sel_wthead">
+        <div class="ui_schedule_sel_wthead_eg">
+        	<div class="ui_schedule_sel_wttime ui_schedule_sug_wktimesug" style="cursor:default"></div>
+            <div class="ui_schedule_sel_wt_egtext">推荐时间段</div>
+            <div class="ui_schedule_sel_wttime ui_schedule_sel_wktimesel" style="cursor:default"></div>
+            <div class="ui_schedule_sel_wt_egtext">投放时间段</div>
+            <div class="ui_schedule_sel_wttime" style="cursor:default"></div>
+            <div class="ui_schedule_sel_wt_egtext">暂停时间段</div>
+        </div>
+        <label class="ui_schedule_sel_recmd"><input type="checkbox" onclick="{5}"/>全选推荐</label>
+        <span class="ui_schedule_sel_wtop" onclick="{2}">全部时间</span>
+        &nbsp;|&nbsp;
+        <span class="ui_schedule_sel_wtop" onclick="{3}">工作日</span>
+        &nbsp;|&nbsp;
+        <span class="ui_schedule_sel_wtop" onclick="{4}">周末</span>
+
+        
+    </div>
+    <div class="ui_schedule_sel_wtbody" id="{0}">
+    </div>
+
+    <span style="display:none;">每周共投放：<b id="{1}">0</b>小时</span>
+        
+</div>
+
+
+<!-- target:UIOrientSelectorWtBodyHead -->
+<div class="ui_schedule_sel_wtbodyline">
+    <div class="ui_schedule_sel_wtday">&nbsp;</div>
+    <div class="ui_schedule_sel_wttimezone"><div class="ui_schedule_sel_wtzonenight"></div>0:00----6:00</div>
+    <div class="ui_schedule_sel_wttimezone"><div class="ui_schedule_sel_wtzoneday"></div>6:00----12:00</div>
+    <div class="ui_schedule_sel_wttimezone"><div class="ui_schedule_sel_wtzoneday"></div>12:00----18:00</div>
+    <div class="ui_schedule_sel_wttimezone"><div class="ui_schedule_sel_wtzonenight"></div>18:00----24:00</div>
+</div>
+
+<!-- target:UIOrientSelectorWtHeadTime -->
+<div class="ui_schedule_sel_wttimehead" onmouseover="{2}" onmouseout="{3}" onclick="{4}" time="{1}" id="{0}">&nbsp;</div>
+
+<!-- target:UIOrientSelectorWtTime -->
+<div class="ui_schedule_sel_wttime" onmouseover="{3}" onmouseout="{4}" onclick="{5}" time="{2}" day="{1}" timeitem="1" id="{0}">{2}</div>
+
+<!-- target:UIOrientSelectorWtLineBegin -->
+<div class="ui_schedule_sel_wtbodyline" id="{0}">
+    <div class="ui_schedule_sel_wtday">
+        <input type="checkbox" id="{1}" value="{2}" onclick="{3}">
+        <label for="{1}">{4}</label>
+                              
+    <!-- target:UIOrientSelectorWtLineMid -->          
+    </div>
+    <div class="ui_schedule_sel_wttimeseg">
+    
+    <!-- target:UIOrientSelectorWtLineEnd -->  
+    </div>
+</div>    

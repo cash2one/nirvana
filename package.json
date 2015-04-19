@@ -1,0 +1,11 @@
+{
+  "name": "serve-static",
+  "version": "0.0.0",
+  "author": "conanmy",
+  "license": "Apache",
+  "scripts": {"start":"node server.js"},
+  "dependencies": {
+    "express": "^4.12.3",
+    "serve-static": "^1.9.2"
+  }
+}

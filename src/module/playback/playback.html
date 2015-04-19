@@ -1,0 +1,44 @@
+<!-- target:playback -->
+<div id="ToolsPlaybackContainer" class="tools-playback-head">
+	<div class="playback-option"><span class="option-span">选择查询时间：</span>
+	<div ui="id:dateSelect;type:Select;datasource:*dateOption;value:*dateOptionSelected;width:140;" class="select_menu">	
+	</div>
+	</div>
+	<div class="playback-option"><span class="option-span">输入已购关键词：<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="已购关键词">&nbsp;</span></span>
+	<input id="KeyWordInputpb" type="input" maxlength="100" value="${keyword}" class="tools-playback-input" />
+	</div>
+	<div class="playback-marquee">
+	<div id="PlaybackKeywordSliderMarquee" class="ui-slider-marquee_short" ui="id:PlaybackKeywordSliderMarquee;type:SliderMarquee;datasource:*keyWordListpb;keywordSelected:*keyWordListSelectedpb;isshow:*isshowflagpb">
+		<div class="ui-slider-marquee_short-left">选定对象</div>
+		<div class="ui-slider-marquee_short-center"><ul></ul></div>
+		<div class="ui-slider-marquee_short-right">
+			<span>翻页更多&nbsp;</span><a href="#" class="prev"></a><a href="#" class="next-active"></a>
+		</div>
+	</div>
+	</div>
+	<div id="ShowCheckcodeInputpb" class="playback-option">
+		<span class="option-span">验证码：</span>
+			<input type="text" id="SearchVcodeInputpb" maxlength="4" />&nbsp;<img src="" alt="" id="SearchVcodeImgpb"/><a href="#" id="RefreshVcodepb" title="更换验证码">看不清楚?</a>&nbsp;&nbsp;
+	</div>
+	<div class="wronginfoinline" id="PlaybackWrong">
+	<span ui="id:InputCheckTip;type:Label;datasource:*inputCheckTip;"></span>&nbsp;&nbsp;
+	<span ui="id:CodeCheckTip;type:Label;datasource:*codeCheckTip;"></span>
+	</div>
+	<div class="playback-option">
+		<div ui="id:PlaybackBtn;type:Button;">查询推广回放</div>
+	</div>
+</div>
+<div id="showResultTips" class="resultTips">
+	<p>未找到相关结果，您尚未购买该关键词或该关键词在查询时间范围内无展现</p>
+</div>
+<div id="PlaybackFrameContainer">
+<form id="PlaybackForm" target="PlaybackFrame" method="POST" action="">
+	<input type="hidden" name="path" id="PlaybackParamsPath" value="GET/Playback"/>
+	<input type="hidden" name="userid" id="PlaybackParamsUserid" value=""/>
+	<input type="hidden" name="params" id="PlaybackParamsParams" value=""/>
+	<input type="hidden" name="token" id="PlaybackParamsToken" value=""/>
+</form>
+<iframe frameborder="0" scrolling="auto" id="PlaybackFrame" name="PlaybackFrame" style="width:100%; height:2000px;" src="about:blank" onload="PlaybackFrameAutoHeight()">
+
+</iframe>
+</div>

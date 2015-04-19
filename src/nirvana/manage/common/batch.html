@@ -1,0 +1,48 @@
+﻿<!-- target:setBatch -->
+<div class='batchDialog' >
+	<div class = 'batch_first' >			
+		生成下载所有计划/单元/关键词/创意信息
+	</div>
+	<div id="batch_notstart" style='display:none'>
+		<div class='batch_second' >
+			尚未生成可下载文档,请点击"生成"后等待。
+		</div>
+		<div class='batch_control' >
+			<div ui="id:AddBatchDownload;type:Button;">生成</div><span class="red batch_close hide">系统暂时无法提供物料信息，请稍候再试</span><span class="batch_grey"></span>
+		</div>
+	</div>
+	<div id="batch_proccessing" style='display:none'>
+		<div class='batch_second' >
+			<img src="asset/img/loading_1.gif" class='batch_loading'/>文档正在生成, 请稍后...<a href="#" id="cancelBatchDownload" data-log="{target:'cancelBatchDownload_btn'}">取消</a>
+			<div class="clear"></div>
+		</div>
+		<div class='batch_control' >
+			<div ui="id:CheckBatchDownload;type:Button;">刷新状态</div><span class="batch_grey">关闭后返回主界面不影响生成</span>
+		</div>
+	</div>
+	<div id="batch_done" style='display:none'>
+		<div class='batch_second' >
+			<a href="#" id="downloadBatchDownload" data-log="{target:'downloadBatchDownload_btn'}" target='_blank'>下载所有计划/单元/关键词/创意信息(<span id="batch_okdate"></span>)</a>
+		</div>
+		<div class='batch_control' >
+			<div ui="id:AgainBatchDownload;type:Button;">重新生成</div><span class="red batch_close hide">系统暂时无法提供物料信息，请稍候再试</span><span class="batch_grey"></span>
+		</div>
+	</div>
+	<div id="batch_error" style='display:none'>
+		<div class='batch_second batch_error' >
+			文档生成错误。
+		</div>
+		<div class='batch_control'  >
+			<div ui="id:AgainBatchDownload2;type:Button;">重新生成</div><span class="red batch_close hide">系统暂时无法提供物料信息，请稍候再试</span><span class="batch_grey"></span>
+		</div>
+	</div>
+	<div id="batch_toomuch" style='display:none'>
+		<div class='batch_second' >
+			<span class="batch_error">抱歉，系统暂不能为过大账户提供下载服务,
+			<a href="http://apihome.baidu.com" target='_blank' data-log="{target:'apiBatchDownload_btn'}" >建议使用API。</a>
+		</div>
+		<div class='batch_control' >
+			<div ui="id:disableBatchDownload;type:Button;">无法生成</div><span class="batch_grey"></span>
+		</div>
+	</div>
+</div>

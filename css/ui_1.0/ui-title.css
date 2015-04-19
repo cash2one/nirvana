@@ -1,0 +1,18 @@
+/*
+ * nirvana
+ * Copyright 2012 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-title.css
+ * desc:    Title组件的样式
+ * author:  mayue
+ * date:    2012/03/09
+ */
+.ui_title_block{
+	background:#FFF url("../../asset/img/bg_repeat_x.png") repeat-x 0 -220px;
+	border: 1px solid #767676;
+	color: #000;
+	line-height: 16px;
+	padding: 2px 5px;
+	position: absolute;
+	z-index:999;
+}

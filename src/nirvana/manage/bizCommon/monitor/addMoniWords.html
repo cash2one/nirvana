@@ -1,0 +1,58 @@
+<!-- target:addMoniWords -->
+<div class="manage_dialog">
+	<p><span class="bold">1 当前的虚拟文件夹：</span><span class="current_folder" id="currentFolder"></span>
+		<span class="show_in_overview" id="showInIndex"><input type="checkbox" ui="id:showInIndex;type:CheckBox" title="显示在推广概况页监控列表"></span>
+	</p><br />
+	<p><span class="bold">2 请选择要监控的关键词</span><span class="gray">(已监控的关键词有<span class="red" id="monidKwNum"></span>个)</span>
+	<span id="addMethod" class='form_value'>
+              	<input type="radio" value="0" checked="checked" name="AddMethodPlatform" title="从账户选择 " ui="type:Radio;group:AddMethodPlatform;id:AddMethodPlatformAccount;" /> 
+                <input type="radio" value="1"  name="AddMethodPlatform" title=" 批量添加关键词" ui="type:Radio;group:AddMethodPlatform;id:AddMethodPlatformBatch;" />
+		</span></p>
+	<div class="monitor_control_area">
+		<h4>
+			新增监控的关键词：(<span id="kwNum" class="red"></span>)
+			<span class="red" id="error_area"></span>
+		</h4>
+		<div ui="id:wordList;"></div>
+		<div class="word_to_left"></div>
+		<div class="material_select">
+			<h4>请从账户<strong id="userName"></strong>中选择关键词</h4>
+			<div ui="id:wordSelect;"></div>
+        </div>
+	</div>
+	<div class="monitor_control_area hide">
+		<h4>请输入需要监控的关键词:</h4>
+    	<div ui="id:wordSelected;type:TextLine;"></div>
+		<div class="tip_area"><span>多个关键词用换行分开，每个关键词最多20个汉字或40个英文</span><br/></div> 
+	</div>
+	<div class="ui_dialog_foot folder_foot">
+		<div ui="id:setDialogOk;type:Button;">确定</div>
+		<div ui="id:setDialogCancel;type:Button;">取消</div>
+	</div>
+	<div class="ui_dialog_foot folder_foot hide">
+		<h4>点击下一步搜索这些词所在的计划和单元</h4>
+		<div ui="id:nextStep;type:Button;">下一步</div>
+		<div ui="id:dialogCancel;type:Button;">取消</div>
+	</div>
+	<div class="monitor_control_area hide">
+		<div class="monitor_not_found">
+			<div ui="id:notFound;type:Table;" class="not_found"></div>	
+			<div class="not_found_search"><span>修改后请点击</span><div ui="id:searchAgain;type:Button;">重新搜索</div></div>
+		</div>
+		<div class="monitor_found">
+			<div id="listdata_tip" class="listdata_tip" ></div>
+			<div ui="id:listData;type:Table;" class="list_data"></div>
+		</div>
+	</div>
+	<div class="ui_dialog_foot folder_foot hide">
+		<div ui="id:done;type:Button;">完成</div>
+		<div ui="id:cancel;type:Button;">取消</div>
+	</div>
+</div>
+<div style="display:none">
+	<label ui="id:currentCount;type:Label;datasource:*currentCount"></label>
+	<label ui="id:maxCount;type:Label;datasource:*maxCount"></label>
+</div>
+
+
+		

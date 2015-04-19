@@ -1,0 +1,314 @@
+/*
+ * cb-web
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:   .ui_mcal.css
+ * desc:    多日历组件
+ * author:  zhaolei,erik
+ * date:    $Date: 2010/05/21 03:00:39 $
+ */
+
+/* 清除浮动 */
+.ui_mcal_itemshow,
+.ui_mcal_foot,
+.ui_mcal_body {
+    zoom:1;
+}
+
+.ui_mcal_itemshow:after,
+.ui_mcal_foot:after,
+.ui_mcal_body:after {
+    content:"\0020"; 
+    display:block;
+    height:0; 
+    visibility:hidden; 
+    clear:both;
+}
+
+/**
+ * 外围容器
+ */
+.ui_mcal {
+    color:#333;
+    cursor:pointer;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	line-height:20px;
+}
+
+.ui_mcal_hover,
+.ui_mcal_press,
+.ui_mcal_active {
+   
+}
+
+.ui_mcal_disabled{
+	color:gray;
+	cursor:default;
+}
+
+.ui_mcal_normal {
+    background:url('../../asset/img/bg_icon.png') no-repeat -207px -787px;
+    width:195px;
+    height:30px;
+    line-height:30px;
+	padding-left:5px;
+    display:inline-block;
+	font-size:14px;
+	font-weight:bold;
+}
+
+
+.ui_mcal_normal_point {
+    height:30px;
+	background:url('../../asset/img/bg_icon.png') no-repeat right -787px;
+	padding-right:26px;
+	float:left;
+}
+
+.ui_mcal_form {
+    width:155px;
+	font-weight:bold;
+    height:22px;
+    line-height:22px;
+	padding-left:5px;
+    display:inline-block;
+	background:url('../../asset/img/bg_icon.png') no-repeat -207px -817px;
+}
+
+
+.ui_mcal_form_point {
+    height:22px;
+    padding-right:36px;
+	float:left;
+	background:url('../../asset/img/bg_icon.png') no-repeat right -817px;
+}
+
+/**
+ * 弹出层
+ */
+.ui_mcal_layer {
+    width:395px;
+    color:#567BA0;
+    text-align:center;
+	border:1px solid #a8adb6;
+	border-top:2px solid #394459;
+    position:absolute;
+    z-index:2000;
+    background:#fff;
+	padding:10px 8px;
+}
+
+/**
+ * 时间选取
+ */
+.ui_mcal_time_body {
+    width:190px;
+	border:1px solid #CCCED4;
+}
+
+.ui_mcal_begin {
+    float:left;
+}
+
+
+.ui_mcal_end {
+    float:right;
+}
+
+/**
+ * 底部按钮容器
+ */
+.ui_mcal_foot {
+    padding:4px 0;
+    clear:both;
+}
+
+.ui_mcal_foot .ui_button {
+    margin-right:5px;
+}
+
+/**
+ * 日历月份外围容器
+ */
+.ui_mcal_body {
+    margin:5px 0;
+}
+
+/**
+ * 月份选择
+ */
+.ui_mcal_month {
+    background:#CCCED4;
+}
+
+.ui_mcal_month table {
+    width:189px;
+}
+.ui_mcal_month td {
+    width:30px;
+    height:32px;
+
+    cursor:pointer;
+}
+
+.ui_mcal_month .ui_select{
+    vertical-align:middle;
+}
+
+/**
+ * 选中月份
+ */
+.ui_mcal_mactive {
+    background:#87A9CB;
+    color:#FFF;
+    font-weight:700;
+}
+
+/**
+ * 月份、年份选择箭头
+ */
+.ui_mcal_prev,
+.ui_mcal_next,
+.ui_mcal_prev_disable,
+.ui_mcal_next_disable{
+    background-image:url(../../asset/img/bg_icon.png);
+    background-repeat: no-repeat;
+    display:block;
+    width:22px;
+    height:22px;
+    overflow:hidden;
+    cursor:pointer;
+}
+.ui_mcal_prev {
+    background-position:-193px -108px;
+    float:left;
+    margin-left:3px;
+}
+.ui_mcal_next {
+    background-position:-227px -108px;
+    float:right;
+    margin-right:3px;
+}
+
+.ui_mcal_prev_disable{
+	background-position:-120px -108px;
+}
+
+.ui_mcal_next_disable{
+	background-position:-156px -108px;
+}
+
+/**
+ * 选择上一月、下一月
+ */
+.ui_mcal_prev_td .ui_mcal_prev {
+    border-width: 7px 6px 6px 7px;
+    border-style:solid;
+    border-color:#FFF;
+}
+
+.ui_mcal_next_td .ui_mcal_next {
+    border-width: 7px 7px 6px 6px;
+    border-style:solid;
+    border-color:#FFF;
+}
+
+td.ui_mcal_prev_td,
+td.ui_mcal_next_td {
+    width:19px;
+}
+
+
+/**
+ * 年份选择
+ */
+.ui_mcal_year {
+    border:1px solid #D3DDE9;
+    background:#E4EFFA;
+    position:relative;
+    height:28px;
+    line-height:28px;
+    clear:both;
+    zoom:1;
+}
+
+.ui_mcal_year .ui_mcal_prev,
+.ui_mcal_year .ui_mcal_next {
+    border:3px solid #E4EFFA;
+    position:absolute;
+    top:5px;
+}
+
+.ui_mcal_year .ui_mcal_prev {
+    left:45px;
+}
+.ui_mcal_year .ui_mcal_next {
+    right:45px;
+}
+
+/**
+ * 日期输入区
+ */
+.ui_mcal_itemshow {
+    padding-bottom:5px;
+}
+
+.ui_mcal_label {
+    float:left;
+    display:inline;
+    height:20px;
+    line-height:20px;
+    margin-right:5px;
+}
+.ui_mcal_input {
+    font-family:STHeiti, SimSun;
+    border:1px solid #7E9DB9;
+    font-size:12px;
+    padding:1px 2px;
+    width:90px;
+    height:16px;
+    line-height:16px;
+    float:left;
+}
+
+/**
+ * 关闭浮出层
+ */
+.ui_mcal_close{
+	position:absolute;
+	top:6px;
+	right:6px;
+	background:url(../../asset/img/bg_icon.png) no-repeat -150px -65px;
+	width:12px;
+	height:12px;
+	cursor:pointer;
+}
+
+/**
+ * 错误提示区
+ */
+.ui_mcal_tip{
+	color:red;
+	line-height:22px;
+	text-align:left;
+}
+
+.ui_mcal_show_time{
+	height:24px;
+	line-height:24px;
+}
+
+.ui_mcal_side_title{
+	font-weight:bold;
+	color:#000;
+	float:left;
+	display:inline-block;
+	margin-right:10px;
+}
+
+.ui_mcal_side_time{
+	color:#000;
+	float:left;
+}

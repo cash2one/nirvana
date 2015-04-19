@@ -1,0 +1,102 @@
+.ui-inline {
+	display: inline-block;
+    +display: inline;
+    +zoom: 1;
+}
+*.IE7 .ui-wrapper {
+    zoom: 1;
+}
+
+.fc-clearfix:before,
+.fc-clearfix:after {
+    content: "";
+    display: table;
+}
+ 
+.fc-clearfix:after {
+    clear: both;
+}
+ 
+
+.fc-clearfix {
+    zoom: 1;
+}
+
+*[class*='fc-ui-'] {
+    line-height: 0 !important;
+}
+.ui-wrapper {
+    line-height: 1 !important;
+    position: relative;
+    height: 100%;
+}
+
+
+.ui-wrapper .triangle {
+    display: block;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+*[class*='fc-ui-'],
+.ui-wrapper,
+.ui-wrapper p,
+.ui-wrapper h1,
+.ui-wrapper h2,
+.ui-wrapper h3,
+.ui-wrapper h4,
+.ui-wrapper h5,
+.ui-wrapper ul,
+.ui-wrapper li,
+.ui-wrapper div,
+.ui-wrapper span,
+.ui-wrapper strong,
+.ui-wrapper label,
+.ui-wrapper input,
+.ui-wrapper textarea,
+.ui-wrapper button,
+.ui-wrapper caption,
+.ui-wrapper table,
+.ui-wrapper thead,
+.ui-wrapper tbody,
+.ui-wrapper tfoot,
+.ui-wrapper th,
+.ui-wrapper tr,
+.ui-wrapper td {
+    color: black;
+	margin: 0;
+    padding: 0;
+    /* 火狐下的 border: none 居然会解析成 border: medium none;*/
+    border: 0 none;
+    font-size: 12px !important;
+    font-weight: normal;
+    font-family: Arial,"宋体",Verdana,Geneva,Helvetica,sans-serif;
+    vertical-align: baseline;
+}
+.ui-wrapper ul {
+    list-style: none;
+}
+.ui-wrapper th {
+    text-align: left;
+}
+.ui-wrapper input[type="checkbox"],
+.ui-wrapper input[type="radio"] {
+    width: 13px;
+    height: 13px;
+}
+
+*[class*="fc-ui"] input:focus,
+*[class*="fc-ui"] textarea:focus,
+input[class*="fc-ui"]:focus,
+textarea[class*="fc-ui"]:focus {
+    outline: none;
+}
+
+.fc-unselectable,
+.fc-unselectable * {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}

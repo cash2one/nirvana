@@ -1,0 +1,29 @@
+div.tools-adpreview-head{background:#e4eaf9; padding:15px 20px; height:100px}
+div.tools-adpreview-head td{padding:2px}
+div.tools-adpreview-head h3 {padding-bottom:3px}
+div.wronginfoinline{color:#F00; padding:5px 0; margin-top:3px;}
+div.tools-adpreview-head div.ui_select_cur{font-weight:bold}
+.tools-adpreview-input{ width:430px; height:20px; border:#abadb3 1px solid}
+#SearchVcodeInput{width:80px; height:20px; border:#abadb3 1px solid}
+#ctrlbuttonAdPreviewBtnlabel{ color:#000; font-weight:bold}
+#AdPreviewFrameContainer{margin:15px 20px;}
+#AdPreviewFrameTip {margin-bottom:15px}
+#AdPreviewFrameTip span{ font-size:18px; font-weight:bold; line-height:22px;}
+#AdPreviewFrameTip span b{ color:#F00; padding:0 4px;}
+#AdPreviewFrameTip p{color:#999}
+#ShowCheckcodeTip,#ShowCheckcodeInput{display:none}
+#KrExpeInAdpreview {margin:10px 20px 60px;}
+div.ui-slider-marquee { position:relative; font-size:12px; margin:5px 0 0 2px; overflow:hidden; height:26px; line-height:26px; width:535px; background:#fffad2 }
+div.ui-slider-marquee-center {overflow:hidden; height:26px; margin:0 90px 0 70px;}
+div.ui-slider-marquee-center ul{width:2009px;}
+div.ui-slider-marquee-center li { float:left; margin:0 5px; width:65px; overflow:hidden;}
+div.ui-slider-marquee-center li a{ text-decoration:none; color:#000}
+div.ui-slider-marquee-center li a.heightlight{font-weight:bold}
+div.ui-slider-marquee-left { position:absolute; left:0; top:0; width:70px; color:#ec9464; text-align:center; }
+div.ui-slider-marquee-right { position:absolute; top:0; right:0px; width:76px; text-align:left; color:#cccccc; }
+div.ui-slider-marquee-right a {display:inline-block; width:5px; height:10px; padding:0 3px 0 3px; background:url(../../asset/img/bg_icon.png) no-repeat; }
+div.ui-slider-marquee-right a.prev{ background-position:-370px -130px; cursor:text}
+div.ui-slider-marquee-right a.prev-active{ background-position:-370px -150px; cursor:pointer}
+div.ui-slider-marquee-right a.next{ background-position:-390px -130px; cursor:text}
+div.ui-slider-marquee-right a.next-active{ background-position:-390px -150px; cursor:pointer}
+#SearchVcodeImg{vertical-align:middle}

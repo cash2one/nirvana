@@ -1,0 +1,167 @@
+<!-- target:effectAnalyse -->
+<div id="ToolsEffectContainer">
+	<div id="EffectAnalyseOptions" class="tools-effect-head">
+		<div class="tools-effect-option">
+			<span class="effect-option-text">选择时间范围：</span>
+			<div ui="type:MultiCalendar;id:EffectanaCalendar;show:form"></div>
+			<div class="effect-guide-link"><a id="EffectUseGuide" href="javascript:void(0)">使用引导</a></div>
+		</div>
+		<div class="tools-effect-option">
+            <span class="effect-option-text">选择分析的关键词：</span>
+            <div class="effect-level-option" id="EffectLevelOptionsDiv">
+            	<input type="radio" value="2" name="EffectTargetType" title="账户中全部" ui="type:Radio;group:EffectTargetType;id:EffectAccount;datasource:*effectTargetType;"/>
+				<input type="radio" value="3" name="EffectTargetType" title="按推广计划" ui="type:Radio;group:EffectTargetType;id:EffectPlan;datasource:*effectTargetType;"/>
+				<input type="radio" value="5" name="EffectTargetType" title="按推广单元" ui="type:Radio;group:EffectTargetType;id:EffectUnit;datasource:*effectTargetType;"/>
+				<input type="radio" value="10" name="EffectTargetType" title="按监控文件夹" ui="type:Radio;group:EffectTargetType;id:EffectFolder;datasource:*effectTargetType;"/>
+				<input type="radio" value="11" name="EffectTargetType" title="按关键词" ui="type:Radio;group:EffectTargetType;id:EffectKeyword;datasource:*effectTargetType;"/>
+            </div>
+        </div>
+		<div class="effect-level-tip" style="display:none;" id="EffectLevelTips">
+            <span class="" id="EffectLevelTipsText">选中计划</span>
+        </div>	
+		<div class="effect-material" style="display:none;" id="ToolsEffectMaterial">
+            <span class="effect-option-text">选定的对象列表：</span>
+            <div class="effect-material-select-area">
+                <div id="EffectMaterialSelectedWrap"><div ui="id:EffectMaterialSelected;type:SelectList;datasource:*effectSelectedData;skin:reminder;deleteHandler:*effectSelectedDeleteHandler;autoState:*effectSelectedAutoState;numberId:EffectSelectedObjNum"></div></div>
+                <div id="EffectMaterialListWrap"><div ui="id:EffectMaterialList;type:MaterialSelect;"></div></div>
+
+            </div>
+        </div>
+		<div class="effect-button">
+        <div ui="id:EffectAnaBtn;type:Button;">确定</div>
+    </div>
+	</div>
+	<!--漏斗区-->
+	<div class="filler_area">
+	<ul id="analyseStageList" class="no_trans">
+	
+		<li>
+			<h3>展现</h3>
+			<h5>
+			<span id="analyseShowsNum">-</span>	
+			</h5>
+		</li>
+		<li class="arrow"></li>
+		<li>
+			<h3>点击</h3>
+			<h5>
+			<span id="analyseClksNum">-</span>
+			</h5>
+		</li>
+		<li class="arrow pv"></li>
+		<li class="pv">
+			<h3>浏览</h3>
+			<h5>
+				<span id="analysePvNum">-</span>
+			</h5>
+		</li>
+		<li class="arrow trans"></li>
+		<li class="trans">
+			<h3>转化</h3>
+			<h5>
+			<span id="analyseTransNum" >-</span>
+			</h5>
+		</li>
+	</ul>
+		
+	</div>
+	<div id="effectResultErrorTip" class="effect-result-error" style="display:none;"></div>
+	<div id="effectResultArea" style="display:none;">
+	<div id="EffectFlashArea" class="effect-flash-area">
+		<!--flash area-->
+		<div class="effect-flash-container">
+		<div id="analyserFlashItems" class="effect-flash-item">
+			指标：
+			<div ui="id:flashItemsSelect;type:Select;datasource:*flashItemOption;value:*flashItemOptionSelected;width:100;" class="select_menu"> 
+            </div>
+			&nbsp;&nbsp;鼠标拖拽：
+			<span id="effectMouseStyle">
+			<input type="radio" value="0" name="EffectMouseType" title="圈选" ui="type:Radio;group:EffectMouseType;id:EffectMouseArea;datasource:*effectMouseType;"/>
+            <input type="radio" value="1" name="EffectMouseType" title="移动" ui="type:Radio;group:EffectMouseType;id:EffectMouseMove;datasource:*effectMouseType;"/>
+		     </span>
+		</div>
+		<div class="effect-flash-item-right">
+			<span class="effect-keyword-icon"></span>关键词<span class="effect-selected-icon"></span>选中关键词<span class="effect-area-icon"></span>选中的区域
+			<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="选中的区域">&nbsp;</span>
+		</div>
+		<div id="analyserFlashContainer">flashflashflash</div>
+		</div>
+		<div id="analyserFlashStat" class="effect-flash-stat">
+			<div ui="id:flashStatTable;type:Table;" class="flash-stat-table"></div>
+		     <div>
+		     	<div><b>选中的关键词<span id="SelectedKeywordCount"></span></b></div>
+				<div id="flashAreaStat" class="flash-area-stat">testtest</div>
+		     </div>
+		</div>
+	</div>
+	<div class="analyse_table_area">
+		<div class = "analyse_table_head">
+		
+		<strong class="head_title">已圈选关键词</strong>	<div class="tip">您可以结合关键词的表现，根据需要进行计划、单元、关键词层级的优化操作，建议您将优化过的关键词添加至监控文件夹中，监控优化效果。</div>
+	
+		</div>
+		
+	<div id="KRPasvOption" class="new_analyse_option">
+		<div class="analyse_optionlink_wrap">
+								
+			<div class="manage_option_left"><div ui="id:analyseModBid;type:Button;">修改出价</div></div>
+			<div class="manage_option_left"><div ui="id:analyseModMatch;type:Button;">修改匹配模式</div></div>		
+				
+			<div class="manage_option_left"><div ui="id:analyseAddMonitor;type:Button;">监控该关键词</div></div>		
+			<div class="manage_option_left"><div ui="id:analysekr;type:Button;">拓展关键词</div></div>		
+			<div class="manage_option_right">
+				<div ui="id:analyseDownLoad;type:Button;" class="">下载数据</div>
+				<span class="ui_bubble" bubblesource="defaultHelp" bubbletitle="下载数据">&nbsp;</span>					
+			</div>	
+			<div class="manage_option_right">
+				<div ui="id:UserDefineForAffect;type:Button;skin:select" class="manage_userdefine">自定义列</div>	
+			</div>	
+		</div>
+    </div>
+	<div ui = "id:analyseTableList"></div>
+	<div class = "analyse_adaptUserDefine" id="analyse_adaptUserDefine"></div>
+	<div id="analysePagerDiv" class="clearfix manage_page" >
+	    <div class="scope">
+			<h4>每页显示</h4>
+			<div ui="id:analysePageSizeSelect;value:*analysePageSize;"></div>
+		</div>
+		<div ui="id:analysePagination;type:Page;"></div>
+	</div>
+	</div>
+	</div>
+</div>
+
+<!-- target:effectAnalyseIdea -->
+	<div class="analyse_idea_area">
+		
+		
+	<div id="KRPasvOption" class="new_analyse_option">
+		<div class="analyse_optionlink_wrap">
+								
+			<div class="manage_option_left"><div ui="id:analyseAddIdea;type:Button;">新增</div></div>
+			
+		</div>
+    </div>
+	<div ui = "id:analyseIdeaTable"></div>
+	<div id="analyseIdeaPagerDiv" class="clearfix manage_page" >
+		
+	<div ui="id:analysedeaTablePage;type:Page;"></div>
+	</div>
+	</div>
+
+<!-- target:effectAnalyseKR -->
+<div  id="analyseAddSuggestWordsWrap" class="add_end_suggest1 keyword_transfer_content"></div>
+<div class="keyword_btn">
+				<div id="SaveSuggestWordsContainer" class="fleft"></div>
+				<div ui="id:Close;type:Button;">关闭</div>
+			    <div id="SaveErrorExpe2" class="save_error_expe"></div>
+</div>
+
+
+<!-- target:effectAnalyseGuide -->
+<div class="effect_guide">
+	<h2 id="effectGuideTitle" class="effect-guide-title">第一步：选择要分析的关键词</h2>
+	<div id="effectGuideSteps" class="effect-guide-step step1"></div>
+	<div id="EffectGuideNextButton" class="effect-guide-button"><div ui="id:EffectGuideNext;type:Button;">下一步</div></div>
+	<div id="EffectGuideFinishButton" class="effect-guide-button"><div ui="id:EffectGuideFinish;type:Button;">完成</div></div>
+</div>

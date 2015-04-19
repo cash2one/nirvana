@@ -1,0 +1,151 @@
+/*
+ * nirvana
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-toolbar.css
+ * desc:    地域样式
+ * author:  zhouyu tongyao
+ * date:    2010/12/16
+ */
+.ui_toolbar{
+	z-index:100;
+	position:fixed;
+	_position:absolute;
+    bottom:0;
+	left:0;
+	width:100%;
+	height:34px;
+ }
+ .ui_toolbar_hide{
+ 	left:-10000px;
+	top:-10000px;
+ }
+.tools{
+ 	position:absolute;
+	left:-10000px;
+	top:-10000px;
+	width:100%;
+	z-index:100;
+ }
+.tool_show{
+	left:0;
+	top:55px;
+ }
+
+.ui_toolbar_cnt,
+.tools_head{
+	height:30px;
+	margin:0 5px;
+	padding:4px 0 0 0;
+	background:url("../../asset/img/bg_repeat_x.png") repeat-x 0 -81px;
+	position:relative;
+ }
+.tools_head{
+	margin:0;
+}
+.tools_head_minimize{
+	padding-left:22px;
+	padding-top:4px;
+	background:url("../../asset/img/bg_icon.png") no-repeat -61px -1183px;
+	height:21px;
+	width:42px;
+	cursor:pointer;
+	color:#000;	
+	position:absolute;
+	right:30px;
+	top:5px;
+	*display:inline-block;
+	*padding-top:6px;
+}
+.tools_head_minimize_hover{
+	background-position:-196px -1183px;
+}
+.tools_reset{
+	padding-left:6px;
+	padding-top:4px;
+	background:url("../../asset/img/bg_icon.png") no-repeat 0 -1183px;
+	height:21px;
+	width:55px;
+	cursor:pointer;
+	color:#000;	
+	position:absolute;
+	right:94px;
+	top:5px;
+	*display:inline-block;
+	*padding-top:6px;
+}
+.tools_reset_hover{
+	background-position:-135px -1183px;
+}
+.tools_head .ui_button{top:2px;}
+.tools_head_title{
+	color:#fff;
+	padding:0 16px 0 13px;
+	font-size:14px;
+	line-height:26px;
+	float:left;
+	display:block;
+	font-weight:bold;
+}
+.ui_toolbar_cnt_wrap{
+ 	background:url("../../asset/img/bg_icon_left.png") no-repeat 60px -426px;
+	padding-left:208px;
+	height:30px;
+}
+.base_tools{
+	margin-right:110px;
+}
+.advanced_tools{
+	position:absolute;
+	top:4px;
+	right:0;
+	width:100px;
+	height:26px;
+	padding-left:5px;
+	border-left:1px dashed #FFF;
+}
+#Tools_advanceResetBtn{
+	display:none;
+}
+.ui_toolbar_rc_l,
+.ui_toolbar_rc_r{
+ 	position:absolute;
+	width:6px;
+	height:6px;
+	overflow:hidden;
+	background:url(../../asset/img/bg_icon.png) no-repeat -156px -147px;
+ }
+.ui_toolbar_rc_r{
+ 	right:0;
+	top:0;
+	background-position:-162px -147px;
+ }
+.ui_toolbar_rc_l{
+ 	left:0;
+	top:0;
+ }
+.ui_toolbar_cnt .ui_button{padding-right:2px;} 
+.ui_toolbar_cnt .ui_button_label{
+	background:none;
+}
+.tools_body{
+	margin:0 3px;
+	background:#fff;
+	overflow:auto;
+	overflow-x:hidden;
+	position:relative;
+}
+.tools_body_wrap{
+	background-color:#4d5568;
+	overflow:hidden;
+}
+.skin_ToolsModuleConfirmReImport_body{
+	line-height:1.5;
+}
+
+.tools_body_wrap .nodata_vertical {
+	text-align:center;
+	line-height:50px;
+	margin:0;
+	position:static;
+}

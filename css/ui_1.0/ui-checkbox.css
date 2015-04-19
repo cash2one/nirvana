@@ -1,0 +1,14 @@
+/*
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-checkbox.css
+ * desc:    复选框控件
+ * author:  zhouyu
+ * date:    $Date: 2011/01/06 $
+ */
+
+.ui_checkbox{
+	position:relative;
+	top:1px;
+	margin-right:3px;
+}

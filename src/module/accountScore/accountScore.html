@@ -1,0 +1,90 @@
+<!-- target:accountScoreOverView -->
+<div class="module_title">
+    <h4>详情</h4>
+    <span class="btn" act="openAccountScore" data-log='{"target":"index_sidebar_viewdetail", "type":1}'></span>
+</div>
+<div class="module_content">
+    <div class="content_close">
+                       账户质量评分 <strong class="value"></strong> 分
+        <span class="up" style="display:none;">▲</span>
+        <span class="down" style="display:none;">▼</span>
+        <span class="changed_score" style="display:none;"></span>
+    </div>
+</div>
+<!--target:accountScoreTab-->
+<li class="score_tab{clazz_name}" scoreType="{score_type_id}">
+    <div class="score_value_info">
+        <p class="score_type_name">{score_type_name}</p>
+        <p class="score_value">{score_value}</p>
+    </div>
+    <div class="score_state_info">
+        <p class="score_state {score_state}">{score_state_name}</p>
+        <p class="score_change_info {score_change_state}">{score_change_info}</p>
+    </div>
+</li>
+<!-- target:accountScoreItemDetail -->
+<li class="qscore_item_detail">
+    <div class="qscore_item_info">
+        <div class="qscore_item_state {qscore_item_state}"></div>
+        <p class="qscore_item_name">{qscore_item_name}</p>
+        <p class="qscore_item_value">{qscore_item_value}</p>
+    </div>
+    <ul class="qscore_item_bar"></ul>
+</li>
+<!-- target:accountScoreDetails -->
+<ul id="accountScoreTabHeaders" class="clearfix">
+</ul>
+<div id="accountScoreTabContainer">
+    <div class="score_change_graph">
+    </div>
+    <ul class="score_details">
+    </ul>
+</div>
+
+<!-- target:offTimeDescr1 -->
+您的下线时间<span class="value_down">过早</span>，建议关注预算及推广时段设置
+<!-- target:offTimeDescr2 -->
+您的下线时间<span class="value_em">表现一般</span>，建议关注预算及推广时段设置
+<!-- target:offTimeDescr3 -->
+您的下线时间<span class="value_up">表现良好</span>，建议持续关注预算及推广时段设置
+<!-- target:offTimeDescr4 -->
+您的下线时间<span class="value_up">表现优秀</span>，请继续保持
+
+<!-- target:wordPresentDescr1 -->
+您的展现次数<span class="value_down">低于{topPercent}%</span>的同行，建议关注关键词数量和匹配模式
+<!-- target:wordPresentDescr2 -->
+您的展现次数<span class="value_up">表现优秀</span>，请继续保持
+
+<!-- target:leftPresentDescr1 -->
+您的左侧展现概率<span class="value_down">低于{topPercent}%</span>的同行，建议关注关键词质量度及出价
+<!-- target:leftPresentDescr2 -->
+您的左侧展现概率<span class="value_up">表现优秀</span>，请继续保持
+
+<!-- target:corewordRankDescr1 -->
+您的重点词平均排名<span class="value_down">低于{topPercent}%</span>的同行，建议关注重点词质量度及出价
+<!-- target:corewordRankDescr2 -->
+您的重点词平均排名<span class="value_up">表现优秀</span>，请继续保持
+<!-- target:corewordRankDescr3 -->
+建议进入重点词包设置重点词，了解您的重点词排名情况
+
+<!-- target:effectQStar3Descr1 -->
+您的生效三星词比例<span class="value_down">低于{topPercent}%</span>的同行，建议关注关键词质量度
+<!-- target:effectQStar3Descr2 -->
+您的生效三星词比例<span class="value_up">表现优秀</span>，请继续保持
+
+<!-- target:siteOpenRateDescr1 -->
+您的网站打开时间<span class="value_up">良好</span>，请继续保持
+<!-- target:siteOpenRateDescr2 -->
+您的网站打开时间<span class="value_em">一般</span>，建议优化网站
+<!-- target:siteOpenRateDescr3 -->
+您的网站打开时间<span class="value_down">过长</span>，建议优化网站
+<!-- target:siteOpenRateDescr4 -->
+建议（正确）安装百度统计，了解您的情况
+
+<!-- target:siteAttractiveDescr1 -->
+您的网站吸引力<span class="value_down">低于{topPercent}%</span>的同行，建议优化网站
+<!-- target:siteAttractiveDescr2 -->
+您的网站吸引力<span class="value_up">表现优秀</span>，请继续保持
+<!-- target:siteAttractiveDescr4 -->
+<!-- import:siteOpenRateDescr4 -->
+

@@ -1,0 +1,129 @@
+.fusesug-title{
+    cursor: pointer;
+    font-family: '宋体'
+}
+
+.fusesug-bubble-min,
+.fusesug-bubble-max {
+    background-color: #FFF6BD;
+    border: 1px solid #D5CA81;
+    width: 150px;
+    position: absolute;
+    display: none;
+    z-index: 2000;
+}
+.fusesug-bubble-min {
+    width: 285px;
+    /*height: 117px;*/
+}
+    .fusesug-bubble-min #BubbleContent {
+        margin: 0 10px;
+    }
+    .fusesug-bubble-min #BubbleContent div{
+        margin: 5px 0;
+    }
+    .fusesug-bubble-max #BubbleContent{
+        margin: 10px;
+    }
+    .fusesug-bubble-min .clickable,
+    .fusesug-bubble-max .clickable {
+        margin-left: 10px;
+    }
+
+.fusesug-loading-inline {
+    color: #999;
+    /*background:url("../../asset/img/loading_1.gif") no-repeat 5px 3px;*/
+    display:block;
+    line-height:18px;
+    width: 45px;
+    /*text-indent:30px;*/
+    margin: 0 auto;
+}
+
+.fusesug-container-min,
+.fusesug-container-max {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    height: 18px;
+    line-height: 18px;
+    /*cursor: pointer;*/
+}
+.fusesug-container-max{
+    text-align: left;
+    padding-left: 13px;
+}
+    .fusesug-container-max .clickable {
+        position: relative;
+        top: -3px;
+    }
+
+.fusesug-battery-yellow,
+.fusesug-battery-red {
+    background: url('../../asset/img/bg_icon_left.png') 0 -1998px no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+}
+.fusesug-battery-red {
+    background-position: 0 -1973px;
+}
+
+.fusesug-container-min .fusesug-battery-yellow
+.fusesug-container-min .fusesug-battery-red{
+    margin: 0 auto;
+}
+
+.fusesug-floatingdetail {
+    display: none;
+    height: 0;
+    overflow: hidden;
+}
+
+.fusesug-floatingSuggestion{
+    /*display: none;*/
+    /*margin-left: 30px;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid orange;
+}
+.fusesug-floatingSuggestion table{
+    width: auto;
+    *width: 290px;
+    height: 100%;
+    /*margin-left: 20px;*/
+}
+.fusesug-floatingSuggestion td {
+    background: #ffe6bd;
+    text-align: center;
+    vertical-align: middle;
+}
+.fusesug-floatingSuggestion td.sugg {
+    text-align: left;
+}
+.fusesug-floatingSuggestion td.sugg span {
+    margin-right: 10px;
+}
+.fusesug-floatingSuggestion .clickable {
+    /*color: red;*/
+}
+
+
+.fusesug-container-min-nosug {
+    text-align: center;
+}
+.fusesug-container-max-nosug {
+    text-align: left;
+    padding-left: 16px;
+}
+
+
+.fusesug-floating-message {
+    background: #FFF6BD;
+    border: 1px solid #D5CA81;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

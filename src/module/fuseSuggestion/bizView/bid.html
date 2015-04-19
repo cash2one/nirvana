@@ -1,0 +1,22 @@
+<!-- target:bizViewBidSingle -->
+<div class="bizview-bid-container">
+    <div id="bizview-bid-header"></div>
+    <div id="bizview-bid-body">
+        <div id="bizview-bid-basicinfo">
+            <span>关键词：</span>{showword}
+            <span>出价：</span>{bid}
+        </div>
+        <div id="bizview-bid-modarea">
+            <span id="bizview-bid-modlabel">修改出价：</span>
+            <div id="bizview-bid-modsection">
+                <input type="text" ui="id:bizCModBidInput;type:TextInput;width:200;height:22;" />
+                <span id="bizview-bid-plusinfo"></span>
+            </div>
+        </div>
+    </div>
+    <div id="bizview-bid-footer">
+        <div ui="id:bizCModBidOk;type:Button;">确定</div>
+        <div ui="id:bizCModBidCancel;type:Button;">取消</div>
+        <span id="bizview-bid-errorinfo"></span>
+    </div>
+</div>

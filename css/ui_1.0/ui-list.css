@@ -1,0 +1,15 @@
+.ui_list_txt {height:18;line-height:18px;}
+.ui_list_txt div{display:inline-block;} 
+.ui_list_txt .ui_list_del {height:18px;width:18px;background:transparent;vertical-align:middle;}
+
+.skin_reminder_line_over{
+	background:#fff9d7;
+}
+.skin_reminder_line_over a{color:#000;}
+.skin_reminder_line_over .ui_list_del{
+	background:transparent url('../../asset/img/bg_icon.png') -100px -103px no-repeat;
+	cursor:pointer;
+}
+.skin_reminder .ui_list_del{
+	float:right;
+}

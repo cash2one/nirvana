@@ -1,0 +1,26 @@
+<!-- target:moniKeyword -->
+<div class="manage_dialog">
+	<p>您选择了以下<span class="red" id="monidKwNum"></span>个关键词</p>
+	<div ui="id:wordList;"></div>
+	<p>请选择将该词放入的监控文件夹:</p>
+	<div ui="id:folderlist;"></div>
+	<span id="createNewFolder" class="create_new_folder" data-log="{target:'createFolder_btn'}">新建监控文件夹</span>
+	<div id="createFolderContainer" class="create_folder_container">
+		名称：<span class="red">*</span>
+		<input type="text" class="float_none" ui="id:newFolderName;type:TextInput;width:200;height:24;" />
+		<span class="gray" id="foldNumTip"></span>
+		<span id="createFolderCloseBtn" class="ui_dialog_close">&nbsp;</span>
+	</div>
+	<div class="ui_dialog_foot">
+		<div ui="id:setDialogOk;type:Button;">确定</div>
+		<div ui="id:setDialogCancel;type:Button;">取消</div>
+		<span class="error_area" id="error_area"></span>
+	</div>
+</div>
+<div style="display:none">
+	<label ui="id:currentCount;type:Label;datasource:*currentCount"></label>
+	<label ui="id:maxCount;type:Label;datasource:*maxCount"></label>
+</div>
+
+
+		

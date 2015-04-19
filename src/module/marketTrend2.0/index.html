@@ -1,0 +1,493 @@
+﻿<!-- target:marketTrendIndex2 -->
+<div id="marketTrendWrap">
+	<div id="marketHead" class="clearfix">
+		<h2>
+		    <span class="name_color_block market_trend_skin"></span>市场风向标
+		</h2>
+		<div class="lift">
+			<span targetId='marketBusiness'>行业趋势分析</span>|
+			<span targetId='marketTime'>行业时段分析</span>|
+			<span targetId='marketArea'>行业地域分析</span>|
+			<span targetId='marketWord'>行业词推荐</span>
+		</div>
+		<a id="marketBackBtn" class="market_light_btn">
+		    <span></span>
+			返回推广概况
+		</a>
+	</div>
+	<!--<div id="marketNav">
+	    <h2><span class="name_color_block market_trend_skin"></span>市场风向标</h2>
+	    <ul>
+	        <li targetId='marketBusiness'>行业趋势分析</li>
+            <li targetId='marketTime'>行业时段分析</li>
+            <li targetId='marketArea'>行业地域分析</li>
+            <li targetId='marketWord'>行业词推荐</li>
+	    </ul>
+	</div>-->
+	<div id="marketBody">
+		<!-- import:marketControl -->
+		
+		<!-- import:marketBusiness -->
+		<!-- import:marketTime -->
+		<!-- import:marketArea -->
+		<!-- import:marketWord -->
+	</div>
+</div>
+
+<!-- target:marketControl -->
+<div id="marketControl" class="clearfix">
+	<div class="market_control_wrapper1">
+		<div class="market_control_wrapper2">
+			<div class="right_top_bg"></div>
+			<div class="market_control_wrapper">
+			    <div class="market_main_control clearfix">
+			        <div class="business_divide">
+			        	<h2>行业分布</h2>
+			        	<div id="businessDivideFlash"></div>
+			        </div>
+			        <div class="business_data">
+			            <!-- import:marketFail -->
+			        	<div class="business_select">
+			        		<p>您关注的行业是</p>
+			        		<div id="businessSelect"></div>
+			        	</div>
+			        	<div class="business_consume_percent">
+			        		最近30天消费占比
+			        		<div id="businessConsumePercent"></div>
+			        		<div id="businessHotTip">
+			        		    <span class="business_hot_icon">旺</span>
+			        		    <span id="businessHotTipText"></span>
+			        		</div>
+			        	</div>
+			        	<div class="business_specific_data">
+			        		<div class="business_specific_data_wrapper clearfix">
+				        		<div class="specific_item">
+				        			<p>上月展现</p><span id="businessShowNum"></span><span id="businessShowRate"></span>
+				        		</div>
+				        		<div class="specific_item">
+				        			<p>上月点击</p><span id="businessClickNum"></span><span id="businessClickRate"></span>
+				        		</div>
+			        		</div>
+			        	</div>
+			        </div>
+			    </div>
+			    <div class="market_contend_business">
+			        <p>您的同行还投放的其他行业</p>
+			        <a id="businessContenderHelp" class="market_light_btn" 
+			            href="http://yingxiao.baidu.com/support/fc/detail_10802.html" target="_blank">什么是同行？</a>
+			        <div class="market_contend_business_content">
+			            <ul id="contendBusiness" class="clearfix"></ul>
+			        </div>
+			        
+			        <div class="contend_read_content">您可以关注竞争对手投放的其他行业，获得更多优质流量。</div>
+			    </div>
+		    </div>
+	   	</div>
+    </div>
+</div>
+<!-- target: contenderBusinessLi -->
+    <li>
+        <div class="contend_business_main">
+            <div class="hot_tip">
+                <span class="business_hot_icon {0}">旺</span>
+                <span class="business_hot_text {0}">{1}</span>
+            </div>
+            <div class="contend_business_bar">
+                <span class="contend_business_innerbar" style="height: {2}px"></span>
+            </div>
+            <span class="contend_business_name" title="{5}">{4}</span>
+            <div class="contend_business_word_btn market_light_btn" businessIndex="{6}">查看热词</div>
+        </div>
+        <div class="contend_business_account">
+            <p class="focus_num">{3}</p>同行
+        </div>
+    </li>
+
+<!-- target:marketBusiness -->
+<div id="marketBusiness" class="market_module">
+	<h2><span class="name_color_block market_trend_skin"></span><span class="business_name market_trend_skin_text"></span>行业趋势分析</h2>
+	<div class="market_module_tip"></div>
+	<div class="content">
+		<div class="business_trend_show clearfix">
+		    <div id="businessTrendTable">
+                <!-- import:marketFail -->
+                <div class="business_table_point"></div>
+                <dl class="clearfix">
+                    <dt class="trend_table_item">
+                        <dl>
+                            <dt></dt>
+                            <dd>行业流量</dd>
+                            <dd>我的行业展现</dd>
+                            <dd>同行行业展现</dd>
+                        </dl>
+                    </dt>
+                    <dd class="trend_table_item">
+                        <dl id="trendTableYesterday">
+                            <dt>昨日</dt>
+                            <dd><span class="business_compare_up">-</span></dd>
+                            <dd><span class="business_compare_up">-</span></dd>
+                            <dd><span class="business_compare_up">-</span></dd>
+                        </dl>
+                    </dd>
+                    <dd class="trend_table_item">
+                        <dl id="trendTableSevenday">
+                            <dt>最近7天</dt>
+                            <dd><span class="business_compare_up">-</span></dd>
+                            <dd><span class="business_compare_up">-</span></dd>
+                            <dd><span class="business_compare_up">-</span></dd>
+                        </dl>
+                    </dd>
+                    <dd class="trend_table_item">
+                        <dl id="trendTableThirtyday">
+                            <dt>最近30天</dt>
+                            <dd><span class="business_compare_up">-</span></dd>
+                            <dd><span class="business_compare_up">-</span></dd>
+                            <dd><span class="business_compare_up">-</span></dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
+            <div class="business_trend_diagram">
+                <!-- import:marketFail -->
+            	<div id="businessDiagramControl">
+        			<input type="checkbox" id="checkboxMyShow" /><label for="checkboxMyShow">我的展现</label>
+        			<input type="checkbox" id="checkboxOtherShow" /><label for="checkboxOtherShow">同行平均展现</label>
+        			<!--<input type="checkbox" id="checkboxNewSearch" /><label for="checkboxNewSearch">行业流量趋势</label>-->
+            	</div>
+            	<div id="businessTrendDiagram"></div>
+            </div>
+        </div>
+        <div class="business_trend_read hide">
+            <h2 class="business_trend_read_title">解读：如何提升展现量</h2>
+            <div class="business_trend_read_main clearfix">
+                <div class="business_trend_read_item" id="businessReadWord">
+                    <h2>评估购词量</h2>
+                    <p>同行平均购词量
+                        <span class="business_average_num focus_num"></span>，
+                                                                         您的购词量<span class="business_your_num focus_num"></span>，
+                                                                        低于<span class="business_compare_rate focus_num"></span>的同行
+                    </p>
+                    <div class="business_average_bar">同行 <span class="business_average_num focus_num"></span></div>
+                    <div class="business_your_bar market_trend_skin">您 <span class="business_your_num focus_num"></span></div>
+                </div>
+                <div class="business_trend_read_item" id="businessReadShow">
+                    <h2>评估展现份额</h2>
+                    <p>同行平均展现份额
+                        <span class="business_average_num focus_num"></span>，
+                                                                         您的展现份额<span class="business_your_num focus_num"></span>，
+                                                                        低于<span class="business_compare_rate focus_num"></span>的同行
+                    </p>
+                    <div class="business_average_bar">同行 <span class="business_average_num focus_num"></span></div>
+                    <div class="business_your_bar market_trend_skin">您 <span class="business_your_num focus_num"></span></div>
+                </div>
+            </div>
+        	<div class="business_trend_read_tip">
+        	    <h2>如何提升展现量,获得更多行业流量？</h2>
+        	    <p><strong>您还可以：</strong>
+        	        <span class="business_trend_read_tip_item first_item"><em>1.</em>提升购词量,提高展现的机会</span>
+        	        <span class="business_trend_read_tip_item"><em>2.</em>提高展现份额,保证已购词获得最大展现</span>
+        	        <span class="business_trend_read_tip_item"><em>3.</em>修改匹配模式,但精准度会有所下降</span>
+        	        <span class="business_trend_read_tip_item"><em>4.</em>延长在线时长</span>
+        	    </p>
+        	</div>
+        </div>
+        <div class="business_trend_hot hide">
+            <h2 class="business_trend_hot_title">图表解读</h2>
+            <h2>根据去年数据预估，旺季期间，行业流量将增大<span id="businessHotRaise" class="focus_num"></span>% | <span id="businessHotWordsBtn" class="market_light_btn">查看行业旺季词</span></h2>
+            <div class="business_trend_hot_main clearfix">
+                <div class="business_trend_hot_item" id="businessHotBudget">
+                    <p>预算</p>
+                    <p class="hot_item_account">有<span class="contender_percent focus_num"></span>%的同行提升了预算，提高了<span class="raise_percent focus_num"></span>元</p>
+                    <p>
+                        <span class="percent">
+                            <span class="n market_trend_skin"></span>
+                        </span>
+                    </p>
+                    <p><span id="businessHotBudgetBtn" class="market_light_btn">修改预算</span></p>
+                </div>
+                <div class="business_trend_hot_item" id="businessHotWordPrice">
+                    <p>关键词价格</p>
+                    <p class="hot_item_account">有<span class="contender_percent focus_num"></span>%的行业关键词提高了竞争价格</p>
+                    <p>
+                        <span class="percent">
+                            <span class="n market_trend_skin"></span>
+                        </span>
+                    </p>
+                    <p><span id="businessHotWordRaisedBtn" class="market_light_btn">查看提价的关键词</span></p>
+                </div>
+                <div class="business_trend_hot_item" id="businessBuyWordNum">
+                    <p>购词量</p>
+                    <p class="hot_item_account">有<span class="contender_percent focus_num"></span>%的同行增加了购词量</p>
+                    <p>
+                        <span class="percent">
+                            <span class="n market_trend_skin"></span>
+                        </span>
+                    </p>
+                    <p><span id="businessHotWordBoughtBtn" class="market_light_btn">查看购买的关键词</span></p>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<!-- target:marketTime -->
+<div id="marketTime" class="market_module">
+    <h2><span class="name_color_block market_trend_skin"></span><span class="business_name market_trend_skin_text"></span>行业时段分析</h2>
+    <div class="market_module_tip"></div>
+    <div class="content">
+        <!-- import:marketFail -->
+        <div id="timeTabControl">
+            <a tabLabel="week">工作日vs周末</a>|<a tabLabel="weekday">工作日(小时)</a>|<a tabLabel="weekend">周末(小时)</a>
+        </div>
+        <div id="timeWeekAnalyze" class="clearfix">
+            <div id="weekFocusCompare" class="time_focused_frame">
+                <div class="business_week_compare_item" id="businessAveragePV">
+                    <p>行业日均流量<span class="business_week_compare_tip">周末是工作日流量的<span id="businessAveragePVCompare" class="focus_num"></span>倍</span></p>
+                    <p>
+                        <span class="percent market_trend_skin">
+                            <span class="n"><span class="inner_text">工作日</span></span><span class="inner_text">周末</span>
+                        </span>
+                    </p>
+                </div>
+                <div class="business_week_compare_item" id="businessAverageShow">
+                    <p>您的日均展现<span class="business_week_compare_tip">周末是工作日展现的<span id="businessAverageShowCompare" class="focus_num"></span>倍</span></p>
+                    <p>
+                        <span class="percent market_trend_skin">
+                            <span class="n"><span class="inner_text">工作日</span></span><span class="inner_text">周末</span>
+                        </span>
+                    </p>
+                </div>
+                <p id="weekendBetterTip" class="hide">周末有更多流量被闲置，竞争降低，建议您利用良好机遇，把握流量缺口。</p>
+            </div>
+            <div id="weekDiagramPart" class="time_diagram_frame">
+                <div class="business_time_diagram">
+                    <!-- import:marketFail -->
+                    <div id="weekDiagram"></div>
+                </div>
+            </div>
+            
+            <div id="weekDiagramRead" class="business_trend_read_tip">
+                <p><strong>您还可以：</strong>
+                    <span class="business_trend_read_tip_item first_item"><em>1.</em>开启此行业所属计划的周末投放时段，延长周末的在线时长。</span>
+                    <span class="business_trend_read_tip_item"><em>2.</em>查看行业的时段分析，分析出<a id="linkToWeekend" class="market_light_btn">周末流量</a>的重点时段，且在重点时段提升推广排名。</span>
+                    <span class="business_trend_read_tip_item"><em>3.</em>看具有明显<a id="weekendFeatureWordBtn" class="market_light_btn">周末特征的网民检索词</a>，这些词平时的检索量可能被忽略，周末却会有激增。</span>
+                </p>
+            </div>
+        </div>
+        <div id="timeWeekdayAnalyze" class="clearfix">
+            <div id="weekdayFocusedHour" class="time_focused_frame">
+                <div id="weekdayHottestHour">
+                    <h2 class="market_trend_skin_text">最受网民欢迎时段</h2>
+                    <div id="weekdayHottestHourContent">
+                    </div>
+                </div>
+                <div id="weekdayBestHour">
+                    <h2 class="market_trend_skin_text">网民检索量大竞争相对小的时段</h2>
+                    <div id="weekdayBestHourContent">
+                    </div>
+                </div>
+            </div>
+            <div id="weekdayDiagramPart" class="time_diagram_frame">
+                <div class="business_time_diagram">
+                    <!-- import:marketFail -->
+                    <div id="weekdayDiagram"></div>
+                </div>
+                <!-- import:timeDiagramRead -->
+            </div>
+        </div>
+        <div id="timeWeekendAnalyze" class="clearfix">
+            <div id="weekendFocusedHour" class="time_focused_frame">
+                <div id="weekendHottestHour">
+                    <h2 class="market_trend_skin_text">最受网民欢迎时段</h2>
+                    <div id="weekendHottestHourContent">
+                        <!-- import:marketFail -->
+                        <ul class="clearfix">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="weekendBestHour">
+                    <h2 class="market_trend_skin_text">网民检索量大竞争相对小的时段</h2>
+                    <div id="weekendBestHourContent">
+                        <!-- import:marketFail -->
+                        <ul class="clearfix">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="weekendDiagramPart" class="time_diagram_frame">
+                <div class="business_time_diagram">
+                    <!-- import:marketFail -->
+                    <div id="weekendDiagram"></div>
+                </div>
+                <!-- import:timeDiagramRead -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- target:timeDiagramRead -->
+<div class="time_diagram_read">
+    <p>图表解读</p>
+    <h2>相同时间点，红蓝间距越大，市场潜力越大。</h2>
+    <div class="time_read_content"><span class="read_content_icon"></span>您可以新建不同的计划进行有针对性的行业细分，针对各地的热门时段和最有潜力的时段，分别优化投放时段，以提升投放效果。</div>
+</div>
+
+<!-- target:marketArea -->
+<div id="marketArea" class="market_module">
+    <h2><span class="name_color_block market_trend_skin"></span><span class="business_name market_trend_skin_text"></span>行业地域分析</h2>
+    <div class="market_module_tip"></div>
+    <div class="content">
+        <div id="areaRangeControl">
+            <a tabLabel="yesterday">昨日</a>|<a tabLabel="sevenday">最近7天</a>|<a tabLabel="thirtyday">最近30天</a><a id="mktModifyAcctRegion" class="market_light_btn">修改账户地域设置</a>
+        </div>
+        <div id="businessAreaMain" class="clearfix">
+            <div id="businessFocusedArea">
+                <div id="businessHottesArea">
+                    <h2 class="market_trend_skin_text">行业流量最大的三个地方</h2>
+                    <div id="businessHottesAreaContent">
+                        <ul class="clearfix">
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div id="businessContendArea">
+                    <h2 class="market_trend_skin_text">您的同行还投放的其他地域</h2>
+                    <div id="businessContendAreaContent">
+                        <ul class="clearfix">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="area_diagram_frame">
+                <!-- import:marketFail -->
+                <div id="businessAreaDiagram"></div>
+            </div>
+        </div>
+        <div class="area_read_content">
+            <span class="read_content_icon"></span>
+            您可以新建不同的计划进行有针对性的行业细分，针对热门需求的地域分别优化地域推广，以提升投放效果。您还可以参考同行投放的其他地域,以扩大流量的获取.
+        </div>
+    </div>
+    <a id="businessAreaHelp" class="market_light_btn" target="_blank" href="http://yingxiao.baidu.com/support/fc/detail_10824.html">什么是ACP指数？</a>
+</div>
+
+<!-- target:marketWord -->
+<div class="wordsTrend market_module" id="marketWord">
+	<h2><span class="name_color_block market_trend_skin"></span><span class="business_name market_trend_skin_text"></span>关键词排行榜</h2>
+	<div class="market_module_tip"></div>
+	<div class="content">
+	    <div id="wordRangeControl">
+            <a tabLabel="one">昨日</a>|<a tabLabel="seven">最近7天</a>
+            <span class="marketTrend_goback">
+                                                回到顶部<span class="back_icon"></span>
+            </span>
+        </div>
+	    <div class="content_wrapper">
+	        <form class="download_words_form" action="/nirvana/tool/mkt/download_keyword.do" method="post">
+	            <input type="hidden" name="userid"/>
+	            <input type="hidden" name="params"/>
+	        </form>
+	        <div class="tab_wrapper">
+	            <!-- import:marketFail -->
+	           	<div class="wordstrend_select"></div>
+	            <div class="wordstrend_oneday_wrap">
+	                <div class="top_words_wrap">
+	                    <h3>
+						</h3>
+	                    <div class="top_words rank_head_wrap">
+	                        <div class="rank_header">
+	                            <span class="column1">&nbsp;</span>
+	                            <span class="column2"><input type="checkbox"
+	                                class="oneday_select_all_topwords"/>&nbsp;<label>关键词</label></span>
+	                            <span class="column3">展现量</span>
+	                            <span class="column4"></span>
+	                        </div>
+	                    </div>
+	                    <div class="top_words topWordsOneday"></div>
+	                </div>
+	                <div class="explosive_words_wrap">
+	                    <h3>
+	                    </h3>
+	                    <div class="explosive_words rank_head_wrap">
+	                        <div class="rank_header">
+	                            <span class="column1">&nbsp;</span>
+	                            <span class="column2"><input type="checkbox"
+	                                class="oneday_select_all_explosivewords"/>&nbsp;<label>关键词</label></span>
+	                            <span class="column3">展现量</span>
+	                            <span class="column4">同比</span>
+	                        </div>
+	                    </div>
+	                    <div class="explosive_words explosiveWordsOneday"></div>
+	            	</div>
+	            </div>
+	            <div class="wordstrend_sevenday_wrap">
+	                <div class="top_words_wrap">
+	                    <h3>
+	                    </h3>
+	                    <div class="top_words rank_head_wrap">
+	                        <div class="rank_header">
+	                            <span class="column1">&nbsp;</span>
+	                            <span class="column2"><input type="checkbox"
+	                                class="sevenday_select_all_topwords"/>&nbsp;<label>关键词</label></span>
+	                            <span class="column3">展现量</span>
+	                            <span class="column4"></span>
+	                        </div>
+	                        
+	                    </div>
+	                    <div class="top_words topWordsSevenday"></div>
+	                </div>
+	                <div class="explosive_words_wrap">
+	                    <h3>
+	                    </h3>
+	                    <div class="explosive_words rank_head_wrap">
+	                        <div class="rank_header">
+	                            <span class="column1">&nbsp;</span>
+	                            <span class="column2"><input type="checkbox"
+	                                class="sevenday_select_all_explosivewords"/>&nbsp;<label>关键词</label></span>
+	                            <span class="column3">展现量</span>
+	                            <span class="column4">同比</span>
+	                        </div>
+	                    </div>
+	                    <div class="explosive_words explosiveWordsSevenday"></div>
+	            	</div>
+	            </div>
+	        </div>
+	        <div class="shortcuts clearfix">
+	            <div class="wordsTrendDownload"></div>
+	            <div class="wordsTrendAddWords"></div>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+<!-- target:marketFail -->
+<div class="market_fail_wrapper hide">
+    <span class="market_fail_tip">暂时没有数据</span>
+</div>
+
+<!-- target:marketTrendLoading -->
+<div class="loading">
+    <img src="asset/img/loading.gif"/>正在读取数据，请稍候...
+</div>
+
+<!-- target:recRankWord -->
+<div class="rank_rec">
+    <div class="rank_rec_head">
+    </div>
+    <div class="rank_rec_body"></div>
+    <div class="rank_rec_foot clearfix">
+        <div class="rankrec_download"></div>
+        <div class="rankrec_addword"></div>
+        <form class="download_words_form" action="/nirvana/tool/mkt/download_keyword.do" method="post">
+            <input type="hidden" name="userid"/>
+            <input type="hidden" name="params"/>
+        </form>
+    </div>
+</div>

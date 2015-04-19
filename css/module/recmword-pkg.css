@@ -1,0 +1,153 @@
+/**
+ * 新版智能提词包样式定义
+ */
+#recmwordpkg-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+/* loading样式定义 */
+.recmword-pkg-loading {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+}
+/* tab样式定义 */
+.recmword-tab {
+    position: relative;
+    line-height: 16px;
+    margin-top: 7px;
+}
+.skin_recmword_pkg_tab {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 10px 0 0 10px;
+}
+.skin_recmword_pkg_tab li h6:hover {
+    text-decoration: none;
+}
+.skin_recmword_pkg_tab ul {
+    height: 45px;
+}
+.skin_recmword_pkg_tab li {
+    height: 44px;
+    border: 1px solid #B9C9D3;
+    background: #ECF4F7;
+    width: 100px;
+}
+.skin_recmword_pkg_tab li.active {
+    height: 44px;
+    line-height: 44px;
+    top: 0px;
+}
+.skin_recmword_pkg_tab .recmword-search-tab  {
+    width: 375px;
+    text-align: left;
+}
+.recmword-tab-icon {
+    background-image: url(../../asset/img/bg_icon.png);
+    float: left;
+    width: 45px;
+    height: 30px;
+}
+.hot-recmword-icon {
+    background-position: -143px -1327px;
+}
+.potential-recmword-icon {
+    background-position: -194px -1327px;
+}
+.industry-recmword-icon {
+    background-position: -245px -1327px;
+}
+.quality-recmword-icon {
+    background-position: -92px -1327px;
+}
+.recmword-tab-text {
+    margin-left: 15px;
+}
+.recmword-type-name {
+    color: #385D7A;
+    font-weight: bold;
+}
+.recmword-num {
+    color: #999999;
+}
+.recmword-num .value {
+    color: #BCBCBC;
+    padding: 0 3px;
+}
+.hasnew-recmword-flag {
+    position: absolute;
+    left: 8px;
+    top: -15px;
+    height: 14px;
+    line-height: 14px;
+    width: 30px;
+    background: #63C514;
+    color: #FFFFFF;
+}
+/* Tab搜索框样式 */
+.tab-search-label {
+    /*float: left;*/
+    margin-right: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.tab-search {
+    background-color: #FFFFFF;
+    border: 1px solid #8FA8D1;
+    height: 30px;
+    /*margin-left: 85px;*/
+    position: relative;
+}
+.tab-search-btn {
+    position: absolute;
+    background: #FFFFFF url(../../asset/img/bg_icon_left.png) no-repeat 5px -1332px;
+    cursor: pointer;
+    width: 29px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.tab-search-btn.active {
+    background-position: 0 -1295px;
+}
+#recmword-search {
+    position: absolute;
+    width: 305px;
+    right: 59px;
+    top: 20px;
+}
+#recmword-search-input {
+    border: none;
+    width: 264px;
+    height: 18px;
+    line-height: 18px !important;
+    padding: 6px 5px;
+    *padding-top: 5px;
+}
+/* tab内容样式定义 */
+.recmword-tip {
+    padding: 10px;
+}
+.recmword-table {
+    border-left: none;
+    border-right: none;
+}
+.recmword-table .ui_table_body {
+    max-height: 323px;
+    min-height: 323px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#recmword-tab-container {
+    overflow: hidden;
+}
+#recmword-tab-container .aopkg_widget_table {
+    margin: 0;
+    padding: 0;
+}
+.no-recmword-tip {
+    line-height: 30px;
+    text-align: center;
+    margin-top: 140px;
+    color: #B1B1B1;
+}

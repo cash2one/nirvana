@@ -1,0 +1,39 @@
+.fc-ui-customcolumn {
+    position: relative;
+}
+.fc-ui-customcolumn .fc-ui-layer {
+    top: 23px !important;
+    left: auto;
+    right: 0;
+}
+.fc-ui-customcolumn .fc-ui-layer .ui-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+.fc-ui-customcolumn .customcolumn-header {
+    height: 15px;
+    line-height: 15px;
+    padding-left: 3px;
+    margin-bottom: 10px;
+}
+.fc-ui-customcolumn .customcolumn-shortcut {
+    border-right: 1px solid black;
+    padding:0 8px;
+    cursor: pointer;
+}
+.fc-ui-customcolumn .customcolumn-header .customcolumn-active {
+    font-weight: bold;
+}
+.fc-ui-customcolumn .customcolumn-shortcut:hover {
+    text-decoration: underline;
+}
+.fc-ui-customcolumn .customcolumn-options table {
+    width: 100%;
+}
+.fc-ui-customcolumn .customcolumn-options td {
+    padding: 6px 10px;
+    width: 129px;
+}
+.fc-ui-customcolumn .customcolumn-options .odd {
+    background-color: #E4EAF9;
+}

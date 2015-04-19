@@ -1,0 +1,135 @@
+.module-expedition {
+    background-color: #FDFDFD;
+    border: 1px solid #D7DDE8;
+    padding-top: 1px;
+}
+.module-expedition.expedition-close .expedition-content,
+.module-expedition.expedition-close .expedition-footer {
+	display: none;
+}
+.module-expedition.expedition-empty .expedition-footer {
+	display: none;
+}
+.expedition-header {
+    background-color: #F0F2F7;  
+    color: #4B637A;
+    padding: 10px 5px;
+    line-height: 18px;
+}
+.module-embedexpedition .expedition-header {
+    padding: 4px;
+}
+.expedition-header em {
+    font-weight: bold;
+    margin: 0 3px;
+}
+.expedition-header .expedition-toggle,
+.expedition-footer .expedition-more {
+    float: right;
+}
+.expedition-header .expedition-toggle {
+    color: #03C;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.expedition-header .expedition-toggle:hover,
+.expedition-footer .expedition-tokr:hover {
+    text-decoration: underline;
+}
+.expedition-content {
+	margin: 10px 0;
+	overflow: hidden;
+    position: relative;
+    *zoom: 1;
+}
+.expedition-empty .expedition-content {
+    padding-left: 5px;
+}
+.module-embedexpedition .expedition-content {
+    margin: 0;
+}
+.expedition-footer {
+	border-top: 1px dashed #CCC;
+    padding: 12px 10px;
+    position: relative;
+}
+.expedition-footer > .fc-ui-button {
+    position: absolute;
+    top: 8px;
+    left: 485px;
+}
+.expedition-footer .value em {
+	font-weight: bold;
+	font-size: 110%;
+}
+.expedition-tokr {
+    color: #03C;
+    cursor: pointer;
+    font-weight: bold;
+	font-size: 110%;
+}
+.expedition-error {
+    color: red;
+}
+.expedition-error > * {
+    line-height: 16px !important;
+    padding: 0 !important;
+}
+.expedition-footer .expedition-error {
+    margin-top: 5px;
+}
+.expedition-footer .fc-ui-planunitselector {
+    position: absolute;
+    top: 8px;
+    left: 105px;
+}
+
+/**
+ * 改写表格组件样式
+ */
+.expedition-content .fc-ui-table {
+    width: 33.2%;
+    overflow: visible;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.module-expedition .table-checkbox {
+    margin-top: 2px;
+}
+.module-embedexpedition .fc-ui-table {
+    width: 100%;
+    overflow: auto;
+}
+.expedition-content .table-thead {
+    background-color: white;
+    border: none;
+}
+.expedition-content .table-icon-sort {
+    color: #999;
+    font-weight: normal;
+}
+.expedition-content .fc-ui-table > div {
+    border-right: 1px dashed #CCC;    
+    padding: 0 10px;
+    padding-bottom: 1000px;
+    margin-bottom: -1000px;
+}
+.expedition-content .fc-ui-table.last > div {
+    border-right: none;
+}
+.embedexpedition-content .fc-ui-table > div {
+    padding: 0;
+    border-right: none;
+    margin-bottom: 0;
+}
+.expedition-content .table-tbody td {
+    border: none !important;
+}
+.expedition-content .table-tbody tr:hover {
+    background-color: #F0F7FE;
+}
+.module-embedexpedition .expedition-content {
+    height: 200px;
+}
